@@ -1,3 +1,10 @@
+popularity-contest (1.27) UNRELEASED; urgency=low
+
+  * Translations
+    - Corrections in Ukrainian uk.po. Closes: #290752
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 16 Jan 2005 17:26:37 +0100
+
 popularity-contest (1.26) unstable; urgency=low
 
   * popcon.pl: Accomodate with kfreebsd-gnu new URL.
