@@ -24,7 +24,6 @@
 
 use strict;
 use 5.6.0;  
-use Config;  
 
 my $dpkg_db="/var/lib/dpkg/info";
 my $popcon_conf="/etc/popularity-contest.conf";
@@ -43,9 +42,8 @@ if ( $HOSTID eq "")
 }
 
 # Architecture.
-
-my ($arch,$os)=split('-',$Config{archname});
-my $debarch= ($os eq 'linux') ? $arch : "$arch-$os";
+my $debarch = `dpkg --print-installation-architecture`;
+chomp $debarch;
 
 # Fetch debian version number.  Example values are "3.0" and
 # "testing/unstable"
