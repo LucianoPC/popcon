@@ -1,6 +1,11 @@
 popularity-contest (1.13) UNRELEASED; urgency=low
 
-  * Update server-side scripts to current popcon.debian.org version.
+  * Bill Allombert
+    - Update server-side scripts to current popcon.debian.org version.
+  * Petter Reinholdtsen 
+    - Move Norwegian Bokmål debconf translation to nb.po, and
+      install it using language codes 'nb' and 'no' as part of the
+      Norwegian language code transition.
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
 
