@@ -16,7 +16,7 @@ popularity-contest (1.15) UNRELEASED; urgency=low
     - Updated Spanish debconf translation.  New file from Ruben Porras.
   * Christian Perrier
     - Updated Japaned debconf translation by Kenshi Muto
-    - s/are unable to/could not in templates. Unfuzzy translations
+    - s/are unable to/could not/ in templates. Unfuzzy translations
     - Updated Simplified Chinese translation by Carlos Z.F. Liu
     - Updated Lithuanian translation by Kestutis Biliunas
 
