@@ -90,6 +90,10 @@ I periodically post survey results on my web page:
 
 		http://www.debian.org/~apenwarr/popcon/
 
+An alternative page is available at
+
+                http://www.debian.org/~ballombe/popcon/
+
 You can find some sample analysis scripts in
 /usr/share/doc/popularity-contest as part of this package.
 
