@@ -5,12 +5,15 @@
 # Only the most recent entry with a given MD5 ID is kept.
 #
 
-import sys, string, os, time
+import sys, string, os, time, re
 
 dirname = 'popcon-entries'
 output = None
 
 now = time.time()
+
+msgstartre = re.compile("^From")
+md5sumre   = re.compile("^([a-f0-9]{32})$")
 
 while 1:
     line = sys.stdin.readline()
@@ -31,7 +34,7 @@ while 1:
 		key, value = list
 	    except:
 		continue
-	    if key == 'ID' and len(value) > 2:
+	    if key == 'ID' and md5sumre.match(value):
 		md5 = value
 		subdir = dirname + '/' + value[0:2]
 		try:
@@ -48,7 +51,7 @@ while 1:
 		
 	
 
-    elif split[0] == 'END-POPULARITY-CONTEST-0':
+    elif split[0] == 'END-POPULARITY-CONTEST-0' or msgstartre.match(split[0]):
 	if output != None:
 	    print "%s: %s" % (md5, time.ctime(mtime))
 	    output.write(line)
