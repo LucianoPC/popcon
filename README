@@ -99,3 +99,11 @@ FINDING THE SOURCE
 This package is being maintained in CVS using Alioth.  The project summary
 page is available from <URL:https://alioth.debian.org/projects/popcon/>.
 The project home page is at <URL:http://popcon.alioth.debian.org/>.
+
+REPORTING BUGS
+==============
+
+Report bugs into the Debian Bug Tracking System.  See
+<URL:http://bugs.debian.org/> for instructions.  If you want to get in
+touch with the popularity contest maintainers, send an email to
+popcon-developers@lists.alioth.debian.org.

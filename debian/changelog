@@ -6,6 +6,8 @@ popularity-contest (1.13) UNRELEASED; urgency=low
     - Move Norwegian Bokmål debconf translation to nb.po, and
       install it using language codes 'nb' and 'no' as part of the
       Norwegian language code transition.
+    - Add info in the README on where to report bugs and how to
+      reach the developers.
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
 
