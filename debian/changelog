@@ -1,8 +1,8 @@
-popularity-contest (1.13) UNRELEASED; urgency=low
+popularity-contest (1.13) unstable; urgency=low
 
   * Bill Allombert
     - Update server-side scripts to current popcon.debian.org version.
-  * Petter Reinholdtsen 
+  * Petter Reinholdtsen
     - Move Norwegian Bokmål debconf translation to nb.po, and
       install it using language codes 'nb' and 'no' as part of the
       Norwegian language code transition.
@@ -16,7 +16,7 @@ popularity-contest (1.13) UNRELEASED; urgency=low
     - Add Czech debconf translation received from Miroslav Kure
       (Closes: #235989)
 
- -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  6 Mar 2004 09:15:43 +0100
 
 popularity-contest (1.12) unstable; urgency=low
 
