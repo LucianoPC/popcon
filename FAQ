@@ -53,3 +53,17 @@ Q) /usr is mounted with 'noatime'.
 A) popularity-contest relies on atime to know what packages were used during
    the last month. This means you will only report the list of packages
    installed without usage information.
+ 
+Q) I don't want popcon email to be send by root! How can I send that ?
+
+A) To send as user 'myuser', edit the function 'do_sendmail' in
+/etc/cron.weekly/popularity-contest to 
+
+do_sendmail()
+{
+  su myuser -s /bin/sh -c "/usr/sbin/sendmail -oi \"$MAILTO\""
+}
+
+Make sure myuser account is properly configured to send email with a valid
+return address.
+
