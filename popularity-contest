@@ -47,6 +47,15 @@ if ( $HOSTID eq "")
 my ($arch,$os)=split('-',$Config{archname});
 my $debarch= ($os eq 'linux') ? $arch : "$arch-$os";
 
+# Fetch debian version number.  Example values are "3.0" and
+# "testing/unstable"
+my $debver;
+if ( -e "/etc/debian_version" && open(RELEASEFILE, "</etc/debian_version")) {
+    $debver = <RELEASEFILE>;
+    chomp $debver;
+    close(RELEASEFILE);
+}
+
 # Initialise time computations
 
 my $now = time;
@@ -102,7 +111,8 @@ close PACKAGES;
 # We're not done yet.  Sort the output in reverse by atime, and
 # add a header/footer.
 	
-print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ARCH:$debarch\n";
+print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ".
+    "ARCH:$debarch DEBVER:$debver\n";
 
 for (sort { $popcon{$b}[0] <=> $popcon{$a}[0] } keys %popcon)
 {
@@ -110,4 +120,3 @@ for (sort { $popcon{$b}[0] <=> $popcon{$a}[0] } keys %popcon)
 }
 
 print "END-POPULARITY-CONTEST-0 TIME:",time,"\n";
-

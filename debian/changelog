@@ -10,6 +10,7 @@ popularity-contest (1.8) UNRELEASED; urgency=low
       This should still fix bug #135273, as the current PARTICIPATE
       value is taken from the current config file, and only that
       variable is modified if the user using debconf change the value.
+    - Collect and report the content of /etc/debian_version.
   * Bill Allombert
     - control: change exim to exim4. (Closes: #228575)
 
