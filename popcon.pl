@@ -324,7 +324,8 @@ for $sec (@dists)
 	print HTML "</pre><p>Statistics for architectures\n<pre>";
         for $f (grep { $_ ne 'unknown' } sort keys %arch)
         {
-                printf HTML "<a href=\"http://www.debian.org/ports/$f/\">%-16s</a> : %-10s\n",$f,$arch{$f};
+		my ($port)=split('-',$f);
+                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s\n",$f,$arch{$f};
         }
         printf HTML "%-16s : %-10s\n","unknown",$arch{"unknown"};
 
