@@ -16,10 +16,3 @@ fi
 
 db_input medium popularity-contest/participate || [ $? -eq 30 ]
 db_go || true
-
-# Ask if the old addresses should be changed to the new address.
-if [ "$MAILTO" = "erich-survey@debian.org" -o \
-     "$MAILTO" = "apenwarr-survey@debian.org" ]; then
-    db_input low popularity-contest/update-mailto || [ $? -eq 30 ]
-    db_go || true
-fi

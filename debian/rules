@@ -24,8 +24,10 @@ install:
 	# Add here commands to install the package into debian/tmp.
 	install -d debian/tmp/usr/sbin/
 	install -d debian/tmp/etc/
+	install -d debian/tmp/usr/share/popularity-contest/
 	install popularity-contest debian/tmp/usr/sbin/
 	install popcon-largest-unused debian/tmp/usr/sbin/
+	install -m 644 default.conf debian/tmp/usr/share/popularity-contest/
 
 # Build architecture-independent files here.
 binary-indep: build install

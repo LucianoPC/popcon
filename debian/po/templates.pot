@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-01-25 12:26+0100\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,14 +63,4 @@ msgstr ""
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
-msgstr ""
-
-#. Description
-#: ../templates:26
-msgid "Update mailto address to the current one?"
-msgstr ""
-
-#. Description
-#: ../templates:26
-msgid "The mail address used to submit popularity-contest entries is obsolete."
 msgstr ""

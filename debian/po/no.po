@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.8\n"
-"POT-Creation-Date: 2004-01-25 12:26+0100\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
 "PO-Revision-Date: 2004-01-25 12:33MET\n"
 "Last-Translator: Petter Reinholdtsen <pere@hungry.com>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -33,9 +33,9 @@ msgid ""
 "new users."
 msgstr ""
 "Denne informasjonen hjelper oss å ta beslutninger om hvilke pakker som bør "
-"plasseres på den første Debian-CDen.  I tillegg, så kan vi forbedre framtidige "
-"versjoner av Debian slik at de mest populære pakkene er de som blir installert "
-"automatisk for nye brukere."
+"plasseres på den første Debian-CDen.  I tillegg, så kan vi forbedre "
+"framtidige versjoner av Debian slik at de mest populære pakkene er de som "
+"blir installert automatisk for nye brukere."
 
 #. Description
 #: ../templates:4
@@ -43,8 +43,9 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Hvis du velger å delta, så vil et automatisk innsendings-skript kjøre automatisk "
-"en gang i uka, og sende statistikken på email til Debian-utviklerne."
+"Hvis du velger å delta, så vil et automatisk innsendings-skript kjøre "
+"automatisk en gang i uka, og sende statistikken på email til Debian-"
+"utviklerne."
 
 #. Description
 #: ../templates:4
@@ -52,8 +53,8 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Du kan alltid endre mening etter å ha tatt denne avgjørelsen: "
-"\"dpkg-reconfigure popularity-contest\""
+"Du kan alltid endre mening etter å ha tatt denne avgjørelsen: \"dpkg-"
+"reconfigure popularity-contest\""
 
 #. Description
 #: ../templates:4
@@ -61,16 +62,14 @@ msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
 msgstr ""
-"(MERK: email-tjeneren legger inn deres egen sporings-informasjon, slik "
-"at dine data ikke vil være fullstendig anonyme under sending.)"
+"(MERK: email-tjeneren legger inn deres egen sporings-informasjon, slik at "
+"dine data ikke vil være fullstendig anonyme under sending.)"
 
-#. Description
-#: ../templates:26
-msgid "Update mailto address to the current one?"
-msgstr "Oppdater mailto-adressen til den gjeldende adressen?"
+#~ msgid "Update mailto address to the current one?"
+#~ msgstr "Oppdater mailto-adressen til den gjeldende adressen?"
 
-#. Description
-#: ../templates:26
-msgid "The mail address used to submit popularity-contest entries is obsolete."
-msgstr "Mail-adressen som brukes for å sende inn til popularity-contest er foreldet."
-
+#~ msgid ""
+#~ "The mail address used to submit popularity-contest entries is obsolete."
+#~ msgstr ""
+#~ "Mail-adressen som brukes for å sende inn til popularity-contest er "
+#~ "foreldet."

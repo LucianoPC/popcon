@@ -19,10 +19,3 @@ _Description: Participate in the Debian Package Popularity Contest?
  .
  (NOTE: e-mail servers add their own tracing information and your data
  won't be completely anonymous while in transit.)
-
-Template: popularity-contest/update-mailto
-Type: boolean
-Default: true
-_Description: Update mailto address to the current one?
- The mail address used to submit popularity-contest entries
- is obsolete.

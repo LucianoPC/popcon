@@ -8,8 +8,9 @@ popularity-contest (1.10) UNRELEASED; urgency=low
     - Drop the intro note, and show the explanation as part of the
       participate question. (Closes: #229573)
     - Update Norwegian Bokmål debconf translation.
-    - Lower the priority from high to low for the question
-      asking if it is ok to edit MAILTO address. (Closes: #229288, #229111)
+    - Remove the question asking if it is ok to edit MAILTO address,
+      and move the default values into
+      /usr/share/popularity-contest.conf. (Closes: #229288, #229111)
   * Bill Allombert
     - Update server-side scripts to current popcon.debian.org version.
 

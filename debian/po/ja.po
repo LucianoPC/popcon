@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-01-25 12:26+0100\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
 "PO-Revision-Date: 2004-01-25 21:13+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -53,7 +53,9 @@ msgstr ""
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr "参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、Debian 開発者に統計が電子メールで送られます。"
+msgstr ""
+"参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、Debian "
+"開発者に統計が電子メールで送られます。"
 
 #. Description
 #: ../templates:4
@@ -73,13 +75,10 @@ msgstr ""
 "(注意: 電子メールサーバは自身の追跡情報を追加し、通過中のデータは完全な匿名で"
 "はありません)"
 
-#. Description
-#: ../templates:26
-msgid "Update mailto address to the current one?"
-msgstr "宛先アドレスを最新のものに更新しますか?"
+#~ msgid "Update mailto address to the current one?"
+#~ msgstr "宛先アドレスを最新のものに更新しますか?"
 
-#. Description
-#: ../templates:26
-msgid "The mail address used to submit popularity-contest entries is obsolete."
-msgstr ""
-"popularity-contest のエントリを提出するメールアドレスが古くなっています。"
+#~ msgid ""
+#~ "The mail address used to submit popularity-contest entries is obsolete."
+#~ msgstr ""
+#~ "popularity-contest のエントリを提出するメールアドレスが古くなっています。"

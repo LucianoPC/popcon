@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-01-25 12:26+0100\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
 "PO-Revision-Date: 2003-08-29 11:52+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,16 +80,6 @@ msgstr ""
 "(NOTA: los servidores de correo electrónico añaden cierta información de "
 "rastreo, por lo que los datos no serán completamente anónimos durante la "
 "transmisión)"
-
-#. Description
-#: ../templates:26
-msgid "Update mailto address to the current one?"
-msgstr ""
-
-#. Description
-#: ../templates:26
-msgid "The mail address used to submit popularity-contest entries is obsolete."
-msgstr ""
 
 #~ msgid ""
 #~ "If you choose to participate, the automatic submission script will run "

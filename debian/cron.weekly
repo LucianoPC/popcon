@@ -11,6 +11,7 @@ unset MY_HOSTID
 unset PARTICIPATE
 
 # get configuration information
+. /usr/share/popularity-contest/default.conf
 . /etc/popularity-contest.conf
 
 # don't run if MAILTO address is blank!
