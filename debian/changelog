@@ -1,4 +1,4 @@
-popularity-contest (1.12) UNRELEASED; urgency=low
+popularity-contest (1.12) unstable; urgency=low
 
   * Use dpkg --print-installation-architecture instead of $Config{archname}
     to report the platform.
@@ -6,6 +6,7 @@ popularity-contest (1.12) UNRELEASED; urgency=low
   * Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
   * Update French debconf translation, thanks Christian Perrier. 
     (Closes: #231294)
+  * Update Dutch debconf translation, thanks Bart Cornelis. (Closes: #229752)
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 10 Feb 2004 17:24:10 +0100
 
