@@ -15,14 +15,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-08-29 11:51+0200\n"
+"POT-Creation-Date: 2004-01-22 01:03+0100\n"
 "PO-Revision-Date: 2003-06-24 21:20+0200\n"
 "Last-Translator: Erich Schubert <erich@debian.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../templates:3
@@ -91,6 +91,17 @@ msgid ""
 msgstr ""
 "Wenn Sie sich entscheiden teilzunehmen, wird popularity-contest einmal jede "
 "Woche Statistiken an die Debian-Entwickler versenden."
+
+#. Description
+#: ../templates:31
+msgid "Update mailto address to the current one?"
+msgstr ""
+
+#. Description
+#: ../templates:31
+msgid ""
+"The mail address used to submit popularity-contenst entries is obsolete."
+msgstr ""
 
 #~ msgid "Accept here if you want to participate in the contest."
 #~ msgstr "Bitte bestätigen Sie, wenn Sie zur Statistik beitragen wollen."

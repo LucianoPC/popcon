@@ -14,14 +14,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-08-29 11:51+0200\n"
+"POT-Creation-Date: 2004-01-22 01:03+0100\n"
 "PO-Revision-Date: 2003-06-17 10:26+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../templates:3
@@ -92,6 +92,17 @@ msgstr ""
 "Si vous choisissez de participer, popularity-contest sera lancé "
 "automatiquement chaque semaine et enverra par courrier les statistiques aux "
 "mainteneurs Debian."
+
+#. Description
+#: ../templates:31
+msgid "Update mailto address to the current one?"
+msgstr ""
+
+#. Description
+#: ../templates:31
+msgid ""
+"The mail address used to submit popularity-contenst entries is obsolete."
+msgstr ""
 
 #~ msgid "Accept here if you want to participate in the contest."
 #~ msgstr ""
