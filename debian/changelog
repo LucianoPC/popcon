@@ -1,13 +1,18 @@
 popularity-contest (1.11) unstable; urgency=medium
 
-  * Raise the priority of the participation question from medium to
-    high to make sure it is displayed in the normal Sarge install.
-  * Add Danish debconf translation, thanks to Morten Brix
-    Pedersen (Closing: #230022)
-  * Only generate host ID when it is needed.
-  * Use quotes for all variables in the config file.
+  * Petter Reinholdtsen
+    - Raise the priority of the participation question from medium to
+      high to make sure it is displayed in the normal Sarge install.
+    - Add Danish debconf translation, thanks to Morten Brix
+      Pedersen (Closing: #230022)
+    - Only generate host ID when it is needed.
+    - Use quotes for all variables in the config file.
+  * Bill Allombert
+    - Use dpkg --print-installation-architecture instead of $Config{archname}
+      to report the platform.
+    - Update server-side scripts to current popcon.debian.org version.
 
- -- Petter Reinholdtsen <pere@debian.org>  Sat, 31 Jan 2004 17:39:19 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Sun,  8 Feb 2004 11:53:56 +0100
 
 popularity-contest (1.10) unstable; urgency=low
 
