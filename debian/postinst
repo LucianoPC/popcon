@@ -12,10 +12,6 @@ if [ -e $conffile ] ; then
     . $conffile
 fi
 
-if [ -z "$MY_HOSTID" ]; then
-    MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum|sed 's/  -//'''`
-fi
-
 # Get this setting from debconf.  It was set based on the content of
 # /etc/popularity-contest.conf in the 'config' script, so it should be
 # safe to ignore the value fetched by loading the file above.  This
@@ -28,6 +24,8 @@ else
 fi
 
 generate_conffile() {
+	MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`
+
 	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.
 		#
