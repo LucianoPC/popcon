@@ -206,7 +206,7 @@ while(<PKG>)
 		  $maintpkg{$maint{$name}}->{$f}+=$v;
 	  }
   }
-  elsif ($type eq "Arch:")
+  elsif ($type eq "Architecture:")
   {
     my ($a,$nb)=@values;
     $arch{$a}=$nb;
