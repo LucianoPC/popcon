@@ -11,23 +11,22 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_1.3-1.1\n"
+"Project-Id-Version: popularity_contest\n"
 "POT-Creation-Date: 2004-01-26 00:49+0100\n"
-"PO-Revision-Date: 2003-04-06 13:40-0300\n"
-"Last-Translator: André Luís Lopes <andrelop@ig.com.br>\n"
+"PO-Revision-Date: 2004-02-28 22:14-0300\n"
+"Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Concurso de Popularidade de Pacotes Debian"
+msgstr "Participar do Concurso de Popularidade de Pacotes Debian ?"
 
 #. Description
 #: ../templates:4
@@ -35,8 +34,9 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
-"Você pode fazer com que seu sistema envie anonimamente via e-mail para os "
-"desenvolvedores Debian estatísticas sobre seus pacotes Debian mais usados."
+"Você pode fazer com que seu sistema envie anonimamente via e-mail para "
+"os desenvolvedores Debian estatísticas sobre seus pacotes Debian mais "
+"usados."
 
 #. Description
 #: ../templates:4
@@ -47,20 +47,19 @@ msgid ""
 "new users."
 msgstr ""
 "Essa informação nos ajudará a tomar decisões como quais pacotes deverão "
-"fazer parte do primeiro CD Debian. Adicionalmente, poderemos melhorar "
+"ser colocados no primeiro CD Debian. Também será possível melhorar "
 "futuras versões do Debian de forma que os pacotes mais populares sejam "
 "instalados automaticamente para novos usuários."
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Caso você opte por participar, o popularity-contest será executado uma vez "
-"por semana automaticamente, enviando as estatísticas para os desenvolvedores "
-"Debian via e-mail."
+"Caso você opte por participar, o script de envio automático será "
+"executado automaticamente toda semana, enviando as estatísticas via "
+"e-mail para os desenvolvedores Debian."
 
 #. Description
 #: ../templates:4
@@ -68,7 +67,7 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Você poderá sempre mudar de idéia depois de tomar esta decisão : \"dpkg-"
+"Você poderá sempre mudar sua opinião após fazer sua decisão : \"dpkg-"
 "reconfigure popularity-contest\""
 
 #. Description
@@ -77,20 +76,6 @@ msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
 msgstr ""
-"(NOTA : servidores de e-mail adicionam sua própria informação de "
-"rastreamento e seus dados não estarão completamente anônimos enquanto "
+"(NOTA: Servidores de e-mail adicionam suas próprias informações de "
+"rastreamento e seus dados não ficarão completamente anônimos enquanto "
 "estiverem em trânsito.)"
-
-#~ msgid ""
-#~ "If you choose to participate, the automatic submission script will run "
-#~ "once every week automatically."
-#~ msgstr ""
-#~ "Caso você opte por participar, o script de envio automático será "
-#~ "executado uma vez por semana automaticamente."
-
-#~ msgid "Do you want to participate?"
-#~ msgstr "Você deseja participar ?"
-
-#, fuzzy
-#~ msgid "Accept here if you want to participate in the contest."
-#~ msgstr "Caso você deseje participar do concurso, selecione sim."

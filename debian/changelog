@@ -8,6 +8,8 @@ popularity-contest (1.13) UNRELEASED; urgency=low
       Norwegian language code transition.
     - Add info in the README on where to report bugs and how to
       reach the developers.
+    - Update Brazilian Portuguese debconf translation.  Got new file
+      from Andre Luis Lopes. (Closes: #235387)
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
 
