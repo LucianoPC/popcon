@@ -1,4 +1,4 @@
-popularity-contest (1.10) UNRELEASED; urgency=low
+popularity-contest (1.10) unstable; urgency=low
 
   * Petter Reinholdtsen
     - Added Japanese debconf translation thanks to Kenshi
@@ -15,7 +15,7 @@ popularity-contest (1.10) UNRELEASED; urgency=low
   * Bill Allombert
     - Update server-side scripts to current popcon.debian.org version.
 
- -- Petter Reinholdtsen <pere@debian.org>  Sun, 25 Jan 2004 09:44:44 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 26 Jan 2004 22:05:41 +0100
 
 popularity-contest (1.9) unstable; urgency=low
 
