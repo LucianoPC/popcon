@@ -1,8 +1,9 @@
 popularity-contest (1.21) UNRELEASED; urgency=low
 
-  * 
+  * Translations
+    - Bosnian update
 
- -- Bill Allombert <ballombe@debian.org>  Wed, 26 May 2004 16:17:11 +0200
+ -- Christian Perrier <bubulle@debian.org>  Wed, 26 May 2004 23:01:43 -0300
 
 popularity-contest (1.20) unstable; urgency=low
 
