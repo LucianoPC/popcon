@@ -21,8 +21,9 @@ popularity-contest (1.15) UNRELEASED; urgency=low
     - Updated Lithuanian translation by Kestutis Biliunas
     - Updated Czech translation by Miroslav Kure. Closes: #239051
     - Updated German translation by Dennis Stampfer
+    - Updated Portuguese translation by Miguel Figueiredo. Closes: #239077
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 21 Mar 2004 09:03:01 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 21 Mar 2004 09:54:01 +0100
 
 popularity-contest (1.14) unstable; urgency=HIGH
 
