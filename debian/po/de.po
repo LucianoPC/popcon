@@ -3,32 +3,29 @@
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
 #         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
+#         info -n '(gettext)Header Entry'#    Some information specific to po-debconf are available at
 #            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#    Developers do not need to manually edit POT or PO files.
+#    Erich Schubert <erich@debian.org>, 2003
+#    Dennis Stampfer <seppy@debian.org>, 2004
 #
-#    Developers do not need to manually edit POT or PO files.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: popularity contest\n"
 "POT-Creation-Date: 2004-01-26 00:49+0100\n"
-"PO-Revision-Date: 2003-06-24 21:20+0200\n"
-"Last-Translator: Erich Schubert <erich@debian.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2004-03-19 21:24GMT\n"
+"Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
+"Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
+"X-Generator: KBabel 0.9.5\n"
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Debian-Pakete Beliebtheitswettbewerb"
+msgstr "Am Debian-Pakete Beliebtheitswettbewerb teilnehmen?"
 
 #. Description
 #: ../templates:4
@@ -54,13 +51,13 @@ msgstr ""
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Wenn Sie sich entscheiden teilzunehmen, wird popularity-contest einmal jede "
-"Woche Statistiken an die Debian-Entwickler versenden."
+"Wenn Sie sich entscheiden teilzunehmen, wird das automatische "
+"Übertragungsprogramm wöchentlich ausgeführt und schickt eine Statistik an "
+"die Debian-Entwickler."
 
 #. Description
 #: ../templates:4
@@ -80,15 +77,3 @@ msgstr ""
 "(Hinweis: E-Mail-Server fügen eigene Rückverfolgungs-Angaben in die E-Mails "
 "ein, während der Übertragung sind ihre Daten nicht anonym!)"
 
-#~ msgid ""
-#~ "If you choose to participate, the automatic submission script will run "
-#~ "once every week automatically."
-#~ msgstr ""
-#~ "Wenn Sie teilnehmen wollen, wird das Skript zum automatischen Versand "
-#~ "jede Woche einmal automatisch aufgerufen."
-
-#~ msgid "Do you want to participate?"
-#~ msgstr "Wollen Sie sich beteiligen?"
-
-#~ msgid "Accept here if you want to participate in the contest."
-#~ msgstr "Bitte bestätigen Sie, wenn Sie zur Statistik beitragen wollen."

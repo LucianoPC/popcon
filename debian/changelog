@@ -9,6 +9,8 @@ popularity-contest (1.15) UNRELEASED; urgency=low
       patch from Håvard Korsvoll. (Closes: #238037)
     - Added Simplified Chinese debconf translation, patch from
       Carlos Z.F. Liu. (Closes: #238302)
+    - Updated German debconf translation.  Patch from Dennis
+      Stampfer. (Closes: #238953)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 22:45:41 +0100
 
