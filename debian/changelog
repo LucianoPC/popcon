@@ -9,8 +9,9 @@ popularity-contest (1.23) UNRELEASED; urgency=low
     - Hungarian update. Closes: #256487
     - Polish update. CLoses: #258558
     - Basque update. Closes: #259784
+    - Arabic added, from Arabeyes repository
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 19 Jul 2004 11:12:35 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 21 Jul 2004 16:45:47 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
