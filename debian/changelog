@@ -1,4 +1,4 @@
-popularity-contest (1.17) UNRELEASED; urgency=low
+popularity-contest (1.17) unstable; urgency=medium
 
   * Translations
     - Hungarian by VEROK Istvan. Closes: #242288
@@ -6,8 +6,11 @@ popularity-contest (1.17) UNRELEASED; urgency=low
     - Dutch by Bart Cornelis. Closes: #242382
     - Hebrew by Lior Kaplan
     - Indonesian by Parlin Imanuel Toh. Closes: #243296
+  * Petter Reinholdtsen
+    - Uploaded with urgency=medium to get the new translations into
+      Sarge quickly.
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 13 Apr 2004 09:47:48 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 13 Apr 2004 10:05:36 +0200
 
 popularity-contest (1.16) unstable; urgency=medium
 
