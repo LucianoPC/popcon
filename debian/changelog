@@ -1,6 +1,10 @@
-popularity-contest (1.14) UNRELEASED; urgency=low
+popularity-contest (1.14) UNRELEASED; urgency=HIGH
 
   * Petter Reinholdtsen
+    - Urgency HIGH to get the translations into Sarge in time for
+      the d-i beta3.
+    - Make symlink from po/no.po to po/nb.po, to make it more
+      obvious that it is the same file.
     - Added Catalan debconf translation received from Aleix
       Badia i Bosch. (Closes: #236639)
     - Added Italian debconf translation received from
