@@ -40,7 +40,7 @@ binary-indep: build install
 	dh_installmanpages
 	dh_installdebconf
 	dh_installchangelogs
-	dh_perl
+	dh_perl -d
 	dh_strip
 	dh_compress
 	dh_fixperms
