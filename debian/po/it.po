@@ -1,0 +1,68 @@
+# Traduzione italiana di popularity-contest
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Cristian Rigamonti <cri@linux.it>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest 1.13\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"PO-Revision-Date: 2004-03-09 01:13+0100\n"
+"Last-Translator: Cristian Rigamonti <cri@linux.it>\n"
+"Language-Team: debian-l10n-italian <debian-l10n-italian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Si desidera partecipare al \"Debian Package Popularity Contest\"?"
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages."
+msgstr ""
+"È possibile configurare il sistema in modo da spedire in modo anonimo agli "
+"sviluppatori Debian le statistiche sui pacchetti Debian più usati."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This information helps us make decisions such as which packages should go on "
+"the first Debian CD.  Also, we can improve future versions of Debian so that "
+"the most popular packages are the ones which are installed automatically for "
+"new users."
+msgstr ""
+"Queste informazioni ci aiutano a decidere, per esempio, quali pacchetti "
+"debbano essere inclusi nel primo CD Debian.  Inoltre, possiamo migliorare le "
+"versioni future di Debian in modo che i pacchetti più popolari siano "
+"installati automaticamente per i nuovi utenti."
+
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week automatically, e-mailing statistics to the Debian developers."
+msgstr ""
+"Se si sceglie di partecipare, lo script di invio verrà eseguito "
+"automaticamente una volta alla settimana, spedendo le statistiche via e-mail "
+"agli sviluppatori Debian."
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Dopo aver preso questa decisione, è ancora possibile cambiare idea eseguendo "
+"\"dpkg-reconfigure popularity-contest\""
+
+#. Description
+#: ../templates:4
+msgid ""
+"(NOTE: e-mail servers add their own tracing information and your data won't "
+"be completely anonymous while in transit.)"
+msgstr ""
+"(NOTA: i server di posta aggiungono informazioni per tracciare i messaggi, "
+"quindi i dati in transito non saranno completamente anonimi)"

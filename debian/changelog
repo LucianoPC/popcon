@@ -1,8 +1,10 @@
 popularity-contest (1.14) UNRELEASED; urgency=low
 
   * Petter Reinholdtsen
-    - Added Catalan debconf translation recieved from Aleix Badia
-      i Bosch. (Closes: #236639)
+    - Added Catalan debconf translation received from Aleix
+      Badia i Bosch. (Closes: #236639)
+    - Added Italian debconf translation received from
+      Cristian Rigamonti.  (Closes: 236956)
 
  -- Petter Reinholdtsen <pere@debian.org>  Mon,  8 Mar 2004 21:08:30 +0100
 
