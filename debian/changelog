@@ -8,6 +8,7 @@ popularity-contest (1.13) UNRELEASED; urgency=low
       Norwegian language code transition.
     - Add info in the README on where to report bugs and how to
       reach the developers.
+    - Use UTF-8 in debconf template.
     - Update Brazilian Portuguese debconf translation.  Got new file
       from Andre Luis Lopes. (Closes: #235387)
     - Add Greek debconf translation recieved from Konstantinos
