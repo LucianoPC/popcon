@@ -6,6 +6,7 @@ popularity-contest (1.27) unstable; urgency=low
     use of xargs which has a length limit.
   * popcon.pl: compute statistics for source packages. Closes: #291747.
   * FAQ: Fix typo noticed by Thomas Wana.
+  * debian/rules: use dh_installman instead of dh_installmanpages.
 
  -- Bill Allombert <ballombe@debian.org>  Fri, 18 Feb 2005 18:35:16 +0100
 
