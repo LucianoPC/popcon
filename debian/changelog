@@ -3,6 +3,7 @@ popularity-contest (1.8) UNRELEASED; urgency=low
   * Petter Reinholdtsen
     - Add Dutch debconf template translation (nl.po).  File from
       Bart Cornelis. (Closes: #217038)
+    - Add URLs to the project home page in manual page and README file.
 
  -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 19:17:12 +0200
 
