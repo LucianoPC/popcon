@@ -31,7 +31,7 @@ popularity-contest (1.8) unstable; urgency=low
     - control: change exim to exim4. (Closes: #228575)
     - Update documentation to refer to popcon.debian.org.
 
- -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 19:17:12 +0200
+ -- Bill Allombert <ballombe@debian.org>  Mon, 22 Jan 2004 09:32:41 -0500
 
 popularity-contest (1.7) unstable; urgency=low
 
