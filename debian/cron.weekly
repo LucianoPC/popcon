@@ -33,7 +33,8 @@ run_popcon()
 	echo "To: $MAILTO"
 	echo "Subject: popularity-contest submission"
 	echo
-	su nobody -pc "sh -c /usr/sbin/popularity-contest"
+	# Set HOME to avoid bug #212013.
+	HOME=/tmp su nobody -pc "sh -c /usr/sbin/popularity-contest"
 }
 
 do_sendmail()
