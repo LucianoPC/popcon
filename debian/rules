@@ -34,7 +34,7 @@ binary-indep: build install
 	dh_testdir
 	dh_testroot
 	dh_installdocs README
-	dh_installexamples prepop.py popcon-process.sh popanal.py README.examples
+	dh_installexamples prepop.pl popcon-process.sh popanal.py popcon.pl README.examples
 	dh_installmenu
 	dh_installcron
 	dh_installmanpages
