@@ -1,0 +1,91 @@
+# Translation of popularity-contest to Finnish
+# 
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"PO-Revision-Date: 2004-06-02 19:03+0300\n"
+"Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
+"Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Osallistutko Debianin suosituin paketti -kilpailuun?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Koneesi voi lähettää nimettömänä sähköpostina Debianin kehittäjille "
+"tilastotietoa eniten käytetyistä Debianin paketeista. Tämä tieto "
+"on yhtenä päätösperusteena esimerkiksi valittaessa ensimmäiselle "
+"Debian-rompulle tulevia paketteja."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Jos päätät osallistua, lähetetään tilastot kerran viikossa automaattisesti "
+"Debianin kehittäjille. "
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Voit muuttaa mielesi milloin tahansa: \"dpkg-reconfigure popularity-contest\""
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Yksikäsitteisen konetunnisteen luominen epäonnistui"
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"Asennuskomento ei saanut luotua yksikäsitteistä konetunnistetta. "
+"Tämä on vakava virhe, kaikilla tietoja lähettävillä koneilla on "
+"oltava yksikäsitteinen tunniste."
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Tee tästä vikailmoitus popularity-contest-paketista ja liitä siihen "
+"tietoa järjestelmästäsi."
+
