@@ -14,32 +14,28 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-03-13 02:38+1300\n"
+"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"PO-Revision-Date: 2004-03-21 02:24+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "您要参加 Debian 软件包流行度测试吗？"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
-"您可以让系统用匿名电子邮件的方式向 Debian 开发人员报告您最常使用的 Debian 包"
-"的统计数据。"
+"您可以让系统用匿名电子邮件的方式向 Debian 开发人员报告您最常使用的 Debian 软"
+"件包的统计数据。"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -51,7 +47,6 @@ msgstr ""
 "这些信息将帮助我们决定哪些软件包应该放到第一张 Debian 光盘中。当然，我们还能"
 "改进未来的 Debian 版本，让最流行的软件包会被自动安装到新用户的系统中。"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -61,7 +56,6 @@ msgstr ""
 "如果您选择参与，自动提交脚本程序将会每周自动运行一次，将统计数据发送给 "
 "Debian 开发人员。"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -70,7 +64,6 @@ msgid ""
 msgstr ""
 "您当然也可以改变现在的决定，请运行：“dpkg-reconfigure popularity-contest”"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -80,25 +73,26 @@ msgstr ""
 "(注意：邮件服务器将会添加其自身的跟踪信息，因此您的数据在传输过程中将不会是完"
 "全匿名的。)"
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "无法生成独有的主机标识"
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is "
+"a fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
+"安装脚本未能生成一个独有的主机标识。这是一个严重错误，所有提交信息的主机都需"
+"要有一个独有的标识。"
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
+"请将此问题作为 popularity-contest 软件包的 bug 报告给维护人员，内容还需要包括"
+"你的配置信息。"
