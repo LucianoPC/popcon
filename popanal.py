@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python 
 #
 # Read Debian popularity-contest submission data on stdin and produce
 # some statistics about it.
@@ -35,7 +35,7 @@ deplist = {}
 provlist = {}
 complained = {}
 host_arch_list = {}
-host_gnu_type_list = {}
+subcount = 0
 
 
 def parse_depends(depline):
@@ -108,8 +108,7 @@ class Submission:
 
     start_date = 0
 
-    host_arch = None
-    host_gnu_type = None
+    host_arch = "unknown"
 
     # initialize a new entry with known data
     def __init__(self, version, owner_id, date):
@@ -160,11 +159,6 @@ class Submission:
         else:
             host_arch_list[self.host_arch] = host_arch_list[self.host_arch] + 1
 
-        if not host_gnu_type_list.has_key(self.host_gnu_type):
-            host_gnu_type_list[self.host_gnu_type] = 1
-        else:
-            host_gnu_type_list[self.host_gnu_type] = host_gnu_type_list[self.host_gnu_type] + 1
-
 def headersplit(pairs):
     header = {}
     for d in pairs:
@@ -178,7 +172,7 @@ def headersplit(pairs):
 
 
 def read_submissions(stream):
-    subcount = 0
+    global subcount
     e = None
     while 1:
 	line = stream.readline()
@@ -198,12 +192,12 @@ def read_submissions(stream):
 	    ewrite('#%s' % subcount)
 	    e = Submission(0, header['ID'], header['TIME'])
 
-            if header.has_key('DEB_HOST_ARCH'):
-                e.host_arch = header['DEB_HOST_ARCH']
+            if header.has_key('ARCH'):
+	    	if header['ARCH']=='x86_64':
+                    e.host_arch = 'amd64'
+		else:
+                    e.host_arch = header['ARCH']
 
-            if header.has_key('DEB_HOST_GNU_TYPE'):
-                e.host_gnu_type = header['DEB_HOST_GNU_TYPE']
-	    
 	elif split[0]=='END-POPULARITY-CONTEST-0' and e != None:
 	    header = headersplit(split[1:])
 	    if header.has_key('TIME'):
@@ -236,21 +230,16 @@ def nicename(s):
     return new_s
 
 # dump the results
+out = open('results', 'w')
+out.write("Submissions: %8d\n" % subcount)  
+
+for host_arch in host_arch_list.keys():
+    out.write("Arch: %-30s %5d\n"
+                  % (host_arch, host_arch_list[host_arch]))
 for section in sectlist.keys():
-    ewrite('Dumping section %s' % nicename(section))
-    out = open('results.%s' % nicename(section), 'w')
     for package in sectlist[section]:
 	fv = votelist[package]
-	out.write("%-30s %5d %5d %5d %5d\n"
+	out.write("Package: %-30s %5d %5d %5d %5d\n"
 		  % (package, fv.yes, fv.old_unused,
 		     fv.too_recent, fv.empty_package))
 
-    out = open('results.host_arch', 'w')
-    for host_arch in host_arch_list.keys():
-        out.write("%-30s %5d\n"
-                  % (host_arch, host_arch_list[host_arch]))
-
-    out = open('results.host_gnu_type', 'w')
-    for host_gnu_type in host_gnu_type_list.keys():
-        out.write("%-30s %5d\n"
-                  % (host_gnu_type, host_gnu_type_list[host_gnu_type]))

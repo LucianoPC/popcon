@@ -1,5 +1,8 @@
 #! /usr/bin/perl -wT
+
+$results="../popcon-mail/results";
 $popcon="../www";
+
 sub htmlheader
 {
   print HTML <<"EOH";
@@ -46,7 +49,7 @@ EOH
 
 sub htmlfooter
 {
-  my $date=`LANG=C date -u`;
+  my $date=gmtime();
   print HTML ("\n </pre>\n</p> \n");
   print HTML <<EOF;
 <pre>
@@ -67,7 +70,7 @@ EOF
 <p><small>
 </small></p>
 <HR>
-Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date. <br>
+Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
 <a href="http://alioth.debian.org/projects/popcon/" > Popularity-contest project <a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <BR>
 Copyright (C) 2004 <A HREF="http://www.spi-inc.org/">SPI</A>;
@@ -80,7 +83,6 @@ EOH
 sub make_sec
 {
   my $sec="$popcon/$_[0]";
-  print "$sec\n";
   -d $sec || system("mkdir","-p","$sec");
 }
 
@@ -168,7 +170,6 @@ for $file (glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages"),glob("
   close AVAIL;
 }
 $ENV{PATH}="/bin:/usr/bin";
-$numsub=`/bin/cat ../popcon-mail/num-submissions`;
 
 #Format
 #<name> <vote> <old> <recent> <no-files>
@@ -181,18 +182,32 @@ $numsub=`/bin/cat ../popcon-mail/num-submissions`;
 #<no-files> is the number of people whose entry didn't contain enough
 #        information (atime and ctime were 0).
 
-open PKG, "zcat ../www/all-popcon-results.txt.gz|";
+open PKG, "$results";
 while(<PKG>)
 {
-  my ($name,@votes)=split(" ");
-  unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
-  $section{$name}='unknown' unless (defined($section{$name}));
-  $maint{$name}='Not in sid' unless (defined($maint{$name}));
-  for(my $i=0;$i<=$#fields;$i++)
+  my ($type,@values)=split(" ");
+  if ($type eq "Package:")
   {
-    my ($f,$v)=($fields[$i],$votes[$i]);
-    $pkg{$name}->{$f}=$v;
-    $maintpkg{$maint{$name}}->{$f}+=$v;
+          my @votes=@values;
+	  $name = shift @votes;
+	  unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
+	  $section{$name}='unknown' unless (defined($section{$name}));
+	  $maint{$name}='Not in sid' unless (defined($maint{$name}));
+	  for(my $i=0;$i<=$#fields;$i++)
+	  {
+		  my ($f,$v)=($fields[$i],$votes[$i]);
+		  $pkg{$name}->{$f}=$v;
+		  $maintpkg{$maint{$name}}->{$f}+=$v;
+	  }
+  }
+  elsif ($type eq "Arch:")
+  {
+    my ($a,$nb)=@values;
+    $arch{$a}=$nb;
+  }
+  elsif ($type eq "Submissions:")
+  {
+    ($numsub)=@values;
   }
 }
 
@@ -217,7 +232,6 @@ for $sec (@sections)
 
 for $sec (".",@dists)
 {
-  print "/$sec\n";
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
   for $order (@fields)
   {
@@ -225,7 +239,6 @@ for $sec (".",@dists)
   }
 }
 {
-  print "/maint\n";
   make_sec "maint";
   for $order (@fields)
   {
@@ -234,7 +247,6 @@ for $sec (".",@dists)
 }
 for $sec (@dists)
 {
-  print "html/$sec\n";
   open HTML , "> $popcon/$sec/index.html";
   opendir SEC,"$popcon/$sec";
   &htmlheader;
@@ -263,7 +275,6 @@ for $sec (@dists)
 }
 for $sec (@dists)
 {
-  print "html/$sec\n";
   open HTML , "> $popcon/$sec/first.html";
   opendir SEC,"$popcon/$sec";
   &htmlheader;
@@ -297,7 +308,6 @@ for $sec (@dists)
   close HTML;
 }
 {
-	print "html/\n";
 	open HTML , "> $popcon/index.html";
 	&htmlheader;
 	printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>",$sec);
@@ -331,7 +341,14 @@ for $sec (@dists)
 		}
 		print HTML ("\n");
 	}
-	print HTML "<p><a href=\"all-popcon-results.txt.gz\">Raw popularity-contest results</a>\n";
+	print HTML "</pre><p>Statistics for architectures\n<pre>";
+        for $f (grep { $_ ne 'unknown' } sort keys %arch)
+        {
+                printf HTML "<a href=\"http://www.debian.org/ports/$f/\">%-16s</a> : %-10s\n",$f,$arch{$f};
+        }
+        printf HTML "%-16s : %-10s\n","unknown",$arch{"unknown"};
+
+	print HTML "</pre>\n<p><a href=\"all-popcon-results.txt.gz\">Raw popularity-contest results</a>\n";
 	&htmlfooter;
 	close HTML;
 }

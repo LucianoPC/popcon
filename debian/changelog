@@ -10,6 +10,8 @@ popularity-contest (1.10) UNRELEASED; urgency=low
     - Update Norwegian Bokmål debconf translation.
     - Lower the priority from high to low for the question
       asking if it is ok to edit MAILTO address. (Closes: #229288, #229111)
+  * Bill Allombert
+    - Update server-side scripts to current popcon.debian.org version.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 25 Jan 2004 09:44:44 +0100
 
