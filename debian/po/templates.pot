@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-01-23 09:31+0100\n"
+"POT-Creation-Date: 2004-01-25 12:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,19 +24,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Description
-#: ../templates:3
-msgid "Debian Package Popularity Contest"
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
 msgstr ""
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "This information helps us make decisions such as which packages should go on "
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
@@ -45,44 +45,32 @@ msgid ""
 msgstr ""
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically."
+"every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
 msgstr ""
 
 #. Description
-#: ../templates:24
-msgid "Do you want to participate?"
-msgstr ""
-
-#. Description
-#: ../templates:24
-msgid ""
-"If you choose to participate, popularity-contest will run once every week "
-"automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-
-#. Description
-#: ../templates:31
+#: ../templates:26
 msgid "Update mailto address to the current one?"
 msgstr ""
 
 #. Description
-#: ../templates:31
+#: ../templates:26
 msgid "The mail address used to submit popularity-contest entries is obsolete."
 msgstr ""

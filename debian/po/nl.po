@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-01-23 09:31+0100\n"
+"POT-Creation-Date: 2004-01-25 12:26+0100\n"
 "PO-Revision-Date: 2003-10-13 22:12+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch@lists.debian.org <debian-l10n-dutch@lists."
@@ -24,12 +24,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Description
-#: ../templates:3
-msgid "Debian Package Popularity Contest"
+#: ../templates:4
+#, fuzzy
+msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Debian pakketpopulariteit-competitie"
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
@@ -38,7 +39,7 @@ msgstr ""
 "ontwikkelaars stuurt over welke pakketten u het meest gebruikt."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "This information helps us make decisions such as which packages should go on "
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
@@ -52,16 +53,18 @@ msgstr ""
 "voor nieuwe gebruikers."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically."
+"every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Indien u voor deelname kiest zal het script dat ons de resultaten toestuurt "
-"automatisch en wekelijks uitgevoerd worden."
+"Indien u voor deelname kiest zal 'popularity-contest' eenmaal per week "
+"uitgevoerd worden, waarna de statistieken naar de Debian ontwikkelaars "
+"verstuurd worden."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
@@ -70,7 +73,7 @@ msgstr ""
 "deactiveren/activeren via het commando 'dpkg-reconfigure popularity-contest'"
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
@@ -79,26 +82,21 @@ msgstr ""
 "dat uw gegevens niet volledig anoniem zijn tijdens het bezorgen.)"
 
 #. Description
-#: ../templates:24
-msgid "Do you want to participate?"
-msgstr "Wilt u hieraan meewerken?"
-
-#. Description
-#: ../templates:24
-msgid ""
-"If you choose to participate, popularity-contest will run once every week "
-"automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-"Indien u voor deelname kiest zal 'popularity-contest' eenmaal per week "
-"uitgevoerd worden, waarna de statistieken naar de Debian ontwikkelaars "
-"verstuurd worden."
-
-#. Description
-#: ../templates:31
+#: ../templates:26
 msgid "Update mailto address to the current one?"
 msgstr ""
 
 #. Description
-#: ../templates:31
+#: ../templates:26
 msgid "The mail address used to submit popularity-contest entries is obsolete."
 msgstr ""
+
+#~ msgid ""
+#~ "If you choose to participate, the automatic submission script will run "
+#~ "once every week automatically."
+#~ msgstr ""
+#~ "Indien u voor deelname kiest zal het script dat ons de resultaten "
+#~ "toestuurt automatisch en wekelijks uitgevoerd worden."
+
+#~ msgid "Do you want to participate?"
+#~ msgstr "Wilt u hieraan meewerken?"

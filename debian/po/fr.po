@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-01-23 09:31+0100\n"
+"POT-Creation-Date: 2004-01-25 12:26+0100\n"
 "PO-Revision-Date: 2003-06-17 10:26+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -24,12 +24,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 
 #. Description
-#: ../templates:3
-msgid "Debian Package Popularity Contest"
+#: ../templates:4
+#, fuzzy
+msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Concours de popularité des paquets Debian"
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
@@ -38,7 +39,7 @@ msgstr ""
 "avec des statistiques sur les paquets que vous utilisez le plus souvent."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "This information helps us make decisions such as which packages should go on "
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
@@ -51,16 +52,18 @@ msgstr ""
 "populaires soient installés automatiquement pour les nouveaux utilisateurs."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically."
+"every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Si vous choisissez de participer, le script d'envoi automatique des "
-"informations s'exécutera automatiquement une fois par semaine."
+"Si vous choisissez de participer, popularity-contest sera lancé "
+"automatiquement chaque semaine et enverra par courrier les statistiques aux "
+"mainteneurs Debian."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
@@ -69,7 +72,7 @@ msgstr ""
 "commande « dpkg-reconfigure popularity-contest »."
 
 #. Description
-#: ../templates:3
+#: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
@@ -79,29 +82,24 @@ msgstr ""
 "seront pas totalement anonymes pendant leur transfert)."
 
 #. Description
-#: ../templates:24
-msgid "Do you want to participate?"
-msgstr "Souhaitez-vous participer ?"
-
-#. Description
-#: ../templates:24
-msgid ""
-"If you choose to participate, popularity-contest will run once every week "
-"automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-"Si vous choisissez de participer, popularity-contest sera lancé "
-"automatiquement chaque semaine et enverra par courrier les statistiques aux "
-"mainteneurs Debian."
-
-#. Description
-#: ../templates:31
+#: ../templates:26
 msgid "Update mailto address to the current one?"
 msgstr ""
 
 #. Description
-#: ../templates:31
+#: ../templates:26
 msgid "The mail address used to submit popularity-contest entries is obsolete."
 msgstr ""
+
+#~ msgid ""
+#~ "If you choose to participate, the automatic submission script will run "
+#~ "once every week automatically."
+#~ msgstr ""
+#~ "Si vous choisissez de participer, le script d'envoi automatique des "
+#~ "informations s'exécutera automatiquement une fois par semaine."
+
+#~ msgid "Do you want to participate?"
+#~ msgstr "Souhaitez-vous participer ?"
 
 #~ msgid "Accept here if you want to participate in the contest."
 #~ msgstr ""
