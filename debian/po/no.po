@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.8\n"
 "POT-Creation-Date: 2004-01-25 12:26+0100\n"
-"PO-Revision-Date: 2004-01-22 01:06MET\n"
+"PO-Revision-Date: 2004-01-25 12:33MET\n"
 "Last-Translator: Petter Reinholdtsen <pere@hungry.com>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -12,9 +12,8 @@ msgstr ""
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Popularitetskonkuranse for Debian-pakker"
+msgstr "Delta i popularitetskonkuransen for Debian-pakker?"
 
 #. Description
 #: ../templates:4
@@ -22,6 +21,8 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
+"Du kan la ditt system sende anonyme email til Debian-utvuiklerne med "
+"statistikk om dine mest brukte Debian-pakker."
 
 #. Description
 #: ../templates:4
@@ -31,6 +32,10 @@ msgid ""
 "the most popular packages are the ones which are installed automatically for "
 "new users."
 msgstr ""
+"Denne informasjonen hjelper oss å ta beslutninger om hvilke pakker som bør "
+"plasseres på den første Debian-CDen.  I tillegg, så kan vi forbedre framtidige "
+"versjoner av Debian slik at de mest populære pakkene er de som blir installert "
+"automatisk for nye brukere."
 
 #. Description
 #: ../templates:4
@@ -38,6 +43,8 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
+"Hvis du velger å delta, så vil et automatisk innsendings-skript kjøre automatisk "
+"en gang i uka, og sende statistikken på email til Debian-utviklerne."
 
 #. Description
 #: ../templates:4
@@ -45,6 +52,8 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
+"Du kan alltid endre mening etter å ha tatt denne avgjørelsen: "
+"\"dpkg-reconfigure popularity-contest\""
 
 #. Description
 #: ../templates:4
@@ -52,16 +61,16 @@ msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
 msgstr ""
+"(MERK: email-tjeneren legger inn deres egen sporings-informasjon, slik "
+"at dine data ikke vil være fullstendig anonyme under sending.)"
 
 #. Description
 #: ../templates:26
 msgid "Update mailto address to the current one?"
-msgstr ""
+msgstr "Oppdater mailto-adressen til den gjeldende adressen?"
 
 #. Description
 #: ../templates:26
 msgid "The mail address used to submit popularity-contest entries is obsolete."
-msgstr ""
+msgstr "Mail-adressen som brukes for å sende inn til popularity-contest er foreldet."
 
-#~ msgid "Do you want to participate?"
-#~ msgstr "Ønsker du å delta?"
