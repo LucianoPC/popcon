@@ -14,9 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-02-10 17:31+0100\n"
+"PO-Revision-Date: 2004-04-06 10:25+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,78 +34,49 @@ msgstr "Wilt u meewerken aan de Debian pakketpopulariteit-competitie?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
-msgstr ""
-"U kunt uw systeem instellen zodat het anoniem statistieken naar de Debian "
-"ontwikkelaars stuurt over welke pakketten u het meest gebruikt."
+msgid "You can have your system anonymously e-mail the Debian developers with statistics about your most used Debian packages."
+msgstr "U kunt uw systeem instellen zodat het anoniem statistieken naar de Debian ontwikkelaars stuurt over welke pakketten u het meest gebruikt."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Deze informatie wordt gebruikt om een aantal dingen te beslissen, zoals "
-"welke pakketten op de eerste Debian-CD geplaatst worden. Met deze informatie "
-"kunnen we toekomstige versies van Debian ook verbeteren door ervoor te "
-"zorgen dat de meest populaire pakketten automatisch geïnstalleerd worden "
-"voor nieuwe gebruikers."
+msgid "This information helps us make decisions such as which packages should go on the first Debian CD.  Also, we can improve future versions of Debian so that the most popular packages are the ones which are installed automatically for new users."
+msgstr "Deze informatie wordt gebruikt om een aantal dingen te beslissen, zoals welke pakketten op de eerste Debian-CD geplaatst worden. Met deze informatie kunnen we toekomstige versies van Debian ook verbeteren door ervoor te zorgen dat de meest populaire pakketten automatisch geïnstalleerd worden voor nieuwe gebruikers."
 
 #  Description
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-"Indien u voor deelname kiest zal het script dat de statistieken naar de "
-"Debian ontwikkelaars verstuurt eenmaal per week uitgevoerd worden."
+msgid "If you choose to participate, the automatic submission script will run once every week automatically, e-mailing statistics to the Debian developers."
+msgstr "Indien u voor deelname kiest zal het script dat de statistieken naar de Debian ontwikkelaars verstuurt eenmaal per week uitgevoerd worden."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
-msgstr ""
-"Mocht u later van gedachten veranderen, dan kunt u uw deelname altijd "
-"deactiveren/activeren via het commando 'dpkg-reconfigure popularity-contest'"
+msgid "You can always change your mind after making this decision: \"dpkg-reconfigure popularity-contest\""
+msgstr "Mocht u later van gedachten veranderen, dan kunt u uw deelname altijd deactiveren/activeren via het commando 'dpkg-reconfigure popularity-contest'"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(OPMERKING: email-servers voegen hun eigen volginformatie toe, dit betekent "
-"dat uw gegevens niet volledig anoniem zijn tijdens het bezorgen.)"
+msgid "(NOTE: e-mail servers add their own tracing information and your data won't be completely anonymous while in transit.)"
+msgstr "(OPMERKING: email-servers voegen hun eigen volginformatie toe, dit betekent dat uw gegevens niet volledig anoniem zijn tijdens het bezorgen.)"
 
 #. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "Genereren unieke computeridentificatie is mislukt"
 
 #. Type: error
 #. Description
 #: ../templates:25
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
+msgid "The install script could not generate a unique host identifier. This is a fatal error, as all hosts submitting information need to have an unique identifier."
+msgstr "Het installatiescript was niet in staat om een unieke computeridentificatie aan te maken. Aangezien alle informatie-insturende computers een unieke identificatie dienen te hebben is dit een fatale fout."
 
 #. Type: error
 #. Description
 #: ../templates:25
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
+msgid "Please report this problem as a bug against the popularity-contest package, and include information about your configuration."
+msgstr "Gelieve dit probleem te rapporteren als een bug tegen het 'popularity-contest'-pakket, met toevoeging van informatie betreffende uw configuratie."
+
