@@ -6,8 +6,9 @@ popularity-contest (1.25) UNRELEASED; urgency=low
     - Update German debconf translation de.po
     - Russian updated. Closes: #268403
     - Norwegian Bokmal and Nynorsk updated : nb.po and nn.po. Closes: #269908
+    - Korean translation updated ko.po
 
- -- Christian Perrier <bubulle@debian.org>  Sun,  5 Sep 2004 08:22:37 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun,  5 Sep 2004 14:39:09 +0200
 
 popularity-contest (1.24) unstable; urgency=low
 
