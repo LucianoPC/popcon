@@ -1,3 +1,10 @@
+popularity-contest (1.24) UNRELEASED; urgency=low
+
+  * Translations
+    - Indonesian update. Closes: #261225
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 24 Jul 2004 22:30:11 +0200
+
 popularity-contest (1.23) unstable; urgency=low
 
   * Translations
