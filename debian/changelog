@@ -6,6 +6,9 @@ popularity-contest (1.4) UNRELEASED; urgency=low
     - Include architecture info in the submissions.  (CLoses: #148756, #187736)
     - Remove useless call to dh_undocumented, previously commented out
       by Christian Perrier.
+    - Updated popanal.py to process the new arch info, and store
+      resulting summary in results.host_arch and
+      results.host_gnu_type.
   * Acknowledge NMUs.  (Closes: #135114, #135273, #136510, #137231,
     #172824, #184608, #187871, #197178, #197230, #201704, #203841)
 	

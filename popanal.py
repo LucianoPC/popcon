@@ -34,6 +34,8 @@ sectlist = { UNKNOWN : [] }
 deplist = {}
 provlist = {}
 complained = {}
+host_arch_list = {}
+host_gnu_type_list = {}
 
 
 def parse_depends(depline):
@@ -106,6 +108,9 @@ class Submission:
 
     start_date = 0
 
+    host_arch = None
+    host_gnu_type = None
+
     # initialize a new entry with known data
     def __init__(self, version, owner_id, date):
 	self.entries = {}
@@ -150,6 +155,15 @@ class Submission:
 		sectlist[UNKNOWN].append(package)
 	    votelist[package].vote_for(package, self.entries[package])
 
+        if not host_arch_list.has_key(self.host_arch):
+            host_arch_list[self.host_arch] = 1
+        else:
+            host_arch_list[self.host_arch] = host_arch_list[self.host_arch] + 1
+
+        if not host_gnu_type_list.has_key(self.host_gnu_type):
+            host_gnu_type_list[self.host_gnu_type] = 1
+        else:
+            host_gnu_type_list[self.host_gnu_type] = host_gnu_type_list[self.host_gnu_type] + 1
 
 def headersplit(pairs):
     header = {}
@@ -183,6 +197,12 @@ def read_submissions(stream):
 	    subcount = subcount + 1
 	    ewrite('#%s' % subcount)
 	    e = Submission(0, header['ID'], header['TIME'])
+
+            if header.has_key('DEB_HOST_ARCH'):
+                e.host_arch = header['DEB_HOST_ARCH']
+
+            if header.has_key('DEB_HOST_GNU_TYPE'):
+                e.host_gnu_type = header['DEB_HOST_GNU_TYPE']
 	    
 	elif split[0]=='END-POPULARITY-CONTEST-0' and e != None:
 	    header = headersplit(split[1:])
@@ -224,3 +244,13 @@ for section in sectlist.keys():
 	out.write("%-30s %5d %5d %5d %5d\n"
 		  % (package, fv.yes, fv.old_unused,
 		     fv.too_recent, fv.empty_package))
+
+    out = open('results.host_arch', 'w')
+    for host_arch in host_arch_list.keys():
+        out.write("%-30s %5d\n"
+                  % (host_arch, host_arch_list[host_arch]))
+
+    out = open('results.host_gnu_type', 'w')
+    for host_gnu_type in host_gnu_type_list.keys():
+        out.write("%-30s %5d\n"
+                  % (host_gnu_type, host_gnu_type_list[host_gnu_type]))
