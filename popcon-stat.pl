@@ -16,7 +16,7 @@ for $f (@ARGV)
        $sub{$f}->{$line[1]}=$line[2];
        $arch{$line[1]}++;
      }
-     else 
+     elsif ($line[0] ne "Release:")
      {
        last;
      }
