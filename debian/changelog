@@ -6,8 +6,9 @@ popularity-contest (1.23) UNRELEASED; urgency=low
     - Japanese update: Closes: #255673
     - Slovak update. Closes: #255702
     - Simplified Chinese update. Closes: #256184
+    - Hungarian update. Closes: #256487
 
- -- Christian Perrier <bubulle@debian.org>  Fri, 25 Jun 2004 22:36:45 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 28 Jun 2004 09:45:28 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
