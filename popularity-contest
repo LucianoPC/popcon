@@ -1,85 +1,113 @@
-#!/bin/bash
+#!/usr/bin/perl -w
 #
+# Copyright (C) 2003 by Bill Allombert <ballombe@debian.org>
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+# based on a design and a bash/gawk script 
+# 
 # Copyright (C) 1998,2000 by Avery Pennarun, for the Debian Project.
 # Use, modify, and redistribute modified or unmodified versions in any
 # way you wish.
-#
 
-# the set of installed packages is the set of all .list files in
-# /var/lib/dpkg/info, with pathnames and .list suffix removed.
-#
-# Store that list in $PACKAGES.
-#
-. /etc/popularity-contest.conf
-if [ -z "$MY_HOSTID" ]; then
-	echo "You must set MY_HOSTID in /etc/popularity-contest.conf!" >&2
-	exit 1
-fi
+use strict;
+use 5.6.0;  
+use Config;  
 
-DI=/var/lib/dpkg/info
-PACKAGES=$(dpkg-awk "Status: .* installed" -- Package \
-		| grep '^Package:' | sed 's/^Package: //')
-DEB_HOST_ARCH=`dpkg --print-architecture`
-DEB_HOST_GNU_TYPE=`dpkg-architecture -qDEB_HOST_GNU_TYPE`
+my $dpkg_db="/var/lib/dpkg/info";
+my $popcon_conf="/etc/popularity-contest.conf";
 
-# Now, for each package, get the list of FILES that we are interested in,
-# producing output lines of the format "atime ctime package pathname".
-#
-for d in $PACKAGES; do
-	FILES=$(egrep '/\.*bin/|/sbin/|^/usr/games/|\.[ah]$' $DI/$d.list)
-	if [ -n "$FILES" ]; then
-		find $FILES -follow -prune -type f \
-			-printf "%A@ %C@ $d %p\\n" 2>/dev/null
-	else
-		echo "0 0 $d <NOFILES>"
-	fi
-done | gawk '
+my %opts=();
 
-	# pass the resulting list through this awk script.
-	# we require gawk, because we use "time" functions.
+# $popcon_conf is in shell-script format
+my $HOSTID = qx(unset MY_HOSTID; . $popcon_conf; echo \$MY_HOSTID );
 
-	BEGIN {
-		lastpack = ""
-		now = systime()
-		daylen = 24 * 60 * 60
-		monthlen = (24 * 60 * 60) * 30
-		lastmonth = now - monthlen
-	}
+chomp $HOSTID;
+
+if ( $HOSTID eq "")
+{
+  print STDERR "You must set MY_HOSTID in $popcon_conf!\n";
+  exit 1;
+}
+
+# Architecture.
+
+my ($arch,$os)=split('-',$Config{archname});
+my $debarch= ($os eq 'linux') ? $arch : "$arch-$os";
+
+# Initialise time computations
+
+my $now = time;
+my $daylen = 24 * 60 * 60;
+my $monthlen = $daylen * 30;
+my $lastmonth = $now - $monthlen;
+
+my %popcon=();
+
+#Read dpkg database of installed packages
+
+open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
+while (<PACKAGES>)
+{
+  /^.*installed *(.+)$/ or next;
+  my $pkg=$1;
+  $popcon{$pkg}=[0,0,$pkg,"<NOFILES>",""];
+  open FILES, "$dpkg_db/$pkg.list";
+  my $bestatime = undef;
+  while (<FILES>)
+  {
+    chop;
+    m{/\.*bin/|/sbin/|^/usr/games/|\.[ah]$} or next;
+    -f $_ or next;
+    my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+                      $atime,$mtime,$ctime,$blksize,$blocks)
+                          = stat;
+    print STDERR if (!defined($atime));
+    if (!defined($bestatime) || $atime >= $bestatime)
+    {
+      $bestatime=$atime;
+      my $st="";
+      if ($atime < $lastmonth)
+      { 
+        # Not accessed since more than 30 days.
+        $st="<OLD>";
+      }
+      elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
+      {
+        # Installed/upgraded less than a month ago and not used after 
+        # install/upgrade day.
+        $st="<RECENT-CTIME>";
+      }
+      # Else we `vote' for the package.
+      $popcon{$pkg}=[$atime,$ctime,$pkg,$_,$st];
+    }
+  }
+  close FILES;
+}
+
+close PACKAGES;
+
+# We're not done yet.  Sort the output in reverse by atime, and
+# add a header/footer.
 	
-	lastpack != $3 {
-		if (mostrecent != "")
-			print mostrecent
-		lastpack = $3
-		lastacc=0
-		mostrecent=""
-	}
-	
-	{
-		if ($1 >= lastacc) {
-			lastacc = $1
-			
-			if ($1 > 0 && $1 < lastmonth)
-			    mostrecent = sprintf("%s %s %s %s <OLD>",
-							$1, $2, $3, $4);
-			else {
-			  if ($1 > 0 && $2 > lastmonth && $1 - $2 < daylen)
-			    mostrecent = sprintf("%s %s %s %s <RECENT-CTIME>",
-			    				$1, $2, $3, $4);
-			  else
-			    mostrecent = $0
-			}
-		}
-	}
-	
-	END {
-		print mostrecent
-	}
-	'   |
+print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ARCH:$debarch\n";
 
-	# We're not done yet.  Sort the output in reverse by atime, and
-	# add a header/footer.
-	
-	( echo "POPULARITY-CONTEST-0" "TIME:$(date +%s)" \
-		"ID:$MY_HOSTID DEB_HOST_ARCH:$DEB_HOST_ARCH DEB_HOST_GNU_TYPE:$DEB_HOST_GNU_TYPE"
-	  sort -n -r;
-	  echo "END-POPULARITY-CONTEST-0" "TIME:$(date +%s)" )
+for (sort { $popcon{$b}[0] <=> $popcon{$a}[0] } keys %popcon)
+{
+  print join(' ',@{$popcon{$_}}),"\n";
+}
+
+print "END-POPULARITY-CONTEST-0 TIME:",time,"\n";
+
