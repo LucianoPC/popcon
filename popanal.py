@@ -200,7 +200,10 @@ def read_submissions(stream):
 	    e = Submission(0, header['ID'], header['TIME'])
 
             if header.has_key('POPCONVER'):
-	        e.release = header['POPCONVER']
+		if header['ARCH']=='':
+	            e.release = 'bogus'
+                else:
+	            e.release = header['POPCONVER']
 	
             if header.has_key('ARCH'):
 	    	if header['ARCH']=='x86_64':
