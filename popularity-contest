@@ -41,6 +41,19 @@ if ( $HOSTID eq "")
   exit 1;
 }
 
+if ( $HOSTID eq "d41d8cd98f00b204e9800998ecf8427e")
+{
+  print STDERR "Warning: MY_HOSTID is the md5sum of the empty file!\n";
+  print STDERR "Please change it to the md5sum of a random file in $popcon_conf!\n";
+}
+
+if ( $HOSTID !~ /^([a-f0-9]{32})$/)
+{
+  print STDERR "MY_HOSTID does not match ^([a-f0-9]{32})\$\n";
+  print STDERR "Please edit $popcon_conf to use a valid md5sum value\n";
+  exit 1;
+}
+
 # Architecture.
 my $debarch = `dpkg --print-installation-architecture`;
 chomp $debarch;

@@ -2,6 +2,8 @@ popularity-contest (1.15) UNRELEASED; urgency=low
 
   * Bill Allombert
     - Invalidate the submissions after 20 days instead of 10.
+    - Use uuidgen in postinst to get a random HOSTID. (Closes: #237874)
+    - Add MY_HOSTID sanity chech to popularity-contest.
   * Petter Reinholdtsen
     - Updated Norwegian Bokmål and Nynorsk debconf translation,
       patch from Håvard Korsvoll. (Closes: #238037)

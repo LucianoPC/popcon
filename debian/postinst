@@ -24,7 +24,11 @@ else
 fi
 
 generate_conffile() {
-	MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`
+        if [ -x /usr/bin/uuidgen ] ; then
+                MY_HOSTID=`uuidgen | tr -d -`
+        else
+	        MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`
+        fi
 
 	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.

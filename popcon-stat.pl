@@ -29,7 +29,12 @@ for $f (sort @ARGV)
 
 @days = sort grep { defined($sub{$_}->{'i386'}) } @ARGV;
 @date = map {m/popcon-([0-9-]+)\.gz/ and $1} @days;
-@data = (\@date);
+@dates=();
+for(my $i=0; $i<=$#date; $i++)
+{
+  $dates[$i]=($i%7)?"":$date[$i];
+}
+@data = (\@dates);
 @arch = sort keys %arch;
 $maxv = -10;
 for $arch (@arch)
@@ -76,7 +81,7 @@ for $arch (@arch)
     push @res,defined($sub{$_}->{$arch})?$sub{$_}->{$arch}:0;
     push @tot,defined($subt{$_})?$subt{$_}:0;
   }
-  @data=(\@date,\@res,\@tot);
+  @data=(\@dates,\@res,\@tot);
   @labels=($arch, 'all submisions');
   $obj=Chart::Composite->new (600,400);
   $obj->set ('title' => "Number of submissions for $arch");
