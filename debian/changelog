@@ -11,11 +11,12 @@ popularity-contest (1.21) UNRELEASED; urgency=low
     - Dutch update. Closes: #253169
     - Traditional Chinese added. Closes: #253256
     - Spanish update
+    - Czech update. Closes: #254188
   * Christian Perrier
     - Shorten the main template to fit it in one screen
       Closes: #250951
 
- -- Christian Perrier <bubulle@debian.org>  Fri, 11 Jun 2004 19:23:31 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 14 Jun 2004 08:37:20 +0200
 
 popularity-contest (1.20) unstable; urgency=low
 
