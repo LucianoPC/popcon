@@ -368,7 +368,9 @@ EOF
         for $f (grep { $_ ne 'unknown' } sort keys %arch)
         {
 		my ($port)=split('-',$f);
-                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s <a href=\"/stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
+		$port="$port/";
+		$port="freebsd/gnu-libc-based" if ($port eq "kfreebsd/");
+                printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"/stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
         }
         printf HTML "%-16s : %-10s <a href=\"/stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"};
 	print HTML  <<'EOF';
