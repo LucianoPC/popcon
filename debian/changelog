@@ -5,6 +5,8 @@ popularity-contest (1.14) UNRELEASED; urgency=low
       Badia i Bosch. (Closes: #236639)
     - Added Italian debconf translation received from
       Cristian Rigamonti.  (Closes: #236956)
+    - Added Swedish debconf translation received from
+      André Dahlqvist. (Closes: #237129)
 
  -- Petter Reinholdtsen <pere@debian.org>  Mon,  8 Mar 2004 21:08:30 +0100
 
