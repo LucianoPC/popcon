@@ -1,0 +1,86 @@
+# translation of popularity-contest_debian_po.po to tagalog
+# Copyright (c) 2005 Debian Tagalog Translation Team
+# Rick Bahague Jr <rickjr@cp-union.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest_debian_po_tl\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
+"PO-Revision-Date: 2005-02-22 09:50+0800\n"
+"Last-Translator: Rick Bahague Jr <rickjr@cp-union.org>\n"
+"Language-Team: tagalog <debian-tl@banwa.upm.edu.ph>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Nais nyo bang sumali sa Debian Package Popularity Contest?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Maaring ipadala na inyong sistema sa Debian developers, sa pamamagitan ng "
+"email ang mga istatistika hinggil sa mga pakete ng Debian na madalas nyong "
+"gamitin. Ang mga impormasyong nakakalap sa paraang ito ay nakakaimpluwensya "
+"sa pagdesisyon kung ano ang mga paketeng isinasama sa unang CD ng Debian."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Kung pipiliin nyong sumali, ang awtomatikong script sa pagpasa ay tatakbo "
+"minsan sa isang linggo. Ipapadala nito sa mga Debian developers ang mga "
+"istatistika sa pamamagitan ng email."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Sakaling magbago ang inyong isip matapos ang pagpasya: "
+" \"dpkg-reconfigure popularity contest\""
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Ang paggawang ng nag-iisang pagkakakilanlan sa host ay nabigo."
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"Ang install script ay hindi makagawa ng nag-iisang pagkakakilanlan sa host. "
+"Ito ay mapaminsalang pagkakamali sapagkat ang bawat host na nagpapasa ng "
+"impormasyon ay kailangang may nag-iisang pagkakakilanlan."
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Mangyaring idulog ang problema bilang bug laban sa pakete ng "
+"popularity-contest at isama ang mga impormasyon tungkol sa inyong "
+"pagkaayos."
+
