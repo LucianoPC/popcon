@@ -17,6 +17,8 @@ popularity-contest (1.14) unstable; urgency=HIGH
       Changwoo Ryu. (Closes: #237620)
     - Added Portuguese debconf translation received from
       Miguel Figueiredo. (Closes: #237858)
+  * Bill Allombert
+    - Invalidate the submissions after 20 days instead of 10.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 15:37:51 +0100
 

@@ -12,7 +12,7 @@ chmod go-rwx ../Mail/survey
 
 # delete outdated entries
 rm -f results
-find popcon-entries -type f -mtime +10 -print0 | xargs -0 rm -f --
+find popcon-entries -type f -mtime +20 -print0 | xargs -0 rm -f --
 find popcon-entries -type f | xargs cat \
         | nice -15 ./popanal.py >popanal.out 2>&1
 cp results ../www/all-popcon-results.txt
