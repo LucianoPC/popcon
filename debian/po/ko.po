@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-03-12 20:21+0900\n"
+"PO-Revision-Date: 2004-03-21 19:31+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr ""
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "호스트 고유 ID를 만드는 데 실패했습니다"
 
 #. Type: error
 #. Description
@@ -83,7 +83,7 @@ msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr ""
+msgstr "설치 스크립트에서 호스트 고유 ID를 만들 수 없습니다. 치명적인 오류로, 정보를 제출하는 모든 호스트는 고유 ID를 가지고 있어야 합니다."
 
 #. Type: error
 #. Description
@@ -91,4 +91,4 @@ msgstr ""
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr ""
+msgstr "이 문제를 popularity-contest 패키지의 버그로 알려 주십시오. 그리고 설정 정보를 포함해 주십시오."

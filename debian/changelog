@@ -1,3 +1,10 @@
+popularity-contest (1.16) UNRELEASE; urgency=low
+
+  * Christiann Perrier
+    - Updated Korean translation by Changwoo Ryu
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 21 Mar 2004 12:24:56 +0100
+
 popularity-contest (1.15) unstable; urgency=low
 
   * Bill Allombert
