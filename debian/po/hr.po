@@ -1,0 +1,77 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Debian-installer HR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"PO-Revision-Date: 2004-07-25 19:38+0200\n"
+"Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
+"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Sudjeluj u Natjeèaju popularnosti Debianovih paketa?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Va¹ sustav mo¾e anonimno slati e-po¹tu razvijateljima Debiana sa "
+"statistikama o paketima koje najvi¹e koristite. Ti podaci utjeèu na odluke "
+"koji paketi æe biti stavljeni na prvi Debianov CD."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Ako odluèite sudjelovati, automatska skrtipta æe razvijateljima Debiana "
+"jednom tjedno slati e-po¹tu sa statistikama."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Uvijek se mo¾ete predomisliti pomoæu: \"dpkg-reconfigure popularity-contest\""
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Stvaranje jedinstvenog naziva domaæina neuspjelo."
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"Instalacijska skripta nije uspjela naèiniti jedinstveni naziv domaæina. To "
+"je kobna pogre¹ka, jer svaki domaèin koji ¹alje podatke mora imati "
+"jedinstveni identifikacijski naziv."
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Molim dojavite ovaj problem kao bubu u popularity-contest paketu, a dodajte "
+"i obavijesti o va¹em raèunalu i sustavu."
