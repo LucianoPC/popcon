@@ -14,26 +14,29 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.14\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"POT-Creation-Date: 2004-03-20 09:52+0100\n"
 "PO-Revision-Date: 2004-03-20 09:34+0100\n"
 "Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
 "Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "¿Desea participar en la encuesta sobre la popularidad de los paquetes de Debian?"
+msgstr ""
+"¿Desea participar en la encuesta sobre la popularidad de los paquetes de "
+"Debian?"
 
 #. Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
-msgstr "Puede hacer que su sistema envíe anónimamente por correo electrónico a los "
+msgstr ""
+"Puede hacer que su sistema envíe anónimamente por correo electrónico a los "
 "desarrolladores de Debian estadísticas sobre los paquetes que más usa."
 
 #. Description
@@ -54,7 +57,8 @@ msgstr ""
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr "Si elige participar, el script automático de entrega se ejecutará "
+msgstr ""
+"Si elige participar, el script automático de entrega se ejecutará "
 "automáticamente una vez a la semana, mandando por correo electrónico "
 "estadísticas a los desarrolladores de Debian."
 
@@ -79,21 +83,22 @@ msgstr ""
 
 #. Description
 #: ../templates:25
-msgid "Generating unique host id failed"
+msgid "Generating unique host identifier failed"
 msgstr ""
 
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host id.  This is a fatal "
-"error, as all hosts submitting info need to have an unique id."
+"The install script are unable to generate a unique host identifier. This is "
+"a fatal error, as all hosts submitting information need to have an unique "
+"identifier."
 msgstr ""
 
 #. Description
 #: ../templates:25
 msgid ""
-"Please report this problem as a bug against popularity-contest, and include "
-"info on your configuration."
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
 msgstr ""
 
 #~ msgid ""
