@@ -1,4 +1,4 @@
-popularity-contest (1.16) UNRELEASED; urgency=low
+popularity-contest (1.16) unstable; urgency=medium
 
   * Christian Perrier
     - Updated Korean debconf translation by Changwoo Ryu
@@ -14,8 +14,11 @@ popularity-contest (1.16) UNRELEASED; urgency=low
       Closes: #240885
     - Updated Italian debconf translation by Cristian Rigamonti
       Closes: #241130
+  * Petter Reinholdtsen
+    - Uploaded with urgency=medium to get the new translations into
+      Sarge quickly.
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 31 Mar 2004 09:30:42 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Wed, 31 Mar 2004 23:07:26 +0200
 
 popularity-contest (1.15) unstable; urgency=low
 
