@@ -1,4 +1,4 @@
-popularity-contest (1.23) UNRELEASED; urgency=low
+popularity-contest (1.23) unstable; urgency=low
 
   * Translations
     - Danish update. Closes: #255533
@@ -11,7 +11,7 @@ popularity-contest (1.23) UNRELEASED; urgency=low
     - Basque update. Closes: #259784
     - Arabic added, from Arabeyes repository
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 21 Jul 2004 16:45:47 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 24 Jul 2004 19:37:55 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
