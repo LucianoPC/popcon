@@ -1,5 +1,5 @@
-# translation of el.po to Greek
-# translation of templates.po to Greek
+# translation of popularity-contest_debian_el.po to Greek
+# translation of popularity-contest_debian_po.po to Greek
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -14,10 +14,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: popularity-contest_debian_el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-02-29 15:50EEST\n"
+"PO-Revision-Date: 2004-04-03 00:30EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,8 +29,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr ""
-"Θέλετε να συμμετέχετε στο Διαγωνισμό Δημοτικότητας των Πακέτων του Debian;"
+msgstr "Θέλετε να συμμετέχετε στο Διαγωνισμό Δημοτικότητας Πακέτων του Debian;"
 
 #. Type: boolean
 #. Description
@@ -51,10 +50,10 @@ msgid ""
 "the most popular packages are the ones which are installed automatically for "
 "new users."
 msgstr ""
-"Οι πληροφορίες αυτές μας βοηθούν να καθορίσουμε ποια πακέτα θα "
-"συμπεριληφθούν στο πρώτο CD του Debian.  Επίσης, μπορούμε να βελτιώσουμε τις "
-"μελλοντικές εκδόσεις του Debian ώστε τα πιο δημοφιλή πακέτα να εγκαθίστανται "
-"αυτόματα για τους νέους χρήστες."
+"Οι πληροφορίες αυτές μας βοηθούν να καθορίσουμε ποια πακέτα θα συμπεριληφθούν "
+"στο πρώτο CD του Debian.  Επίσης, μπορούμε να βελτιώσουμε τις μελλοντικές εκδόσεις "
+"του Debian ώστε τα πιο δημοφιλή πακέτα να εγκαθίστανται αυτόματα για τους νέους "
+"χρήστες."
 
 #. Type: boolean
 #. Description
@@ -63,8 +62,8 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Αν επιλέξετε να συμμετέχετε, η αυτόματη αποστολή των στατιστικών στους "
-"Debian Developers θα εκτελείται μια φορά την εβδομάδα."
+"Αν επιλέξετε να συμμετέχετε, η αυτόματη αποστολή των στατιστικών στους Debian "
+"Developers θα εκτελείται μια φορά την εβδομάδα."
 
 #. Type: boolean
 #. Description
@@ -73,8 +72,8 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Φυσικά, μπορείτε να αλλάξετε τη ρύθμιση αυτή στο μέλλον με την εντολή: "
-"\"dpkg- reconfigure popularity-contest\""
+"Φυσικά, μπορείτε να αλλάξετε τη ρύθμιση αυτή στο μέλλον με την εντολή: \"dpkg- "
+"reconfigure popularity-contest\""
 
 #. Type: boolean
 #. Description
@@ -90,7 +89,7 @@ msgstr ""
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "Δημιουργία μοναδικού αναγνωριστικού του υπολογιστή"
 
 #. Type: error
 #. Description
@@ -100,6 +99,9 @@ msgid ""
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
+"Σφάλμα κατά τη δημιουργία μοναδικού αναγνωριστικού του υπολογιστή. Αυτό είναι "
+"μοιραίο σφάλμα, γιατί η αποστολή της πληροφορίας από κάθε υπολογιστή "
+"απαιτεί ένα μοναδικό αναγνωριστικό του υπολογιστή."
 
 #. Type: error
 #. Description
@@ -108,3 +110,6 @@ msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
+"Παρακαλώ αναφέρτε αυτό το πρόβλημα με μια αναφορά σφάλματος (bug report) στο "
+"πακέτο popularity-contest με περαιτέρω πληροφορίες για το σύστημά σας."
+

@@ -14,11 +14,13 @@ popularity-contest (1.16) unstable; urgency=medium
       Closes: #240885
     - Updated Italian debconf translation by Cristian Rigamonti
       Closes: #241130
+    - Updated Greek debconf translation by Konstantinos Margaritis
+      Closes: #241771
   * Petter Reinholdtsen
     - Uploaded with urgency=medium to get the new translations into
       Sarge quickly.
 
- -- Petter Reinholdtsen <pere@debian.org>  Wed, 31 Mar 2004 23:07:26 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sat,  3 Apr 2004 09:37:33 +0200
 
 popularity-contest (1.15) unstable; urgency=low
 
