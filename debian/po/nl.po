@@ -14,22 +14,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-01-31 00:09+0100\n"
-"PO-Revision-Date: 2004-01-26 12:48+0100\n"
+"POT-Creation-Date: 2004-01-23 09:31+0100\n"
+"PO-Revision-Date: 2004-02-10 17:31+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
-"Language-Team: debian-l10n-dutch@lists.debian.org <debian-l10n-dutch@lists."
-"debian.org>\n"
+"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Description
+#  Description
+#  Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Debian pakketpopulariteit-competitie"
+msgstr "Wilt u meewerken aan de Debian pakketpopulariteit-competitie?"
 
-#. Description
+#  Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
@@ -52,16 +51,14 @@ msgstr ""
 "zorgen dat de meest populaire pakketten automatisch geïnstalleerd worden "
 "voor nieuwe gebruikers."
 
-#. Description
+#  Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Indien u voor deelname kiest zal 'popularity-contest' eenmaal per week "
-"uitgevoerd worden, waarna de statistieken naar de Debian ontwikkelaars "
-"verstuurd worden."
+"Indien u voor deelname kiest zal het script dat de statistieken naar de "
+"Debian ontwikkelaars verstuurt eenmaal per week uitgevoerd worden."
 
 #. Description
 #: ../templates:4
