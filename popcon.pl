@@ -325,7 +325,7 @@ for $sec (@dists)
         for $f (grep { $_ ne 'unknown' } sort keys %arch)
         {
 		my ($port)=split('-',$f);
-                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s\n",$f,$arch{$f};
+                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s\n",$f;
         }
         printf HTML "%-16s : %-10s\n","unknown",$arch{"unknown"};
 
