@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_1.3-1.1\n"
-"POT-Creation-Date: 2004-01-22 01:03+0100\n"
+"POT-Creation-Date: 2004-01-23 09:31+0100\n"
 "PO-Revision-Date: 2003-04-06 13:40-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@ig.com.br>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -100,8 +100,7 @@ msgstr ""
 
 #. Description
 #: ../templates:31
-msgid ""
-"The mail address used to submit popularity-contenst entries is obsolete."
+msgid "The mail address used to submit popularity-contest entries is obsolete."
 msgstr ""
 
 #, fuzzy
