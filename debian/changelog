@@ -1,9 +1,14 @@
-popularity-contest (1.26) UNRELEASED; urgency=low
+popularity-contest (1.26) unstable; urgency=low
 
-  * popcon.pl:  Accomodate with kfreebsd-gnu new URL.
-  * popcon-stat.pl:  Unclutter the graph.
-  * Document how to not send popcon email by root. Closes: #264593
-    Thanks Martin Dickopp.
+  * popcon.pl: Accomodate with kfreebsd-gnu new URL.
+             + Add popcon release stats.
+  * popcon-stat.pl: Unclutter the graph.
+                  + Generate the popcon release graph.  
+  * FAQ: Document how to not send popcon email by root. Closes: #264593
+         Thanks Martin Dickopp.
+       + Document when popularity-contest run and recommends anacron.
+         Thanks Martin Rasp.
+  * debian/control: Suggests: anacron.
   * Remove regexp to catch .pyc files since there are not in packages.
     Closes: #265360. Thanks Martin v. Loewis.
 

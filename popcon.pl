@@ -248,6 +248,11 @@ while(<PKG>)
   {
     ($numsub)=@values;
   }
+  elsif ($type eq "Release:")
+  {
+    my ($a,$nb)=@values;
+    $release{$a}=$nb;
+  }
 }
 
 @pkgs=sort keys %pkg;
@@ -362,7 +367,7 @@ for $sec (@dists)
 <table border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 <td>
-Statistics for architectures
+Statistics per Debian architectures:
 <pre>
 EOF
         for $f (grep { $_ ne 'unknown' } sort keys %arch)
@@ -370,14 +375,29 @@ EOF
 		my ($port)=split('-',$f);
 		$port="$port/";
 		$port="kfreebsd-gnu/" if ($port eq "kfreebsd/");
-                printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"/stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
+                printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
         }
-        printf HTML "%-16s : %-10s <a href=\"/stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"};
+        printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"};
 	print HTML  <<'EOF';
 </pre></td>
 <td>
  <img alt="Graph of number of submissions per architectures"
- src="/stat/submission.png">
+ src="stat/submission.png">
+</td></tr>
+<td>
+Statistics per popularity-contest releases:
+<pre>
+EOF
+        for $f (grep { $_ ne 'unknown' } sort keys %release)
+        {
+                printf HTML "%-16s : %-10s \n",$f,$release{$f};
+        }
+        printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
+	print HTML  <<'EOF';
+</pre></td>
+<td>
+ <img alt="Graph of popularity-contest versions in use"
+ src="stat/release.png">
 </td></tr>
 </table>
 <p>

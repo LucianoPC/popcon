@@ -2,11 +2,14 @@
 BEGIN {
 @INC=(@INC, map { "./$_" } @INC);
 }
-$dirpng="../www/stat";
 
-for $f (sort @ARGV)
+$dirpng="../www/stat";
+for (sort @ARGV)
 {
-   open FILE,"zcat $f|";
+   open FILE,"zcat $_|";
+   m/popcon-([0-9-]+)\.gz$/ or next;
+   $f=$1;
+   push @date,$f;
    while(<FILE>)
    {
      my @line=split(/ +/);
@@ -19,6 +22,14 @@ for $f (sort @ARGV)
        $sub{$f}->{$line[1]}=$line[2];
        $arch{$line[1]}++;
      }
+     elsif ($line[0] eq "Release:")
+     {
+       if (defined($line[2])) {
+         $rel{$f}->{$line[1]}=$line[2];
+       } else {
+         $rel{$f}->{"unknown"}+=$line[1];
+       }
+     }
      elsif ($line[0] eq "Package:")
      {
        last;
@@ -27,9 +38,8 @@ for $f (sort @ARGV)
    close FILE;
 }
 
-@days = sort grep { defined($sub{$_}->{'i386'}) } @ARGV;
-@dates = map {m/popcon-([0-9-]+)\.gz/ and $1} @days;
-@data = (\@dates);
+@days = sort grep { defined($sub{$_}->{'i386'}) } @date;
+@data = (\@days);
 @arch = sort keys %arch;
 $maxv = -10;
 for $arch (@arch)
@@ -56,7 +66,7 @@ use Chart::LinesPoints;
 
 $obj=Chart::LinesPoints->new (600,400);
 $obj->set ('title' => 'Number of submissions per architectures');
-$obj->set ('legend_labels' => \@labels);
+$obj->set ('legend_labels' => [@arch]);
 $obj->set ('f_y_tick' => \&ytick);
 $obj->set ('brush_size' => 3);
 $obj->set ('pt_size' => 7);
@@ -77,7 +87,7 @@ for $arch (@arch)
     push @res,defined($sub{$_}->{$arch})?$sub{$_}->{$arch}:0;
     push @tot,defined($subt{$_})?$subt{$_}:0;
   }
-  @data=(\@dates,\@res,\@tot);
+  @data=(\@days,\@res,\@tot);
   @labels=($arch, 'all submissions');
   $obj=Chart::Composite->new (600,400);
   $obj->set ('title' => "Number of submissions for $arch");
@@ -90,3 +100,25 @@ for $arch (@arch)
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
 
+@days = sort grep { $_ ge "2004-05-14" } @date;
+%release= map { map { $_ => 1 } keys %{$rel{$_}}  } @days;
+@data = (\@days);
+@release= sort keys %release;
+for $release (@release)
+{
+  my @res=();
+  for (@days)
+  {
+    my $data=defined($rel{$_}->{$release})?$rel{$_}->{$release}:0;
+    push @res,$data;
+  }
+  push @data,\@res;
+}
+$obj=Chart::LinesPoints->new (600,400);
+$obj->set ('title' => 'popularity-contest versions in use');
+$obj->set ('legend_labels' => [@release]);
+$obj->set ('brush_size' => 3);
+$obj->set ('pt_size' => 7);
+$obj->set ('x_ticks' => 'vertical');
+$obj->set ('skip_x_ticks' => 14);
+$obj->png ("$dirpng/release.png", \@data);
