@@ -4,9 +4,19 @@ set -e
 
 . /usr/share/debconf/confmodule
 
+if [ -f /etc/popularity-contest.conf ] ; then
+       . /etc/popularity-contest.conf
+       if [ yes = "$PARTICIPATE" ] ; then
+               PARTICIPATE=true
+       else
+               PARTICIPATE=false
+       fi
+       db_set popularity-contest/participate "$PARTICIPATE"
+fi
+
 db_input medium popularity-contest/intro || true
 db_go || true
 
-db_input high popularity-contest/participate || true
+db_input medium popularity-contest/participate || true
 db_go || true
 

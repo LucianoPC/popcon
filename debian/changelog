@@ -1,3 +1,33 @@
+popularity-contest (1.3-1.3) unstable; urgency=low
+
+  * NMU again
+  * Removed the "Accept here" sentence in debconf templates 
+    as suggested by Joey Hess.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 29 Aug 2003 11:54:13 +0200
+
+popularity-contest (1.3-1.2) unstable; urgency=low
+
+  * NMU.
+  * Switch to gettext-based debconf templates. Build dependency upon
+    debhelper versioned. Closes: #197178
+  * Debconf templates changed for avoiding "if you say yes". Closes: #197230
+  * Added french debconf templates translation
+  * Added german debconf templates translation. Closes: #137231
+  * Added brazilian portuguese debconf templates translation. Closes: #187871
+  * Added spanish debconf templates translation. Closes: #135114
+  * Removed trailing dot in description synopsis in debian/control
+  * Commented call to now useless dh_undocumented in debian/rules
+  * Get PARTICIPATE value from old config file from potato. Applied
+    patch from Petter Reinholdtsen. Closes: #172824
+  * Lowered the question about participating to medium so that the note
+    is always displayed before asking the question. Closes: #201704
+  * Removed the trailing '  -' in HOSTID generated from new md5sum
+    Closes: #203841
+  * Updated to Standards: 3.6.1 (no change other than above..:-))
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 28 Aug 2003 19:19:50 +0200
+
 popularity-contest (1.3-1.1) unstable; urgency=high
 
   * NMU.

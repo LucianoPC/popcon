@@ -11,7 +11,7 @@ if [ "$1" = "configure" ] && [ ! -e /etc/popularity-contest.conf ]; then
 		MAILTO="apenwarr-survey@debian.org"
 	fi
 	if [ -z "$MY_HOSTID" ]; then
-		MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum`
+		MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum|sed 's/  -//'''`
 	fi
 	
 	cat <<-EOF >/etc/popularity-contest.conf

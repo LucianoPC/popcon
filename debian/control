@@ -2,14 +2,14 @@ Source: popularity-contest
 Section: misc
 Priority: optional
 Maintainer: Avery Pennarun <apenwarr@debian.org>
-Build-Depends-Indep: debhelper
-Standards-Version: 3.5.6.0
+Build-Depends-Indep: debhelper (>=4.1.16)
+Standards-Version: 3.6.1
 
 Package: popularity-contest
 Architecture: all
 Depends: gawk, dpkg-awk, exim | mail-transport-agent, debconf
 Recommends: cron
-Description: Vote for your favourite packages automatically.
+Description: Vote for your favourite packages automatically
  When you install this package, it sets up a cron job that will anonymously
  e-mail the Debian developers periodically with statistics about your
  most used Debian packages.

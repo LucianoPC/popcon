@@ -36,7 +36,9 @@ binary-indep: build install
 	dh_installcron
 	dh_installmanpages
 	dh_installdebconf
-	dh_undocumented 
+	# C. Perrier for 1.3.1-1.2 : dh_undocumented is now useless and
+	# does nothing
+	#dh_undocumented 
 	dh_installchangelogs
 	dh_strip
 	dh_compress
