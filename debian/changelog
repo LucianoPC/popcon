@@ -3,6 +3,8 @@ popularity-contest (1.7) UNRELEASED; urgency=low
   * Petter Reinholdtsen
     - Provide 'popcon', to make it easier to find this package by
       its common short name. (Closes: #215563)
+    - Add new program popcon-largest-unused.  Script from Yann Dirson,
+      manual page from Petter Reinholdtsen. (Closes: #127633)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 19 Oct 2003 11:02:26 +0200
 

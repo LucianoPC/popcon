@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Author: Yann Dirson <dirson@debian.org>
+# License: GPL
+
+grep '<OLD>' /var/log/popularity-contest |
+  cut -d' ' -f3 |
+  xargs apt-cache -o 'APT::Cache::AllVersions=0' show |
+  grep -E '^(Package|Installed-Size): ' |
+  perl -ne 'if (/^Package: (.*)/) { $p = $1 };  if (/^Installed-Size: (.*)/) { print "$1 $p\n"; $p = 'BUG' }' |
+  sort -rn
