@@ -234,7 +234,7 @@ out = open('results', 'w')
 out.write("Submissions: %8d\n" % subcount)  
 
 for host_arch in host_arch_list.keys():
-    out.write("Arch: %-30s %5d\n"
+    out.write("Architecture: %-30s %5d\n"
                   % (host_arch, host_arch_list[host_arch]))
 for section in sectlist.keys():
     for package in sectlist[section]:
