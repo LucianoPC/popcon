@@ -1,0 +1,78 @@
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+# 		
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"PO-Revision-Date: 2004-08-23 16:34+0300\n"
+"Last-Translator: Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
+"Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Участие в класацията на популярността на дебианските пакети?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr "Можете да настроите Вашата система анонимно да праща ел.поща до дебианските разработчици със статистика кои са най-често използваните от Вас дебиански пакети. Тази информация влияе на решения като например кои пакети се разполагат в първия дебиански компактдиск."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr "Ако изберете да участвате, скриптът за автоматично изпращане ще се изпълнява веднъж седмично, пращайки ел.поща със статистика до дебианските разработчици."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr "Винаги можете да промените решението си по-късно, като изпълните \"dpkg-reconfigure popularity-contest\""
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Грешка при генерирането на уникален идентификатор на хоста"
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr "Инсталиращият скрипт не можа да генерира уникален идентификатор на хоста. Това е фатална грешка, тъй като всички изпращания на информация трябва да имат уникален идентификатор."
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr "Моля, докладвайте този проблем като грешка на пакета popularity-contest, като включите информация за Вашите настройки."
+

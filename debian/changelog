@@ -1,3 +1,10 @@
+popularity-contest (1.25) UNRELEASED; urgency=low
+
+  * Translations
+    - Initial Bulgarian debconf translation bg.po. Closes: #267586
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 23 Aug 2004 19:33:15 +0200
+
 popularity-contest (1.24) unstable; urgency=low
 
   * Petter Reinholdtsen
