@@ -10,7 +10,7 @@ popularity-contest (1.10) UNRELEASED; urgency=low
     - Update Norwegian Bokmål debconf translation.
     - Remove the question asking if it is ok to edit MAILTO address,
       and move the default values into
-      /usr/share/popularity-contest.conf. (Closes: #229288, #229111)
+      /usr/share/popularity-contest/default.conf. (Closes: #229288, #229111)
     - Change to use dh_perl -d' to only depend on the base perl packages.
   * Bill Allombert
     - Update server-side scripts to current popcon.debian.org version.
