@@ -13,29 +13,27 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-03-20 09:24+0100\n"
-"PO-Revision-Date: 2003-08-29 11:52+0100\n"
-"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: popularity-contest 1.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"PO-Revision-Date: 2004-03-20 09:34+0100\n"
+"Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
+"Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Encuesta sobre la popularidad de los paquetes Debian"
+msgstr "¿Desea participar en la encuesta sobre la popularidad de los paquetes de Debian?"
 
 #. Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
-msgstr ""
-"Puede hacer que el sistema envíe anónimamente por correo electrónico a los "
+msgstr "Puede hacer que su sistema envíe anónimamente por correo electrónico a los "
 "desarrolladores de Debian estadísticas sobre los paquetes que más usa."
 
 #. Description
@@ -53,14 +51,12 @@ msgstr ""
 
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-"Si elige participar, popularity-contest se ejecutará automáticamente una vez "
-"a la semana, mandando por correo electrónico estadísticas de los paquetes "
-"instalados a los desarrolladores de Debian."
+msgstr "Si elige participar, el script automático de entrega se ejecutará "
+"automáticamente una vez a la semana, mandando por correo electrónico "
+"estadísticas a los desarrolladores de Debian."
 
 #. Description
 #: ../templates:4
@@ -111,4 +107,4 @@ msgstr ""
 #~ msgstr "¿Quiere participar?"
 
 #~ msgid "Accept here if you want to participate in the contest."
-#~ msgstr "Acepte si desea participar en el expermiento"
+#~ msgstr "Acepte si desea participar en el experimento"

@@ -12,7 +12,8 @@ popularity-contest (1.15) UNRELEASED; urgency=low
     - Updated German debconf translation.  Patch from Dennis
       Stampfer. (Closes: #238953)
     - Replace MY_HOSTID on upgrades if it is the empty ID mentioned in
-      bug #237874
+      bug #237874.
+    - Updated Spanish debconf translation.  New file from Ruben Porras.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 22:45:41 +0100
 
