@@ -8,8 +8,10 @@ popularity-contest (1.16) UNRELEASED; urgency=low
       Closes: #239824
     - Updated Brazilian portuguese translation by Andre Luis Lopes
       Closes: #240485
+    - Updated Spanish debconf translation by Ruben Porras
+      Closes: #240723
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 28 Mar 2004 11:28:37 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 29 Mar 2004 09:06:53 +0200
 
 popularity-contest (1.15) unstable; urgency=low
 
