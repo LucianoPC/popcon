@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_1.12_templates\n"
-"POT-Creation-Date: 2002-10-10 21:56+0200\n"
+"POT-Creation-Date: 2004-03-20 09:24+0100\n"
 "PO-Revision-Date: 2004-01-31 19:57GMT\n"
 "Last-Translator: Aleix Badia i Bosch <abadia@ica.es>\n"
 "Language-Team: Debian L10n Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -69,3 +69,22 @@ msgstr ""
 "(Nota: els servidors de correu electrònic afegeixen la seva informació de "
 "seguiment i les vostres dades no seran absolutament anònimes durant la "
 "transmissió.)"
+
+#. Description
+#: ../templates:25
+msgid "Generating unique host id failed"
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script are unable to generate a unique host id.  This is a fatal "
+"error, as all hosts submitting info need to have an unique id."
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against popularity-contest, and include "
+"info on your configuration."
+msgstr ""

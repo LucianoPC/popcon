@@ -23,13 +23,24 @@ else
     PARTICIPATE="no"
 fi
 
-generate_conffile() {
+# The md5 sum of an empty file
+EMPTYID="d41d8cd98f00b204e9800998ecf8427e"
+
+generate_id() {
         if [ -x /usr/bin/uuidgen ] ; then
                 MY_HOSTID=`uuidgen | tr -d -`
         else
 	        MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`
         fi
+        if [ "$MY_HOSTID" == "$EMPTYID" ] ; then
+            db_input critical popularity-contest/hostid-failed || [ $? -eq 30 ]
+            db_go || true
+            exit 1
+        fi
+}
 
+generate_conffile() {
+        generate_id
 	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.
 		#
@@ -53,20 +64,30 @@ case "$1" in
 	if [ ! -e $conffile ]; then
 	    generate_conffile
 	else
+
+            # Workaround for bug #237874 triggered on hurd.  The
+            # problem was fixed in version 1.15, 2004-03-20.
+            if [ "$MY_HOSTID" == "$EMPTYID" ] ; then
+                generate_id
+            fi
+
 	    # Replace only if the content changed, to avoid changing the
 	    # config file date when no change was done.
 
 
 	    # Commenting out the obsolete addresses, to use the
 	    # default config from /usr/share/ on hosts where
-	    # the old default was unchanged
+	    # the old default was unchanged.  Replace the "empty" id.
 
-	    if sed " \
+	    sedopts=" \
 		s/^PARTICIPATE=.*$/PARTICIPATE=\"$PARTICIPATE\"/;   \
 		s/^\(MAILTO=\"erich-survey@debian.org\"\)$/#\1/;    \
 		s/^\(MAILTO=\"apenwarr-survey@debian.org\"\)$/#\1/; \
 		s/^\(MAILTO=\"survey@popcon.debian.org\"\)$/#\1/;   \
-		" < $conffile > $conffile.new &&
+		s/^MY_HOSTID="\\?$EMPTYID"\\?/MY_HOSTID=\"$MY_HOSTID\"/; \
+		"
+
+	    if sed "$sedopts" < $conffile > $conffile.new &&
 		! cmp $conffile $conffile.new > /dev/null; then
 		mv $conffile.new $conffile
 		# Make sure user nobody can read the file.

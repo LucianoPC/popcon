@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-01-31 00:09+0100\n"
+"POT-Creation-Date: 2004-03-20 09:24+0100\n"
 "PO-Revision-Date: 2004-01-28 00:05+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -75,3 +75,22 @@ msgid ""
 msgstr ""
 "(BEMÆRK: Postservere tilføjer deres egne sporingsoplysninger, så dine data "
 "vil ikke være fuldstændigt anonyme."
+
+#. Description
+#: ../templates:25
+msgid "Generating unique host id failed"
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script are unable to generate a unique host id.  This is a fatal "
+"error, as all hosts submitting info need to have an unique id."
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against popularity-contest, and include "
+"info on your configuration."
+msgstr ""

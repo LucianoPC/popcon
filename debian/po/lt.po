@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.13\n"
-"POT-Creation-Date: 2004-03-14 22:47+0100\n"
+"POT-Creation-Date: 2004-03-20 09:24+0100\n"
 "PO-Revision-Date: 2004-03-10 22:02+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -69,3 +69,22 @@ msgid ""
 msgstr ""
 "(PASTABA: elektroninio pašto serveris pridės savo kelio informaciją ir Jūsų "
 "duomenys nebus pilnai anoniminiai kol bus persiunčiami.)"
+
+#. Description
+#: ../templates:25
+msgid "Generating unique host id failed"
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script are unable to generate a unique host id.  This is a fatal "
+"error, as all hosts submitting info need to have an unique id."
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against popularity-contest, and include "
+"info on your configuration."
+msgstr ""

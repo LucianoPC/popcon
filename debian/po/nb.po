@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_1.13_nb\n"
-"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"POT-Creation-Date: 2004-03-20 09:24+0100\n"
 "PO-Revision-Date: 2004-03-14 23:16+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -68,6 +68,25 @@ msgstr ""
 "(MERK: e-posttjeneren legger inn deres egen sporingsinformasjon, slik at "
 "dine data ikke vil være fullstendig anonyme under sending.)"
 
+#. Description
+#: ../templates:25
+msgid "Generating unique host id failed"
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script are unable to generate a unique host id.  This is a fatal "
+"error, as all hosts submitting info need to have an unique id."
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against popularity-contest, and include "
+"info on your configuration."
+msgstr ""
+
 #~ msgid "Update mailto address to the current one?"
 #~ msgstr "Oppdater mailto-adressen til den gjeldende adressen?"
 
@@ -76,4 +95,3 @@ msgstr ""
 #~ msgstr ""
 #~ "Mail-adressen som brukes for å sende inn til popularity-contest er "
 #~ "foreldet."
-

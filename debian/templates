@@ -19,3 +19,13 @@ _Description: Participate in the Debian Package Popularity Contest?
  .
  (NOTE: e-mail servers add their own tracing information and your data
  won't be completely anonymous while in transit.)
+
+Template: popularity-contest/hostid-failed
+Type: error
+_Description: Generating unique host id failed
+ The install script are unable to generate a unique host id.  This
+ is a fatal error, as all hosts submitting info need to have an unique
+ id.
+ .
+ Please report this problem as a bug against popularity-contest, and
+ include info on your configuration.

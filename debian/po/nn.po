@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_1.13_nn\n"
-"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"POT-Creation-Date: 2004-03-20 09:24+0100\n"
 "PO-Revision-Date: 2004-03-14 23:19+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -35,7 +35,9 @@ msgstr "Vil du delta i popularitetskonkurransen for Debian-pakkar?"
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
-msgstr "Du kan la systemet ditt senda anonyme e-postar til Debian-utviklarane med statistikk om dine mest brukte Debian-pakkar."
+msgstr ""
+"Du kan la systemet ditt senda anonyme e-postar til Debian-utviklarane med "
+"statistikk om dine mest brukte Debian-pakkar."
 
 #. Description
 #: ../templates:4
@@ -44,26 +46,54 @@ msgid ""
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
 "the most popular packages are the ones which are installed automatically for "
 "new users."
-msgstr "Denne informasjonen vil hjelpa oss til å ta avgjerdsler om kva for pakkar som bør vera på den første Debian-CDen. I tillegg kan vi forbetra framtidige versjonar av Debian slik at dei mest populære pakkane er dei som blir installert automatisk for nye brukarar."
+msgstr ""
+"Denne informasjonen vil hjelpa oss til å ta avgjerdsler om kva for pakkar "
+"som bør vera på den første Debian-CDen. I tillegg kan vi forbetra framtidige "
+"versjonar av Debian slik at dei mest populære pakkane er dei som blir "
+"installert automatisk for nye brukarar."
 
 #. Description
 #: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr "Viss du vel å delta, så vil eit skript bli køyrt ein gang i veka. Dette skriptet sender automatisk inn statistikken på e-post til Debian-utviklarane."
+msgstr ""
+"Viss du vel å delta, så vil eit skript bli køyrt ein gang i veka. Dette "
+"skriptet sender automatisk inn statistikken på e-post til Debian-utviklarane."
 
 #. Description
 #: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
-msgstr "Du kan alltid endra oppsettet seinar viss du skiftar meining «dpkg-reconfigure popularity-contest»"
+msgstr ""
+"Du kan alltid endra oppsettet seinar viss du skiftar meining «dpkg-"
+"reconfigure popularity-contest»"
 
 #. Description
 #: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
-msgstr "(MERK: e-posttenaren legg til eigen sporingsinformasjon. Dette gjer at dataa du sender ikkje vil vera fullstendig anonyme under sending.)"
+msgstr ""
+"(MERK: e-posttenaren legg til eigen sporingsinformasjon. Dette gjer at dataa "
+"du sender ikkje vil vera fullstendig anonyme under sending.)"
 
+#. Description
+#: ../templates:25
+msgid "Generating unique host id failed"
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script are unable to generate a unique host id.  This is a fatal "
+"error, as all hosts submitting info need to have an unique id."
+msgstr ""
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against popularity-contest, and include "
+"info on your configuration."
+msgstr ""
