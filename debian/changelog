@@ -8,8 +8,9 @@ popularity-contest (1.23) UNRELEASED; urgency=low
     - Simplified Chinese update. Closes: #256184
     - Hungarian update. Closes: #256487
     - Polish update. CLoses: #258558
+    - Basque update. Closes: #259784
 
- -- Christian Perrier <bubulle@debian.org>  Mon, 12 Jul 2004 20:09:46 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 19 Jul 2004 11:12:35 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
