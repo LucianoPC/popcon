@@ -58,14 +58,8 @@ if ( $HOSTID !~ /^([a-f0-9]{32})$/)
 my $debarch = `dpkg --print-installation-architecture`;
 chomp $debarch;
 
-# Fetch debian version number.  Example values are "3.0" and
-# "testing/unstable"
-my $debver;
-if ( -e "/etc/debian_version" && open(RELEASEFILE, "</etc/debian_version")) {
-    $debver = <RELEASEFILE>;
-    chomp $debver;
-    close(RELEASEFILE);
-}
+# Popcon release
+my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest`;
 
 # Initialise time computations
 
@@ -123,7 +117,7 @@ close PACKAGES;
 # add a header/footer.
 	
 print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ".
-    "ARCH:$debarch DEBVER:$debver\n";
+    "ARCH:$debarch POPCONVER:$popconver\n";
 
 for (sort { $popcon{$b}[0] <=> $popcon{$a}[0] } keys %popcon)
 {

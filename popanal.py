@@ -199,8 +199,8 @@ def read_submissions(stream):
 	    ewrite('#%s' % subcount)
 	    e = Submission(0, header['ID'], header['TIME'])
 
-            if header.has_key('DEBVER'):
-	        e.release = header['DEBVER']
+            if header.has_key('POPCONVER'):
+	        e.release = header['POPCONVER']
 	
             if header.has_key('ARCH'):
 	    	if header['ARCH']=='x86_64':
