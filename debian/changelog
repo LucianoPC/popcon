@@ -2,6 +2,9 @@ popularity-contest (1.15) UNRELEASED; urgency=low
 
   * Bill Allombert
     - Invalidate the submissions after 20 days instead of 10.
+  * Petter Reinholdtsen
+    - Updated Norwegian Bokmål and Nynorsk debconf translation,
+      patch from Håvard Korsvoll. (Closes: #238037)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 22:45:41 +0100
 

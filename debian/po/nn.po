@@ -1,35 +1,41 @@
+# translation of popularity-contest_1.13_nn.po to Norwegian Nynorsk
+# translation of popularity-contest_1.13_templates.po to Norwegian Nynorsk
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
 #         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'#    Some information specific to po-debconf are available at
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
 #            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#    Developers do not need to manually edit POT or PO files.
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+# Håvard Korsvoll <korsvoll@skulelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: popularity-contest_1.13_nn\n"
 "POT-Creation-Date: 2004-01-26 00:49+0100\n"
-"PO-Revision-Date: 2004-03-14 15:39MET\n"
-"Last-Translator: Petter Reinholdtsen <pere@hungry.com>\n"
+"PO-Revision-Date: 2004-03-14 23:19+0100\n"
+"Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr ""
+msgstr "Vil du delta i popularitetskonkurransen for Debian-pakkar?"
 
 #. Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
-msgstr ""
+msgstr "Du kan la systemet ditt senda anonyme e-postar til Debian-utviklarane med statistikk om dine mest brukte Debian-pakkar."
 
 #. Description
 #: ../templates:4
@@ -38,26 +44,26 @@ msgid ""
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
 "the most popular packages are the ones which are installed automatically for "
 "new users."
-msgstr ""
+msgstr "Denne informasjonen vil hjelpa oss til å ta avgjerdsler om kva for pakkar som bør vera på den første Debian-CDen. I tillegg kan vi forbetra framtidige versjonar av Debian slik at dei mest populære pakkane er dei som blir installert automatisk for nye brukarar."
 
 #. Description
 #: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr ""
+msgstr "Viss du vel å delta, så vil eit skript bli køyrt ein gang i veka. Dette skriptet sender automatisk inn statistikken på e-post til Debian-utviklarane."
 
 #. Description
 #: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
-msgstr ""
+msgstr "Du kan alltid endra oppsettet seinar viss du skiftar meining «dpkg-reconfigure popularity-contest»"
 
 #. Description
 #: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
-msgstr ""
+msgstr "(MERK: e-posttenaren legg til eigen sporingsinformasjon. Dette gjer at dataa du sender ikkje vil vera fullstendig anonyme under sending.)"
 
