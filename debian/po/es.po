@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 "Puede hacer que su sistema envíe anónimamente estadísticas por correo "
 "electrónico a los desarrolladores de Debian sobre los paquetes que más usa. "
-"Esta información tiene influencia sobre ciertas decisiones, como qué paquetes "
-"deben incluirse en el primer CD de Debian."
+"Esta información tiene influencia sobre ciertas decisiones, como qué "
+"paquetes deben incluirse en el primer CD de Debian."
 
 #. Type: boolean
 #. Description
