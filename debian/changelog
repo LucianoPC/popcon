@@ -2,6 +2,7 @@ popularity-contest (1.17) UNRELEASED; urgency=low
 
   * Translations
     - Hungarian by VEROK Istvan. Closes: #242288
+    - Polish by Bartosz Fenski. Closes: #242360
 
  -- Christian Perrier <bubulle@debian.org>  Tue,  6 Apr 2004 12:46:19 +0200
 
