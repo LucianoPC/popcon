@@ -82,7 +82,7 @@ for $arch (@arch)
     push @tot,defined($subt{$_})?$subt{$_}:0;
   }
   @data=(\@dates,\@res,\@tot);
-  @labels=($arch, 'all submisions');
+  @labels=($arch, 'all submissions');
   $obj=Chart::Composite->new (600,400);
   $obj->set ('title' => "Number of submissions for $arch");
   $obj->set ('legend_labels' => \@labels);
