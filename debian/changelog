@@ -1,4 +1,4 @@
-popularity-contest (1.8) UNRELEASED; urgency=low
+popularity-contest (1.8) unstable; urgency=low
 
   * Petter Reinholdtsen
     - Add Dutch debconf template translation (nl.po).  File from
@@ -19,6 +19,7 @@ popularity-contest (1.8) UNRELEASED; urgency=low
     - Started on Norwegian Bokmål debconf translation (no.po).
   * Bill Allombert
     - control: change exim to exim4. (Closes: #228575)
+    - Update documentation to refer to popcon.debian.org.
 
  -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 19:17:12 +0200
 

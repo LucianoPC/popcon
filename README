@@ -81,18 +81,14 @@ want to participate.
   !!!!
 
 The popularity-contest package comes with a cron task to send the
-information out to us each night.  You can change where the submissions go
+information out to us each week.  You can change where the submissions go
 by editing /etc/popularity-contest.conf.  Normally, you will send the
 results to:
-		apenwarr-survey@debian.org
+		survey@popcon.debian.org
 	
-I periodically post survey results on my web page:
+The result of the survey is available at
 
-		http://www.debian.org/~apenwarr/popcon/
-
-An alternative page is available at
-
-                http://www.debian.org/~ballombe/popcon/
+		http://popcon.debian.org/
 
 You can find some sample analysis scripts in
 /usr/share/doc/popularity-contest as part of this package.
