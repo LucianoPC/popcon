@@ -6,8 +6,10 @@ popularity-contest (1.16) UNRELEASED; urgency=low
       Closes: #239348
     - Updated Danish debconf translation by Morten Brix Pedersen
       Closes: #239824
+    - Updated Brazilian portuguese translation by Andre Luis Lopes
+      Closes: #240485
 
- -- Christian Perrier <bubulle@debian.org>  Wed, 24 Mar 2004 19:28:41 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 28 Mar 2004 11:28:37 +0200
 
 popularity-contest (1.15) unstable; urgency=low
 
