@@ -30,8 +30,8 @@ msgid ""
 msgstr ""
 "Jūs galite turėti sistema, elektroniniu paštu anonimiškai pranešančią "
 "Debian'o kūrėjams statistiką apie tankiausiai Jūsų naudojamus Debian'o "
-"paketus.  Ši informacija įtakoja sprendimus, tokius kaip kokius paketus įtraukti "
-"į pirmąjį Debian'o CD."
+"paketus.  Ši informacija įtakoja sprendimus, tokius kaip kokius paketus "
+"įtraukti į pirmąjį Debian'o CD."
 
 #. Type: boolean
 #. Description
@@ -81,4 +81,3 @@ msgid ""
 msgstr ""
 "Prašau pranešti apie šią problemą, kaip apie paketo popularity-contest riktą "
 "(bug), įtraukdami informaciją apie Jūsų konfigūraciją."
-

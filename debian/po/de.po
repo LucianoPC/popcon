@@ -90,4 +90,3 @@ msgstr ""
 "Bitte berichten Sie dieses Problem mit einem Fehlerbericht gegen das "
 "popularity-contest Paket. Fügen Sie bitte Informationen über Ihre "
 "Konfiguration bei."
-

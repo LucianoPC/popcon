@@ -21,7 +21,7 @@ msgstr ""
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -38,9 +38,9 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Koneesi voi lähettää nimettömänä sähköpostina Debianin kehittäjille "
-"tilastotietoa eniten käytetyistä Debianin paketeista. Tämä tieto "
-"on yhtenä päätösperusteena esimerkiksi valittaessa ensimmäiselle "
-"Debian-rompulle tulevia paketteja."
+"tilastotietoa eniten käytetyistä Debianin paketeista. Tämä tieto on yhtenä "
+"päätösperusteena esimerkiksi valittaessa ensimmäiselle Debian-rompulle "
+"tulevia paketteja."
 
 #. Type: boolean
 #. Description
@@ -75,9 +75,9 @@ msgid ""
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
-"Asennuskomento ei saanut luotua yksikäsitteistä konetunnistetta. "
-"Tämä on vakava virhe, kaikilla tietoja lähettävillä koneilla on "
-"oltava yksikäsitteinen tunniste."
+"Asennuskomento ei saanut luotua yksikäsitteistä konetunnistetta. Tämä on "
+"vakava virhe, kaikilla tietoja lähettävillä koneilla on oltava "
+"yksikäsitteinen tunniste."
 
 #. Type: error
 #. Description
@@ -86,6 +86,5 @@ msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Tee tästä vikailmoitus popularity-contest-paketista ja liitä siihen "
-"tietoa järjestelmästäsi."
-
+"Tee tästä vikailmoitus popularity-contest-paketista ja liitä siihen tietoa "
+"järjestelmästäsi."

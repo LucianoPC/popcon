@@ -14,6 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-06-07 17:42+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
@@ -34,21 +35,37 @@ msgstr "Wilt u meewerken aan de Debian pakketpopulariteit-competitie?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "You can have your system anonymously e-mail the Debian developers with statistics about your most used Debian packages.  This information influences decisions such as which packages should go on the first Debian CD."
-msgstr "U kunt uw systeem instellen zodat er via anonieme e-mail statistieken naar de Debian ontwikkelaars worden. De verstuurde statistieken hebben betrekking op welke pakketten het meest gebruikt worden, en worden gebruikt om te beslissen welke paketten op de eerste Debian-installatie-CD terecht komen."
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"U kunt uw systeem instellen zodat er via anonieme e-mail statistieken naar "
+"de Debian ontwikkelaars worden. De verstuurde statistieken hebben betrekking "
+"op welke pakketten het meest gebruikt worden, en worden gebruikt om te "
+"beslissen welke paketten op de eerste Debian-installatie-CD terecht komen."
 
 #  Description
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "If you choose to participate, the automatic submission script will run once every week, e-mailing statistics to the Debian developers."
-msgstr "Indien u voor deelname kiest zal het instuurscript eenmaal per week uitgevoerd worden; dit script verstuurt de statistieken per e-mail naar de Debian ontwikkelaars."
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Indien u voor deelname kiest zal het instuurscript eenmaal per week "
+"uitgevoerd worden; dit script verstuurt de statistieken per e-mail naar de "
+"Debian ontwikkelaars."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "You can always change your mind after making this decision: \"dpkg-reconfigure popularity-contest\""
-msgstr "Mocht u later van gedachten veranderen, dan kunt u uw deelname altijd deactiveren/activeren via het commando 'dpkg-reconfigure popularity-contest'"
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Mocht u later van gedachten veranderen, dan kunt u uw deelname altijd "
+"deactiveren/activeren via het commando 'dpkg-reconfigure popularity-contest'"
 
 #. Type: error
 #. Description
@@ -59,12 +76,21 @@ msgstr "Genereren unieke computeridentificatie is mislukt"
 #. Type: error
 #. Description
 #: ../templates:17
-msgid "The install script could not generate a unique host identifier. This is a fatal error, as all hosts submitting information need to have an unique identifier."
-msgstr "Het installatiescript was niet in staat om een unieke computeridentificatie aan te maken. Aangezien alle informatie-insturende computers een unieke identificatie dienen te hebben is dit een fatale fout."
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"Het installatiescript was niet in staat om een unieke computeridentificatie "
+"aan te maken. Aangezien alle informatie-insturende computers een unieke "
+"identificatie dienen te hebben is dit een fatale fout."
 
 #. Type: error
 #. Description
 #: ../templates:17
-msgid "Please report this problem as a bug against the popularity-contest package, and include information about your configuration."
-msgstr "Gelieve dit probleem te rapporteren als een bug tegen het 'popularity-contest'-pakket, met toevoeging van informatie betreffende uw configuratie."
-
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Gelieve dit probleem te rapporteren als een bug tegen het 'popularity-"
+"contest'-pakket, met toevoeging van informatie betreffende uw configuratie."

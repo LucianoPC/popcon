@@ -14,6 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-05-27 18:31-0300\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"

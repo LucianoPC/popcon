@@ -40,8 +40,8 @@ msgid ""
 msgstr ""
 "Você pode ter o seu sistema a enviar anónimamente por e-mail aos "
 "desenvolvedores de Debian estatísticas acerca dos seus pacotes Debian mais "
-"utilizados.  Esta informação influencia decisões tais como que pacotes "
-"devem ser incluídos no primeiro CD de Debian."
+"utilizados.  Esta informação influencia decisões tais como que pacotes devem "
+"ser incluídos no primeiro CD de Debian."
 
 #. Type: boolean
 #. Description
@@ -108,4 +108,3 @@ msgstr ""
 #~ msgstr ""
 #~ "(NOTA: servidores de e-mail, sua informção de rastreio e os seus dados "
 #~ "não serão completamente anónimos enquanto estiverem em trânsito.)"
-

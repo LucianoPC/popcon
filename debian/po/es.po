@@ -1,39 +1,126 @@
-Index: debian/po/es.po
-===================================================================
-RCS file: /cvsroot/popcon/popularity-contest/debian/po/es.po,v
-retrieving revision 1.11
-diff -u -r1.11 es.po
---- debian/po/es.po	27 May 2004 21:33:56 -0000	1.11
-+++ debian/po/es.po	31 May 2004 21:09:44 -0000
-@@ -16,7 +16,7 @@
- "Project-Id-Version: popularity-contest 1.14\n"
- "Report-Msgid-Bugs-To: \n"
- "POT-Creation-Date: 2004-05-27 18:27-0300\n"
--"PO-Revision-Date: 2004-03-28 20:16+0200\n"
-+"PO-Revision-Date: 2004-05-31 23:05+0200\n"
- "Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
- "Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
- "MIME-Version: 1.0\n"
-@@ -34,19 +34,19 @@
- #. Type: boolean
- #. Description
- #: ../templates:4
--#, fuzzy
- msgid ""
- "You can have your system anonymously e-mail the Debian developers with "
- "statistics about your most used Debian packages.  This information "
- "influences decisions such as which packages should go on the first Debian CD."
- msgstr ""
- "Puede hacer que su sistema envíe anónimamente estadísticas por correo "
--"electrónico a los desarrolladores de Debian sobre los paquetes que más usa."
-+"electrónico a los desarrolladores de Debian sobre los paquetes que más usa. "
-+"Esta información tiene influencia sobre ciertas decisiones, como qué paquetes "
-+"deben incluirse en el primer CD de Debian."
- 
- #. Type: boolean
- #. Description
- #: ../templates:4
--#, fuzzy
- msgid ""
- "If you choose to participate, the automatic submission script will run once "
- "every week, e-mailing statistics to the Debian developers."
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest 1.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"PO-Revision-Date: 2004-05-31 23:05+0200\n"
+"Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
+"Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr ""
+"¿Desea participar en la encuesta sobre la popularidad de los paquetes de "
+"Debian?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Puede hacer que su sistema envíe anónimamente estadísticas por correo "
+"electrónico a los desarrolladores de Debian sobre los paquetes que más usa. "
+"Esta información tiene influencia sobre ciertas decisiones, como qué paquetes "
+"deben incluirse en el primer CD de Debian."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Si elige participar, el script de envío se ejecutará automáticamente una vez "
+"a la semana, mandando estadísticas por correo electrónico a los "
+"desarrolladores de Debian."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Siempre puede cambiar de opinión después de tomar la decisión: \"dpkg-"
+"reconfigure popularity-contest\""
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Falló la generación del identificador de sistema"
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"El script de instalación no pudo generar un identificador de puesto único. "
+"Esto es un error fatal, ya que todos los sistemas que envíen información "
+"necesitan un identificador único."
+
+#. Type: error
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Por favor, avise del problema enviando un informe de fallo al paquete "
+"«popularity-contest», incluyendo información acerca de su configuración."
+
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Esta información nos ayuda a tomar decisiones, como qué paquetes deben ir "
+#~ "en el primer CD de Debian. También servirá para mejorar versiones futuras "
+#~ "de Debian, haciendo que los paquetes más populares sean los que se "
+#~ "instalen automáticamente para los nuevos usuarios."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(NOTA: los servidores de correo electrónico añaden cierta información de "
+#~ "rastreo, por lo que los datos no serán completamente anónimos mientras "
+#~ "estén en tránsito.)"
+
+#~ msgid ""
+#~ "If you choose to participate, the automatic submission script will run "
+#~ "once every week automatically."
+#~ msgstr ""
+#~ "Si elige participar, popularity-contest se ejecutará automáticamente una "
+#~ "vez a la semana."
+
+#~ msgid "Do you want to participate?"
+#~ msgstr "¿Quiere participar?"
+
+#~ msgid "Accept here if you want to participate in the contest."
+#~ msgstr "Acepte si desea participar en el experimento"
