@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-03-21 02:24+1200\n"
+"PO-Revision-Date: 2004-06-25 22:07+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,24 +32,23 @@ msgstr "您要参加 Debian 软件包流行度测试吗？"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "您可以让系统用匿名电子邮件的方式向 Debian 开发人员报告您最常使用的 Debian 软"
-"件包的统计数据。"
+"件包的统计数据。这些数据信息将会影响关于哪些软件包应该被包含在第一张 Debian "
+"光盘的决定。"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"如果您选择参与，自动提交脚本程序将会每周自动运行一次，将统计数据发送给 "
+"如果您选择参与调查，自动提交脚本程序将会每周自动运行一次，将统计数据发送给 "
 "Debian 开发人员。"
 
 #. Type: boolean
