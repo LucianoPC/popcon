@@ -1,14 +1,16 @@
-popularity-contest (1.19) unreleased; urgency=low
+popularity-contest (1.19) unstable; urgency=low
 
   * Translations
     - Turkish by Recai Oktas. Closes: #244164
     - Russian update. Closes: #245000
     - Slovak by Miroslav Kure. Closes: #245672
-    - French typo corrected
+    - French typo corrected.
   * Bill Allombert
     - Update server-side scripts to current popcon.debian.org version.
     - Change popularity-contest to report the popularity-contest version
       instead of the Debian release which is not reliable.
+    - Update FAQ accordingly.
+    - Fix some typo in FAQ and README.
 
  -- Bill Allombert <ballombe@debian.org>  Fri, 14 May 2004 11:35:30 +0200
 

@@ -2,10 +2,10 @@
 
 Q) What informations are reported by popularity-contest ?
 
-A) popularity-contest report the Debian architecture you use,
-   the Debian release and the list of packages installed on the
-   system with the most recent atime of important files in them
-   (mainly executable files).
+A) popularity-contest report the Debian architecture you use, the version of
+   popularity-contest you use and the list of packages installed on the system
+   with the most recent atime of important files in them (mainly executable
+   files).
 
 Q) What are the privacy consideration for popularity-contest ?
 
@@ -38,10 +38,9 @@ A) Each popularity-contest host is identified by a random 128bit uuid
 Q) My submissions bounce with 
    550 [PERMFAIL] popcon.debian.org requires valid sender domain.
 
-A) popularity-contest send the report as root but the email adress of the root
-   user was not configured properly. With exim, you can
-   add an entry for root in /etc/email-addresses with a suitable
-   adresse.
+A) popularity-contest send the report as root but the email address of the root
+   user was not configured properly. With exim, you can add an entry for root
+   in /etc/email-addresses with a suitable address.
 
    A better fix would be to change popcon.debian.org to not reject emails with
    invalid sender domain in the first place, but it is out of our reach for the
@@ -49,6 +48,6 @@ A) popularity-contest send the report as root but the email adress of the root
 
 Q) /usr is mounted with 'noatime'.
 
-A) popularity-contest use atime to know what packages were used during
-   the last month. This mean you will only report the list of packages installed
-   without usage information.
+A) popularity-contest relies on atime to know what packages were used during
+   the last month. This means you will only report the list of packages
+   installed without usage information.
