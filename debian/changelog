@@ -3,8 +3,9 @@ popularity-contest (1.24) UNRELEASED; urgency=low
   * Translations
     - Indonesian update. Closes: #261225
     - Initial Croatian debconf translation hr.po
+    - Swedish updated. Closes: #261404
 
- -- Christian Perrier <bubulle@debian.org>  Sat, 24 Jul 2004 22:30:11 +0200
+ -- Christian Perrier <bubulle@debian.org>  Mon, 26 Jul 2004 08:27:19 +0200
 
 popularity-contest (1.23) unstable; urgency=low
 

@@ -16,41 +16,35 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-03-29 20:57+0100\n"
-"Last-Translator: AndrÃ© Dahlqvist <andre.dahlqvist@telia.com>\n"
+"PO-Revision-Date: 2004-07-25 22:15+0200\n"
+"Last-Translator: Per Olofsson <pelle@dsv.su.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Delta i Debianpaketens popularitetstÃ¤vling?"
+msgstr "Delta i Debianpaketens popularitetstävling?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr ""
-"Du kan lÃ¥ta ditt system anonymt e-posta Debianutvecklarna med statistik om "
-"dina mest anvÃ¤nda Debianpaket."
+msgstr "Du kan låta ditt system anonymt e-posta Debianutvecklarna med statistik om dina mest använda Debianpaket. Den här informationen influerar de val som görs om vilka paket som ska hamna på den första Debian-CD:n."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
-msgstr ""
-"Om du vÃ¤ljer att delta kommer det automatiska inlÃ¤mningsskriptet kÃ¶ras "
-"automatiskt en gÃ¥ng varje vecka och e-posta statistik till Debianutvecklarna."
+msgstr "Om du väljer att delta kommer det automatiska inlämningsskriptet köras automatiskt en gång varje vecka och e-posta statistik till Debianutvecklarna."
 
 #. Type: boolean
 #. Description
@@ -59,14 +53,14 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Du kan alltid Ã¤ndra dig efter att du har gjort det hÃ¤r valet: \"dpkg-"
+"Du kan alltid ändra dig efter att du har gjort det här valet: \"dpkg-"
 "reconfigure popularity-contest\""
 
 #. Type: error
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr "Generering av unik vÃ¤rdidentifierare misslyckades"
+msgstr "Generering av unik värdidentifierare misslyckades"
 
 #. Type: error
 #. Description
@@ -76,8 +70,8 @@ msgid ""
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
-"Installationsskriptet kunde inte generera en unik vÃ¤rdidentifierare. Detta "
-"Ã¤r ett Ã¶desdigert fel eftersom alla vÃ¤rdar som skickar information mÃ¥ste ha "
+"Installationsskriptet kunde inte generera en unik värdidentifierare. Detta "
+"är ett ödesdigert fel eftersom alla värdar som skickar information måste ha "
 "en unik identifierare."
 
 #. Type: error
@@ -96,14 +90,14 @@ msgstr ""
 #~ "so that the most popular packages are the ones which are installed "
 #~ "automatically for new users."
 #~ msgstr ""
-#~ "Denna information hjÃ¤lper oss att gÃ¶ra val om exempelvis vilka paket som "
-#~ "ska lÃ¤ggas pÃ¥ den fÃ¶rsta Debian-cd:n. Vi kan ocksÃ¥ fÃ¶rbÃ¤ttra framtida "
-#~ "versioner av Debian sÃ¥ att de mest populÃ¤ra paketen Ã¤r de som installeras "
-#~ "automatiskt fÃ¶r nya anvÃ¤ndare."
+#~ "Denna information hjälper oss att göra val om exempelvis vilka paket som "
+#~ "ska läggas på den första Debian-cd:n. Vi kan också förbättra framtida "
+#~ "versioner av Debian så att de mest populära paketen är de som installeras "
+#~ "automatiskt för nya användare."
 
 #~ msgid ""
 #~ "(NOTE: e-mail servers add their own tracing information and your data "
 #~ "won't be completely anonymous while in transit.)"
 #~ msgstr ""
-#~ "(NOTERA: e-postservrar lÃ¤gger till sin egen spÃ¥rningsinformation och din "
+#~ "(NOTERA: e-postservrar lägger till sin egen spårningsinformation och din "
 #~ "data kommer inte att vara helt anonym under transporten.)"
