@@ -17,6 +17,7 @@ popularity-contest (1.24) UNRELEASED; urgency=low
     - Finnish updated by Tapio Lehtonen. Closes: #263555
     - Greek updated by George Papamichelakis.  Closes: #265002
     - Lithuanian updated by Gintautas Miliauskas.  Closes: #265837
+    - Catalan updated by Aleix Badia i Bosch.  Closes: #261540
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 26 Jul 2004 08:27:19 +0200
 
