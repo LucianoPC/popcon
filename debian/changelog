@@ -4,6 +4,7 @@ popularity-contest (1.12) UNRELEASED; urgency=low
     - Use dpkg --print-installation-architecture instead of $Config{archname}
       to report the platform.
     - Update server-side scripts to current popcon.debian.org version.
+    - Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun,  8 Feb 2004 13:47:38 +0100
 

@@ -18,7 +18,7 @@ unset PARTICIPATE
 if [ -z "$MAILTO" ]; then exit 0; fi
 
 # don't run if PARTICIPATE is "no" or unset!
-[ "$PARTICIPATE" = "no" -o -z "$PARTICIPATE" ] && exit 0
+[ "$PARTICIPATE" = "no" ] || [ -z "$PARTICIPATE" ] && exit 0
 
 # keep old logs
 cd /var/log
