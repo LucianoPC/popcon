@@ -20,7 +20,7 @@ gzip -f ../www/all-popcon-results.txt
 cp ../www/all-popcon-results.txt.gz all-popcon-results/popcon-`date +"%Y-%m-%d"`.gz
 cd ../popcon-stat
 
-find ../popcon-mail/all-popcon-results -type f -print0 | xargs -0 ./popcon-stat.pl
+find ../popcon-mail/all-popcon-results -type f -print | sort |./popcon-stat.pl
 
 cd ../popcon-web
 ./popcon.pl

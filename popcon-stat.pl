@@ -1,15 +1,19 @@
-#! /usr/bin/perl -w
+#! /usr/bin/perl -wT
+
 BEGIN {
 @INC=(@INC, map { "./$_" } @INC);
 }
 
+$ENV{PATH}="/usr/bin:/bin";
 $dirpng="../www/stat";
-for (sort @ARGV)
+while (<>)
 {
-   open FILE,"zcat $_|";
-   m/popcon-([0-9-]+)\.gz$/ or next;
-   $f=$1;
+   my ($file);
+   m/^(.*\/popcon-([0-9-]+)\.gz)$/ or next;
+   $file=$1;
+   $f=$2;
    push @date,$f;
+   open FILE,"zcat $file|";
    while(<FILE>)
    {
      my @line=split(/ +/);

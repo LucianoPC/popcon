@@ -2,8 +2,10 @@ popularity-contest (1.27) UNRELEASED; urgency=low
 
   * Translations
     - Corrections in Ukrainian uk.po. Closes: #290752
+  * popcon-stat.pl, popcon-process.sh: Change the interface to avoid
+    use of xargs which has a length limit.
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 16 Jan 2005 17:26:37 +0100
+ -- Bill Allombert <ballombe@debian.org>  Tue, 15 Feb 2005 15:44:35 +0100
 
 popularity-contest (1.26) unstable; urgency=low
 
