@@ -1,7 +1,9 @@
-popularity-contest (1.4) unstable; urgency=low
+popularity-contest (1.4) UNRELEASED; urgency=low
 
   * Petter Reinholdtsen
     - Adding myself as uploader.
+    - Add link to Alioth summary page in the README.
+  * Acknowledge NMUs.  (Closes: #135273, #136510)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun,  7 Sep 2003 19:31:37 +0200
 

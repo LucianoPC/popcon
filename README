@@ -92,3 +92,9 @@ I periodically post survey results on my web page:
 
 You can find some sample analysis scripts in
 /usr/share/doc/popularity-contest as part of this package.
+
+FINDING THE SOURCE
+==================
+
+This package is being maintained in CVS using Alioth.  The project summary
+page is available from <URL:https://alioth.debian.org/projects/popcon/>.
