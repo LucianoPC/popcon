@@ -11,6 +11,7 @@ popularity-contest (1.24) UNRELEASED; urgency=low
     - Initial Romanian debconf translation hr.po by Eddy Petrisor
     - Italian updated by Cristian Rigamonti. Closes: #262703
     - Translation Chinese updated by Tetralet. Closes: #263182
+    - Finnish updated by Tapio Lehtonen. Closes: #263555
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 26 Jul 2004 08:27:19 +0200
 
