@@ -1,9 +1,11 @@
-popularity-contest (1.16) UNRELEASE; urgency=low
+popularity-contest (1.16) UNRELEASED; urgency=low
 
-  * Christiann Perrier
-    - Updated Korean translation by Changwoo Ryu
+  * Christian Perrier
+    - Updated Korean debconf translation by Changwoo Ryu
+    - New Ukrainian debconf translation by Eugeniy Meshcheryakov
+      Closes: #239348
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 21 Mar 2004 12:24:56 +0100
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 23 Mar 2004 13:46:04 +0100
 
 popularity-contest (1.15) unstable; urgency=low
 
