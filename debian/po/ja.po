@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2004-03-20 09:52+0100\n"
-"PO-Revision-Date: 2004-01-25 21:13+0900\n"
+"PO-Revision-Date: 2004-03-20 19:17+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr ""
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "固有のホスト識別子を生成するのに失敗しました"
 
 #. Description
 #: ../templates:25
@@ -86,19 +86,11 @@ msgid ""
 "The install script are unable to generate a unique host identifier. This is "
 "a fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr ""
+msgstr "インストールスクリプトは固有のホスト識別子を生成することができませんでした。情報を送るすべてのホストは固有の識別子を持たなければならないため、これは深刻なエラーです。"
 
 #. Description
 #: ../templates:25
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr ""
-
-#~ msgid "Update mailto address to the current one?"
-#~ msgstr "宛先アドレスを最新のものに更新しますか?"
-
-#~ msgid ""
-#~ "The mail address used to submit popularity-contest entries is obsolete."
-#~ msgstr ""
-#~ "popularity-contest のエントリを提出するメールアドレスが古くなっています。"
+msgstr "あなたの設定についての情報を添えて、popularity-contest パッケージへのバグとしてこの問題を報告してください。"
