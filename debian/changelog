@@ -11,9 +11,10 @@ popularity-contest (1.8) UNRELEASED; urgency=low
       value is taken from the current config file, and only that
       variable is modified if the user using debconf change the value.
     - Collect and report the content of /etc/debian_version.
+    - Start using generic address survey@popcon.debian.org. (Closes: #206830)
     - Ask if the submit address should be changed on upgrades and
-      reconfigures.  This should activate the new address
-      survey@popcon.debian.org on old installations.
+      reconfigures.  This should activate the new address on old
+      installations.
   * Bill Allombert
     - control: change exim to exim4. (Closes: #228575)
 
