@@ -14,5 +14,5 @@ if [ -f /etc/popularity-contest.conf ] ; then
        db_set popularity-contest/participate "$PARTICIPATE"
 fi
 
-db_input medium popularity-contest/participate || [ $? -eq 30 ]
+db_input high popularity-contest/participate || [ $? -eq 30 ]
 db_go || true

@@ -1,5 +1,7 @@
 popularity-contest (1.11) UNRELEASED; urgency=low
 
+  * Raise the priority of the participation question from medium to
+    high to make sure it is displayed in the normal Sarge install.
   * Add Danish debconf translation, thanks to Morten Brix
     Pedersen (Closing: #230022)
 
