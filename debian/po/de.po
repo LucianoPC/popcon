@@ -3,9 +3,13 @@
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
 #         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'#    Some information specific to po-debconf are available at
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
 #            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#    Developers do not need to manually edit POT or PO files.
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
 #    Erich Schubert <erich@debian.org>, 2003
 #    Dennis Stampfer <seppy@debian.org>, 2004
 #
@@ -14,13 +18,12 @@ msgstr ""
 "Project-Id-Version: popularity contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-06-07 15:24GMT\n"
+"PO-Revision-Date: 2004-06-16 21:44GMT\n"
 "Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
 
 #. Type: boolean
 #. Description
@@ -78,7 +81,7 @@ msgid ""
 msgstr ""
 "Das Installations-Script konnte keine eindeutige Rechner-Identifikation "
 "erstellen. Dies ist ein schwerwiegender Fehler, da alle Computer, die "
-"Informationen versenden, eine eindeutige Absenderkennung benötigen."
+"Informationen versenden, eine eindeutige Kennung benötigen."
 
 #. Type: error
 #. Description
