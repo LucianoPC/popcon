@@ -7,6 +7,9 @@ popularity-contest (1.8) UNRELEASED; urgency=low
     - Make it possible to reconfigure this package by calling
       'dpkg-reconfigure popularity-contest', to get the code in
       base-config working as it should. (Closes: #228535).
+      This should still fix bug #135273, as the current PARTICIPATE
+      value is taken from the current config file, and only that
+      variable is modified if the user using debconf change the value.
   * Bill Allombert
     - control: change exim to exim4. (Closes: #228575)
 
