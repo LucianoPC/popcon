@@ -86,6 +86,12 @@ sub make_sec
   -d $sec || system("mkdir","-p","$sec");
 }
 
+sub print_by
+{
+   my ($dir,$f)=@_;
+   print HTML ("<a href=\"$dir/by_$f\">$f</a> [<a href=\"$dir/by_$f.gz\">gz</a>] ");
+}
+
 sub make_by
 {
   my ($sec,$order,$pkg,@list) = @_;
@@ -93,7 +99,7 @@ sub make_by
   @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @list;
   $winner{"$sec/$order"}=$list[0];
   my $m=($sec eq "maint"?"":"(maintainer)");
-  open DAT , "> $popcon/$sec/by_$order";
+  open DAT , "| tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
   print DAT <<"EOF";
 #Format
 #   
@@ -220,10 +226,7 @@ for $sec (@sections)
 {
   my @list = grep {$section{$_} eq $sec} @pkgs;
   make_sec $sec;
-  for $order (@fields)
-  {
-    make_by $sec, $order, \%pkg, @list;
-  }
+  make_by ($sec, $_, \%pkg, @list) for (@fields);
 }
 
 @dists=("main","contrib","non-free","non-US");
@@ -233,28 +236,17 @@ for $sec (@sections)
 for $sec (".",@dists)
 {
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
-  for $order (@fields)
-  {
-    make_by $sec, $order, \%pkg, @list;
-  }
+  make_by ($sec, $_, \%pkg, @list) for (@fields);
 }
-{
-  make_sec "maint";
-  for $order (@fields)
-  {
-     make_by "maint", $order, \%maintpkg, @maints;
-  }
-}
+make_sec "maint";
+make_by ("maint", $_, \%maintpkg, @maints) for (@fields);
 for $sec (@dists)
 {
   open HTML , "> $popcon/$sec/index.html";
   opendir SEC,"$popcon/$sec";
   &htmlheader;
   printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
-  for $f (@fields)
-  {
-      print HTML ("<a href=\"by_$f\"> $f </a> " );
-  }
+  print_by (".",$_) for (@fields);
   print HTML ("\n </p> \n");
   printf HTML ("<p> <a href=\"first.html\"> First packages in subsections for each fields </a>\n");
   printf HTML ("<p>Statistics for subsections sorted by fields\n <pre>\n");
@@ -263,10 +255,7 @@ for $sec (@dists)
     -d "$popcon/$sec/$dir" or next;
     $dir !~ /^\./ or next;
     printf HTML ("%-16s : ",$dir);
-    for $f (@fields)
-    {
-      print HTML ("<a href=\"$dir/by_$f\"> $f </a> " );
-    }
+    print_by ($dir,$_) for (@fields);
     print HTML ("\n");
   }
   &htmlfooter;
@@ -311,16 +300,10 @@ for $sec (@dists)
 	open HTML , "> $popcon/index.html";
 	&htmlheader;
 	printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>",$sec);
-	for $f (@fields)
-	{
-		print HTML ("<a href=\"by_$f\"> $f </a> " );
-	}
+	print_by (".",$_) for (@fields);
 	print HTML ("</pre>\n </p> \n");
 	printf HTML ("<p>Statistics by maintainers sorted by fields: <pre>",$sec);
-	for $f (@fields)
-	{
-		print HTML ("<a href=\"maint/by_$f\"> $f </a> " );
-	}
+	print_by ("maint",$_) for (@fields);
 	print HTML ("</pre>\n </p> \n");
 	printf HTML ("<p>Statistics for sections sorted by fields\n <pre>\n");
   	for $dir ("main","contrib","non-free","non-US","unknown")
@@ -335,10 +318,7 @@ for $sec (@dists)
 		{
 			printf HTML ("<a href=\"$dir/index.html\">%-16s</a> : ",$dir);
 		}
-		for $f (@fields)
-		{
-			print HTML ("<a href=\"$dir/by_$f\"> $f </a> " );
-		}
+		print_by ($dir,$_) for (@fields);
 		print HTML ("\n");
 	}
 	print HTML "</pre><p>Statistics for architectures\n<pre>";
