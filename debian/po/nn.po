@@ -1,5 +1,4 @@
-# translation of popularity-contest_1.13_nn.po to Norwegian Nynorsk
-# translation of popularity-contest_1.13_templates.po to Norwegian Nynorsk
+# translation of popularity-contest_debian.po to Norwegian (Nynorsk)
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -14,12 +13,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_1.13_nn\n"
+"Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-03-14 23:19+0100\n"
+"PO-Revision-Date: 2004-04-29 23:22+0200\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
-"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,7 +29,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Vil du delta i popularitetskonkurransen for Debian-pakkar?"
+msgstr "Delta i popularitetskonkurranse for debianpakkar?"
 
 #. Type: boolean
 #. Description
@@ -38,9 +37,7 @@ msgstr "Vil du delta i popularitetskonkurransen for Debian-pakkar?"
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
-msgstr ""
-"Du kan la systemet ditt senda anonyme e-postar til Debian-utviklarane med "
-"statistikk om dine mest brukte Debian-pakkar."
+msgstr "Du kan setja opp systemet ditt til å senda anonyme e-postar til utviklarane av Debian med statistikk over dei mest brukte debianpakkane."
 
 #. Type: boolean
 #. Description
@@ -50,11 +47,7 @@ msgid ""
 "the first Debian CD.  Also, we can improve future versions of Debian so that "
 "the most popular packages are the ones which are installed automatically for "
 "new users."
-msgstr ""
-"Denne informasjonen vil hjelpa oss til å ta avgjerdsler om kva for pakkar "
-"som bør vera på den første Debian-CDen. I tillegg kan vi forbetra framtidige "
-"versjonar av Debian slik at dei mest populære pakkane er dei som blir "
-"installert automatisk for nye brukarar."
+msgstr "Denne informasjonen hjelper debianutviklarane med å avgjera kva for pakkar som skal inn på den første Debian-CDen. I tillegg kan vi forbetra framtidige versjonar av Debian slik at dei mest populære pakkane er dei som vert automatisk installert for nye brukarar."
 
 #. Type: boolean
 #. Description
@@ -62,9 +55,7 @@ msgstr ""
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
-msgstr ""
-"Viss du vel å delta, så vil eit skript bli køyrt ein gang i veka. Dette "
-"skriptet sender automatisk inn statistikken på e-post til Debian-utviklarane."
+msgstr "Viss du vel å delta vil eit skript bli køyrt automatisk ein gong i veka og sender inn statistikk til debianutviklarane."
 
 #. Type: boolean
 #. Description
@@ -72,9 +63,7 @@ msgstr ""
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
-msgstr ""
-"Du kan alltid endra oppsettet seinar viss du skiftar meining «dpkg-"
-"reconfigure popularity-contest»"
+msgstr "Du kan alltids angra valet ditt seinare ved å køyra kommandoen «dpkg-reconfigure popularity-contest»"
 
 #. Type: boolean
 #. Description
@@ -82,15 +71,13 @@ msgstr ""
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
-msgstr ""
-"(MERK: e-posttenaren legg til eigen sporingsinformasjon. Dette gjer at dataa "
-"du sender ikkje vil vera fullstendig anonyme under sending.)"
+msgstr "(MERK: e-posttenarar legg igjen sine eigne spor, så dataa dine vil ikkje vera fullstendig anonyme medan dei vert sendt.)"
 
 #. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "Klarte ikkje laga unik identifikator for vert"
 
 #. Type: error
 #. Description
@@ -99,7 +86,7 @@ msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr ""
+msgstr "Installeringsskriptet klarte ikkje laga ein unik identifikator for verten. Dette er ein fatal feil, sidan alle vertar som sender informasjon må ha ein unik identifikasjon."
 
 #. Type: error
 #. Description
@@ -107,4 +94,5 @@ msgstr ""
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr ""
+msgstr "Rapporter dette problemet som ein feil på pakka «popularity-contest», og ta med informasjon om oppsettet ditt."
+

@@ -1,8 +1,10 @@
-popularity-contest (1.20) unreleased; urgency=low
+popularity-contest (1.20) UNRELEASED; urgency=low
 
-  *  
+  * Translations
+    - Basque update. Closes: #243768
+    - Norwegian Nynorsk update. Closes: #249681
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 14 May 2004 15:12:42 +0200
+ -- Christian Perrier <bubulle@debian.org>  Tue, 18 May 2004 23:08:18 +0200
 
 popularity-contest (1.19) unstable; urgency=low
 
