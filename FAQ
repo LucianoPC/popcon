@@ -1,0 +1,19 @@
+      Popularity-contest Frequently Asked Questions.
+
+Q) My submissions bounce with 
+   550 [PERMFAIL] popcon.debian.org requires valid sender domain.
+
+A) popularity-contest send the report as root but the email adress of the root
+   user was not configured properly. With exim, you can
+   add an entry for root in /etc/email-addresses with a suitable
+   adresse.
+
+   A better fix would be to change popcon.debian.org to not reject emails with
+   invalid sender domain in the first place, but it is out of our reach for the
+   time being.
+
+Q) /usr is mounted with 'noatime'.
+
+A) popularity-contest use atime to know what packages were used during
+   the last month. This mean you will only report the list of packages installed
+   without usage information.
