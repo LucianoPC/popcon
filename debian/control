@@ -20,4 +20,6 @@ Description: Vote for your favourite packages automatically
  on the first Debian CD.  Also, we can improve future versions of Debian
  so that the most popular packages are the ones which are installed
  automatically for new users.
+ .
+ Homepage: http://popcon.alioth.debian.org
 
