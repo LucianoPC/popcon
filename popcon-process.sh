@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 cd /org/popcon.debian.org/popcon-mail
 umask 0002

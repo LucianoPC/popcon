@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Load debconf variables
 . /usr/share/debconf/confmodule
@@ -17,7 +17,7 @@ fi
 # safe to ignore the value fetched by loading the file above.  This
 # should allow for using debconf to reconfigure the package.
 db_get popularity-contest/participate || true
-if [ "$RET" = "yes" -o "$RET" = "YES" -o "$RET" = "true" ]; then
+if [ "$RET" = "yes" ] || [ "$RET" = "YES" ] || [ "$RET" = "true" ]; then
     PARTICIPATE="yes"
 else
     PARTICIPATE="no"
