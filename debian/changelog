@@ -4,8 +4,10 @@ popularity-contest (1.16) UNRELEASED; urgency=low
     - Updated Korean debconf translation by Changwoo Ryu
     - New Ukrainian debconf translation by Eugeniy Meshcheryakov
       Closes: #239348
+    - Updated Danish debconf translation by Morten Brix Pedersen
+      Closes: #239824
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 23 Mar 2004 13:46:04 +0100
+ -- Christian Perrier <bubulle@debian.org>  Wed, 24 Mar 2004 19:28:41 +0100
 
 popularity-contest (1.15) unstable; urgency=low
 
