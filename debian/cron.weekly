@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# don't run if this package is removed but not purged
+if [ ! -f /usr/sbin/popularity-contest ]; then
+	exit 0
+fi
+
+unset MAILFROM
+unset MAILTO
+unset MY_HOSTID
+unset PARTICIPATE
+
+# get configuration information
+. /etc/popularity-contest.conf
+
+# don't run if MAILTO address is blank!
+if [ -z "$MAILTO" ]; then exit 0; fi
+
+# don't run if PARTICIPATE is "no" or unset!
+[ "$PARTICIPATE" = "no" -o -z "$PARTICIPATE" ] && exit 0
+
+# keep old logs
+cd /var/log
+umask 022
+savelog -c 7 popularity-contest >/dev/null
+
+run_popcon()
+{
+	if [ -n "$MAILFROM" ]; then
+		echo "From: <$MAILFROM>"
+		echo "Sender: <$MAILFROM>"
+	fi
+	echo "To: $MAILTO"
+	echo "Subject: popularity-contest submission"
+	echo
+	su nobody -pc "sh -c /usr/sbin/popularity-contest"
+}
+
+do_sendmail()
+{
+	if [ -n "$MAILFROM" ]; then
+		sendmail -oi -f "$MAILFROM" "$MAILTO"
+	else
+		sendmail -oi "$MAILTO"
+	fi
+}
+
+# generate and transmit the popularity contest data
+
+run_popcon \
+	| tee /var/log/popularity-contest \
+	| do_sendmail

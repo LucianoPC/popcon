@@ -1,0 +1,75 @@
+#!/bin/bash
+
+set -e
+
+#DEBHELPER#
+
+if [ "$1" = "configure" ] && [ ! -e /etc/popularity-contest.conf ]; then
+	. /usr/share/debconf/confmodule
+
+	if [ -z "$MAILTO" -o "$MAILTO" = "erich-survey@debian.org" ]; then
+		MAILTO="apenwarr-survey@debian.org"
+	fi
+	if [ -z "$MY_HOSTID" ]; then
+		MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum`
+	fi
+	
+	cat <<-EOF >/etc/popularity-contest.conf
+		# Config file for Debian's popularity-contest package.
+		#
+		# To change this file, remove it and use:
+		#        dpkg-reconfigure popularity-contest
+		#
+		# You can also edit it by hand, if you so choose.
+		
+		# MAILTO specifies the address to e-mail statistics to each week.
+		#
+		MAILTO="$MAILTO"
+		
+		# MY_HOSTID is a secret number that the popularity-contest receiver
+		# uses to keep track of your submissions.  Whenever you send in a
+		# new entry, it overwrites the last one that had the same HOSTID.
+		#
+		# This key was generated automatically so you should normally just
+		# leave it alone.
+		#
+		MY_HOSTID="$MY_HOSTID"
+	
+		# MAILFROM is the forged sender email address you want to use in
+		# email submitted to the popularity-contest.  If this is commented
+		# out, no From: or Sender: lines will be added to the outgoing mail,
+		# and it will be your MTA's job to add them.  This is usually what
+		# you want.
+		#
+		# If your MTA is misconfigured or impossible to configure correctly,
+		# and it always generates invalid From: and/or Sender: lines, you
+		# can force different results by setting MAILFROM here.  This can
+		# cause problems with spam bouncers, so most people should leave it
+		# commented out.
+		#
+	EOF
+	if [ -z "$MAILFROM" ]; then
+		echo '#MAILFROM=root@nowhere.org' >>/etc/popularity-contest.conf
+	else
+		echo "MAILFROM=$MAILFROM" >>/etc/popularity-contest.conf
+	fi
+
+	# Get this setting from debconf.
+	db_get popularity-contest/participate || true
+	if [ "$RET" = "yes" -o "$RET" = "YES" -o "$RET" = "true" ]; then
+		PARTICIPATE="yes"
+	else
+		PARTICIPATE="no"
+	fi
+	
+	cat <<-EOF >>/etc/popularity-contest.conf
+	
+		# PARTICIPATE can be one of "yes" or "no".
+		# If you don't want to participate in the contest, say "no"
+		# and we won't send messages.
+		#
+		# If this option is missing, the default is "no".
+		#
+		PARTICIPATE=$PARTICIPATE
+	EOF
+fi

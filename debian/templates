@@ -1,0 +1,28 @@
+Template: popularity-contest/intro
+Type: note
+Description: Debian Package Popularity Contest
+ You can have your system anonymously e-mail the Debian developers
+ with statistics about your most used Debian packages.
+ .
+ This information helps us make decisions such as which packages
+ should go on the first Debian CD.  Also, we can improve future
+ versions of Debian so that the most popular packages are the ones
+ which are installed automatically for new users.
+ .
+ If you choose to participate, the automatic submission script will
+ run once every week automatically.
+ .
+ You can always change your mind after making this decision:
+ "dpkg-reconfigure popularity-contest"
+ .
+ (NOTE: e-mail servers add their own tracing information and your data won't
+ be completely anonymous while in transit.)
+
+Template: popularity-contest/participate
+Type: boolean
+Default: false
+Description: Do you want to participate?
+ If you choose to participate, popularity-contest will run once every week
+ automatically, e-mailing statistics to the Debian developers.
+ .
+ If you want to participate in the contest, select yes.

@@ -1,0 +1,83 @@
+#!/bin/bash
+#
+# Copyright (C) 1998,2000 by Avery Pennarun, for the Debian Project.
+# Use, modify, and redistribute modified or unmodified versions in any
+# way you wish.
+#
+
+# the set of installed packages is the set of all .list files in
+# /var/lib/dpkg/info, with pathnames and .list suffix removed.
+#
+# Store that list in $PACKAGES.
+#
+. /etc/popularity-contest.conf
+if [ -z "$MY_HOSTID" ]; then
+	echo "You must set MY_HOSTID in /etc/popularity-contest.conf!" >&2
+	exit 1
+fi
+
+DI=/var/lib/dpkg/info
+PACKAGES=$(dpkg-awk "Status: .* installed" -- Package \
+		| grep '^Package:' | sed 's/^Package: //')
+
+# Now, for each package, get the list of FILES that we are interested in,
+# producing output lines of the format "atime ctime package pathname".
+#
+for d in $PACKAGES; do
+	FILES=$(egrep '/\.*bin/|/sbin/|^/usr/games/|\.[ah]$' $DI/$d.list)
+	if [ -n "$FILES" ]; then
+		find $FILES -follow -prune -type f \
+			-printf "%A@ %C@ $d %p\\n" 2>/dev/null
+	else
+		echo "0 0 $d <NOFILES>"
+	fi
+done | gawk '
+
+	# pass the resulting list through this awk script.
+	# we require gawk, because we use "time" functions.
+
+	BEGIN {
+		lastpack = ""
+		now = systime()
+		daylen = 24 * 60 * 60
+		monthlen = (24 * 60 * 60) * 30
+		lastmonth = now - monthlen
+	}
+	
+	lastpack != $3 {
+		if (mostrecent != "")
+			print mostrecent
+		lastpack = $3
+		lastacc=0
+		mostrecent=""
+	}
+	
+	{
+		if ($1 >= lastacc) {
+			lastacc = $1
+			
+			if ($1 > 0 && $1 < lastmonth)
+			    mostrecent = sprintf("%s %s %s %s <OLD>",
+							$1, $2, $3, $4);
+			else {
+			  if ($1 > 0 && $2 > lastmonth && $1 - $2 < daylen)
+			    mostrecent = sprintf("%s %s %s %s <RECENT-CTIME>",
+			    				$1, $2, $3, $4);
+			  else
+			    mostrecent = $0
+			}
+		}
+	}
+	
+	END {
+		print mostrecent
+	}
+	'   |
+
+	# We're not done yet.  Sort the output in reverse by atime, and
+	# add a header/footer.
+	
+	( echo "POPULARITY-CONTEST-0" "TIME:$(date +%s)" \
+		"ID:$MY_HOSTID"
+	  sort -n -r;
+	  echo "END-POPULARITY-CONTEST-0" "TIME:$(date +%s)" )

@@ -1,0 +1,95 @@
+popularity-contest (1.3-1.1) unstable; urgency=high
+
+  * NMU.
+  * Do not ship /etc/popularity-contest.conf; don't change it using
+    debconf if it already exists; don't mark it as a conffile (since we
+    don't ship it any more).  (Closes: #135273)
+    This should be sufficient to get popularity-contest back into woody.
+  * #136510 appears to have been fixed in 1.2 or 1.3-1.  (Closes: #136510)
+    (If you want to participate question is now boolean.)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon,  1 Apr 2002 21:21:22 -0600
+
+popularity-contest (1.3-1) unstable; urgency=high
+
+  * Change default MAILTO back to apenwarr-survey@debian.org.  Oops!
+    (Closes: #137224)
+
+ -- Avery Pennarun <apenwarr@debian.org>  Thu,  7 Mar 2002 12:39:49 -0500
+
+
+popularity-contest (1.2) unstable; urgency=low
+
+  * Use debconf.
+
+  * use full path in su (Closes: #125701)
+
+  * repaired description (Closes: #129539)
+
+  * correct handling of sender (sendmail -f) (Closes: #123765)
+
+  * Mostly thanks to Erich Schubert <erich@debian.org>
+
+ -- Avery Pennarun <apenwarr@debian.org>  Thu, 21 Feb 2002 09:11:58 -0500
+
+
+popularity-contest (1.1-1) unstable; urgency=low
+
+  * Allow overriding the From: and Sender: headers in outgoing mail by
+    adding a new MAIL_FROM variable in /etc/popularity-contest.conf.  Also
+    drop to user "nobody" before running.  Closes: #89530, #39501, #69823, 
+    #74809, #57257, #57709, #65218.  Okay, this was obviously a popular
+    request, but if people would just configure their mailers not to use
+    invalid From: lines by default, they would be a lot happier.
+    
+  * Added a popularity-contest.8 manpage.  Closes: #39501.
+  
+  * Updated README.  Closes: #105668.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Tue,  6 Nov 2001 21:19:38 -0500
+
+
+popularity-contest (1.0-1) unstable; urgency=low
+
+  * Now runs only once a week instead of once a day.  Fixes bug#53768.
+  
+  * Let sendmail auto-generate the From header.  Fixes bug#48195, bug#48200.
+  
+  * Warnings about Received and Message-Id e-mail lines that may reveal the
+    sender.  Fixes bug#31205.
+    
+  * Actually even version 0.1-2 saved the popcon results to a log file, so
+    that fixes bug#44801.
+    
+  * Uses a more unique ID string than just the hostname, and it persists
+    across hostname changes.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
+
+
+popularity-contest (0.1-2) frozen unstable; urgency=low
+
+  * Added a missing dependency on mail-transport-agent; fixed bug#31010.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
+
+
+popularity-contest (0.1) frozen unstable; urgency=low
+
+  * Use a valid From_ address for sendmail; fixes bug#30341.
+  
+  * popularity-contest.8 is a link to the undocumented(8) man page, and we
+    provide a README file in /usr/doc; downgrades bug#28745.
+    
+  * Include my post-processing scripts in /usr/doc/popularity-contest/examples
+  
+  * No longer tries to report on packages that aren't installed.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Sun, 20 Dec 1998 16:11:02 -0500
+
+
+popularity-contest (0.00) unstable; urgency=low
+
+  * Initial test release.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Sat, 24 Oct 1998 22:33:58 -0400

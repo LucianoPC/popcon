@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#DEBHELPER#
+
+# older versions had popularity-contest as a conffile in a different dir, so
+# it won't get removed automatically.
+#
+if [ "$1" = upgrade ]; then
+    rm -f /etc/cron.daily/popularity-contest
+fi

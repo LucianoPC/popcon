@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+db_input medium popularity-contest/intro || true
+db_go || true
+
+db_input high popularity-contest/participate || true
+db_go || true
+
