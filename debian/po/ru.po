@@ -1,3 +1,4 @@
+# translation of popularity-contest-debconf_ru.po to Русский язык
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -10,34 +11,39 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
 #
 #    Developers do not need to manually edit POT or PO files.
+# Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_1.12\n"
-"POT-Creation-Date: 2004-01-26 00:49+0100\n"
-"PO-Revision-Date: 2004-03-16 02:01+0300\n"
-"Last-Translator: Ruslan Batdalov <linnando@tolkien.ru>\n"
-"Language-Team: Russian Debian <debian-l10n-russian@lists.debian.org>\n"
+"Project-Id-Version: popularity-contest-debconf_ru\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"PO-Revision-Date: 2004-04-12 13:52+0200\n"
+"Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
+"Language-Team: Русский язык <debian-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr ""
-"Вы хотите предоставлять информацию для соревнования пакетов "
-"Debian по популярности?"
+msgstr "Хотите ли вы предоставлять информацию для учёта популярности пакетов Debian?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
-"Ваша система может отправлять разработчикам Debian анонимные "
-"электронные сообщения с информацией об используемых вами пакетах."
+"Ваша система может отправлять разработчикам Debian анонимные электронные "
+"сообщения с информацией об используемых вами пакетах."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -47,10 +53,11 @@ msgid ""
 "new users."
 msgstr ""
 "Эта информация поможет нам определить, какие пакеты следует помещать на "
-"первый компакт-диск Debian. В следующих версиях дистрибутива мы сможем "
-"при установке системы новым пользователем автоматически устанавливать "
-"наиболее популярные пакеты."
+"первый компакт-диск Debian. В следующих версиях дистрибутива мы сможем при "
+"установке системы новым пользователем автоматически устанавливать наиболее "
+"популярные пакеты."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -60,22 +67,47 @@ msgstr ""
 "Если у вас есть такое желание, автоматический скрипт будет еженедельно "
 "отправлять статистику разработчикам."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Вы всегда можете изменить своё решение, выполнив команду: "
-"  dpkg-reconfigure popularity-contest"
+"Вы всегда можете изменить своё решение, выполнив команду:   dpkg-reconfigure "
+"popularity-contest"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "(NOTE: e-mail servers add their own tracing information and your data won't "
 "be completely anonymous while in transit.)"
 msgstr ""
-"(ПРИМЕЧАНИЕ: почтовые серверы добавляют собственную служебную информацию, "
-"и в ходе пересылки из ваших данных, в принципе, можно извлечь некоторую "
+"(ПРИМЕЧАНИЕ: почтовые серверы добавляют собственную служебную информацию, и "
+"в ходе пересылки из ваших данных, в принципе, можно извлечь некоторую "
 "косвенную информацию об отправителе."
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid "Generating unique host identifier failed"
+msgstr "Не удалось создать уникальный номер компьютера"
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr "Установщику не удалось создать уникальный номер компьютера. Это -- неисправимая ошибка, так как любому компьютеру, отсылающему информацию, требуется этот номер."
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr "Сообщите об этой ошибке как об ошибке в пакете popularity-contest и не забудьте описать настройки вашей системы."
 
