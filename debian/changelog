@@ -10,6 +10,8 @@ popularity-contest (1.13) UNRELEASED; urgency=low
       reach the developers.
     - Update Brazilian Portuguese debconf translation.  Got new file
       from Andre Luis Lopes. (Closes: #235387)
+    - Add Greek debconf translation recieved from Konstantinos
+      Margaritis.  (Closes: #235448)
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
 

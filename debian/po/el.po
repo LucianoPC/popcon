@@ -1,0 +1,80 @@
+# translation of el.po to Greek
+# translation of templates.po to Greek
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+# Konstantinos Margaritis <markos@debian.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"PO-Revision-Date: 2004-02-29 15:50EEST\n"
+"Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
+"Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
+
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Θέλετε να συμμετέχετε στο Διαγωνισμό Δημοτικότητας των Πακέτων του Debian;"
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages."
+msgstr ""
+"Μπορείτε να συμμετέχετε ανώνυμα, αποστέλλοντας email στους Debian Developers "
+"με στατιστικά των πιο χρησιμοποιούμενων πακέτων Debian στο σύστημά σας."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This information helps us make decisions such as which packages should go on "
+"the first Debian CD.  Also, we can improve future versions of Debian so that "
+"the most popular packages are the ones which are installed automatically for "
+"new users."
+msgstr ""
+"Οι πληροφορίες αυτές μας βοηθούν να καθορίσουμε ποια πακέτα θα συμπεριληφθούν "
+"στο πρώτο CD του Debian.  Επίσης, μπορούμε να βελτιώσουμε τις μελλοντικές εκδόσεις "
+"του Debian ώστε τα πιο δημοφιλή πακέτα να εγκαθίστανται αυτόματα για τους νέους "
+"χρήστες."
+
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week automatically, e-mailing statistics to the Debian developers."
+msgstr ""
+"Αν επιλέξετε να συμμετέχετε, η αυτόματη αποστολή των στατιστικών στους Debian "
+"Developers θα εκτελείται μια φορά την εβδομάδα."
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Φυσικά, μπορείτε να αλλάξετε τη ρύθμιση αυτή στο μέλλον με την εντολή: \"dpkg- "
+"reconfigure popularity-contest\""
+
+#. Description
+#: ../templates:4
+msgid ""
+"(NOTE: e-mail servers add their own tracing information and your data won't "
+"be completely anonymous while in transit.)"
+msgstr ""
+"(ΣΗΜΕΙΩΣΗ: Οι διακομιστές email προσθέτουν δικές τους πληροφορίες ανίχνευσης "
+"και τα δεδομένα σας δε θα είναι εντελώς ανώνυμα κατά την αποστολή)."
+
