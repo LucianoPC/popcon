@@ -24,3 +24,10 @@ Default: false
 _Description: Do you want to participate?
  If you choose to participate, popularity-contest will run once every week
  automatically, e-mailing statistics to the Debian developers.
+
+Template: popularity-contest/update-mailto
+Type: boolean
+Default: true
+_Description: Update mailto address to the current one?
+ The mail address used to submit popularity-contenst entries
+ is obsolete.

@@ -3,6 +3,8 @@
 # Load debconf variables
 . /usr/share/debconf/confmodule
 
+OFFICIAL_MAILTO="survey@popcon.debian.org"
+
 conffile=/etc/popularity-contest.conf
 
 set -e
@@ -12,8 +14,8 @@ if [ -e $conffile ] ; then
     . $conffile
 fi
 
-if [ -z "$MAILTO" -o "$MAILTO" = "erich-survey@debian.org" ]; then
-    MAILTO="apenwarr-survey@debian.org"
+if [ -z "$MAILTO" ] ; then
+    MAILTO="$OFFICIAL_MAILTO"
 fi
 if [ -z "$MY_HOSTID" ]; then
     MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum|sed 's/  -//'''`
@@ -28,6 +30,14 @@ if [ "$RET" = "yes" -o "$RET" = "YES" -o "$RET" = "true" ]; then
     PARTICIPATE="yes"
 else
     PARTICIPATE="no"
+fi
+
+if [ "$MAILTO" = "erich-survey@debian.org" -o \
+     "$MAILTO" = "apenwarr-survey@debian.org" ]; then
+    db_get popularity-contest/update-mailto || true
+    if [ "true" = "$RET" ] ; then
+	MAILTO="$OFFICIAL_MAILTO"
+    fi
 fi
 
 generate_conffile() {
@@ -91,7 +101,7 @@ case "$1" in
 	else
             # Replace if the value changed, to avoid changing the
 	    # config file date when no change was done.
-	    if sed "s/^PARTICIPATE=.*$/PARTICIPATE=$PARTICIPATE/" < $conffile > $conffile.new &&
+	    if sed "s/^PARTICIPATE=.*$/PARTICIPATE=$PARTICIPATE/; s/^MAILTO=.*$/MAILTO=\"$MAILTO\"/" < $conffile > $conffile.new &&
 		! cmp $conffile $conffile.new > /dev/null; then
 		mv $conffile.new $conffile
 	    else
