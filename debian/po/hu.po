@@ -1,0 +1,115 @@
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"PO-Revision-Date: 2004-04-05 20:26+0200\n"
+"Last-Translator: VERÓK István <vi@fsf.hu>\n"
+"Language-Team: Hungarian <debian-l10n-hungarian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Szolgáltat adatokat a Debian-csomagok népszerűségi nyilvántartásának?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages."
+msgstr ""
+"Névtelen elektronikus levélben statisztikákat közölhet a Debian-fejlesztőivel "
+"a leggyakrabban használt Debian-csomagokról."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"This information helps us make decisions such as which packages should go on "
+"the first Debian CD.  Also, we can improve future versions of Debian so that "
+"the most popular packages are the ones which are installed automatically for "
+"new users."
+msgstr ""
+"Ezekre az adatokra aztán a Debian-fejlesztők különféle döntéseket "
+"alapozhatnak, pl. mely csomagok kerüljenek az első Debian-CD-re. A "
+"Debian jövőbeli változatainak is előnyére válik, ha az új felhasználók "
+"számára valóban a leghasznosabbnak bizonyuló csomagok "
+"települhetnek automatikusan a gépeikre."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week automatically, e-mailing statistics to the Debian developers."
+msgstr ""
+"Ha az adatszolgáltatás mellett dönt, az adatok beküldését végző program "
+"hetente automatikusan le fog futni, és elektronikus levélben statisztikákat "
+"juttat el a Debian-fejlesztőkhöz."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"A későbbiekben bármikor felülbírálhatja a részvételről hozott "
+"döntését a \"dpkg-reconfigure popularity-contest\" paranccsal."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"(NOTE: e-mail servers add their own tracing information and your data won't "
+"be completely anonymous while in transit.)"
+msgstr ""
+"(MEGJEGYZÉS: az elektronikus levelek továbbítását végző kiszolgálók "
+"nyomkövetési információkat szoktak a levelekhez fűzni, a beküldött adat "
+"tehát nem tekintendő teljes mértékben anonimnak.)"
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid "Generating unique host identifier failed"
+msgstr "Egyedi gazdagép-azonosító előállítása nem sikerült"
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"A telepítő nem tudott egy egyedi gazdagép-azonosítót előállítani. Ez "
+"megkerülhetetlen hiba, hiszen az adatszolgáltatásban résztvevő "
+"minden gépet külön azonosítónak kell jelölnie."
+
+#. Type: error
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Kérjük, jelentse be a popularity-contest csomag e hibáját, és a "
+"hibajelentésben írja le az érintett gép jellemzőit is."
+
