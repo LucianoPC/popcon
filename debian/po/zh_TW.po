@@ -17,9 +17,9 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-06-08 14:53+0800\n"
+"PO-Revision-Date: 2004-07-31 23:01+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
 "debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,6 @@ msgstr "是否要參加 Debian 熱門套件競賽？"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
@@ -42,16 +41,16 @@ msgid ""
 msgstr ""
 "您可以讓系統藉由匿名的電子郵件來向 Debian 的開發人員提交您最常使用的 Debian "
 "套件的統計數據。"
+"這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光碟中。"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"如果您決定要參與，自動提交的 Script 將會每週一次，自動將統計數據以 E-mail 寄"
+"如果您決定要參與，自動提交的 Script 將會每週一次，將統計數據以 E-mail 寄"
 "送給 Debian 開發人員。"
 
 #. Type: boolean
