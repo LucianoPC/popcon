@@ -12,8 +12,10 @@ popularity-contest (1.16) UNRELEASED; urgency=low
       Closes: #240723
     - Updated Swedish debconf translation by Andre Dahlqvist
       Closes: #240885
+    - Updated Italian debconf translation by Cristian Rigamonti
+      Closes: #241130
 
- -- Christian Perrier <bubulle@debian.org>  Mon, 29 Mar 2004 22:48:45 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 31 Mar 2004 09:30:42 +0200
 
 popularity-contest (1.15) unstable; urgency=low
 
