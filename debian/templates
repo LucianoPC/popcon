@@ -22,10 +22,10 @@ _Description: Participate in the Debian Package Popularity Contest?
 
 Template: popularity-contest/hostid-failed
 Type: error
-_Description: Generating unique host id failed
- The install script are unable to generate a unique host id.  This
- is a fatal error, as all hosts submitting info need to have an unique
- id.
+_Description: Generating unique host identifier failed
+ The install script are unable to generate a unique host identifier.
+ This is a fatal error, as all hosts submitting information need to have
+ an unique identifier.
  .
- Please report this problem as a bug against popularity-contest, and
- include info on your configuration.
+ Please report this problem as a bug against the popularity-contest
+ package, and include information about your configuration.
