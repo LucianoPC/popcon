@@ -1,4 +1,4 @@
-popularity-contest (1.21) UNRELEASED; urgency=low
+popularity-contest (1.21) unstable; urgency=low
 
   * Translations
     - Bosnian update
@@ -21,7 +21,7 @@ popularity-contest (1.21) UNRELEASED; urgency=low
     - Remove nb.po/no.po transition code.  The duplication is now
       handled by po-debconf via dh_installdebconf.
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 13 Jun 2004 08:56:28 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 19 Jun 2004 00:10:49 +0200
 
 popularity-contest (1.20) unstable; urgency=low
 
