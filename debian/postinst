@@ -92,6 +92,8 @@ generate_conffile() {
 		#
 		PARTICIPATE=$PARTICIPATE
 	EOF
+	# Make sure user nobody can read the file.
+	chmod a+r $conffile
 }
 
 case "$1" in
@@ -104,6 +106,8 @@ case "$1" in
 	    if sed "s/^PARTICIPATE=.*$/PARTICIPATE=$PARTICIPATE/; s/^MAILTO=.*$/MAILTO=\"$MAILTO\"/" < $conffile > $conffile.new &&
 		! cmp $conffile $conffile.new > /dev/null; then
 		mv $conffile.new $conffile
+		# Make sure user nobody can read the file.
+		chmod a+r $conffile
 	    else
 		rm $conffile.new
 	    fi

@@ -3,6 +3,8 @@ popularity-contest (1.10) UNRELEASED; urgency=low
   * Petter Reinholdtsen
     - Added Japanese debconf translation thanks to Kenshi
       Moto. (Closes: #229538)
+    - Make sure /etc/popularity-contest.conf is readable by user
+      nobody, no matter the umask of root.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 25 Jan 2004 09:44:44 +0100
 
