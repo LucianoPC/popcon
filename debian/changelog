@@ -9,6 +9,9 @@ popularity-contest (1.18) UNRELEASED; urgency=low
     - Add FAQ:
       + Document valid sender domain problem. Closes: #241383
       + Document the noatime problem. Closes: #239939
+    - sync server-side scripts with popcon.debian.org: 
+      + Address bug #238004 in popcon.pl w.r.t. wording of per-maintainer
+        reports.
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 13 Apr 2004 18:39:19 +0200
 

@@ -98,9 +98,30 @@ sub make_by
   my %sum;
   @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @list;
   $winner{"$sec/$order"}=$list[0];
-  my $m=($sec eq "maint"?"":"(maintainer)");
   open DAT , "| tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
-  print DAT <<"EOF";
+  if ($sec eq "maint")
+  {
+    print DAT <<"EOF";
+#Format
+#   
+#<name> is the developer name;
+#
+#The fields below are the sum for all the packages maintained by that
+#developer:
+#
+#<inst> is the number of people who installed this package;
+#<vote> is the number of people who use this package regularly;
+#<old> is the number of people who installed, but don't use this package
+#      regularly;
+#<recent> is the number of people who upgraded this package recently;
+#<no-files> is the number of people whose entry didn't contain enough
+#           information (atime and ctime were 0).
+#rank name                            inst  vote   old recent no-files
+EOF
+  }
+  else 
+  {
+    print DAT <<"EOF";
 #Format
 #   
 #<name> is the package name;
@@ -111,8 +132,9 @@ sub make_by
 #<recent> is the number of people who upgraded this package recently;
 #<no-files> is the number of people whose entry didn't contain enough
 #        information (atime and ctime were 0).
-#rank name                            inst  vote   old recent no-files  $m
+#rank name                            inst  vote   old recent no-files (maintainer)
 EOF
+  }
   $format="%-5d %-30s".(" %5d"x($#fields+1))." %-32s\n";
   my $rank=0;
   for $p (@list)
