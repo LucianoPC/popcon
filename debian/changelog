@@ -1,5 +1,9 @@
 popularity-contest (1.8) UNRELEASED; urgency=low
 
+  * Petter Reinholdtsen
+    - Add Dutch debconf template translation (nl.po).  File from
+      Bart Cornelis. (Closes: #217038)
+
  -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 19:17:12 +0200
 
 popularity-contest (1.7) unstable; urgency=low
