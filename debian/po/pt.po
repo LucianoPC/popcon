@@ -14,10 +14,10 @@
 # Miguel Figueiredo <elmig@debianpt.org>, 2004
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest 1.15\n"
+"Project-Id-Version: popularity-contest 1.21\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-03-20 18:40+0000\n"
+"PO-Revision-Date: 2004-06-04 19:50+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianptorg>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,6 @@ msgstr "Participar no Concurso de Popularidade de Pacotes Debian?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
@@ -41,19 +40,18 @@ msgid ""
 msgstr ""
 "Você pode ter o seu sistema a enviar anónimamente por e-mail aos "
 "desenvolvedores de Debian estatísticas acerca dos seus pacotes Debian mais "
-"utilizados."
+"utilizados.  Esta informação influencia decisões tais como que pacotes "
+"devem ser incluídos no primeiro CD de Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"Se escolher participar, o script de envio automático correrá uma vez por "
-"semana automaticamente, enviando por e-mail estatísticas aos desenvolvedores "
-"de Debian."
+"Se escolher participar, o script automático de submissão correrá uma vez por "
+"semana, enviando por e-mail estatísticas aos desenvolvedores de Debian."
 
 #. Type: boolean
 #. Description
@@ -110,3 +108,4 @@ msgstr ""
 #~ msgstr ""
 #~ "(NOTA: servidores de e-mail, sua informção de rastreio e os seus dados "
 #~ "não serão completamente anónimos enquanto estiverem em trânsito.)"
+
