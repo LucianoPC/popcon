@@ -1,5 +1,40 @@
       Popularity-contest Frequently Asked Questions.
 
+Q) What informations are reported by popularity-contest ?
+
+A) popularity-contest report the Debian architecture you use,
+   the Debian release and the list of packages installed on the
+   system with the most recent atime of important files in them
+   (mainly executable files).
+
+Q) What are the privacy consideration for popularity-contest ?
+
+A) Each popularity-contest host is identified by a random 128bit uuid
+   (MY_HOSTID in /etc/popularity-contest). This uuid is used to track
+   submission issued by the same host. It should be kept secret.  The reports
+   are sent by email to the popcon server.  The server automatically extract
+   the report from the email and store it in a database for a maximum of 20
+   days or until the host send a new report. This database is readable only by
+   Debian Developers.  The emails are readable only by the server admins.
+   Every day, the server compute a summary and post it on
+   <http://popcon.debian.org/all-popcon-results.txt.gz>. This summary is a
+   merge of all the submissions and does not include uuids.
+   
+   Known weakness of the system:
+   
+   1) Your email submission might be intercepted. We evaluate the possibility
+   to use public-key cryptography to protect the email.
+   
+   2) Someone who know you are very likely to use a particular package reported
+   by only one person (e.g. you are the maintainer) might infer you are not at
+   home when the package is not reported anymore. However this is only a
+   problem if you are gone for more than two weeks if the computer is shut-down
+   and 23 days if it is let idle.  
+   
+   3) Unofficial and local packages are reported. This can be an issue
+   especially with 2) above, especially for custom-build kernel packages.
+   We are evaluating how far we can alleviate this problem.
+   
 Q) My submissions bounce with 
    550 [PERMFAIL] popcon.debian.org requires valid sender domain.
 
