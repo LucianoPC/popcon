@@ -7,6 +7,8 @@ popularity-contest (1.14) UNRELEASED; urgency=low
       Cristian Rigamonti.  (Closes: #236956)
     - Added Swedish debconf translation received from
       André Dahlqvist. (Closes: #237129)
+    - Added Lithuanian debconf translation received from
+      K�?stutis Biliūnas.  (Closes: #237288)
 
  -- Petter Reinholdtsen <pere@debian.org>  Mon,  8 Mar 2004 21:08:30 +0100
 
