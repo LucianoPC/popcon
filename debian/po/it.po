@@ -3,15 +3,15 @@
 # Cristian Rigamonti <cri@linux.it>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest 1.15\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: popularity-contest 1.23\n"
 "POT-Creation-Date: 2004-05-27 18:27-0300\n"
-"PO-Revision-Date: 2004-03-30 23:53+0200\n"
+"PO-Revision-Date: 2004-08-01 18:15+0200\n"
 "Last-Translator: Cristian Rigamonti <cri@linux.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #. Type: boolean
 #. Description
@@ -22,19 +22,19 @@ msgstr "Si desidera partecipare al \"Debian Package Popularity Contest\"?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "È possibile configurare il sistema in modo da spedire in modo anonimo agli "
-"sviluppatori Debian le statistiche sui pacchetti Debian più usati."
+"sviluppatori Debian le statistiche sui pacchetti Debian più usati. Queste "
+"informazioni influenzeranno ad esempio la decisione riguardante i pacchetti "
+"da includere nel primo CD della distribuzione Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
@@ -50,14 +50,14 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Dopo aver preso questa decisione, è ancora possibile cambiare idea eseguendo "
+"Una volta deciso di partecipare, è sempre possibile cambiare idea eseguendo "
 "\"dpkg-reconfigure popularity-contest\""
 
 #. Type: error
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr "Generazione di un identificatore univoco dell'host fallito"
+msgstr "Generazione dell'identificatore univoco dell'host fallita"
 
 #. Type: error
 #. Description
@@ -68,8 +68,8 @@ msgid ""
 "identifier."
 msgstr ""
 "Lo script di installazione non è riuscito a generare un identificatore "
-"univoco dell'host. È un errore fatale, perchè tutti gli host che inviano "
-"informazioni devono possedere un identificatore univoco."
+"univoco dell'host. È un errore fatale, perchè tutti ogni host che invia "
+"informazioni deve possedere un identificatore univoco."
 
 #. Type: error
 #. Description
