@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-03-09 00:18+0100\n"
+"PO-Revision-Date: 2004-03-29 20:57+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,7 @@ msgstr ""
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "Generering av unik värdidentifierare misslyckades"
 
 #. Type: error
 #. Description
@@ -97,6 +97,9 @@ msgid ""
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
+"Installationsskriptet kunde inte generera en unik värdidentifierare. Detta "
+"är ett ödesdigert fel eftersom alla värdar som skickar information måste ha "
+"en unik identifierare."
 
 #. Type: error
 #. Description
@@ -105,3 +108,5 @@ msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
+"Rapportera detta problem som en bugg i paketet popularity-contest och "
+"inkludera information om din konfiguration."
