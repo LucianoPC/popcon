@@ -28,12 +28,7 @@ for $f (sort @ARGV)
 }
 
 @days = sort grep { defined($sub{$_}->{'i386'}) } @ARGV;
-@date = map {m/popcon-([0-9-]+)\.gz/ and $1} @days;
-@dates=();
-for(my $i=0; $i<=$#date; $i++)
-{
-  $dates[$i]=($i%7)?"":$date[$i];
-}
+@dates = map {m/popcon-([0-9-]+)\.gz/ and $1} @days;
 @data = (\@dates);
 @arch = sort keys %arch;
 $maxv = -10;
@@ -63,11 +58,12 @@ $obj=Chart::LinesPoints->new (600,400);
 $obj->set ('title' => 'Number of submissions per architectures');
 $obj->set ('legend_labels' => \@labels);
 $obj->set ('f_y_tick' => \&ytick);
-$obj->set ('brush_size' => 2);
-$obj->set ('pt_size' => 9);
+$obj->set ('brush_size' => 3);
+$obj->set ('pt_size' => 7);
 $obj->set ('max_val' => $maxv+1);
 $obj->set ('y_ticks' => int $maxv +1);
 $obj->set ('x_ticks' => 'vertical');
+$obj->set ('skip_x_ticks' => 14);
 $obj->png ("$dirpng/submission.png", \@data);
 
 use Chart::Composite;
@@ -86,9 +82,10 @@ for $arch (@arch)
   $obj=Chart::Composite->new (600,400);
   $obj->set ('title' => "Number of submissions for $arch");
   $obj->set ('legend_labels' => \@labels);
-  $obj->set ('brush_size' => 2);
-  $obj->set ('pt_size' => 9);
+  $obj->set ('brush_size' => 3);
+  $obj->set ('pt_size' => 7);
   $obj->set ('x_ticks' => 'vertical');
+  $obj->set ('skip_x_ticks' => 14);
   $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]); 
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
