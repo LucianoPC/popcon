@@ -32,11 +32,6 @@ generate_id() {
         else
 	        MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`
         fi
-        if [ "$MY_HOSTID" == "$EMPTYID" ] ; then
-            db_input critical popularity-contest/hostid-failed || [ $? -eq 30 ]
-            db_go || true
-            exit 1
-        fi
 }
 
 generate_conffile() {
@@ -65,12 +60,16 @@ case "$1" in
 	    generate_conffile
 	else
 
+            OLDHOSTID="$MY_HOSTID";
+            case $MY_HOSTID in
             # Workaround for bug #237874 triggered on hurd.  The
             # problem was fixed in version 1.15, 2004-03-20.
-            if [ "$MY_HOSTID" == "$EMPTYID" ] ; then
-                generate_id
-            fi
 
+              $EMPTYID) generate_id;;
+            # Workaround for bug #240603 triggered by md5sums change
+            # of behaviour with stdin. version 1.17, 2004-04-12.
+              *-)  MY_HOSTID="${MY_HOSTID%  -}";;
+            esac;
 	    # Replace only if the content changed, to avoid changing the
 	    # config file date when no change was done.
 
@@ -84,8 +83,12 @@ case "$1" in
 		s/^\(MAILTO=\"erich-survey@debian.org\"\)$/#\1/;    \
 		s/^\(MAILTO=\"apenwarr-survey@debian.org\"\)$/#\1/; \
 		s/^\(MAILTO=\"survey@popcon.debian.org\"\)$/#\1/;   \
-		s/^MY_HOSTID=\"\\?$EMPTYID\"\\?/MY_HOSTID=\"$MY_HOSTID\"/; \
+                "
+            if [ "$OLDHOSTID" != "$MY_HOSTID" ]; then
+                sedopts="$sedopts \
+                s/^MY_HOSTID=\"\\?$OLDHOSTID\"\\?/MY_HOSTID=\"$MY_HOSTID\"/; \
 		"
+            fi
 
 	    if sed "$sedopts" < $conffile > $conffile.new &&
 		! cmp $conffile $conffile.new > /dev/null; then
