@@ -1,12 +1,12 @@
-popularity-contest (1.9) UNRELEASED; urgency=low
+popularity-contest (1.9) unstable; urgency=low
 
   * Petter Reinholdtsen
     - Report error in popcon-largest-unused if
       /var/log/popularity-contest is missing.
     - Make sure db_input do not fail if the question already was
-      displayed earlier.  (Closes: #229091, #229092)
+      displayed earlier.  (Closes: #229091, #229092, #229112)
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 22 Jan 2004 22:18:38 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 23 Jan 2004 09:40:57 +0100
 
 popularity-contest (1.8) unstable; urgency=low
 
