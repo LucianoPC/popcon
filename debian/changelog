@@ -1,11 +1,11 @@
-popularity-contest (1.6) UNRELEASED; urgency=low
+popularity-contest (1.6) unstable; urgency=low
 
   * Make new mailing list popcon-developers@lists.alioth.debian.org the
     maintainer of this package, to make sure all developers get the
     bug reports.  Updated uploaders to include the new addresses.
   * Added Bill Allombert as co-maintainer and uploader.
 
- -- Petter Reinholdtsen <pere@debian.org>  Tue, 14 Oct 2003 09:50:24 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 18 Oct 2003 10:45:58 +0200
 
 popularity-contest (1.5) unstable; urgency=low
 
