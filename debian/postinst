@@ -40,7 +40,7 @@ generate_conffile() {
 		# on the options.
 		
 		MY_HOSTID="$MY_HOSTID"
-		PARTICIPATE=$PARTICIPATE
+		PARTICIPATE="$PARTICIPATE"
 	EOF
 	# Make sure user nobody can read the file.
 	chmod a+r $conffile
