@@ -8,7 +8,7 @@ touch ../Mail/survey
 chmod go-rwx ../Mail/survey
 
 # process entries
-./prepop.py <new-popcon-entries >prepop.out
+./prepop.pl <new-popcon-entries >prepop.out 2>&1
 
 # delete outdated entries
 rm -f results
