@@ -1,48 +1,58 @@
-# translation of popularity-contest_1.13_nb.po to Norwegian Nynorsk
-# Håvard Korsvoll <korsvoll@skulelinux.no>, 2004.
+# translation of popularity-contest_debian.po to Norwegian bokmål
+# translation of popularity-contest_debian.po to Norwegian Bokmål
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+# Axel Bojer <axelb@skolelinux.no>, 2004.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_1.13_nb\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: popularity-contest_debian\n"
 "POT-Creation-Date: 2004-08-15 15:35+0000\n"
-"PO-Revision-Date: 2004-03-20 17:28MET\n"
-"Last-Translator: Petter Reinholdtsen <pere@hungry.com>\n"
-"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"PO-Revision-Date: 2004-07-10 19:22GMT+2\n"
+"Last-Translator: Axel Bojer <axelb@skolelinux.no>\n"
+"Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Generator: KBabel 1.3\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Delta i popularitetskonkuransen for Debian-pakker?"
+msgstr "Vil du delta i avstemmingen om populære Debian-pakker?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Du kan la systemet ditt sende anonyme e-poster til Debian-utviklerne med "
-"statistikk om de mest brukte Debian-pakkene dine."
+"Du kan gjøre slik at systemet ditt sender anonym e-post til Debian-"
+"utviklerne med statistikk om dine mest brukte Debian-pakkker. Disse "
+"opplysningene påvirker ulike avgjørelser, f.eks. hvilke pakker som blir lagt "
+"på den første Debian CD-en."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"Hvis du velger å delta, så vil et automatisk innsendings-skript kjøre "
-"automatisk en gang i uka, og sende statistikken på email til Debian-"
-"utviklerne."
+"Hvis du velger å delta, så vil et skript kjøres en gang i uka, som "
+"automatisk sender e-post med statistikk til Debian-utviklerne."
 
 #. Type: boolean
 #. Description
@@ -51,14 +61,13 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Du kan alltid endre mening etter å ha tatt denne avgjørelsen: «dpkg-"
-"reconfigure popularity-contest»"
+"Du kan alltid ombestemme deg senere: «dpkg reconfigure popularity-contest»"
 
 #. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr "Generering av unik verts-identifikator feilet"
+msgstr "Det lyktes ikke å lage en unik verts-identifikasjon"
 
 #. Type: note
 #. Description
@@ -68,9 +77,9 @@ msgid ""
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
-"Installasjonsskriptet klarte ikke å generere en unik verts-identifikator.  "
-"Dette er en fatal feil, da alle verter som sender inn info må ha en unik "
-"identifikator. "
+"Installasjonsskriptet klarte ikke å lage en entydig identifikasjon for denne "
+"verten. Dette er en fatal feil, fordi alle vertsmaskiner som sender inn "
+"informasjon må ha en entydig identifikasjon."
 
 #. Type: note
 #. Description
@@ -79,23 +88,5 @@ msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Rapporter dette problemet som en feil mot pakken popularity-contest, og "
-"inkluder informasjon om ditt oppsett."
-
-#~ msgid ""
-#~ "This information helps us make decisions such as which packages should go "
-#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
-#~ "so that the most popular packages are the ones which are installed "
-#~ "automatically for new users."
-#~ msgstr ""
-#~ "Denne informasjonen hjelper oss å ta beslutninger om hvilke pakker som "
-#~ "bør plasseres på den første Debian-CDen.  I tillegg, så kan vi forbedre "
-#~ "framtidige versjoner av Debian slik at de mest populære pakkene er de som "
-#~ "blir installert automatisk for nye brukere."
-
-#~ msgid ""
-#~ "(NOTE: e-mail servers add their own tracing information and your data "
-#~ "won't be completely anonymous while in transit.)"
-#~ msgstr ""
-#~ "(MERK: e-posttjeneren legger inn deres egen sporingsinformasjon, slik at "
-#~ "dine data ikke vil være fullstendig anonyme under sending.)"
+"Vennligst meld inn dette problemet som feil i pakka popularity-contest, og "
+"legg ved informasjon om oppsettet."
