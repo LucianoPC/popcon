@@ -1,8 +1,9 @@
 popularity-contest (1.19) unreleased; urgency=low
 
-  * 
+  * Translations
+    Turkish by Recai Oktas. Closes: #244164
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 16 Apr 2004 15:22:02 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun, 25 Apr 2004 12:42:12 +0200
 
 popularity-contest (1.18) unstable; urgency=low
 
