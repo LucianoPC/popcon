@@ -1,3 +1,10 @@
+popularity-contest (1.11) UNRELEASED; urgency=low
+
+  * Add Danish debconf translation, thanks to Morten Brix
+    Pedersen (Closing: #230022)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 27 Jan 2004 22:44:28 +0100
+
 popularity-contest (1.10) unstable; urgency=low
 
   * Petter Reinholdtsen
