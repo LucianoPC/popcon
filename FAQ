@@ -12,7 +12,7 @@ A) popularity-contest report the Debian architecture you use, the version of
 Q) What are the privacy consideration for popularity-contest ?
 
 A) Each popularity-contest host is identified by a random 128bit uuid
-   (MY_HOSTID in /etc/popularity-contest). This uuid is used to track
+   (MY_HOSTID in /etc/popularity-contest.conf). This uuid is used to track
    submission issued by the same host. It should be kept secret.  The reports
    are sent by email to the popcon server.  The server automatically extract
    the report from the email and store it in a database for a maximum of 20

@@ -1,12 +1,13 @@
-popularity-contest (1.27) UNRELEASED; urgency=low
+popularity-contest (1.27) unstable; urgency=low
 
   * Translations
     - Corrections in Ukrainian uk.po. Closes: #290752
-  * popcon-stat.pl, popcon-process.sh: Change the interface to avoid
+  * popcon-stat.pl, popcon-process.sh: change the interface to avoid
     use of xargs which has a length limit.
   * popcon.pl: compute statistics for source packages. Closes: #291747.
+  * FAQ: Fix typo noticed by Thomas Wana.
 
- -- Bill Allombert <ballombe@debian.org>  Tue, 15 Feb 2005 15:44:35 +0100
+ -- Bill Allombert <ballombe@debian.org>  Fri, 18 Feb 2005 18:35:16 +0100
 
 popularity-contest (1.26) unstable; urgency=low
 
