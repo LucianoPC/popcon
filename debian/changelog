@@ -4,6 +4,9 @@ popularity-contest (1.24) UNRELEASED; urgency=low
     - Let postinst and popcon-process.sh use /bin/sh, and make sure
       the notation in postinst is POSIX compatible.  Patch from David
       Weinehall.  (Closes: #260088)
+    - Change type of popularity-contest/hostid-failed template from
+      'error' to 'note'.  The former is only available in cdebconf.
+      (Closes: #262426)
   * Translations
     - Indonesian update. Closes: #261225
     - Initial Croatian debconf translation hr.po
