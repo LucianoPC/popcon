@@ -1,0 +1,93 @@
+# Galician translation of the popularity-contest debconf template
+# Jacobo Tarrío <jtarrio@debian.org>, 2005
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
+"PO-Revision-Date: 2005-02-21 18:03+0100\n"
+"Last-Translator: Jacobo Tarrío <jtarrio@debian.org>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "¿Participar no Concurso de Popularidade dos Paquetes Debian?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Pode facer que o seu sistema envíe e-mails anónimos aos desenvolvedores de "
+"Debian con estatísticas sobre os paquetes Debian que máis usa. Esta "
+"información inflúe en decisións tales coma os paquetes que van no primeiro "
+"CD de Debian."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Se quere participar, o guión de envío automático ha funcionar unha vez por "
+"semana, enviándolle estatísticas aos desenvolvedores de Debian."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Sempre pode cambiar de idea despois de tomar esta decisión: \"dpkg-"
+"reconfigure popularity-contest\""
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "A xeración do identificador único da máquina fallou"
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid ""
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"O guión de instalación non puido xerar un identificador único de máquina. "
+"Este é un erro grave, xa que tódalas máquinas que envían información teñen "
+"que ter un identificador único."
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"Informe deste problema poñéndolle un informe de erro ao paquete popularity-"
+"contest, e inclúa información sobre a súa configuración."
