@@ -4,6 +4,8 @@ popularity-contest (1.8) UNRELEASED; urgency=low
     - Add Dutch debconf template translation (nl.po).  File from
       Bart Cornelis. (Closes: #217038)
     - Add URLs to the project home page in manual page and README file.
+  * Bill Allombert
+    - control: change exim to exim4. (Closes: #228575)
 
  -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 19:17:12 +0200
 
