@@ -2,6 +2,7 @@ Source: popularity-contest
 Section: misc
 Priority: optional
 Maintainer: Avery Pennarun <apenwarr@debian.org>
+Uploaders: Petter Reinholdtsen <pere@debian.org>
 Build-Depends-Indep: debhelper (>=4.1.16)
 Standards-Version: 3.6.1
 
