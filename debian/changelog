@@ -1,6 +1,8 @@
 popularity-contest (1.9) UNRELEASED; urgency=low
 
-  * 
+  * Petter Reinholdtsen
+    - Report error in popcon-largest-unused if
+      /var/log/popularity-contest is missing.
 
  -- Bill Allombert <ballombe@debian.org>  Thu, 22 Jan 2004 22:18:38 +0100
 
