@@ -51,7 +51,7 @@ sub popconintro
 {
   print HTML <<"EOH";
   <p> <em> The popularity contest project is an attempt to map the usage of
-  Debian packages.  This site publishes the statistics gathered from report send by users of the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package. This package send every week the list of packages installed and the access time of relevant files to the server via email. Every day the server anonymize the result and publishes this survey.
+  Debian packages.  This site publishes the statistics gathered from report send by users of the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package. This package sends every week the list of packages installed and the access time of relevant files to the server via email. Every day the server anonymizes the result and publishes this survey.
   For more information, read the <a href="README">README</a> and the 
   <a href="FAQ">FAQ</a>.
   </em> <p>
