@@ -4,8 +4,9 @@ popularity-contest (1.25) UNRELEASED; urgency=low
     - Initial Bulgarian debconf translation bg.po. Closes: #267586
     - Turkish updated. Closes: #267836
     - Update German debconf translation de.po
+    - Russian updated. Closes: #268403
 
- -- Christian Perrier <bubulle@debian.org>  Tue, 24 Aug 2004 19:48:04 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun, 29 Aug 2004 09:52:03 +0200
 
 popularity-contest (1.24) unstable; urgency=low
 

@@ -1,3 +1,4 @@
+# translation of popularity-contest-debconf_ru.po to Russian
 # translation of popularity-contest-debconf_ru.po to Русский язык
 #
 #    Translators, if you are not familiar with the PO format, gettext
@@ -12,15 +13,16 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 # Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
+# Yuri Kozlov <yuray@id.ru>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest-debconf_ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-15 15:35+0000\n"
-"PO-Revision-Date: 2004-04-12 13:52+0200\n"
-"Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
-"Language-Team: Русский язык <debian-russian@lists.debian.org>\n"
+"PO-Revision-Date: 2004-08-27 09:37+0400\n"
+"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,31 +34,29 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr ""
-"Хотите ли вы предоставлять информацию для учёта популярности пакетов Debian?"
+msgstr "Хотите ли вы предоставлять информацию для учёта популярности пакетов Debian?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Ваша система может отправлять разработчикам Debian анонимные электронные "
-"сообщения с информацией об используемых вами пакетах."
+"сообщения с информацией о наиболее часто используемых вами пакетах. Эта "
+"информация повлияет на то, какие пакеты будут записаны на первый Debian CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"Если у вас есть такое желание, автоматический скрипт будет еженедельно "
-"отправлять статистику разработчикам."
+"Если у вы хотите поучаствовать, автоматический скрипт будет еженедельно "
+"отправлять статистику разработчикам Debian."
 
 #. Type: boolean
 #. Description
@@ -96,21 +96,3 @@ msgstr ""
 "Сообщите об этой ошибке как об ошибке в пакете popularity-contest и не "
 "забудьте описать настройки вашей системы."
 
-#~ msgid ""
-#~ "This information helps us make decisions such as which packages should go "
-#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
-#~ "so that the most popular packages are the ones which are installed "
-#~ "automatically for new users."
-#~ msgstr ""
-#~ "Эта информация поможет нам определить, какие пакеты следует помещать на "
-#~ "первый компакт-диск Debian. В следующих версиях дистрибутива мы сможем "
-#~ "при установке системы новым пользователем автоматически устанавливать "
-#~ "наиболее популярные пакеты."
-
-#~ msgid ""
-#~ "(NOTE: e-mail servers add their own tracing information and your data "
-#~ "won't be completely anonymous while in transit.)"
-#~ msgstr ""
-#~ "(ПРИМЕЧАНИЕ: почтовые серверы добавляют собственную служебную информацию, "
-#~ "и в ходе пересылки из ваших данных, в принципе, можно извлечь некоторую "
-#~ "косвенную информацию об отправителе."
