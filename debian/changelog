@@ -11,6 +11,8 @@ popularity-contest (1.14) UNRELEASED; urgency=low
       KÄ?stutis BiliÅ«nas.  (Closes: #237288)
     - Added Korean debconf translation received from
       Changwoo Ryu. (Closes: #237620)
+    - Added Portuguese debconf translation received from
+      Miguel Figueiredo. (Closes: #237858)
 
  -- Petter Reinholdtsen <pere@debian.org>  Mon,  8 Mar 2004 21:08:30 +0100
 
