@@ -10,6 +10,7 @@ Package: popularity-contest
 Architecture: all
 Depends: dpkg (>= 1.10), exim4 | mail-transport-agent, debconf, ${perl:Depends}
 Recommends: cron
+Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
  When you install this package, it sets up a cron job that will anonymously

@@ -53,7 +53,16 @@ Q) /usr is mounted with 'noatime'.
 A) popularity-contest relies on atime to know what packages were used during
    the last month. This means you will only report the list of packages
    installed without usage information.
- 
+
+Q) When does popularity-contest run ?
+
+A) popularity-contest is run by the weekly cron job 
+/etc/cron.weekly/popularity-contest.
+Under the default configuration of cron, this happens every sundays
+at 6:47 in the morning. This can be changed by editing /etc/crontab
+but if your computer is not always turned on, we really recommend you
+install the anacron package.
+
 Q) I don't want popcon email to be send by root! How can I send that ?
 
 A) To send as user 'myuser', edit the function 'do_sendmail' in
@@ -66,4 +75,5 @@ do_sendmail()
 
 Make sure myuser account is properly configured to send email with a valid
 return address.
+
 
