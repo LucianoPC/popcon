@@ -1,8 +1,10 @@
 popularity-contest (1.23) UNRELEASED; urgency=low
 
-  *  
+  * Translations
+    - Danish update. Closes: #255533
+    - Ukrainian update. Closes: #255523
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 20 Jun 2004 15:37:12 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 22 Jun 2004 08:31:33 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
