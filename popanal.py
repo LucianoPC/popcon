@@ -34,7 +34,8 @@ sectlist = { UNKNOWN : [] }
 deplist = {}
 provlist = {}
 complained = {}
-host_arch_list = {}
+release_list = {}
+arch_list = {}
 subcount = 0
 
 
@@ -108,7 +109,8 @@ class Submission:
 
     start_date = 0
 
-    host_arch = "unknown"
+    arch = "unknown"
+    release= "unknown"
 
     # initialize a new entry with known data
     def __init__(self, version, owner_id, date):
@@ -154,10 +156,15 @@ class Submission:
 		sectlist[UNKNOWN].append(package)
 	    votelist[package].vote_for(package, self.entries[package])
 
-        if not host_arch_list.has_key(self.host_arch):
-            host_arch_list[self.host_arch] = 1
+        if not release_list.has_key(self.release):
+            release_list[self.release] = 1
         else:
-            host_arch_list[self.host_arch] = host_arch_list[self.host_arch] + 1
+            release_list[self.release] = release_list[self.release] + 1
+
+        if not arch_list.has_key(self.arch):
+            arch_list[self.arch] = 1
+        else:
+            arch_list[self.arch] = arch_list[self.arch] + 1
 
 def headersplit(pairs):
     header = {}
@@ -192,13 +199,14 @@ def read_submissions(stream):
 	    ewrite('#%s' % subcount)
 	    e = Submission(0, header['ID'], header['TIME'])
 
+            if header.has_key('DEBVER'):
+	        e.release = header['DEBVER']
+	
             if header.has_key('ARCH'):
 	    	if header['ARCH']=='x86_64':
-                    e.host_arch = 'amd64'
-		elif header['ARCH']=='i386-gnu':
-                    e.host_arch = 'hurd'
+                    e.arch = 'amd64'
 		else:
-                    e.host_arch = header['ARCH']
+                    e.arch = header['ARCH']
 
 	elif split[0]=='END-POPULARITY-CONTEST-0' and e != None:
 	    header = headersplit(split[1:])
@@ -234,10 +242,13 @@ def nicename(s):
 # dump the results
 out = open('results', 'w')
 out.write("Submissions: %8d\n" % subcount)  
+for release in release_list.keys():
+    out.write("Release: %-30s %5d\n"
+                  % (release, release_list[release]))
 
-for host_arch in host_arch_list.keys():
+for arch in arch_list.keys():
     out.write("Architecture: %-30s %5d\n"
-                  % (host_arch, host_arch_list[host_arch]))
+                  % (arch, arch_list[arch]))
 for section in sectlist.keys():
     for package in sectlist[section]:
 	fv = votelist[package]
