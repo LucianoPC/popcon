@@ -71,7 +71,7 @@ EOF
 </small></p>
 <HR>
 Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
-<a href="http://alioth.debian.org/projects/popcon/" > Popularity-contest project <a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
+<a href="http://popcon.alioth.debian.org" > Popularity-contest project <a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <BR>
 Copyright (C) 2004 <A HREF="http://www.spi-inc.org/">SPI</A>;
 See <A HREF="http://www.debian.org/license">license terms</A>.
