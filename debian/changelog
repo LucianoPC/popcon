@@ -9,15 +9,16 @@ popularity-contest (1.18) UNRELEASED; urgency=low
     - Add FAQ:
       + Document valid sender domain problem. Closes: #241383
       + Document the noatime problem. Closes: #239939
-    - README, debian/popularity.contest.8: 
+    - README, debian/popularity.contest.8:
       + Add pointers to the FAQ.
     - sync server-side scripts with popcon.debian.org:
       + Address bug #238004 in popcon.pl w.r.t. wording of per-maintainer
         reports.
   * Translations
     - Basque added by Piarres Beobide. Closes: #243768
+    - French update (removed first person) by Christian Perrier
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Thu, 15 Apr 2004 09:22:48 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Fri, 16 Apr 2004 09:03:10 +0200
 
 popularity-contest (1.17) unstable; urgency=medium
 
