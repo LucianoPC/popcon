@@ -10,6 +10,7 @@ Package: popularity-contest
 Architecture: all
 Depends: gawk, dpkg-awk, exim | mail-transport-agent, debconf
 Recommends: cron
+Provides: popcon
 Description: Vote for your favourite packages automatically
  When you install this package, it sets up a cron job that will anonymously
  e-mail the Debian developers periodically with statistics about your
