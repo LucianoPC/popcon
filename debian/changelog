@@ -1,4 +1,4 @@
-popularity-contest (1.18) UNRELEASED; urgency=low
+popularity-contest (1.18) unstable; urgency=low
 
   * Bill Allombert
     - debian/postinst:
@@ -18,7 +18,7 @@ popularity-contest (1.18) UNRELEASED; urgency=low
     - Basque added by Piarres Beobide. Closes: #243768
     - French update (removed first person) by Christian Perrier
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Fri, 16 Apr 2004 09:03:10 +0200
+ -- Bill Allombert <ballombe@debian.org>  Fri, 16 Apr 2004 14:25:04 +0200
 
 popularity-contest (1.17) unstable; urgency=medium
 
