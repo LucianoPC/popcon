@@ -205,6 +205,8 @@ def read_submissions(stream):
             if header.has_key('ARCH'):
 	    	if header['ARCH']=='x86_64':
                     e.arch = 'amd64'
+	    	elif header['ARCH']=='i386-gnu':
+                    e.arch = 'hurd-i386'
 		else:
                     e.arch = header['ARCH']
 
