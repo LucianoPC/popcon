@@ -1,5 +1,8 @@
 popularity-contest (1.25) UNRELEASED; urgency=low
 
+  * Petter Reinholdtsen
+    - Removed Avery Pennarun as uploader on request from
+      Jeroen van Wolffelaar (QA).
   * Translations
     - Initial Bulgarian debconf translation bg.po. Closes: #267586
     - Turkish updated. Closes: #267836
