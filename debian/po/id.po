@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-04-07 23:15+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian Indonesia <debid@yahoogroups.com>\n"
@@ -53,13 +53,13 @@ msgstr ""
 "Anda selalu dapat mengubah pilihan anda setelah ini dengan: \"dpkg-"
 "reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Gagal membuat identitas host unik"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 "merupakan kesalahan fatal, karena semua host yang mengumpulkan informasi "
 "perlu memiliki identitas unik."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -80,4 +80,3 @@ msgid ""
 msgstr ""
 "Silakan laporkan masalah ini sebagai bug atas paket popularity-contest, dan "
 "berikan juga informasi tentang konfigurasi anda."
-

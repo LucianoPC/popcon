@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-05-27 18:31-0300\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -63,13 +63,13 @@ msgstr ""
 "Vous pouvez à tout moment revenir sur votre décision en utilisant la "
 "commande « dpkg-reconfigure popularity-contest »."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Échec de la génération d'un identifiant unique d'hôte"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "Cette erreur est fatal car tous les hôtes qui envoient des informations "
 "doivent posséder un identifiant unique."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-03-21 19:31+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -50,13 +50,13 @@ msgstr ""
 "이 결정에 대해 언제든지 마음을 바꿀 수 있습니다: \"dpkg-reconfigure "
 "popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "호스트 고유 ID를 만드는 데 실패했습니다"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 "설치 스크립트에서 호스트 고유 ID를 만들 수 없습니다. 치명적인 오류로, 정보를 "
 "제출하는 모든 호스트는 고유 ID를 가지고 있어야 합니다."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

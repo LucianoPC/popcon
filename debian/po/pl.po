@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-10 12:13+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -38,9 +38,9 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Mo¿esz sprawiæ, ¿e Twój system bêdzie anonimowo przesy³a³ deweloperom "
-"Debiana informacje o najczê¶ciej u¿ywanych przez Ciebie pakietach. "
-"Te informacje maj± wp³yw na decyzjê o tym jakie pakiety zostan± "
-"umieszczona na pierwszej p³ycie Debiana."
+"Debiana informacje o najczê¶ciej u¿ywanych przez Ciebie pakietach. Te "
+"informacje maj± wp³yw na decyzjê o tym jakie pakiety zostan± umieszczona na "
+"pierwszej p³ycie Debiana."
 
 #. Type: boolean
 #. Description
@@ -63,13 +63,13 @@ msgstr ""
 "Mo¿esz w ka¿dej chwili zmieniæ swoje zdanie pó¼niej: \"dpkg-reconfigure "
 "popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Generowanie unikalnego identyfikatora komputera nie powiod³o siê"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "komputera. To b³±d krytyczny, poniewa¿ wszystkie komputery przesy³aj±ce "
 "informacje musz± posiadaæ unikalny identyfikator."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -90,4 +90,3 @@ msgid ""
 msgstr ""
 "Proszê zg³osiæ ten problem wype³niaj±c zg³oszenie przeciwko pakietowi "
 "popularity-contest. Za³±cz informacje o swojej konfiguracji."
-

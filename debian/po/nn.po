@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-04-29 23:22+0200\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -64,13 +64,13 @@ msgstr ""
 "Du kan alltids angra valet ditt seinare ved å køyra kommandoen «dpkg-"
 "reconfigure popularity-contest»"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Klarte ikkje laga unik identifikator for vert"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 "Dette er ein fatal feil, sidan alle vertar som sender informasjon må ha ein "
 "unik identifikasjon."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

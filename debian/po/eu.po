@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-16 19:21+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -40,8 +40,8 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Zuk Debian garatzaileei ePostaz zuk gehien erabiltzen dituzun programei "
-"buruzko informazio anonimoki emango dien sistema bat izan dezakezu. "
-"Argibide hauekin Debianen lehen CD-an sartzen diren paketeak aukeratzen dira."
+"buruzko informazio anonimoki emango dien sistema bat izan dezakezu. Argibide "
+"hauekin Debianen lehen CD-an sartzen diren paketeak aukeratzen dira."
 
 #. Type: boolean
 #. Description
@@ -63,13 +63,13 @@ msgstr ""
 "Zuk artutako erabakia aldatu dezakezu \"dpkg-reconfigure popularity-contest"
 "\" erabiliaz"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Ostalari identifikazioa sortzerakoan huts egin du"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "errore konponezin bat da; eta informazio bidaltzen duten ostalari guztiak "
 "identifikagarri bat eduki behar dute."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -108,4 +108,3 @@ msgstr ""
 #~ msgstr ""
 #~ "(OHARRA: ePosta zerbitzariakberaien bidalketa informazioa gehitzen dute "
 #~ "eta zure datak ez dira guztiz anonimoak bidaltzerakoan)"
-

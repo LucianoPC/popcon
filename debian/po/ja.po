@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-22 20:27+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -36,7 +36,10 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "あなたが最も利用した Debian パッケージについての統計を Debian 開発者に匿名の電子メールで送るようシステムを設定できます。この情報は私たちが 1 番目の CD に入れるべきパッケージであるかどうかを決定するのに役立ちます。"
+msgstr ""
+"あなたが最も利用した Debian パッケージについての統計を Debian 開発者に匿名の"
+"電子メールで送るようシステムを設定できます。この情報は私たちが 1 番目の CD に"
+"入れるべきパッケージであるかどうかを決定するのに役立ちます。"
 
 #. Type: boolean
 #. Description
@@ -44,7 +47,9 @@ msgstr "あなたが最も利用した Debian パッケージについての統計を Debian 開発者に匿
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
-msgstr "参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、Debian 開発者に統計が電子メールで送られます。"
+msgstr ""
+"参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、Debian "
+"開発者に統計が電子メールで送られます。"
 
 #. Type: boolean
 #. Description
@@ -56,13 +61,13 @@ msgstr ""
 "この決定は、あとでいつでも変更できます: \"dpkg-reconfigure popularity-contest"
 "\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "固有のホスト識別子を生成するのに失敗しました"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -74,7 +79,7 @@ msgstr ""
 "情報を送るすべてのホストは固有の識別子を持たなければならないため、これは深刻"
 "なエラーです。"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

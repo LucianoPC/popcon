@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-21 16:56+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -62,13 +62,13 @@ msgstr ""
 "Du kan altid ændre mening senere, ved at køre: \"dpkg-reconfigure popularity-"
 "contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Oprettelse af unik værts-identificering fejlede"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -80,7 +80,7 @@ msgstr ""
 "stort problem, eftersom det er et krav at alle værter der sender information "
 "skal have en unik nøgle."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

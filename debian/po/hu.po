@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-27 14:34+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian <debian-l10n-hungarian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -37,9 +37,9 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Névtelen elektronikus levélben statisztikákat közölhet a Debian-"
-"fejlesztőivel a leggyakrabban használt Debian-csomagokról. E "
-"statisztikák alapján szoktak dönteni (többek közt) az első "
-"Debian-CD-n szereplő programok listájáról."
+"fejlesztőivel a leggyakrabban használt Debian-csomagokról. E statisztikák "
+"alapján szoktak dönteni (többek közt) az első Debian-CD-n szereplő programok "
+"listájáról."
 
 #. Type: boolean
 #. Description
@@ -49,8 +49,8 @@ msgid ""
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Ha az adatszolgáltatás mellett dönt, az adatok beküldését végző program "
-"automatikusan hetente lefut, és elektronikus levélben statisztikákat "
-"juttat el a Debian-fejlesztőkhöz."
+"automatikusan hetente lefut, és elektronikus levélben statisztikákat juttat "
+"el a Debian-fejlesztőkhöz."
 
 #. Type: boolean
 #. Description
@@ -62,13 +62,13 @@ msgstr ""
 "A későbbiekben bármikor felülbírálhatja a részvételről hozott döntését a "
 "\"dpkg-reconfigure popularity-contest\" paranccsal."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Egyedi gazdagép-azonosító előállítása nem sikerült"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -80,7 +80,7 @@ msgstr ""
 "megkerülhetetlen hiba, hiszen az adatszolgáltatásban résztvevő minden gépet "
 "külön azonosítónak kell jelölnie."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

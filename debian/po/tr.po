@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-04-17 05:04+0300\n"
 "Last-Translator: Ozgur Murat Homurlu <ozgurmurat@gmx.net>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -55,13 +55,13 @@ msgstr ""
 "Bu kararı verdikten sonra tercihinizi şu komutla istediğiniz zaman "
 "değiştirebilirsiniz: \"dpkg-reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Makineyi tanımlayan benzersiz bir tanıtıcı üretilemedi"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 "tüm makinelerin farklı bir tanıtıcıya sahip olması gerektiğinden bu ölümcül "
 "bir hata."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

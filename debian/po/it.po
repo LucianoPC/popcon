@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.23\n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-08-01 18:15+0200\n"
 "Last-Translator: Cristian Rigamonti <cri@linux.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. Type: boolean
 #. Description
@@ -53,13 +53,13 @@ msgstr ""
 "Una volta deciso di partecipare, è sempre possibile cambiare idea eseguendo "
 "\"dpkg-reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Generazione dell'identificatore univoco dell'host fallita"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 "univoco dell'host. È un errore fatale, perchè tutti ogni host che invia "
 "informazioni deve possedere un identificatore univoco."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

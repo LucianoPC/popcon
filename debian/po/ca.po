@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_1.12_templates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-29 00:10+0200\n"
 "Last-Translator: Aleix Badia i Bosch <abadia@ica.es>\n"
 "Language-Team: Debian L10n Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -28,7 +28,11 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "El vostre sistema pot enviar correus electrònics anònims als desenvolupadors de Debian amb les estadístiques dels paquets de Debian més utilitzats. Aquesta informació pot influir en les decisions a l'estil de quins paquets hauria d'incloure el primer CD de Debian."
+msgstr ""
+"El vostre sistema pot enviar correus electrònics anònims als desenvolupadors "
+"de Debian amb les estadístiques dels paquets de Debian més utilitzats. "
+"Aquesta informació pot influir en les decisions a l'estil de quins paquets "
+"hauria d'incloure el primer CD de Debian."
 
 #. Type: boolean
 #. Description
@@ -36,7 +40,10 @@ msgstr "El vostre sistema pot enviar correus electrònics anònims als desenvolu
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
-msgstr "Si decidiu participar-hi, la seqüència de tramesa automàtica s'executarà automàticament un cop a la setmana i enviarà les estadístiques als desenvolupadors de Debian."
+msgstr ""
+"Si decidiu participar-hi, la seqüència de tramesa automàtica s'executarà "
+"automàticament un cop a la setmana i enviarà les estadístiques als "
+"desenvolupadors de Debian."
 
 #. Type: boolean
 #. Description
@@ -48,28 +55,34 @@ msgstr ""
 "Sempre podeu canviar d'opinió posteriorment: \"dpkg-reconfigure popularity-"
 "contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr "S'ha produït un error en la generació de l'identificador d'ordinador únic"
+msgstr ""
+"S'ha produït un error en la generació de l'identificador d'ordinador únic"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr "La seqüència d'instal·lació no ha pogut generar l'identificador d'ordinador únic. És un error fatal, ja que tots els ordinadors que envien informació necessiten un identificador únic."
+msgstr ""
+"La seqüència d'instal·lació no ha pogut generar l'identificador d'ordinador "
+"únic. És un error fatal, ja que tots els ordinadors que envien informació "
+"necessiten un identificador únic."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr "Informeu d'aquest problema com un error del paquet popularity-contest i adjunteu-hi informació sobre la vostra configuració."
+msgstr ""
+"Informeu d'aquest problema com un error del paquet popularity-contest i "
+"adjunteu-hi informació sobre la vostra configuració."
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "

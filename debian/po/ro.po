@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-28 00:42+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -38,7 +38,11 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "Puteţi permite sistemului dvs. să trimită e-mail-uri anonime dezvoltatorilor Debian cu informaţii legate de cele mai utilizate pachete Debian. Aceste informaţii influenţează decizii precum cele legate de pachetele care ar trebui să se afle pe primul CD Debian."
+msgstr ""
+"Puteţi permite sistemului dvs. să trimită e-mail-uri anonime dezvoltatorilor "
+"Debian cu informaţii legate de cele mai utilizate pachete Debian. Aceste "
+"informaţii influenţează decizii precum cele legate de pachetele care ar "
+"trebui să se afle pe primul CD Debian."
 
 #. Type: boolean
 #. Description
@@ -46,7 +50,9 @@ msgstr "Puteţi permite sistemului dvs. să trimită e-mail-uri anonime dezvolta
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
-msgstr "Dacă doriţi să participaţi, scriptul de trimitere automată va rula săptămânal, trimiţând prin e-mail statistici dezvoltatorilor Debian."
+msgstr ""
+"Dacă doriţi să participaţi, scriptul de trimitere automată va rula "
+"săptămânal, trimiţând prin e-mail statistici dezvoltatorilor Debian."
 
 #. Type: boolean
 #. Description
@@ -58,26 +64,31 @@ msgstr ""
 "Va puteţi răzgândi oricând în legătură cu această decizie: \"dpkg-"
 "reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Generarea identificatorului unic de calculator a eşuat"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr "Scriptul de instalare nu a putut genera un identificator unic de calculator. Acesta este o eroare fatală deoarece toate calculatoarele care trimit informaţii trebuie să aiba ficare un identificator unic."
+msgstr ""
+"Scriptul de instalare nu a putut genera un identificator unic de calculator. "
+"Acesta este o eroare fatală deoarece toate calculatoarele care trimit "
+"informaţii trebuie să aiba ficare un identificator unic."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr "Vă rugăm să raportaţi această problemă ca bug (defect de programare) al pachetului popularity-contest şi să includeţi informaţii legate de configuraţia dvs."
-
+msgstr ""
+"Vă rugăm să raportaţi această problemă ca bug (defect de programare) al "
+"pachetului popularity-contest şi să includeţi informaţii legate de "
+"configuraţia dvs."

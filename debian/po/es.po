@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-05-31 23:05+0200\n"
 "Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
 "Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
@@ -65,13 +65,13 @@ msgstr ""
 "Siempre puede cambiar de opinión después de tomar la decisión: \"dpkg-"
 "reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Falló la generación del identificador de sistema"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -83,7 +83,7 @@ msgstr ""
 "Esto es un error fatal, ya que todos los sistemas que envíen información "
 "necesitan un identificador único."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

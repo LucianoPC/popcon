@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian_po_ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-21 00:41+0300\n"
 "Last-Translator: Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -37,7 +37,10 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "يمكنك أن تجعل نظامك يرسل بسريّة إحصائيّاتٍ عن حزم دبيان الأكثر استعمالاً عندك إلى مطوّري دبيان. هذه المعلومات تؤثّر على القرارات مثل أيّ الحزم يفترض أن توضع على قرص المدمج الأوّل لدبيان."
+msgstr ""
+"يمكنك أن تجعل نظامك يرسل بسريّة إحصائيّاتٍ عن حزم دبيان الأكثر استعمالاً عندك "
+"إلى مطوّري دبيان. هذه المعلومات تؤثّر على القرارات مثل أيّ الحزم يفترض أن توضع "
+"على قرص المدمج الأوّل لدبيان."
 
 #. Type: boolean
 #. Description
@@ -45,7 +48,9 @@ msgstr "يمكنك أن تجعل نظامك يرسل بسريّة إحصائيّ
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
-msgstr "إذا اخترت المشاركة فنصّ التّسليم البرمجي الآلي سيعمل أسبوعيّاً مرسلاً الإحصائيّات إلى مطوّري دبيان عن طريق البريد الإلكتروني."
+msgstr ""
+"إذا اخترت المشاركة فنصّ التّسليم البرمجي الآلي سيعمل أسبوعيّاً مرسلاً الإحصائيّات "
+"إلى مطوّري دبيان عن طريق البريد الإلكتروني."
 
 #. Type: boolean
 #. Description
@@ -53,28 +58,33 @@ msgstr "إذا اخترت المشاركة فنصّ التّسليم البرم�
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
-msgstr "يمكنك دائماً تغيير رأيك بعد اتّخاذ هذا القرار: \"dpkg -reconfigure popularity-contest\""
+msgstr ""
+"يمكنك دائماً تغيير رأيك بعد اتّخاذ هذا القرار: \"dpkg -reconfigure popularity-"
+"contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "فشل توليد معرّف المضيف الفريد"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr "لم يتمكّن نصّ التّثبيت البرمجي من توليد معرّف مضيف فريد. هذا خطأٌ فادح إذ يجب أن يكون لكلّ مضيفٍ يسلّم معلومات معرّفٌ فريد."
+msgstr ""
+"لم يتمكّن نصّ التّثبيت البرمجي من توليد معرّف مضيف فريد. هذا خطأٌ فادح إذ يجب أن "
+"يكون لكلّ مضيفٍ يسلّم معلومات معرّفٌ فريد."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr "رجاءً بلّغ عن هذه المشكلة كعلّةٍ في حزمة popularity-contest و أرفق معلوماتٍ عن إعدادك."
-
+msgstr ""
+"رجاءً بلّغ عن هذه المشكلة كعلّةٍ في حزمة popularity-contest و أرفق معلوماتٍ عن "
+"إعدادك."

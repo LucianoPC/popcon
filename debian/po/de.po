@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-16 21:44GMT\n"
 "Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
@@ -65,13 +65,13 @@ msgstr ""
 "Sie können es sich jederzeit anders überlegen: \"dpkg-reconfigure popularity-"
 "contest\" stellt Ihnen die Frage erneut."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Erstellen einer eindeutigen Rechner-Identifikation fehlgeschlagen"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -83,7 +83,7 @@ msgstr ""
 "erstellen. Dies ist ein schwerwiegender Fehler, da alle Computer, die "
 "Informationen versenden, eine eindeutige Kennung benötigen."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

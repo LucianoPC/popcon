@@ -1,4 +1,4 @@
-	#
+#
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-22 16:46+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -38,9 +38,9 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Môžete nechať systém, aby anonymne poslal vývojárom Debianu elektronickú "
-"poštu so štatistikou o najviac používaných balíkoch na vašom systéme. "
-"Táto informácia pomôže v rozhodovaní, ktoré balíky by mali byť "
-"na prvom CD Debianu."
+"poštu so štatistikou o najviac používaných balíkoch na vašom systéme. Táto "
+"informácia pomôže v rozhodovaní, ktoré balíky by mali byť na prvom CD "
+"Debianu."
 
 #. Type: boolean
 #. Description
@@ -59,16 +59,16 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu: "
-"\"dpkg-reconfigure popularity-contest\""
+"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu: \"dpkg-"
+"reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Zlyhalo vytvorenie jednoznačnej identifikácie počítača"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -80,13 +80,12 @@ msgstr ""
 "je závažná chyba, pretože každý počítač zasielajúci tieto údaje musí mať "
 "jednoznačnú identifikáciu."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Nahláste to, prosím, ako chybu balíka popularity-contest a uveďte údaje "
-"o svojej konfigurácii."
-
+"Nahláste to, prosím, ako chybu balíka popularity-contest a uveďte údaje o "
+"svojej konfigurácii."

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest-debconf_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-04-12 13:52+0200\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Русский язык <debian-russian@lists.debian.org>\n"
@@ -68,13 +68,13 @@ msgstr ""
 "Вы всегда можете изменить своё решение, выполнив команду:   dpkg-reconfigure "
 "popularity-contest"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Не удалось создать уникальный номер компьютера"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 "неисправимая ошибка, так как любому компьютеру, отсылающему информацию, "
 "требуется этот номер."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

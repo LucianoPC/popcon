@@ -16,14 +16,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-31 23:01+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"debian.org>\n"
 
 #. Type: boolean
 #. Description
@@ -40,8 +41,8 @@ msgid ""
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "您可以讓系統藉由匿名的電子郵件來向 Debian 的開發人員提交您最常使用的 Debian "
-"套件的統計數據。"
-"這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光碟中。"
+"套件的統計數據。這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光"
+"碟中。"
 
 #. Type: boolean
 #. Description
@@ -50,8 +51,8 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"如果您決定要參與，自動提交的 Script 將會每週一次，將統計數據以 E-mail 寄"
-"送給 Debian 開發人員。"
+"如果您決定要參與，自動提交的 Script 將會每週一次，將統計數據以 E-mail 寄送給 "
+"Debian 開發人員。"
 
 #. Type: boolean
 #. Description
@@ -63,13 +64,13 @@ msgstr ""
 "在您決定之後，您還是可以在日後隨時改變心意：『dpkg-reconfigure popularity-"
 "contest』"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "無法產生獨一無二的主機識別碼"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -80,7 +81,7 @@ msgstr ""
 "安裝 Script 無法產生獨一無二的主機識別碼。這是一個嚴重錯誤，因為所有提交資訊"
 "的主機都需要擁有一個獨一無二的主機識別碼。。"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

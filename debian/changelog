@@ -1,4 +1,4 @@
-popularity-contest (1.24) UNRELEASED; urgency=low
+popularity-contest (1.24) unstable; urgency=low
 
   * Petter Reinholdtsen
     - Let postinst and popcon-process.sh use /bin/sh, and make sure
@@ -19,7 +19,7 @@ popularity-contest (1.24) UNRELEASED; urgency=low
     - Lithuanian updated by Gintautas Miliauskas.  Closes: #265837
     - Catalan updated by Aleix Badia i Bosch.  Closes: #261540
 
- -- Christian Perrier <bubulle@debian.org>  Mon, 26 Jul 2004 08:27:19 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 15 Aug 2004 17:34:28 +0200
 
 popularity-contest (1.23) unstable; urgency=low
 

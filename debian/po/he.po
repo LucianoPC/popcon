@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popcon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-12 23:59+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: Hebrew\n"
@@ -61,13 +61,13 @@ msgstr ""
 "תמיד ניתן לשנות את דעתך אחרי שבחרת ע\"י הפקודה: \"dpkg-reconfigure "
 "popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "יצירת מזהה חד-חד-ערכי לשרת נכשלה"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -78,7 +78,7 @@ msgstr ""
 "סקריפט ההתקנה לא הצליח ליצור מזהה חד-חד-ערכי לשרת. זהו שגיאה פאטאלית מאחר "
 "וכך השרתים ששולחים מידע צריכים מזהה חד-חד-ערכי"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-25 22:07+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -60,13 +60,13 @@ msgid ""
 msgstr ""
 "您当然也可以改变现在的决定，请运行：“dpkg-reconfigure popularity-contest”"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "无法生成独有的主机标识"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -77,7 +77,7 @@ msgstr ""
 "安装脚本未能生成一个独有的主机标识。这是一个严重错误，所有提交信息的主机都需"
 "要有一个独有的标识。"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-07-25 19:38+0200\n"
 "Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -48,13 +48,13 @@ msgid ""
 msgstr ""
 "Uvijek se mo¾ete predomisliti pomoæu: \"dpkg-reconfigure popularity-contest\""
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Stvaranje jedinstvenog naziva domaæina neuspjelo."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -66,7 +66,7 @@ msgstr ""
 "je kobna pogre¹ka, jer svaki domaèin koji ¹alje podatke mora imati "
 "jedinstveni identifikacijski naziv."
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""

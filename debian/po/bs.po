@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"POT-Creation-Date: 2004-08-15 15:35+0000\n"
 "PO-Revision-Date: 2004-06-13 17:30+0200\n"
 "Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -66,13 +66,13 @@ msgstr ""
 
 #  Type: error
 #  Description
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Stvaranje jedinstvenog host identifikatora nije uspjelo"
 
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 
 #  Type: error
 #  Description
-#. Type: error
+#. Type: note
 #. Description
 #: ../templates:17
 msgid ""
