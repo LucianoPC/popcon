@@ -1,0 +1,76 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"PO-Revision-Date: 2004-03-03 10:11+0100\n"
+"Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
+"Language-Team: Czech <provoz@debian.cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Pøipojit se k soutì¾i o nejpopulárnìj¹í balíky?"
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages."
+msgstr ""
+"Mù¾ete nechat systém, aby anonymnì poslal debianím vývojáøùm email se "
+"statistikou o nejvíce vyu¾ívaných balících na va¹em systému."
+
+#. Description
+#: ../templates:4
+msgid ""
+"This information helps us make decisions such as which packages should go on "
+"the first Debian CD.  Also, we can improve future versions of Debian so that "
+"the most popular packages are the ones which are installed automatically for "
+"new users."
+msgstr ""
+"Tyto informace nám pomohou v rozhodování, které balíky by mìly být umístìny "
+"na prvním debianím CD. Také mù¾eme vylep¹it budoucí verze Debianu tím, ¾e "
+"nejpopulárnìj¹í balíky necháme instalovat automaticky."
+
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week automatically, e-mailing statistics to the Debian developers."
+msgstr ""
+"Pokud se rozhodnete pøipojit k soutì¾i, nainstaluje se skript, který bude "
+"automaticky jednou týdnì odesílat statistiku debianím vývojáøùm."
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"Své rozhodnutí mù¾ete kdykoliv zmìnit, staèí spustit: \"dpkg-reconfigure "
+"popularity-contest\"."
+
+#. Description
+#: ../templates:4
+msgid ""
+"(NOTE: e-mail servers add their own tracing information and your data won't "
+"be completely anonymous while in transit.)"
+msgstr ""
+"(POZNÁMKA: emailové servery do po¹tovních zpráv pøidávají své znaèky, tak¾e "
+"bìhem pøenosu nebudete zcela anonymní.)"
