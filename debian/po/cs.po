@@ -14,22 +14,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-03-03 10:11+0100\n"
+"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"PO-Revision-Date: 2004-03-20 15:51+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Pøipojit se k soutì¾i o nejpopulárnìj¹í balíky?"
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -39,7 +36,6 @@ msgstr ""
 "Mù¾ete nechat systém, aby anonymnì poslal debianím vývojáøùm email se "
 "statistikou o nejvíce vyu¾ívaných balících na va¹em systému."
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -52,7 +48,6 @@ msgstr ""
 "na prvním debianím CD. Také mù¾eme vylep¹it budoucí verze Debianu tím, ¾e "
 "nejpopulárnìj¹í balíky necháme instalovat automaticky."
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -62,7 +57,6 @@ msgstr ""
 "Pokud se rozhodnete pøipojit k soutì¾i, nainstaluje se skript, který bude "
 "automaticky jednou týdnì odesílat statistiku debianím vývojáøùm."
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -72,7 +66,6 @@ msgstr ""
 "Své rozhodnutí mù¾ete kdykoliv zmìnit, staèí spustit: \"dpkg-reconfigure "
 "popularity-contest\"."
 
-#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -82,25 +75,27 @@ msgstr ""
 "(POZNÁMKA: emailové servery do po¹tovních zpráv pøidávají své znaèky, tak¾e "
 "bìhem pøenosu nebudete zcela anonymní.)"
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
-msgstr ""
+msgstr "Vytváøení jednoznaèné identifikace poèítaèe selhalo"
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is "
+"a fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
+"Instalaèní skript nemohl vytvoøit jednoznaèný identifikátor poèítaèe. Toto "
+"je osudová chyba, proto¾e ka¾dý poèítaè posílají informace musí mít "
+"jednoznaènou identifikaci."
 
-#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
+"Nahlaste to prosím jako chybu proti balíku popularity-contest a uveïte "
+"informace o své konfiguraci."

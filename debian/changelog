@@ -19,6 +19,7 @@ popularity-contest (1.15) UNRELEASED; urgency=low
     - s/are unable to/could not/ in templates. Unfuzzy translations
     - Updated Simplified Chinese translation by Carlos Z.F. Liu
     - Updated Lithuanian translation by Kestutis Biliunas
+    - Updated Czech translation by Miroslav Kure. Closes: #239051
 
  -- Christian Perrier <bubulle@debian.org>  Sat, 20 Mar 2004 16:40:44 +0100
 
