@@ -49,7 +49,7 @@ if ( $HOSTID eq "d41d8cd98f00b204e9800998ecf8427e")
 
 if ( $HOSTID !~ /^([a-f0-9]{32})$/)
 {
-  print STDERR "MY_HOSTID does not match ^([a-f0-9]{32})\$\n";
+  print STDERR "Error: MY_HOSTID does not match ^([a-f0-9]{32})\$\n";
   print STDERR "Please edit $popcon_conf to use a valid md5sum value\n";
   exit 1;
 }
