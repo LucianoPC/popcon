@@ -4,8 +4,9 @@ popularity-contest (1.23) UNRELEASED; urgency=low
     - Danish update. Closes: #255533
     - Ukrainian update. Closes: #255523
     - Japanese update: Closes: #255673
+    - Slovak update. Closes: #255702
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 23 Jun 2004 11:48:23 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Wed, 23 Jun 2004 11:53:44 +0200
 
 popularity-contest (1.22) unstable; urgency=low
 
