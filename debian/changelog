@@ -1,12 +1,13 @@
 popularity-contest (1.12) UNRELEASED; urgency=low
 
-  * Bill Allombert
-    - Use dpkg --print-installation-architecture instead of $Config{archname}
-      to report the platform.
-    - Update server-side scripts to current popcon.debian.org version.
-    - Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
+  * Use dpkg --print-installation-architecture instead of $Config{archname}
+    to report the platform.
+  * Update server-side scripts to current popcon.debian.org version.
+  * Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
+  * Update French debconf translation, thanks Christian Perrier. 
+    (Closes: #231294)
 
- -- Petter Reinholdtsen <pere@debian.org>  Sun,  8 Feb 2004 13:47:38 +0100
+ -- Bill Allombert <ballombe@debian.org>  Tue, 10 Feb 2004 17:24:10 +0100
 
 popularity-contest (1.11) unstable; urgency=medium
 
