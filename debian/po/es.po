@@ -14,15 +14,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.14\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: 2004-03-20 09:34+0100\n"
 "Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
 "Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
@@ -30,6 +31,7 @@ msgstr ""
 "¿Desea participar en la encuesta sobre la popularidad de los paquetes de "
 "Debian?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -39,6 +41,7 @@ msgstr ""
 "Puede hacer que su sistema envíe anónimamente por correo electrónico a los "
 "desarrolladores de Debian estadísticas sobre los paquetes que más usa."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -52,6 +55,7 @@ msgstr ""
 "Debian, haciendo que los paquetes más populares sean los que se instalen "
 "automáticamente para los nuevos usuarios."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -62,6 +66,7 @@ msgstr ""
 "automáticamente una vez a la semana, mandando por correo electrónico "
 "estadísticas a los desarrolladores de Debian."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -71,6 +76,7 @@ msgstr ""
 "Siempre puede cambiar de opinión después de tomar la decisión: \"dpkg-"
 "reconfigure popularity-contest\""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -81,19 +87,22 @@ msgstr ""
 "rastreo, por lo que los datos no serán completamente anónimos durante la "
 "transmisión)"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""

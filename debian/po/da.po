@@ -14,7 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: 2004-01-28 00:05+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -22,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Deltag i Debianpakkernes popularitetskonkurrence?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -36,6 +39,7 @@ msgstr ""
 "Du kan få dit system til at sende en anonym e-mail til Debianudviklerne med "
 "statistikker om dine mest brugte Debianpakker."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -49,6 +53,7 @@ msgstr ""
 "fremtidige versioner af Debian så de mest populære pakker er dem som "
 "installeres automatisk til nye brugere."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -58,6 +63,7 @@ msgstr ""
 "Hvis du vælger at deltage, vil et automatisk skript køres hver uge, som "
 "sender statistikkerne til Debianudviklerne."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -67,6 +73,7 @@ msgstr ""
 "Du kan altid ændre mening senere, ved at køre: \"dpkg-reconfigure popularity-"
 "contest\""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -76,19 +83,22 @@ msgstr ""
 "(BEMÆRK: Postservere tilføjer deres egne sporingsoplysninger, så dine data "
 "vil ikke være fuldstændigt anonyme."
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""

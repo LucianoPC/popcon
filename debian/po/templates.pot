@@ -15,7 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,11 +24,13 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr ""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -35,6 +38,7 @@ msgid ""
 "statistics about your most used Debian packages."
 msgstr ""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -44,6 +48,7 @@ msgid ""
 "new users."
 msgstr ""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -51,6 +56,7 @@ msgid ""
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -58,6 +64,7 @@ msgid ""
 "reconfigure popularity-contest\""
 msgstr ""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -65,19 +72,22 @@ msgid ""
 "be completely anonymous while in transit.)"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""

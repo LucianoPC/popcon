@@ -16,8 +16,9 @@ popularity-contest (1.15) UNRELEASED; urgency=low
     - Updated Spanish debconf translation.  New file from Ruben Porras.
   * Christian Perrier
     - Updated Japaned debconf translation by Kenshi Muto
+    - s/are unable to/could not in templates. Unfuzzy translations
 
- -- Christian Perrier <bubulle@debian.org>  Sat, 20 Mar 2004 12:08:58 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Mar 2004 16:36:50 +0100
 
 popularity-contest (1.14) unstable; urgency=HIGH
 
@@ -33,7 +34,7 @@ popularity-contest (1.14) unstable; urgency=HIGH
     - Added Swedish debconf translation received from
       André Dahlqvist. (Closes: #237129)
     - Added Lithuanian debconf translation received from
-      K�?stutis Biliūnas.  (Closes: #237288)
+      Kestutis Biliūnas.  (Closes: #237288)
     - Added Korean debconf translation received from
       Changwoo Ryu. (Closes: #237620)
     - Added Portuguese debconf translation received from

@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.13\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: 2004-03-10 22:02+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -14,11 +15,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Ar prisijungsite prie Debian'o Paketų Populiarumo Konkurso?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -29,6 +32,7 @@ msgstr ""
 "Debian'o kūrėjams statistiką apie tankiausiai Jūsų naudojamus Debian'o "
 "paketus."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -42,6 +46,7 @@ msgstr ""
 "Debian'o versijas taip, kad naujam naudotojui populiariausi paketai būtų "
 "įdiegiami automatiškai."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -52,6 +57,7 @@ msgstr ""
 "išsiunčiantis elektroniniu paštu statistiką Debian'o kūrėjams, bus vykdomas "
 "vieną kartą kiekvieną savaitę."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -61,6 +67,7 @@ msgstr ""
 "Jūs galite betkada pakeisti savo sprendimą įvykdę komandą: \"dpkg-"
 "reconfigure popularity-contest\""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -70,19 +77,22 @@ msgstr ""
 "(PASTABA: elektroninio pašto serveris pridės savo kelio informaciją ir Jūsų "
 "duomenys nebus pilnai anoniminiai kol bus persiunčiami.)"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""

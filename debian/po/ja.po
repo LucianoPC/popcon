@@ -14,7 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: 2004-03-20 19:17+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -22,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=EUC-JP\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Debian パッケージ人気コンテストに参加しますか?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -36,6 +39,7 @@ msgstr ""
 "あなたが最も利用した Debian パッケージについての統計を Debian 開発者に匿名の"
 "電子メールで送るようシステムを設定できます。"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -48,6 +52,7 @@ msgstr ""
 "のに役立ちます。また、最も人気のあるパッケージは、新しいユーザーには自動的に"
 "インストールするよう Debian の将来のバージョンで改良できます。"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -57,6 +62,7 @@ msgstr ""
 "参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、Debian "
 "開発者に統計が電子メールで送られます。"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -66,6 +72,7 @@ msgstr ""
 "この決定は、あとでいつでも変更できます: \"dpkg-reconfigure popularity-contest"
 "\""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -75,22 +82,30 @@ msgstr ""
 "(注意: 電子メールサーバは自身の追跡情報を追加し、通過中のデータは完全な匿名で"
 "はありません)"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr "固有のホスト識別子を生成するのに失敗しました"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr "インストールスクリプトは固有のホスト識別子を生成することができませんでした。情報を送るすべてのホストは固有の識別子を持たなければならないため、これは深刻なエラーです。"
+msgstr ""
+"インストールスクリプトは固有のホスト識別子を生成することができませんでした。"
+"情報を送るすべてのホストは固有の識別子を持たなければならないため、これは深刻"
+"なエラーです。"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr "あなたの設定についての情報を添えて、popularity-contest パッケージへのバグとしてこの問題を報告してください。"
+msgstr ""
+"あなたの設定についての情報を添えて、popularity-contest パッケージへのバグとし"
+"てこの問題を報告してください。"

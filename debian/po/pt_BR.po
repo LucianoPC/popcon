@@ -14,7 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity_contest\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-20 16:34+0100\n"
 "PO-Revision-Date: 2004-02-28 22:14-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -22,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Participar do Concurso de Popularidade de Pacotes Debian ?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -36,6 +39,7 @@ msgstr ""
 "Você pode fazer com que seu sistema envie anonimamente via e-mail para os "
 "desenvolvedores Debian estatísticas sobre seus pacotes Debian mais usados."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -49,6 +53,7 @@ msgstr ""
 "versões do Debian de forma que os pacotes mais populares sejam instalados "
 "automaticamente para novos usuários."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -59,6 +64,7 @@ msgstr ""
 "automaticamente toda semana, enviando as estatísticas via e-mail para os "
 "desenvolvedores Debian."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -68,6 +74,7 @@ msgstr ""
 "Você poderá sempre mudar sua opinião após fazer sua decisão : \"dpkg-"
 "reconfigure popularity-contest\""
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
@@ -78,19 +85,22 @@ msgstr ""
 "rastreamento e seus dados não ficarão completamente anônimos enquanto "
 "estiverem em trânsito.)"
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid "Generating unique host identifier failed"
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
-"The install script are unable to generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../templates:25
 msgid ""
