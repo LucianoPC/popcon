@@ -1,3 +1,11 @@
+popularity-contest (1.22) unstable; urgency=low
+
+  * Update server-side scripts to current popcon.debian.org version:
+    - popcon.pl: Fix URL for kfreebsd port.
+    - popanal.py: Take care of broken reports with empty DEBVER field.
+
+ -- Bill Allombert <ballombe@debian.org>  Sun, 20 Jun 2004 10:49:52 +0200
+
 popularity-contest (1.21) unstable; urgency=low
 
   * Translations
