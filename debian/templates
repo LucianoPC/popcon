@@ -29,5 +29,5 @@ Template: popularity-contest/update-mailto
 Type: boolean
 Default: true
 _Description: Update mailto address to the current one?
- The mail address used to submit popularity-contenst entries
+ The mail address used to submit popularity-contest entries
  is obsolete.
