@@ -1,0 +1,99 @@
+#    Traditional Chinese translation for popularity-contest
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"PO-Revision-Date: 2004-06-08 14:53+0800\n"
+"Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "是否要參加 Debian 熱門套件競賽？"
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can have your system anonymously e-mail the Debian developers with "
+"statistics about your most used Debian packages."
+msgstr ""
+"您可以讓系統藉由匿名的電子郵件來向 Debian 的開發人員提交您最常使用的 Debian 套件的統計數據。"
+
+#. Description
+#: ../templates:4
+msgid ""
+"This information helps us make decisions such as which packages should go on "
+"the first Debian CD.  Also, we can improve future versions of Debian so that "
+"the most popular packages are the ones which are installed automatically for "
+"new users."
+msgstr ""
+"這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光碟中。"
+"而且，我們也能據此在 Debian 的未來版本中進行修正，"
+"來讓這些最熱門的套件能夠被自動安裝到使用者的新系統中。"
+
+#. Description
+#: ../templates:4
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week automatically, e-mailing statistics to the Debian developers."
+msgstr ""
+"如果您決定要參與，自動提交的 Script 將會每週一次，自動將統計數據以 E-mail 寄送給 "
+"Debian 開發人員。"
+
+#. Description
+#: ../templates:4
+msgid ""
+"You can always change your mind after making this decision: \"dpkg-"
+"reconfigure popularity-contest\""
+msgstr ""
+"在您決定之後，您還是可以在日後隨時改變心意：『dpkg-reconfigure popularity-contest』"
+
+#. Description
+#: ../templates:4
+msgid ""
+"(NOTE: e-mail servers add their own tracing information and your data won't "
+"be completely anonymous while in transit.)"
+msgstr ""
+"（注意：郵件伺服器會自行加入一些追蹤資訊，因此您的資料在傳送過程中並不算是完全匿名的。）"
+
+#. Description
+#: ../templates:25
+msgid "Generating unique host identifier failed"
+msgstr "無法產生獨一無二的主機識別碼"
+
+#. Description
+#: ../templates:25
+msgid ""
+"The install script could not generate a unique host identifier. This is "
+"a fatal error, as all hosts submitting information need to have an unique "
+"identifier."
+msgstr ""
+"安裝 Script 無法產生獨一無二的主機識別碼。這是一個嚴重錯誤，因為所有提交資訊的主機都需"
+"要擁有一個獨一無二的主機識別碼。。"
+
+#. Description
+#: ../templates:25
+msgid ""
+"Please report this problem as a bug against the popularity-contest package, "
+"and include information about your configuration."
+msgstr ""
+"請將此問題向 popularity-contest 套件進行 Bug 報告，"
+"並請一併附上您所使用的設定之相關資訊。"
+
