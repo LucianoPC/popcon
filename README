@@ -93,6 +93,13 @@ The result of the survey is available at
 You can find some sample analysis scripts in
 /usr/share/doc/popularity-contest as part of this package.
 
+QUESTIONS ?
+===========
+
+Please look at the FAQ in /usr/share/doc/popularity-contest/FAQ
+or for an up-to-date version, online at http://popcon.debian.org/FAQ
+
+
 FINDING THE SOURCE
 ==================
 
