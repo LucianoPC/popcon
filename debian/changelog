@@ -7,6 +7,8 @@ popularity-contest (1.15) UNRELEASED; urgency=low
   * Petter Reinholdtsen
     - Updated Norwegian Bokmål and Nynorsk debconf translation,
       patch from Håvard Korsvoll. (Closes: #238037)
+    - Added Simplified Chinese debconf translation, patch from
+      Carlos Z.F. Liu. (Closes: #238302)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 22:45:41 +0100
 
