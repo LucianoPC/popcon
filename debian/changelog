@@ -4,6 +4,8 @@ popularity-contest (1.19) unreleased; urgency=low
     - Turkish by Recai Oktas. Closes: #244164
     - Russian update. Closes: #245000
     - Slovak by Miroslav Kure. Closes: #245672
+  * Bill Allombert
+    - Update server-side scripts to current popcon.debian.org version.
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 25 Apr 2004 12:50:11 +0200
 
