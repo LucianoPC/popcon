@@ -14,7 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-03-20 09:52+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-04-24 10:40+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -22,80 +23,86 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
 msgstr "Pripojit sa k súťaži o najpopulárnejšie balíky?"
 
+#. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Môžete nechať systém, aby anonymne poslal vývojarom Debianu elektronickú "
 "poštu so štatistikou o najviac používaných balíkoch na vašom systéme."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Tieto informácie nám pomôžu v rozhodovaní, ktoré balíky by mali byť umiestnené "
-"na prvom CD Debianu. Taktiež môžeme vylepšiť budúce verzie Debianu tým, že "
-"najpopulárnejšie balíky necháme inštalovať automaticky."
-
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Ak sa rozhodnete pripojiť k súťaži, nainštaluje sa skript, ktorý bude "
 "automaticky raz týždenne odosielať štatistiku vývojárom Debainu."
 
+#. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu: "
-"\"dpkg-reconfigure popularity-contest\"."
+"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu: \"dpkg-"
+"reconfigure popularity-contest\"."
 
+#. Type: error
 #. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(POZNÁMKA: e-mailové servery pridávajú do elektronickej pošty svoje značky, "
-"takže počas prenosu nebudete celkom anonymní.)"
-
-#. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Zlyhalo vytvorenie jednoznačnej identifikácie počítača"
 
+#. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
-"The install script could not generate a unique host identifier. This is "
-"a fatal error, as all hosts submitting information need to have an unique "
+"The install script could not generate a unique host identifier. This is a "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 "Inštalačný skript nemohol vytvoriť jednoznačný identifikátor počítača. Toto "
 "je závažná chyba, pretože každý počítač zasielajúci tieto údaje musí mať "
 "jednoznačnú identifikáciu."
 
+#. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Nahláste to, prosím, ako chybu balíka popularity-contest a uveďte údaje "
-"o svojej konfigurácii."
+"Nahláste to, prosím, ako chybu balíka popularity-contest a uveďte údaje o "
+"svojej konfigurácii."
+
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Tieto informácie nám pomôžu v rozhodovaní, ktoré balíky by mali byť "
+#~ "umiestnené na prvom CD Debianu. Taktiež môžeme vylepšiť budúce verzie "
+#~ "Debianu tým, že najpopulárnejšie balíky necháme inštalovať automaticky."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(POZNÁMKA: e-mailové servery pridávajú do elektronickej pošty svoje "
+#~ "značky, takže počas prenosu nebudete celkom anonymní.)"

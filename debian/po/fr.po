@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
-"PO-Revision-Date: 2004-04-16 09:01+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
+"PO-Revision-Date: 2004-05-27 18:31-0300\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,36 +34,23 @@ msgstr ""
 #: ../templates:4
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Votre système peut envoyer anonymement des courriers aux responsables "
 "Debian, avec des statistiques sur les paquets que vous utilisez le plus "
-"souvent."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Cette information permet de choisir les paquets qui sont placés sur le premier "
-"CD Debian. Elle permet également d'améliorer les futures versions de Debian "
-"afin que les paquets les plus populaires soient installés automatiquement "
-"pour les nouveaux utilisateurs."
+"souvent. Cette information permet de choisir les paquets qui sont placés sur "
+"le premier cédérom Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
-"Si vous choisissez de participer, le script d'envoi automatique sera exécuté "
-"chaque semaine et enverra par courrier les statistiques aux responsables "
-"Debian."
+"Si vous choisissez de participer, le script d'envoi sera exécuté chaque "
+"semaine et enverra par courriel les statistiques aux responsables Debian."
 
 #. Type: boolean
 #. Description
@@ -75,26 +62,15 @@ msgstr ""
 "Vous pouvez à tout moment revenir sur votre décision en utilisant la "
 "commande « dpkg-reconfigure popularity-contest »."
 
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"NOTE : les serveurs de courrier intermédiaires ajoutent des informations qui "
-"leur sont propres. En conséquence, les données envoyées ne seront pas "
-"totalement anonymes pendant leur transfert."
-
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Échec de la génération d'un identifiant unique d'hôte"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
@@ -106,7 +82,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."

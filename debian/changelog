@@ -2,8 +2,11 @@ popularity-contest (1.21) UNRELEASED; urgency=low
 
   * Translations
     - Bosnian update
+  * Christian Perrier
+    - Shorten the main template to fit it in one screen
+      Closes: #250951
 
- -- Christian Perrier <bubulle@debian.org>  Wed, 26 May 2004 23:01:43 -0300
+ -- Christian Perrier <bubulle@debian.org>  Thu, 27 May 2004 18:31:23 -0300
 
 popularity-contest (1.20) unstable; urgency=low
 

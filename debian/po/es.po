@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-03-28 20:16+0200\n"
 "Last-Translator: Rubén Porras <nahoo@inicia.es>\n"
 "Language-Team: ES <debian-l10n-spanish@lists.debian.org>\n"
@@ -34,34 +34,25 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
-msgstr "Puede hacer que su sistema envíe anónimamente estadísticas por correo "
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
+msgstr ""
+"Puede hacer que su sistema envíe anónimamente estadísticas por correo "
 "electrónico a los desarrolladores de Debian sobre los paquetes que más usa."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Esta información nos ayuda a tomar decisiones, como qué paquetes deben ir en "
-"el primer CD de Debian. También servirá para mejorar versiones futuras de "
-"Debian, haciendo que los paquetes más populares sean los que se instalen "
-"automáticamente para los nuevos usuarios."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
-msgstr "Si elige participar, el script de envío se ejecutará automáticamente "
-"una vez a la semana, mandando estadísticas por correo electrónico a los "
+"every week, e-mailing statistics to the Debian developers."
+msgstr ""
+"Si elige participar, el script de envío se ejecutará automáticamente una vez "
+"a la semana, mandando estadísticas por correo electrónico a los "
 "desarrolladores de Debian."
 
 #. Type: boolean
@@ -74,41 +65,52 @@ msgstr ""
 "Siempre puede cambiar de opinión después de tomar la decisión: \"dpkg-"
 "reconfigure popularity-contest\""
 
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr "(NOTA: los servidores de correo electrónico añaden cierta información "
-"de rastreo, por lo que los datos no serán completamente anónimos mientras "
-"estén en tránsito.)"
-
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Falló la generación del identificador de sistema"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
-msgstr "El script de instalación no pudo generar un identificador de puesto "
-"único. Esto es un error fatal, ya que todos los sistemas que envíen información "
+msgstr ""
+"El script de instalación no pudo generar un identificador de puesto único. "
+"Esto es un error fatal, ya que todos los sistemas que envíen información "
 "necesitan un identificador único."
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
-msgstr "Por favor, avise del problema enviando un informe de fallo al paquete "
+msgstr ""
+"Por favor, avise del problema enviando un informe de fallo al paquete "
 "«popularity-contest», incluyendo información acerca de su configuración."
+
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Esta información nos ayuda a tomar decisiones, como qué paquetes deben ir "
+#~ "en el primer CD de Debian. También servirá para mejorar versiones futuras "
+#~ "de Debian, haciendo que los paquetes más populares sean los que se "
+#~ "instalen automáticamente para los nuevos usuarios."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(NOTA: los servidores de correo electrónico añaden cierta información de "
+#~ "rastreo, por lo que los datos no serán completamente anónimos mientras "
+#~ "estén en tránsito.)"
 
 #~ msgid ""
 #~ "If you choose to participate, the automatic submission script will run "

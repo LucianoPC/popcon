@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-01-28 00:05+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -32,9 +32,11 @@ msgstr "Deltag i Debianpakkernes popularitetskonkurrence?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Du kan få dit system til at sende en anonym e-mail til Debianudviklerne med "
 "statistikker om dine mest brugte Debianpakker."
@@ -42,23 +44,10 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Disse oplysninger hjælper os med at tage beslutninger, som f.eks. hvilke "
-"pakker der skal være på den første Debian CD. Derudover kan vi forbedre "
-"fremtidige versioner af Debian så de mest populære pakker er dem som "
-"installeres automatisk til nye brugere."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Hvis du vælger at deltage, vil et automatisk skript køres hver uge, som "
 "sender statistikkerne til Debianudviklerne."
@@ -73,40 +62,48 @@ msgstr ""
 "Du kan altid ændre mening senere, ved at køre: \"dpkg-reconfigure popularity-"
 "contest\""
 
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(BEMÆRK: Postservere tilføjer deres egne sporingsoplysninger, så dine data "
-"vil ikke være fuldstændigt anonyme."
-
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Oprettelse af unik værts-identificering fejlede"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
-"Installationen kunne ikke oprette en unik værts-identificerings. Dette er "
-"et stort problem, eftersom det er et krav at alle værter der sender "
-"information skal have en unik nøgle."
+"Installationen kunne ikke oprette en unik værts-identificerings. Dette er et "
+"stort problem, eftersom det er et krav at alle værter der sender information "
+"skal have en unik nøgle."
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
 "Du bør rapportere dette problem som en fejlrapport imod popularity-contest "
 "pakken og inkludere oplysninger om din opsætning."
+
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Disse oplysninger hjælper os med at tage beslutninger, som f.eks. hvilke "
+#~ "pakker der skal være på den første Debian CD. Derudover kan vi forbedre "
+#~ "fremtidige versioner af Debian så de mest populære pakker er dem som "
+#~ "installeres automatisk til nye brugere."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(BEMÆRK: Postservere tilføjer deres egne sporingsoplysninger, så dine "
+#~ "data vil ikke være fuldstændigt anonyme."

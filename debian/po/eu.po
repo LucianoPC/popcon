@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-05-18 18:31+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -33,35 +33,22 @@ msgstr "Debian Pakete erabilienen galdeketan parte artu nahi duzu?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Zuk Debian garatzaileei ePostaz zuk gehien erabiltzen dituzun programei "
-"buruzko "
-"informazio anonimoki emango dien sistema bat izan dezakezu."
+"buruzko informazio anonimoki emango dien sistema bat izan dezakezu."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Informazio hau guk Debian-en lehenengo CD-an zein software egon behar "
-"den "
-"erabakitzeko erabiliko dugu.  Honetaz gain, Debianen hurrengo bertsiotan "
-"erabiltzaile "
-"berriei instalatuko zaizkien paketeak honetan oinarrituko dugu."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Zuk parte hartzea erabakitzen baduzu, bidalketa automatiko skripta astean "
 "bein abiaraziko da zure estatistikak debian garatzaileei bidaliz."
@@ -73,28 +60,18 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Zuk artutako erabakia aldatu dezakezu \"dpkg-"
-"reconfigure popularity-contest\" erabiliaz"
-
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(OHARRA: ePosta zerbitzariakberaien bidalketa informazioa gehitzen dute eta "
-"zure datak ez dira guztiz anonimoak bidaltzerakoan)"
+"Zuk artutako erabakia aldatu dezakezu \"dpkg-reconfigure popularity-contest"
+"\" erabiliaz"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Ostalari identifikazioa sortzerakoan huts egin du"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
@@ -106,12 +83,28 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
 "Mesedez arazo honen berri eman ezazu popularity-contest paketaren "
-"arduradunari, "
-"eta zure konfiguraketari buruzko informazioa bidali."
+"arduradunari, eta zure konfiguraketari buruzko informazioa bidali."
 
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Informazio hau guk Debian-en lehenengo CD-an zein software egon behar den "
+#~ "erabakitzeko erabiliko dugu.  Honetaz gain, Debianen hurrengo bertsiotan "
+#~ "erabiltzaile berriei instalatuko zaizkien paketeak honetan oinarrituko "
+#~ "dugu."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(OHARRA: ePosta zerbitzariakberaien bidalketa informazioa gehitzen dute "
+#~ "eta zure datak ez dira guztiz anonimoak bidaltzerakoan)"

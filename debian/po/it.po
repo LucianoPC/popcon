@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-03-30 23:53+0200\n"
 "Last-Translator: Cristian Rigamonti <cri@linux.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -22,9 +22,11 @@ msgstr "Si desidera partecipare al \"Debian Package Popularity Contest\"?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "È possibile configurare il sistema in modo da spedire in modo anonimo agli "
 "sviluppatori Debian le statistiche sui pacchetti Debian più usati."
@@ -32,23 +34,10 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Queste informazioni ci aiutano a decidere, per esempio, quali pacchetti "
-"debbano essere inclusi nel primo CD Debian.  Inoltre, possiamo migliorare le "
-"versioni future di Debian in modo che i pacchetti più popolari siano "
-"installati automaticamente per i nuovi utenti."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Se si sceglie di partecipare, lo script di invio verrà eseguito "
 "automaticamente una volta alla settimana, spedendo le statistiche via e-mail "
@@ -64,25 +53,15 @@ msgstr ""
 "Dopo aver preso questa decisione, è ancora possibile cambiare idea eseguendo "
 "\"dpkg-reconfigure popularity-contest\""
 
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(NOTA: i server di posta aggiungono informazioni per tracciare i messaggi, "
-"quindi i dati in transito non saranno completamente anonimi)"
-
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Generazione di un identificatore univoco dell'host fallito"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
@@ -94,10 +73,28 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Si prega di segnalare questo problema come bug del pacchetto popularity-contest, "
-"includendo informazioni sulla propria configurazione."
+"Si prega di segnalare questo problema come bug del pacchetto popularity-"
+"contest, includendo informazioni sulla propria configurazione."
+
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Queste informazioni ci aiutano a decidere, per esempio, quali pacchetti "
+#~ "debbano essere inclusi nel primo CD Debian.  Inoltre, possiamo migliorare "
+#~ "le versioni future di Debian in modo che i pacchetti più popolari siano "
+#~ "installati automaticamente per i nuovi utenti."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(NOTA: i server di posta aggiungono informazioni per tracciare i "
+#~ "messaggi, quindi i dati in transito non saranno completamente anonimi)"

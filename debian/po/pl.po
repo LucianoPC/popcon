@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 16:34+0100\n"
+"POT-Creation-Date: 2004-05-27 18:27-0300\n"
 "PO-Revision-Date: 2004-04-06 10:49+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -27,15 +27,16 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr 
-"Chcesz wzi±æ udzia³ w konkursie na najpopularniejszy pakiet Debiana?"
+msgstr "Chcesz wzi±æ udzia³ w konkursie na najpopularniejszy pakiet Debiana?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
-"statistics about your most used Debian packages."
+"statistics about your most used Debian packages.  This information "
+"influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Mo¿esz sprawiæ, ¿e Twój system bêdzie anonimowo przesy³a³ deweloperom "
 "Debiana informacje o najczê¶ciej u¿ywanych przez Ciebie pakietach."
@@ -43,23 +44,10 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"This information helps us make decisions such as which packages should go on "
-"the first Debian CD.  Also, we can improve future versions of Debian so that "
-"the most popular packages are the ones which are installed automatically for "
-"new users."
-msgstr ""
-"Te informacje pomog± nam podj±æ decyzjê o tym jakie pakiety powinny "
-"byæ umieszczone na pierwszej p³ycie Debiana. Pozwoli to równie¿ ulepszyæ "
-"przysz³e wersje Debiana tak by najpopularniejsze pakiety instalowa³y "
-"siê domy¶lnie nowym u¿ytkonikom."
-
-#. Type: boolean
-#. Description
-#: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week automatically, e-mailing statistics to the Debian developers."
+"every week, e-mailing statistics to the Debian developers."
 msgstr ""
 "Je¶li zgodzisz siê na udzia³ w tym konkursie, skrypt uruchamiany "
 "automatycznie raz w tygodniu bêdzie przesy³a³ statystyki do deweloperów "
@@ -72,44 +60,51 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Mo¿esz w ka¿dej chwili zmieniæ swoje zdanie pó¼niej: "
-"\"dpkg-reconfigure popularity-contest\""
-
-#. Type: boolean
-#. Description
-#: ../templates:4
-msgid ""
-"(NOTE: e-mail servers add their own tracing information and your data won't "
-"be completely anonymous while in transit.)"
-msgstr ""
-"(ZAUWA¯: serwery dodaj± pewne informacje o drodze przesy³ania "
-"wiadomo¶ci wiêc Twoje dane nie bêd± kompletnie anonimowe."
+"Mo¿esz w ka¿dej chwili zmieniæ swoje zdanie pó¼niej: \"dpkg-reconfigure "
+"popularity-contest\""
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid "Generating unique host identifier failed"
 msgstr "Generowanie unikalnego identyfikatora komputera nie powiod³o siê"
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
 "fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 "Skrypt instalacyjny nie móg³ wygenerowaæ unikalnego identyfikatora "
-"komputera. To b³±d krytyczny, poniewa¿ wszystkie komputery "
-"przesy³aj±ce informacje musz± posiadaæ unikalny identyfikator."
+"komputera. To b³±d krytyczny, poniewa¿ wszystkie komputery przesy³aj±ce "
+"informacje musz± posiadaæ unikalny identyfikator."
 
 #. Type: error
 #. Description
-#: ../templates:25
+#: ../templates:17
 msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Proszê zg³osiæ ten problem wype³niaj±c zg³oszenie przeciwko "
-"pakietowi popularity-contest. Za³±cz informacje o swojej konfiguracji."
+"Proszê zg³osiæ ten problem wype³niaj±c zg³oszenie przeciwko pakietowi "
+"popularity-contest. Za³±cz informacje o swojej konfiguracji."
 
+#~ msgid ""
+#~ "This information helps us make decisions such as which packages should go "
+#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
+#~ "so that the most popular packages are the ones which are installed "
+#~ "automatically for new users."
+#~ msgstr ""
+#~ "Te informacje pomog± nam podj±æ decyzjê o tym jakie pakiety powinny byæ "
+#~ "umieszczone na pierwszej p³ycie Debiana. Pozwoli to równie¿ ulepszyæ "
+#~ "przysz³e wersje Debiana tak by najpopularniejsze pakiety instalowa³y siê "
+#~ "domy¶lnie nowym u¿ytkonikom."
+
+#~ msgid ""
+#~ "(NOTE: e-mail servers add their own tracing information and your data "
+#~ "won't be completely anonymous while in transit.)"
+#~ msgstr ""
+#~ "(ZAUWA¯: serwery dodaj± pewne informacje o drodze przesy³ania wiadomo¶ci "
+#~ "wiêc Twoje dane nie bêd± kompletnie anonimowe."
