@@ -1,20 +1,37 @@
 #!/bin/bash
 
+# Load debconf variables
+. /usr/share/debconf/confmodule
+
+conffile=/etc/popularity-contest.conf
+
 set -e
 
-#DEBHELPER#
+if [ -e $conffile ] ; then
+    # Fetch current values.
+    . $conffile
+fi
 
-if [ "$1" = "configure" ] && [ ! -e /etc/popularity-contest.conf ]; then
-	. /usr/share/debconf/confmodule
+if [ -z "$MAILTO" -o "$MAILTO" = "erich-survey@debian.org" ]; then
+    MAILTO="apenwarr-survey@debian.org"
+fi
+if [ -z "$MY_HOSTID" ]; then
+    MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum|sed 's/  -//'''`
+fi
 
-	if [ -z "$MAILTO" -o "$MAILTO" = "erich-survey@debian.org" ]; then
-		MAILTO="apenwarr-survey@debian.org"
-	fi
-	if [ -z "$MY_HOSTID" ]; then
-		MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum|sed 's/  -//'''`
-	fi
-	
-	cat <<-EOF >/etc/popularity-contest.conf
+# Get this setting from debconf.  It was set based on the content of
+# /etc/popularity-contest.conf in the 'config' script, so it should be
+# safe to ignore the value fetched by loading the file above.  This
+# should allow for using debconf to reconfigure the package.
+db_get popularity-contest/participate || true
+if [ "$RET" = "yes" -o "$RET" = "YES" -o "$RET" = "true" ]; then
+    PARTICIPATE="yes"
+else
+    PARTICIPATE="no"
+fi
+
+generate_conffile() {
+	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.
 		#
 		# To change this file, remove it and use:
@@ -49,20 +66,13 @@ if [ "$1" = "configure" ] && [ ! -e /etc/popularity-contest.conf ]; then
 		#
 	EOF
 	if [ -z "$MAILFROM" ]; then
-		echo '#MAILFROM=root@nowhere.org' >>/etc/popularity-contest.conf
+		echo '#MAILFROM=root@nowhere.org' >> $conffile
 	else
-		echo "MAILFROM=$MAILFROM" >>/etc/popularity-contest.conf
+		echo "MAILFROM=$MAILFROM" >> $conffile
 	fi
 
-	# Get this setting from debconf.
-	db_get popularity-contest/participate || true
-	if [ "$RET" = "yes" -o "$RET" = "YES" -o "$RET" = "true" ]; then
-		PARTICIPATE="yes"
-	else
-		PARTICIPATE="no"
-	fi
 	
-	cat <<-EOF >>/etc/popularity-contest.conf
+	cat <<-EOF >> $conffile
 	
 		# PARTICIPATE can be one of "yes" or "no".
 		# If you don't want to participate in the contest, say "no"
@@ -72,4 +82,25 @@ if [ "$1" = "configure" ] && [ ! -e /etc/popularity-contest.conf ]; then
 		#
 		PARTICIPATE=$PARTICIPATE
 	EOF
-fi
+}
+
+case "$1" in
+    configure)
+	if [ ! -e $conffile ]; then
+	    generate_conffile
+	else
+            # Replace if the value changed, to avoid changing the
+	    # config file date when no change was done.
+	    if sed "s/^PARTICIPATE=.*$/PARTICIPATE=$PARTICIPATE/" < $conffile > $conffile.new &&
+		! cmp $conffile $conffile.new > /dev/null; then
+		mv $conffile.new $conffile
+	    else
+		rm $conffile.new
+	    fi
+	fi
+	;;
+    *)
+	;;
+esac
+
+#DEBHELPER#

@@ -4,6 +4,9 @@ popularity-contest (1.8) UNRELEASED; urgency=low
     - Add Dutch debconf template translation (nl.po).  File from
       Bart Cornelis. (Closes: #217038)
     - Add URLs to the project home page in manual page and README file.
+    - Make it possible to reconfigure this package by calling
+      'dpkg-reconfigure popularity-contest', to get the code in
+      base-config working as it should. (Closes: #228535).
   * Bill Allombert
     - control: change exim to exim4. (Closes: #228575)
 
