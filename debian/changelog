@@ -3,8 +3,9 @@ popularity-contest (1.19) unreleased; urgency=low
   * Translations
     - Turkish by Recai Oktas. Closes: #244164
     - Russian update. Closes: #245000
+    - Slovak by Miroslav Kure. Closes: #245672
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 25 Apr 2004 12:47:41 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun, 25 Apr 2004 12:50:11 +0200
 
 popularity-contest (1.18) unstable; urgency=low
 
