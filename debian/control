@@ -1,8 +1,8 @@
 Source: popularity-contest
 Section: misc
 Priority: optional
-Maintainer: Avery Pennarun <apenwarr@debian.org>
-Uploaders: Petter Reinholdtsen <pere@debian.org>
+Maintainer: Popularity Contest Developers <popcon-developers@lists.alioth.debian.org>
+Uploaders: Avery Pennarun <apenwarr@debian.org>, Petter Reinholdtsen <pere@debian.org>, Bill Allombert <ballombe@debian.org>
 Build-Depends-Indep: debhelper (>=4.1.16)
 Standards-Version: 3.6.1
 

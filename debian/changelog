@@ -1,3 +1,11 @@
+popularity-contest (1.6) unstable; urgency=low
+
+  * Make new mailing list popcon-developers@lists.alioth.debian.org the
+    maintainer of this package, to make sure all developers get the
+    bug reports.  Updated uploaders to include the new addresses.
+
+ -- Petter Reinholdtsen <pere@gigs.hungry.com>  Tue, 14 Oct 2003 09:50:24 +0200
+
 popularity-contest (1.5) unstable; urgency=low
 
   * Set HOME to an existing directory before running
