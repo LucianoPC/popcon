@@ -1,3 +1,9 @@
+popularity-contest (1.26) UNRELEASED; urgency=low
+
+  * Update server-side scripts to accomodate with kfreebsd-gnu new URL.
+
+ -- Bill Allombert <ballombe@debian.org>  Fri, 29 Oct 2004 10:20:28 +0200
+
 popularity-contest (1.25) unstable; urgency=low
 
   * Petter Reinholdtsen
