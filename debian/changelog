@@ -4,6 +4,8 @@ popularity-contest (1.4) UNRELEASED; urgency=low
     - Adding myself as uploader.
     - Add link to Alioth summary page in the README.
     - Include architecture info in the submissions.  (CLoses: #148756, #187736)
+    - Remove useless call to dh_undocumented, previously commented out
+      by Christian Perrier.
   * Acknowledge NMUs.  (Closes: #135114, #135273, #136510, #137231,
     #172824, #184608, #187871, #197178, #197230, #201704, #203841)
 	
