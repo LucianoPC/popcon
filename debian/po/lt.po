@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.13\n"
-"POT-Creation-Date: 2004-01-26 00:49+0100\n"
+"POT-Creation-Date: 2004-03-14 22:47+0100\n"
 "PO-Revision-Date: 2004-03-10 22:02+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -25,8 +25,9 @@ msgid ""
 "You can have your system anonymously e-mail the Debian developers with "
 "statistics about your most used Debian packages."
 msgstr ""
-"Jūs galite turėti sistema, elektroniniu paštu anonimiškai pranešančią Debian'o "
-"kūrėjams statistiką apie tankiausiai Jūsų naudojamus Debian'o paketus."
+"Jūs galite turėti sistema, elektroniniu paštu anonimiškai pranešančią "
+"Debian'o kūrėjams statistiką apie tankiausiai Jūsų naudojamus Debian'o "
+"paketus."
 
 #. Description
 #: ../templates:4
@@ -47,9 +48,9 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week automatically, e-mailing statistics to the Debian developers."
 msgstr ""
-"Jei Jūs pasirinksite prisijungti, automatinio pateikimo skriptas, išsiunčiantis "
-"elektroniniu paštu statistiką Debian'o kūrėjams, bus vykdomas vieną kartą "
-"kiekvieną savaitę."
+"Jei Jūs pasirinksite prisijungti, automatinio pateikimo skriptas, "
+"išsiunčiantis elektroniniu paštu statistiką Debian'o kūrėjams, bus vykdomas "
+"vieną kartą kiekvieną savaitę."
 
 #. Description
 #: ../templates:4
@@ -68,4 +69,3 @@ msgid ""
 msgstr ""
 "(PASTABA: elektroninio pašto serveris pridės savo kelio informaciją ir Jūsų "
 "duomenys nebus pilnai anoniminiai kol bus persiunčiami.)"
-
