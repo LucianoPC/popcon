@@ -32,15 +32,15 @@ easily later.
 The rest of the lines are package entries, one line for each package
 installed on your system.  They have the format:
 
-	<atime> <ctime> <packagename> <mru-program> <tag>
+	<atime> <ctime> <package-name> <mru-program> <tag>
 
-<packagename> is the name of the Debian package that contains <mru-program>. 
+<package-name> is the name of the Debian package that contains <mru-program>. 
 <mru-program> is the most recently used program, static library, or header
 (.h) file in the package.
 
 <atime> and <ctime> are the access time and creation time of the
 <mru-program> on your disk, respectively, represented as the number of
-seconds since midnight GMT on January 1, 1970 (ie. in Unix time_t format). 
+seconds since midnight GMT on January 1, 1970 (i.e. in Unix time_t format). 
 Linux updates <atime> whenever you open the file; <ctime> was set when you
 first installed the package.
 
