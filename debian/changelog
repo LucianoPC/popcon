@@ -1,6 +1,6 @@
 popularity-contest (1.13) UNRELEASED; urgency=low
 
-  * nothing for now.
+  * Update server-side scripts to current popcon.debian.org version.
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
 

@@ -207,6 +207,8 @@ def read_submissions(stream):
                     e.arch = 'amd64'
 	    	elif header['ARCH']=='i386-gnu':
                     e.arch = 'hurd-i386'
+		elif header['ARCH']=='':
+                    e.arch = 'unknown'
 		else:
                     e.arch = header['ARCH']
 

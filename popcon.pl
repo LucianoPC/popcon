@@ -50,7 +50,6 @@ EOH
 sub htmlfooter
 {
   my $date=gmtime();
-  print HTML ("\n </pre>\n</p> \n");
   print HTML <<EOF;
 <pre>
 inst     : number of people who installed this package;
@@ -67,14 +66,15 @@ To participate in this survey, install the <a href="http://packages.debian.org/p
 </p>
 EOF
   print HTML <<EOH
-<p><small>
-</small></p>
+<p>
 <HR>
+<small>
 Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
 <a href="http://popcon.alioth.debian.org" > Popularity-contest project <a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <BR>
 Copyright (C) 2004 <A HREF="http://www.spi-inc.org/">SPI</A>;
 See <A HREF="http://www.debian.org/license">license terms</A>.
+</small>
 </body>
 </html>
 EOH
@@ -258,6 +258,7 @@ for $sec (@dists)
     print_by ($dir,$_) for (@fields);
     print HTML ("\n");
   }
+  print HTML ("\n </pre>\n");
   &htmlfooter;
   closedir SEC;
   close HTML;
@@ -292,6 +293,7 @@ for $sec (@dists)
 	  }
 	  print HTML ("\n");
   }
+  print HTML ("\n </pre>\n");
   &htmlfooter;
   closedir SEC;
   close HTML;
@@ -321,15 +323,31 @@ for $sec (@dists)
 		print_by ($dir,$_) for (@fields);
 		print HTML ("\n");
 	}
-	print HTML "</pre><p>Statistics for architectures\n<pre>";
+	print HTML  <<'EOF';
+</pre>
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<tr>
+<td>
+Statistics for architectures
+<pre>
+EOF
         for $f (grep { $_ ne 'unknown' } sort keys %arch)
         {
 		my ($port)=split('-',$f);
-                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s\n",$f;
+                printf HTML "<a href=\"http://www.debian.org/ports/$port/\">%-16s</a> : %-10s <a href=\"/stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
         }
-        printf HTML "%-16s : %-10s\n","unknown",$arch{"unknown"};
+        printf HTML "%-16s : %-10s <a href=\"/stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"};
+	print HTML  <<'EOF';
+</pre></td>
+<td>
+ <img alt="Graph of number of submissions per architectures"
+ src="/stat/submission.png">
+</td></tr>
+</table>
+<p>
+EOF
 
-	print HTML "</pre>\n<p><a href=\"all-popcon-results.txt.gz\">Raw popularity-contest results</a>\n";
+	print HTML "<a href=\"all-popcon-results.txt.gz\">Raw popularity-contest results</a>\n";
 	&htmlfooter;
 	close HTML;
 }
