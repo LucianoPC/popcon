@@ -1,3 +1,9 @@
+popularity-contest (1.13) UNRELEASED; urgency=low
+
+  * nothing for now.
+
+ -- Bill Allombert <ballombe@debian.org>  Sat, 14 Feb 2004 16:34:37 +0100
+
 popularity-contest (1.12) unstable; urgency=low
 
   * Use dpkg --print-installation-architecture instead of $Config{archname}
