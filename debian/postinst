@@ -84,7 +84,7 @@ case "$1" in
 		s/^\(MAILTO=\"erich-survey@debian.org\"\)$/#\1/;    \
 		s/^\(MAILTO=\"apenwarr-survey@debian.org\"\)$/#\1/; \
 		s/^\(MAILTO=\"survey@popcon.debian.org\"\)$/#\1/;   \
-		s/^MY_HOSTID="\\?$EMPTYID"\\?/MY_HOSTID=\"$MY_HOSTID\"/; \
+		s/^MY_HOSTID=\"\\?$EMPTYID\"\\?/MY_HOSTID=\"$MY_HOSTID\"/; \
 		"
 
 	    if sed "$sedopts" < $conffile > $conffile.new &&
