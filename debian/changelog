@@ -5,8 +5,9 @@ popularity-contest (1.17) UNRELEASED; urgency=low
     - Polish by Bartosz Fenski. Closes: #242360
     - Dutch by Bart Cornelis. Closes: #242382
     - Hebrew by Lior Kaplan
+    - Indonesian by Parlin Imanuel Toh. Closes: #243296
 
- -- Christian Perrier <bubulle@debian.org>  Wed,  7 Apr 2004 10:38:34 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 13 Apr 2004 09:47:48 +0200
 
 popularity-contest (1.16) unstable; urgency=medium
 
