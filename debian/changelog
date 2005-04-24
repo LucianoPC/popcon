@@ -4,8 +4,9 @@ popularity-contest (1.28) UNRELEASED; urgency=low
     - Added Galician by Jacobo Tarrio. Closes: #296307
     - Added Albanian by Elian Myftiu. Closes: #302398
     - Added Tagalog by Eric Pareja. Closes: #296409
+    - Updated Basque from Inaki Larranaga Murgoitio. Closes: #306049
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 18 Feb 2005 21:15:55 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 24 Apr 2005 09:12:30 +0200
 
 popularity-contest (1.27) unstable; urgency=low
 
