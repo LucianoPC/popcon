@@ -51,7 +51,12 @@ sub popconintro
 {
   print HTML <<"EOH";
   <p> <em> The popularity contest project is an attempt to map the usage of
-  Debian packages.  This site publishes the statistics gathered from report send by users of the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package. This package sends every week the list of packages installed and the access time of relevant files to the server via email. Every day the server anonymizes the result and publishes this survey.
+  Debian packages.  This site publishes the statistics gathered from report
+  sent by users of the <a
+  href="http://packages.debian.org/popularity-contest">popularity-contest</a>
+  package. This package sends every week the list of packages installed and the
+  access time of relevant files to the server via email. Every day the server
+  anonymizes the result and publishes this survey.
   For more information, read the <a href="README">README</a> and the 
   <a href="FAQ">FAQ</a>.
   </em> <p>
@@ -171,7 +176,10 @@ sub print_pkg
   print HTML "<a href=\"http://packages.debian.org/$pkg\">$pkgt</a> ",
   ' 'x(20-$size);
 }
-
+sub mark
+{
+  print join(" ",$_[0],times),"\n";
+}
 
 %pkg=();
 %section=();
@@ -197,7 +205,7 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS","woody","woody-nonUS")
   }
   close AVAIL;
 }
-
+mark "Reading legacy packages...";
 
 for $file (glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages"),glob("/org/ftp.root/debian/dists/sid/*/binary-*/Packages"))
 {
@@ -214,6 +222,8 @@ for $file (glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages"),glob("
   }
   close AVAIL;
 }
+mark "Reading current packages...";
+
 $ENV{PATH}="/bin:/usr/bin";
 
 #Format
@@ -261,6 +271,7 @@ while(<PKG>)
     $release{$a}=$nb;
   }
 }
+mark "Reading stats...";
 
 @pkgs=sort keys %pkg;
 %sections = map {$section{$_} => 1} keys %section;
@@ -274,6 +285,8 @@ for $sec (@sections)
   make_sec $sec;
   make_by ($sec, $_, \%pkg, @list) for (@fields);
 }
+
+mark "Building by sections pages";
 
 @dists=("main","contrib","non-free","non-US");
 #There is a hack: '.' is both the current directory and
@@ -311,6 +324,7 @@ for $sec (@dists)
   closedir SEC;
   close HTML;
 }
+mark "Building by sub-sections pages";
 for $sec (@dists)
 {
   open HTML , "> $popcon/$sec/first.html";
@@ -346,6 +360,9 @@ for $sec (@dists)
   closedir SEC;
   close HTML;
 }
+
+mark "Building winner pages";
+
 {
 	open HTML , "> $popcon/index.html";
 	&htmlheader;
@@ -420,4 +437,4 @@ EOF
 	&htmlfooter;
 	close HTML;
 }
-
+mark "Building index.html";

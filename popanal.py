@@ -137,7 +137,7 @@ class Submission:
     # we found the last line of the survey: finish it
     def done(self, date):
 	ewrite('\t STOP: after %d seconds, %d packages'
-	       % (long(date) - self.start_date, len(self.entries)))
+	       % (date - self.start_date, len(self.entries)))
 	for package in self.entries.keys():
 	    e = self.entries[package]
 	    if deplist.has_key(package):
@@ -202,7 +202,9 @@ def read_submissions(stream):
             if header.has_key('POPCONVER'):
 		if header['POPCONVER']=='':
 	            e.release = 'unknown'
-                else:
+                elif header['POPCONVER']=='1.27.bill.1':
+                    e.release = '1.27'
+		else:
 	            e.release = header['POPCONVER']
 	
             if header.has_key('ARCH'):
@@ -218,7 +220,12 @@ def read_submissions(stream):
 	elif split[0]=='END-POPULARITY-CONTEST-0' and e != None:
 	    header = headersplit(split[1:])
 	    if header.has_key('TIME'):
-		e.done(header['TIME'])
+		try:
+		  date = long(header['TIME'])
+		except: 
+		  ewrite('Invalid date: ' + header['TIME'])
+		  continue
+		e.done(date)
 	    e = None
 
 	elif e != None:

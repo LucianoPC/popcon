@@ -23,4 +23,4 @@ cd ../popcon-stat
 find ../popcon-mail/all-popcon-results -type f -print | sort |./popcon-stat.pl
 
 cd ../popcon-web
-./popcon.pl
+./popcon.pl >popcon.log
