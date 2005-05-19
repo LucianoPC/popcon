@@ -1,23 +1,13 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
 # Miguel Figueiredo <elmig@debianpt.org>, 2004
+#
+# 17-05-2005 - Miguel Figueiredo <elmig@debianpt.org> - fixed typos.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.21\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-15 15:35+0000\n"
-"PO-Revision-Date: 2004-06-04 19:50+0000\n"
+"PO-Revision-Date: 2005-05-17 21:50+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianptorg>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +28,7 @@ msgid ""
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Você pode ter o seu sistema a enviar anónimamente por e-mail aos "
+"Você pode ter o seu sistema a enviar anonimamente por e-mail aos "
 "desenvolvedores de Debian estatísticas acerca dos seus pacotes Debian mais "
 "utilizados.  Esta informação influencia decisões tais como que pacotes devem "
 "ser incluídos no primeiro CD de Debian."
