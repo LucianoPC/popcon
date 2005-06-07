@@ -16,10 +16,10 @@ sub htmlheader
         <body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#800080" alink="#FF0000">
         <div align="center">
         <a href="http://www.debian.org/">
-        <img src="http://www.debian.org/logos/openlogo-nd-50.png" border="0" hspace="0" vspace="0" alt="">
+        <img src="http://www.debian.org/logos/openlogo-nd-50.png" border="0" hspace="0" vspace="0" alt="" width="50" height="61">
         </a>
         <a href="http://www.debian.org/">
-        <img src="http://www.debian.org/Pics/debian.jpg" border="0" hspace="0" vspace="0" alt="Debian Project">
+        <img src="http://www.debian.org/Pics/debian.jpg" border="0" hspace="0" vspace="0" alt="Debian Project" width="179" height="61">
         </a>
         </div>
         <br>
@@ -86,7 +86,7 @@ EOF
 <HR>
 <small>
 Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
-<a href="http://popcon.alioth.debian.org" > Popularity-contest project <a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
+<a href="http://popcon.alioth.debian.org" > Popularity-contest project </a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <BR>
 Copyright (C) 2004-2005 <A HREF="http://www.spi-inc.org/">SPI</A>;
 See <A HREF="http://www.debian.org/license">license terms</A>.
@@ -412,9 +412,9 @@ EOF
 </pre></td>
 <td>
  <img alt="Graph of number of submissions per architectures"
- src="stat/submission.png">
+ width="600" height="400" src="stat/submission.png">
 </td></tr>
-<td>
+<tr><td>
 Statistics per popularity-contest releases:
 <pre>
 EOF
@@ -427,7 +427,7 @@ EOF
 </pre></td>
 <td>
  <img alt="Graph of popularity-contest versions in use"
- src="stat/release.png">
+  width="600" height="400" src="stat/release.png">
 </td></tr>
 </table>
 <p>
