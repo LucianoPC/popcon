@@ -149,8 +149,8 @@ class Submission:
 	for package in self.entries.keys():
 	    if not votelist.has_key(package):
 		if not complained.has_key(package):
-			ewrite(('Warning: package %s not in '
-				+ '/var/lib/dpkg/available')  % package)
+			ewrite(('Warning: package %s neither in '
+				+ 'stable nor unstable')  % package)
 			complained[package] = 1
 		votelist[package] = Vote()
 		sectlist[UNKNOWN].append(package)
