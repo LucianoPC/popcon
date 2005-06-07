@@ -1,3 +1,17 @@
+popularity-contest (1.29) unstable; urgency=low
+
+  * Please note when reading stats that sarge was released with 1.28.
+  * debian/rules: Ship popcon-stat.pl as example script.
+  * popcon.pl: Generate more standard-compliant HTML.
+  * popularity-contest: Remove extraneous space at end of lines.
+    Closes: #295763. Thanks Erik Schanze.
+  * popanal.py: Update warning to match code.
+  * README.examples: update to reflect current arrangement
+  * Translations (Done by Christian Perrier)
+    - Portuguese translation updated by Miguel Figueiredo.
+
+ -- Bill Allombert <ballombe@debian.org>  Tue,  7 Jun 2005 16:58:30 +0200
+
 popularity-contest (1.28) unstable; urgency=low
 
   * Update example server-side scripts to popcon.d.o version:
