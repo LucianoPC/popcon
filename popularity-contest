@@ -77,7 +77,7 @@ while (<PACKAGES>)
 {
   /^.*installed *(.+)$/ or next;
   my $pkg=$1;
-  $popcon{$pkg}=[0,0,$pkg,"<NOFILES>",""];
+  $popcon{$pkg}=[0,0,$pkg,"<NOFILES>"];
   open FILES, "$dpkg_db/$pkg.list";
   my $bestatime = undef;
   while (<FILES>)
@@ -92,20 +92,22 @@ while (<PACKAGES>)
     if (!defined($bestatime) || $atime >= $bestatime)
     {
       $bestatime=$atime;
-      my $st="";
       if ($atime < $lastmonth)
       { 
         # Not accessed since more than 30 days.
-        $st="<OLD>";
+        $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<OLD>"];
       }
       elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
       {
         # Installed/upgraded less than a month ago and not used after 
         # install/upgrade day.
-        $st="<RECENT-CTIME>";
+        $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<RECENT-CTIME>"];
       }
-      # Else we `vote' for the package.
-      $popcon{$pkg}=[$atime,$ctime,$pkg,$_,$st];
+      else
+      {
+        # Else we `vote' for the package.
+        $popcon{$pkg}=[$atime,$ctime,$pkg,$_];
+      }
     }
   }
   close FILES;
