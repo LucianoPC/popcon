@@ -1,3 +1,29 @@
+popularity-contest (1.30) UNRELEASED; urgency=low
+
+  * Add support for reporting using http POST.
+  * new script /usr/share/popularity-contest/popcon-upload
+  * new CGI /usr/share/doc/popularity-contest/popcon.cgi
+  * Uploading using content-type text/plain, content-encoding x-gzip.
+  * debian/cron.weekly:
+    - do not run sendmail if it is not available.  This will make it
+      possible to downgrade mail-transport-agent from Depend to
+      Recommends if we move to HTTP.
+    - try to run /usr/share/popularity-contest/popcon-upload if
+      USEHTTP is enabled, disabled by default.
+  * Code done by Bill Allombert.  Patch based on code from Ubuntu,
+    though reimplemented in perl to avoid python dependency.  The
+    ubuntu versions are included in the source package as
+    popcon-submit-ubuntu.cgi and popcon-upload-ubuntu.
+  * Added simple FAQ entry about the http POST feature.
+  * Depend on ${misc:Depends} instead of debconf, to get the updated
+    debconf dependency.
+  * TODO:
+      + Edit popcon-submit.cgi to report to the main server
+      + Add timeout in the upload script.
+      + Consider using existing perl module to submit file using http.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
+
 popularity-contest (1.29) unstable; urgency=low
 
   * Please note when reading stats that sarge was released with 1.28.

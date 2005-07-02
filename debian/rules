@@ -26,6 +26,7 @@ install:
 	install -d debian/tmp/etc/
 	install -d debian/tmp/usr/share/popularity-contest/
 	install popularity-contest debian/tmp/usr/sbin/
+	install popcon-upload debian/tmp/usr/share/popularity-contest/
 	install popcon-largest-unused debian/tmp/usr/sbin/
 	install -m 644 default.conf debian/tmp/usr/share/popularity-contest/
 
@@ -34,7 +35,7 @@ binary-indep: build install
 	dh_testdir
 	dh_testroot
 	dh_installdocs README FAQ
-	dh_installexamples prepop.pl popcon-process.sh popanal.py popcon.pl popcon-stat.pl README.examples
+	dh_installexamples prepop.pl popcon-process.sh popanal.py popcon.pl popcon-stat.pl popcon-submit.cgi README.examples
 	dh_installmenu
 	dh_installcron
 	dh_installman debian/popularity-contest.8 debian/popcon-largest-unused.8

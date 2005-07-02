@@ -9,6 +9,8 @@ unset MAILFROM
 unset MAILTO
 unset MY_HOSTID
 unset PARTICIPATE
+unset SUBMITURL
+unset USEHTTP
 
 # get configuration information
 . /usr/share/popularity-contest/default.conf
@@ -24,6 +26,7 @@ if [ -z "$MAILTO" ]; then exit 0; fi
 cd /var/log
 umask 022
 savelog -c 7 popularity-contest >/dev/null
+POPCON=/var/log/popularity-contest
 
 run_popcon()
 {
@@ -47,8 +50,18 @@ do_sendmail()
 	fi
 }
 
-# generate and transmit the popularity contest data
+# generate the popularity contest data
 
-run_popcon \
-	| tee /var/log/popularity-contest \
-	| do_sendmail
+run_popcon > $POPCON
+
+# try to email the popularity contest data
+
+if [ -x "`which sendmail 2>/dev/null`" ]; then
+	do_sendmail < $POPCON
+fi
+
+# try to post the report through http POST
+if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
+	setsid /usr/share/popularity-contest/popcon-upload \
+	    -u $SUBMITURL -f $POPCON 2>/dev/null
+fi

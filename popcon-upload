@@ -1,0 +1,58 @@
+#!/usr/bin/perl -w
+# Written by Bill Allombert for the Debian popularity-contest project.
+# This file is placed in the public domain.
+
+use strict;
+use IO::Socket;
+use Getopt::Std;
+
+getopt("uf", \%opts);
+
+my ($submiturl)  = $opts{'u'} || "http://popcon.debian.org/cgi-bin/popcon.cgi";
+my ($file)  = $opts{'f'} || "-";
+
+($host) = $submiturl =~ m%http://([^/]+)%;
+
+# Configure the proxy:
+my ($http_proxy,$proxy,$port,$remote);
+
+$http_proxy=$ENV{'http_proxy'};
+if (defined($http_proxy))
+{
+  $http_proxy =~ m{http://([^:]*)(?::([0-9]+))?} 
+        or die ("unrecognized http_proxy");
+  $proxy=$1; $port=$2;
+}
+  
+$proxy=$host unless (defined($proxy));
+$port=80 unless (defined($port));
+
+# Compress the report:
+my ($str,$len);
+open GZIP, "gzip -c $file |" or die "gzip -c $file";
+$str .= $_ while(<GZIP>); 
+close(GZIP);
+$len = length($str);
+
+# Connect to server
+$remote = IO::Socket::INET->new(Proto => "tcp", PeerAddr => $proxy, 
+                                                PeerPort => $port); 
+unless ($remote) { die "cannot connect to $proxy:$port" }
+
+#Send data
+print $remote <<"EOF";
+POST $submiturl HTTP/1.1
+Host: $host
+Content-Type: text/plain; charset=utf-8
+Content-Encoding: x-gzip
+Content-Length: $len
+
+EOF
+print $remote $str;
+
+#Get answer
+my($answer)="";
+$answer.=$_ while(<$remote>);
+close ($remote);
+#Check answer
+exit (($answer =~ m/DEBIAN POPCON HTTP-POST OK/)?0:1);

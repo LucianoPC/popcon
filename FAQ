@@ -76,4 +76,10 @@ do_sendmail()
 Make sure myuser account is properly configured to send email with a valid
 return address.
 
+Q) My system are unable to send email out to the Internet.  How can I
+participate.
 
+An alternative is to use the new experimental http submission support.
+This can be enabled using this command:
+
+  echo USEHTTP="yes" >> /etc/popularity-contest.conf
