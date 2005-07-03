@@ -34,6 +34,10 @@ $str .= $_ while(<GZIP>);
 close(GZIP);
 $len = length($str);
 
+# 30 second timeout on http connections
+$SIG{ALRM} = sub { die "timeout\n" };
+alarm(30);
+
 # Connect to server
 $remote = IO::Socket::INET->new(Proto => "tcp", PeerAddr => $proxy, 
                                                 PeerPort => $port); 

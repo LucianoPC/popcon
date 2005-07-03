@@ -18,9 +18,9 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Depend on ${misc:Depends} instead of debconf, to get the updated
     debconf dependency.
   * Added low priority debconf question asking if http should be used.
+  * Added 30 second timeout in the http upload script.
   * TODO:
       + Edit popcon-submit.cgi to report to the main server
-      + Add timeout in the upload script.
       + Consider using existing perl module to submit file using http.
       + Improve the http debconf template text.
 
