@@ -12,6 +12,11 @@ _Description: Participate in the Debian Package Popularity Contest?
  You can always change your mind after making this decision:
  "dpkg-reconfigure popularity-contest"
 
+Template: popularity-contest/use-http
+Type: boolean
+Default: false
+_Description: Use HTTP to submit reports?
+
 Template: popularity-contest/hostid-failed
 Type: note
 _Description: Generating unique host identifier failed

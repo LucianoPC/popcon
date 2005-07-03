@@ -12,7 +12,17 @@ if [ -f /etc/popularity-contest.conf ] ; then
                PARTICIPATE=false
        fi
        db_set popularity-contest/participate "$PARTICIPATE"
+
+       if [ yes = "$USEHTTP" ] ; then
+               USEHTTP=true
+       else
+               USEHTTP=false
+       fi
+       db_set popularity-contest/use-http "$USEHTTP"
 fi
 
 db_input high popularity-contest/participate || [ $? -eq 30 ]
+db_go || true
+
+db_input low popularity-contest/use-http || [ $? -eq 30 ]
 db_go || true

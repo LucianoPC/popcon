@@ -17,6 +17,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Added simple FAQ entry about the http POST feature.
   * Depend on ${misc:Depends} instead of debconf, to get the updated
     debconf dependency.
+  * Added low priority debconf question asking if http should be used.
   * TODO:
       + Edit popcon-submit.cgi to report to the main server
       + Add timeout in the upload script.

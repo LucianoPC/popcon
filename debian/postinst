@@ -22,6 +22,12 @@ if [ "$RET" = "yes" ] || [ "$RET" = "YES" ] || [ "$RET" = "true" ]; then
 else
     PARTICIPATE="no"
 fi
+db_get popularity-contest/use-http || true
+if [ "$RET" = "yes" ] || [ "$RET" = "YES" ] || [ "$RET" = "true" ]; then
+    USEHTTP="yes"
+else
+    USEHTTP="no"
+fi
 
 # The md5 sum of an empty file
 EMPTYID="d41d8cd98f00b204e9800998ecf8427e"
@@ -49,6 +55,7 @@ generate_conffile() {
 		
 		MY_HOSTID="$MY_HOSTID"
 		PARTICIPATE="$PARTICIPATE"
+		USEHTTP="$USEHTTP"
 	EOF
 	# Make sure user nobody can read the file.
 	chmod a+r $conffile
@@ -80,6 +87,7 @@ case "$1" in
 
 	    sedopts=" \
 		s/^PARTICIPATE=.*$/PARTICIPATE=\"$PARTICIPATE\"/;   \
+		s/^USEHTTP=.*$/USEHTTP=\"$USEHTTP\"/;   \
 		s/^\(MAILTO=\"erich-survey@debian.org\"\)$/#\1/;    \
 		s/^\(MAILTO=\"apenwarr-survey@debian.org\"\)$/#\1/; \
 		s/^\(MAILTO=\"survey@popcon.debian.org\"\)$/#\1/;   \
