@@ -82,4 +82,4 @@ participate.
 An alternative is to use the new experimental http submission support.
 This can be enabled using this command:
 
-  echo USEHTTP="yes" >> /etc/popularity-contest.conf
+  dpkg-reconfigure popularity-contest
