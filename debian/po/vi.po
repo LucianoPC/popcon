@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-15 15:35+0000\n"
+"POT-Creation-Date: 2005-07-04 00:48+0200\n"
 "PO-Revision-Date: 2005-04-27 12:59+0400\n"
 "Last-Translator: Phan Vinh Thinh <teppi@vnoss.org>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -26,8 +26,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously e-mail the Debian developers with "
+"You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
@@ -38,9 +39,10 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, e-mailing statistics to the Debian developers."
+"every week, sending statistics to the Debian developers."
 msgstr ""
 "Nếu quyết định tham gia, một tập lệnh đệ trình sẽ tự động chạy hàng tuần, để "
 "gửi thống kê tới các nhà phát triển Debian."
@@ -81,3 +83,15 @@ msgid ""
 msgstr ""
 "Xin hãy báo cáo vấn đề này như một lỗi bug đến cho Gói Popularity Contest, "
 "cùng với thông tin về cấu hình."
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "Use HTTP to submit reports?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid " If you do not want to use HTTP, email is used instead."
+msgstr ""

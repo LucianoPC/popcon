@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-15 15:35+0000\n"
+"POT-Creation-Date: 2005-07-04 00:48+0200\n"
 "PO-Revision-Date: 2004-07-10 12:13+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -32,8 +32,9 @@ msgstr "Chcesz wzi±æ udzia³ w konkursie na najpopularniejszy pakiet Debiana?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously e-mail the Debian developers with "
+"You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
@@ -45,9 +46,10 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, e-mailing statistics to the Debian developers."
+"every week, sending statistics to the Debian developers."
 msgstr ""
 "Je¶li zgodzisz siê na udzia³ w tym konkursie, skrypt uruchamiany "
 "automatycznie raz w tygodniu bêdzie przesy³a³ statystyki do deweloperów "
@@ -90,3 +92,15 @@ msgid ""
 msgstr ""
 "Proszê zg³osiæ ten problem wype³niaj±c zg³oszenie przeciwko pakietowi "
 "popularity-contest. Za³±cz informacje o swojej konfiguracji."
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "Use HTTP to submit reports?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid " If you do not want to use HTTP, email is used instead."
+msgstr ""

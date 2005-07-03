@@ -2,20 +2,15 @@ Template: popularity-contest/participate
 Type: boolean
 Default: false
 _Description: Participate in the Debian Package Popularity Contest?
- You can have your system anonymously e-mail the Debian developers with
+ You can have your system anonymously supply the Debian developers with
  statistics about your most used Debian packages.  This information influences
  decisions such as which packages should go on the first Debian CD.
  .
  If you choose to participate, the automatic submission script will
- run once every week, e-mailing statistics to the Debian developers.
+ run once every week, sending statistics to the Debian developers.
  .
  You can always change your mind after making this decision:
  "dpkg-reconfigure popularity-contest"
-
-Template: popularity-contest/use-http
-Type: boolean
-Default: false
-_Description: Use HTTP to submit reports?
 
 Template: popularity-contest/hostid-failed
 Type: note
@@ -26,3 +21,9 @@ _Description: Generating unique host identifier failed
  .
  Please report this problem as a bug against the popularity-contest
  package, and include information about your configuration.
+
+Template: popularity-contest/use-http
+Type: boolean
+Default: false
+_Description: Use HTTP to submit reports?
+  If you do not want to use HTTP, email is used instead.

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-15 15:35+0000\n"
+"POT-Creation-Date: 2005-07-04 00:48+0200\n"
 "PO-Revision-Date: 2004-09-05 20:28+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -20,19 +20,26 @@ msgstr "데비안 패키지 인기 투표에 참여하시겠습니까?"
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously e-mail the Debian developers with "
+"You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "가장 많이 쓰는 데비안 꾸러미에 대한 통계를 전자메일로 데비안 개발자들에게 익명으로 보낼 수 있습니다.  이 정보는 어떤 꾸러미를 첫 번째 데비안 CD에 넣을 것인가와 같은 결정을 하는 데 이용합니다."
+msgstr ""
+"가장 많이 쓰는 데비안 꾸러미에 대한 통계를 전자메일로 데비안 개발자들에게 익"
+"명으로 보낼 수 있습니다.  이 정보는 어떤 꾸러미를 첫 번째 데비안 CD에 넣을 것"
+"인가와 같은 결정을 하는 데 이용합니다."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, e-mailing statistics to the Debian developers."
-msgstr "참가하시게 되면, 매 주마다 자동으로 스크립트를 실행해서 데비안 개발자들에게 전자메일로 통계 정보를 제출하게 됩니다."
+"every week, sending statistics to the Debian developers."
+msgstr ""
+"참가하시게 되면, 매 주마다 자동으로 스크립트를 실행해서 데비안 개발자들에게 "
+"전자메일로 통계 정보를 제출하게 됩니다."
 
 #. Type: boolean
 #. Description
@@ -70,3 +77,15 @@ msgid ""
 msgstr ""
 "이 문제를 popularity-contest 패키지의 버그로 알려 주십시오. 그리고 설정 정보"
 "를 포함해 주십시오."
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "Use HTTP to submit reports?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid " If you do not want to use HTTP, email is used instead."
+msgstr ""
