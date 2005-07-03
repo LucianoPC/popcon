@@ -1,6 +1,6 @@
 popularity-contest (1.30) UNRELEASED; urgency=low
 
-  * Add support for reporting using http POST.
+  * Add support for reporting using http POST. (Closes: #239097)
   * new script /usr/share/popularity-contest/popcon-upload
   * new CGI /usr/share/doc/popularity-contest/popcon.cgi
   * Uploading using content-type text/plain, content-encoding x-gzip.
