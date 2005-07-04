@@ -70,6 +70,6 @@ if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
 	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
 		:
 	else
-		logger -t popcon "unable to submit report using HTTP."
+		logger -t popcon "unable to submit report using http."
 	fi
 fi
