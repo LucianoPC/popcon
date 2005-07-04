@@ -58,8 +58,15 @@ if ( $HOSTID !~ /^([a-f0-9]{32})$/)
 my $debarch = `dpkg --print-installation-architecture`;
 chomp $debarch;
 
+# Set if dpkg package version is older than 1.10, thus missing dpkg-query.
+my $olddpkg = 0;
+
 # Popcon release
-my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest`;
+my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest 2>/dev/null`;
+if ($?) {
+    $popconver = `dpkg-awk "Package: *popularity-contest.*" -- Version|grep ^Version|sed 's/^Version: //'`;
+    $olddpkg = 1;
+}
 
 # Initialise time computations
 
@@ -71,8 +78,11 @@ my $lastmonth = $now - $monthlen;
 my %popcon=();
 
 #Read dpkg database of installed packages
-
-open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
+if ($olddpkg) {
+    open PACKAGES, "dpkg-awk 'Status: .* installed' -- Package | grep '^Package:' | sed 's/^Package: /install ok installed /'|";
+} else {
+    open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
+}
 while (<PACKAGES>)
 {
   /^.*installed *(.+)$/ or next;

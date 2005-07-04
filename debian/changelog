@@ -25,6 +25,10 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * TODO:
       + Consider using existing perl module to upload file using http.
       + Improve the http debconf template text.
+  * Rewrite popularity-contest to use dpkg-awk if dpkg-query is
+    missing, to make it compatible with dpkg versions before 1.10.
+    Drop versioned dependency on dpkg.  This make a backport to woody
+    trivial.
   * Translations (Done by Christian Perrier)
     - Updated French from Christian Perrier
 
