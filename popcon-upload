@@ -36,7 +36,7 @@ close(GZIP);
 $len = length($str);
 
 # 30 second timeout on http connections
-$SIG{ALRM} = sub { die "timeout\n" };
+$SIG{ALRM} = sub { die "timeout in popcon-upload\n" };
 alarm(30);
 
 # Connect to server
