@@ -61,7 +61,7 @@ if [ -x "`which sendmail 2>/dev/null`" ]; then
 	cat $POPCON
     ) | do_sendmail
 else
-	logger -t popcon "Unable to submit popcon report using sendmail."
+	logger -t popcon "unable to submit report using sendmail."
 fi
 
 # try to post the report through http POST
@@ -70,6 +70,6 @@ if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
 	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
 		:
 	else
-		logger -t popcon "Unable to submit popcon report using HTTP."
+		logger -t popcon "unable to submit report using HTTP."
 	fi
 fi
