@@ -6,12 +6,13 @@ use strict;
 use IO::Socket;
 use Getopt::Std;
 
+my %opts;
 getopt("uf", \%opts);
 
 my ($submiturl)  = $opts{'u'} || "http://popcon.debian.org/cgi-bin/popcon.cgi";
 my ($file)  = $opts{'f'} || "-";
 
-($host) = $submiturl =~ m%http://([^/]+)%;
+my ($host) = $submiturl =~ m%http://([^/]+)%;
 
 # Configure the proxy:
 my ($http_proxy,$proxy,$port,$remote);
