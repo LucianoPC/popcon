@@ -58,10 +58,16 @@ run_popcon > $POPCON
 
 if [ -x "`which sendmail 2>/dev/null`" ]; then
 	do_sendmail < $POPCON
+else
+	logger -t popcon "Unable to submit popcon report using sendmail."
 fi
 
 # try to post the report through http POST
 if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
-	setsid /usr/share/popularity-contest/popcon-upload \
-	    -u $SUBMITURL -f $POPCON 2>/dev/null
+	if setsid /usr/share/popularity-contest/popcon-upload \
+	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
+		:
+	else
+		logger -t popcon "Unable to submit popcon report using HTTP."
+	fi
 fi
