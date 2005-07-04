@@ -30,13 +30,6 @@ POPCON=/var/log/popularity-contest
 
 run_popcon()
 {
-	if [ -n "$MAILFROM" ]; then
-		echo "From: <$MAILFROM>"
-		echo "Sender: <$MAILFROM>"
-	fi
-	echo "To: $MAILTO"
-	echo "Subject: popularity-contest submission"
-	echo
 	# Set HOME to avoid bug #212013.
 	HOME=/tmp su nobody -pc "sh -c /usr/sbin/popularity-contest"
 }
@@ -57,7 +50,16 @@ run_popcon > $POPCON
 # try to email the popularity contest data
 
 if [ -x "`which sendmail 2>/dev/null`" ]; then
-	do_sendmail < $POPCON
+    (
+	if [ -n "$MAILFROM" ]; then
+		echo "From: <$MAILFROM>"
+		echo "Sender: <$MAILFROM>"
+	fi
+	echo "To: $MAILTO"
+	echo "Subject: popularity-contest submission"
+	echo
+	cat $POPCON
+    ) | do_sendmail
 else
 	logger -t popcon "Unable to submit popcon report using sendmail."
 fi
