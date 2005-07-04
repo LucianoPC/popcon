@@ -66,6 +66,15 @@ case "$1" in
 	if [ ! -e $conffile ]; then
 	    generate_conffile
 	else
+	    # Make sure the config file have the USEHTTP entry if we
+	    # are to enable HTTP.
+	    if [ "yes" = "$USEHTTP" ] ; then
+		if grep -q USEHTTP $conffile; then
+		    :
+		else
+		    echo "USEHTTP=\"$USEHTTP\"" >> $conffile
+		fi
+	    fi
 
             OLDHOSTID="$MY_HOSTID";
             case $MY_HOSTID in
@@ -79,16 +88,6 @@ case "$1" in
             esac;
 	    # Replace only if the content changed, to avoid changing the
 	    # config file date when no change was done.
-
-	    # Make sure the config file have the USEHTTP entry if we
-	    # are to enable HTTP.
-	    if [ "yes" = "$USEHTTP" ] ; then
-		if grep -q USEHTTP $conffile; then
-		    :
-		else
-		    echo "USEHTTP=\"$USEHTTP\"" >> $conffile
-		fi
-	    fi
 
 	    # Commenting out the obsolete addresses, to use the
 	    # default config from /usr/share/ on hosts where
