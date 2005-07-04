@@ -1,8 +1,8 @@
 popularity-contest (1.30) UNRELEASED; urgency=low
 
   * Add support for reporting using http POST. (Closes: #239097)
-  * new script /usr/share/popularity-contest/popcon-upload
-  * new CGI /usr/share/doc/popularity-contest/popcon.cgi
+  * New script /usr/share/popularity-contest/popcon-upload
+  * New CGI /usr/share/doc/popularity-contest/popcon.cgi
   * Uploading using content-type text/plain, content-encoding x-gzip.
   * debian/cron.weekly:
     - do not run sendmail if it is not available.  This will make it
@@ -23,8 +23,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     submissions and not emails, to make it neutral to the submission
     method used.
   * TODO:
-      + Edit popcon-submit.cgi to report to the main server
-      + Consider using existing perl module to submit file using http.
+      + Consider using existing perl module to upload file using http.
       + Improve the http debconf template text.
   * Translations (Done by Christian Perrier)
     - Updated French from Christian Perrier
