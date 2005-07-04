@@ -8,7 +8,7 @@ Standards-Version: 3.6.1
 
 Package: popularity-contest
 Architecture: all
-Depends: ${misc:Depends}, dpkg, exim4 | mail-transport-agent, ${perl:Depends}
+Depends: ${misc:Depends}, exim4 | mail-transport-agent, ${perl:Depends}
 Recommends: cron
 Suggests: anacron
 Provides: popcon
