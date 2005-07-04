@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 00:48+0200\n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
 "PO-Revision-Date: 2004-07-25 19:38+0200\n"
 "Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -87,5 +87,5 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:28
-msgid " If you do not want to use HTTP, email is used instead."
+msgid "If you do not want to use HTTP, email is used instead."
 msgstr ""

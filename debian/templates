@@ -26,4 +26,4 @@ Template: popularity-contest/use-http
 Type: boolean
 Default: false
 _Description: Use HTTP to submit reports?
-  If you do not want to use HTTP, email is used instead.
+ If you do not want to use HTTP, email is used instead.

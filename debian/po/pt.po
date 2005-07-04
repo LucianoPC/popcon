@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.21\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 00:48+0200\n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
 "PO-Revision-Date: 2005-05-17 21:50+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianptorg>\n"
@@ -92,7 +92,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:28
-msgid " If you do not want to use HTTP, email is used instead."
+msgid "If you do not want to use HTTP, email is used instead."
 msgstr ""
 
 #~ msgid ""

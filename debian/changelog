@@ -26,6 +26,8 @@ popularity-contest (1.30) UNRELEASED; urgency=low
       + Edit popcon-submit.cgi to report to the main server
       + Consider using existing perl module to submit file using http.
       + Improve the http debconf template text.
+  * Translations (Done by Christian Perrier)
+    - Updated French from Christian Perrier
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 

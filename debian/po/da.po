@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 00:48+0200\n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
 "PO-Revision-Date: 2004-06-21 16:56+0200\n"
 "Last-Translator: Morten Brix Pedersen <morten@wtf.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -101,5 +101,5 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:28
-msgid " If you do not want to use HTTP, email is used instead."
+msgid "If you do not want to use HTTP, email is used instead."
 msgstr ""

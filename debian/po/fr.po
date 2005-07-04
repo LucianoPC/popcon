@@ -1,3 +1,4 @@
+# translation of fr.po to French
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -15,13 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 00:48+0200\n"
-"PO-Revision-Date: 2004-05-27 18:31-0300\n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"PO-Revision-Date: 2005-07-04 07:21+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-15\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -33,7 +35,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
@@ -41,19 +42,19 @@ msgid ""
 msgstr ""
 "Votre système peut envoyer anonymement des courriers aux responsables "
 "Debian, avec des statistiques sur les paquets que vous utilisez le plus "
-"souvent. Cette information permet de choisir les paquets qui sont placés sur "
-"le premier cédérom Debian."
+"souvent. Cette information influence le choix des paquets qui sont placés "
+"sur le premier cédérom Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
-"Si vous choisissez de participer, le script d'envoi sera exécuté chaque "
-"semaine et enverra par courriel les statistiques aux responsables Debian."
+"Si vous choisissez de participer, le script automatique d'envoi sera exécuté "
+"chaque semaine et enverra par courriel les statistiques aux responsables "
+"Debian."
 
 #. Type: boolean
 #. Description
@@ -98,10 +99,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Faut-il utiliser HTTP pour l'envoi des rapports ?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
-msgid " If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgid "If you do not want to use HTTP, email is used instead."
+msgstr "Si vous ne souhaitez pas utiliser HTTP, l'envoi se fera par courriel."
