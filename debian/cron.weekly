@@ -55,7 +55,7 @@ if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
 	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
 		SUBMITTED=yes
 	else
-		logger -t popcon "unable to submit report using http."
+		logger -t popularity-contest "unable to submit report using http."
 	fi
 fi
 
@@ -101,10 +101,10 @@ if [ yes != "$SUBMITTED" ]; then
 	fi
 	SUBMITTED=yes
     else
-	logger -t popcon "unable to submit report using sendmail."
+	logger -t popularity-contest "unable to submit report using sendmail."
     fi
 fi
 
 if [ "yes" != "$SUBMITTED" ] ; then
-	logger -t popcon "unable to submit report."
+	logger -t popularity-contest "unable to submit report."
 fi
