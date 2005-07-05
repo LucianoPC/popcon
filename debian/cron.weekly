@@ -47,7 +47,7 @@ do_sendmail()
 
 run_popcon > $POPCON
 
-SUBMITTED=
+SUBMITTED=no
 
 # try to post the report through http POST
 if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
@@ -61,7 +61,7 @@ fi
 
 # try to email the popularity contest data
 
-if [ yes != "SUBMITTED" ] && [ -x "`which sendmail 2>/dev/null`" ]; then
+if [ yes != "$SUBMITTED" ] && [ -x "`which sendmail 2>/dev/null`" ]; then
 	# Sending compressed emails are disabled as the receiving end
 	# isn't implemented yet.
 	if false && [ -x "`which mime-construct 2>/dev/null`" ]; then
