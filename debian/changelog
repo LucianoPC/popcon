@@ -28,8 +28,9 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     missing, to make it compatible with dpkg versions before 1.10.
     Drop versioned dependency on dpkg.  This make a backport to woody
     trivial.
-  * Send compressed MIME emails when recommended package
-    mime-construct is installed. (Closes: #149425)
+  * Implement sending of compressed MIME emails when recommended
+    package mime-construct is installed.  Disabled until the server
+    side is enabled. (Debian bug #149425)
   * Do not send email if http POST method was successfull.
   * Translations (Done by Christian Perrier)
     - Updated French from Christian Perrier
