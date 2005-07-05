@@ -61,7 +61,8 @@ fi
 
 # try to email the popularity contest data
 
-if [ yes != "$SUBMITTED" ] && [ -x "`which sendmail 2>/dev/null`" ]; then
+if [ yes != "$SUBMITTED" ]; then
+    if [ -x "`which sendmail 2>/dev/null`" ]; then
 	# Sending compressed emails are disabled as the receiving end
 	# isn't implemented yet.
 	if false && [ -x "`which mime-construct 2>/dev/null`" ]; then
@@ -99,8 +100,9 @@ if [ yes != "$SUBMITTED" ] && [ -x "`which sendmail 2>/dev/null`" ]; then
 	    ) | do_sendmail
 	fi
 	SUBMITTED=yes
-else
+    else
 	logger -t popcon "unable to submit report using sendmail."
+    fi
 fi
 
 if [ "yes" != "$SUBMITTED" ] ; then
