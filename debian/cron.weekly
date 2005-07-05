@@ -47,29 +47,62 @@ do_sendmail()
 
 run_popcon > $POPCON
 
-# try to email the popularity contest data
-
-if [ -x "`which sendmail 2>/dev/null`" ]; then
-    (
-	if [ -n "$MAILFROM" ]; then
-		echo "From: <$MAILFROM>"
-		echo "Sender: <$MAILFROM>"
-	fi
-	echo "To: $MAILTO"
-	echo "Subject: popularity-contest submission"
-	echo
-	cat $POPCON
-    ) | do_sendmail
-else
-	logger -t popcon "unable to submit report using sendmail."
-fi
+SUBMITTED=
 
 # try to post the report through http POST
 if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
 	if setsid /usr/share/popularity-contest/popcon-upload \
 	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
-		:
+		SUBMITTED=yes
 	else
 		logger -t popcon "unable to submit report using http."
 	fi
+fi
+
+# try to email the popularity contest data
+
+if [ yes != "SUBMITTED" ] && [ -x "`which sendmail 2>/dev/null`" ]; then
+	# Sending compressed emails are disabled as the receiving end
+	# isn't implemented yet.
+	if false && [ -x "`which mime-construct 2>/dev/null`" ]; then
+        	# Make compresssed email
+		if [ -n "$MAILFROM" ]; then
+			gzip -9 < $POPCON | mime-construct \
+			    --type application/x-popcon-compressed \
+			    --encoding base64 --file - \
+			    --subject "popularity-contest submission" \
+			    --to "$MAILTO" \
+			    --header "From: <$MAILFROM>" \
+			    --header "Sender: <$MAILFROM>" \
+			    --output | do_sendmail
+		else
+			gzip -9 < $POPCON | mime-construct \
+			    --type application/x-popcon-compressed \
+			    --encoding base64 --file - \
+			    --subject "popularity-contest submission" \
+			    --to "$MAILTO" \
+			    --output | do_sendmail
+		fi
+	else
+            # Not able to make compressed email, send uncompressed
+	    (
+		if [ -n "$MAILFROM" ]; then
+		    	echo "From: <$MAILFROM>"
+			echo "Sender: <$MAILFROM>"
+		fi
+		echo "To: $MAILTO"
+		echo "Subject: popularity-contest submission"
+		echo "MIME-Version: 1.0"
+		echo "Content-Type: text/plain"
+		echo
+		cat $POPCON
+	    ) | do_sendmail
+	fi
+	SUBMITTED=yes
+else
+	logger -t popcon "unable to submit report using sendmail."
+fi
+
+if [ "yes" != "$SUBMITTED" ] ; then
+	logger -t popcon "unable to submit report."
 fi
