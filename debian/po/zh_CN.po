@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-06-25 22:07+1200\n"
+"PO-Revision-Date: 2005-07-07 02:39+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,20 +32,18 @@ msgstr "您要参加 Debian 软件包流行度测试吗？"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"您可以让系统用匿名电子邮件的方式向 Debian 开发人员报告您最常使用的 Debian 软"
-"件包的统计数据。这些数据信息将会影响关于哪些软件包应该被包含在第一张 Debian "
-"光盘的决定。"
+"您可以让系统用匿名方式向 Debian 开发人员报告您最常使用的 Debian 软件包的统计"
+"数据。这些数据信息将会影响关于哪些软件包应该被包含在第一张 Debian 光盘的决"
+"定。"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
@@ -93,13 +91,13 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "使用 HTTP 提交报告吗？"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "如果您不想使用 HTTP，程序将会启用 email。"
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "

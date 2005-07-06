@@ -38,6 +38,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated Norwegian Bokmål from Petter Reinholdtsen
     - Updated Basque from Iñaki Larranaga Murgoitio
     - Updated Galician from Jacobo Tarrío. (Closes: #317135)
+    - Updated Simplified Chinese from Carlos Z.F. Liu. (Closes: #317136)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 
