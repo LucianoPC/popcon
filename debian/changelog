@@ -1,37 +1,36 @@
 popularity-contest (1.30) UNRELEASED; urgency=low
 
-  * Add support for reporting using http POST to a list of
-    URLs. (Closes: #239097)
-  * New script /usr/share/popularity-contest/popcon-upload
-  * New CGI /usr/share/doc/popularity-contest/popcon.cgi
-  * Uploading using content-type text/plain, content-encoding x-gzip.
-  * debian/cron.weekly:
-    - do not run sendmail if it is not available.  This will make it
-      possible to downgrade mail-transport-agent from Depend to
-      Recommends if we move to HTTP.
-    - try to run /usr/share/popularity-contest/popcon-upload if
-      USEHTTP is enabled, disabled by default.
+  * Add support for reporting using http POST to a list of URLs.
+    Uploading using content-type text/plain, content-encoding
+    x-gzip, with 30 second timeout. (Closes: #239097)
+  * New client script /usr/share/popularity-contest/popcon-upload.
+  * New server CGI /usr/share/doc/popularity-contest/popcon.cgi.
+  * Added simple FAQ entry about the http POST feature.
   * Code done by Bill Allombert.  Patch based on code from Ubuntu,
     though reimplemented in perl to avoid python dependency.  The
     ubuntu versions are included in the source package as
     popcon-submit-ubuntu.cgi and popcon-upload-ubuntu.
-  * Added simple FAQ entry about the http POST feature.
-  * Depend on ${misc:Depends} instead of debconf, to get the updated
-    debconf dependency.
   * Added low priority debconf question asking if http should be used.
     Only ask this question if participating.
-  * Added 30 second timeout in the http upload script.
-  * Rewrite the participation template text, to only talk about
-    submissions and not emails, to make it neutral to the submission
+  * Rewrote the participation template text, to only talk about
+    submissions and not emails, making it neutral to the submission
     method used.
-  * Rewrite popularity-contest to use dpkg-awk if dpkg-query is
-    missing, to make it compatible with dpkg versions before 1.10.
-    Drop versioned dependency on dpkg.  This make a backport to woody
-    trivial.
-  * Implement sending of compressed MIME emails when recommended
+  * debian/cron.weekly:
+    - Try to run /usr/share/popularity-contest/popcon-upload if
+      USEHTTP is enabled, disabled by default.
+    - Do not send email if http POST method was successfull.
+    - Do not run sendmail if it is not available.  This will make it
+      possible to downgrade mail-transport-agent from Depend to
+      Recommends if we enable HTTP submissoin by default.
+  * Depend on ${misc:Depends} instead of debconf, to get the updated
+    debconf dependency.
+  * Rewrote popularity-contest to use dpkg-awk if dpkg-query is
+    missing.  This make it compatible with dpkg versions before 1.10,
+    getting it to work on woody, sarge, etch and sid.  Drop versioned
+    dependency on dpkg because of this.
+  * Implemented sending of compressed MIME emails when recommended
     package mime-construct is installed.  Disabled until the server
-    side is enabled. (Debian bug #149425)
-  * Do not send email if http POST method was successfull.
+    side is implemented. (Debian bug #149425)
   * Add info in README about the linux counter. (Closes: #259004)
   * Translations (Done by Christian Perrier)
     - Updated Italian from Cristian Rigamonti
