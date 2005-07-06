@@ -24,8 +24,6 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Rewrite the participation template text, to only talk about
     submissions and not emails, to make it neutral to the submission
     method used.
-  * TODO:
-      + Improve the http debconf template text.
   * Rewrite popularity-contest to use dpkg-awk if dpkg-query is
     missing, to make it compatible with dpkg versions before 1.10.
     Drop versioned dependency on dpkg.  This make a backport to woody
