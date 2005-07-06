@@ -24,5 +24,9 @@ fi
 db_input high popularity-contest/participate || [ $? -eq 30 ]
 db_go || true
 
-db_input low popularity-contest/use-http || [ $? -eq 30 ]
-db_go || true
+# Only ask about the method if the user want to participate.
+db_get popularity-contest/participate || true
+if [ "$RET" = "yes" ] || [ "$RET" = "YES" ] || [ "$RET" = "true" ]; then
+    db_input low popularity-contest/use-http || [ $? -eq 30 ]
+    db_go || true
+fi

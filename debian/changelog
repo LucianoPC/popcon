@@ -19,6 +19,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Depend on ${misc:Depends} instead of debconf, to get the updated
     debconf dependency.
   * Added low priority debconf question asking if http should be used.
+    Only ask this question if participating.
   * Added 30 second timeout in the http upload script.
   * Rewrite the participation template text, to only talk about
     submissions and not emails, to make it neutral to the submission
