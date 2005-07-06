@@ -29,9 +29,10 @@ msgid ""
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Zure sistema anonimoki eduki dezakezu Debian-eko garatzaileei posta elektronikoa bidaliz (erabiltzen dituzun Debian-eko "
-"paketeen estatistikeekin). Informazio honek erabakiak hartzen lagunduko "
-"du, Debian-eko aurreneko CDak edukiko dituen paketeen zerrenda bezalakoak adibidez."
+"Zure sistema anonimoki eduki dezakezu Debian-eko garatzaileei posta "
+"elektronikoa bidaliz (erabiltzen dituzun Debian-eko paketeen "
+"estatistikeekin). Informazio honek erabakiak hartzen lagunduko du, Debian-"
+"eko aurreneko CDak edukiko dituen paketeen zerrenda bezalakoak adibidez."
 
 #. Type: boolean
 #. Description
@@ -50,8 +51,8 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Nahi duzunean erabakiz alda dezakezu, honakoa exekutatuz: "
-"\"dpkg-reconfigure popularity-contest\""
+"Nahi duzunean erabakiz alda dezakezu, honakoa exekutatuz: \"dpkg-reconfigure "
+"popularity-contest\""
 
 #. Type: note
 #. Description
@@ -92,4 +93,3 @@ msgstr "Erabili HTTP erroreen berri emateko?"
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
 msgstr "Posta elektronikoa erabil dezakezu HTTPren ordez."
-

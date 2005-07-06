@@ -40,8 +40,8 @@ msgid ""
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Se si sceglie di partecipare, lo script di invio verrà eseguito "
-"automaticamente una volta alla settimana, spedendo le statistiche "
-"agli sviluppatori Debian."
+"automaticamente una volta alla settimana, spedendo le statistiche agli "
+"sviluppatori Debian."
 
 #. Type: boolean
 #. Description
