@@ -101,4 +101,4 @@ msgstr "Send inn rapporter ved hjelp av HTTP?"
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr "Hvis du ikke ønsker å bruke HTTP, så vil e-post bli brukt i stedet."
+msgstr "Hvis du ikke Ã¸nsker Ã¥ bruke HTTP, sÃ¥ vil e-post bli brukt i stedet."
