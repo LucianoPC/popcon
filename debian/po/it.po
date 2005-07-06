@@ -3,10 +3,10 @@
 # Cristian Rigamonti <cri@linux.it>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest 1.23\n"
+"Project-Id-Version: popularity-contest 1.30\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-08-01 18:15+0200\n"
+"PO-Revision-Date: 2005-07-06 17:00+0200\n"
 "Last-Translator: Cristian Rigamonti <cri@linux.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,6 @@ msgstr "Si desidera partecipare al \"Debian Package Popularity Contest\"?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
@@ -36,13 +35,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Se si sceglie di partecipare, lo script di invio verrà eseguito "
-"automaticamente una volta alla settimana, spedendo le statistiche via e-mail "
+"automaticamente una volta alla settimana, spedendo le statistiche "
 "agli sviluppatori Debian."
 
 #. Type: boolean
@@ -87,28 +85,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Usa HTTP per inviare i rapporti?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
-
-#~ msgid ""
-#~ "This information helps us make decisions such as which packages should go "
-#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
-#~ "so that the most popular packages are the ones which are installed "
-#~ "automatically for new users."
-#~ msgstr ""
-#~ "Queste informazioni ci aiutano a decidere, per esempio, quali pacchetti "
-#~ "debbano essere inclusi nel primo CD Debian.  Inoltre, possiamo migliorare "
-#~ "le versioni future di Debian in modo che i pacchetti più popolari siano "
-#~ "installati automaticamente per i nuovi utenti."
-
-#~ msgid ""
-#~ "(NOTE: e-mail servers add their own tracing information and your data "
-#~ "won't be completely anonymous while in transit.)"
-#~ msgstr ""
-#~ "(NOTA: i server di posta aggiungono informazioni per tracciare i "
-#~ "messaggi, quindi i dati in transito non saranno completamente anonimi)"
+msgstr "Se non si intende usare HTTP, verrà usata l'email."
