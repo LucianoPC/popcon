@@ -75,9 +75,10 @@ msgstr "Échec de la génération d'un identifiant unique d'hôte"
 #. Type: note
 #. Description
 #: ../templates:17
+#, fuzzy
 msgid ""
 "The install script could not generate a unique host identifier. This is a "
-"fatale error, as all hosts submitting information need to have an unique "
+"fatal error, as all hosts submitting information need to have an unique "
 "identifier."
 msgstr ""
 "Le script d'installation n'a pas pu générer un identifiant unique d'hôte. "
