@@ -1,13 +1,14 @@
+# translation of debconf.eu.po to Basque
 # translation of popularity-contest_debian_po-eu.po to Basque
-# Inaki Larranaga Murgoitio <dooteo@euskalgnu.org>, 2005.
+# Iñaki Larranaga Murgoitio <dooteo@euskalgnu.org>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_debian_po-eu\n"
+"Project-Id-Version: debconf.eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2005-04-22 12:29+0200\n"
-"Last-Translator:  Inaki Larranaga Murgoitio <dooteo@euskalgnu.org>\n"
+"PO-Revision-Date: 2005-07-06 17:23+0200\n"
+"Last-Translator: Iñaki Larranaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team:  <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,21 +24,18 @@ msgstr "Debian-eko paketeen onespeneko galdeketan parte hartzea nahi duzu?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Zure sistema anonimoki eduki dezakezu Debian-eko garatzaileei posta "
-"elektronikoa bidaliz (erabiltzen dituzun Debian-eko paketeen "
-"estatistikeekin). Informazio honek erabakiak hartzen lagunduko du, Debian-"
-"eko aurreneko CDak edukiko dituen paketeen zerrenda bezalakoak adibidez."
+"Zure sistema anonimoki eduki dezakezu Debian-eko garatzaileei posta elektronikoa bidaliz (erabiltzen dituzun Debian-eko "
+"paketeen estatistikeekin). Informazio honek erabakiak hartzen lagunduko "
+"du, Debian-eko aurreneko CDak edukiko dituen paketeen zerrenda bezalakoak adibidez."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
@@ -52,8 +50,8 @@ msgid ""
 "You can always change your mind after making this decision: \"dpkg-"
 "reconfigure popularity-contest\""
 msgstr ""
-"Nahi duzunean erabakiz alda dezakezu, honakoa exekutatuz: \"dpkg-reconfigure "
-"popularity-contest\""
+"Nahi duzunean erabakiz alda dezakezu, honakoa exekutatuz: "
+"\"dpkg-reconfigure popularity-contest\""
 
 #. Type: note
 #. Description
@@ -80,17 +78,18 @@ msgid ""
 "Please report this problem as a bug against the popularity-contest package, "
 "and include information about your configuration."
 msgstr ""
-"Eamn ezazu errore honen berri, 'popularity-contest' paketearen arlora, eta "
+"Eman ezazu errore honen berri, 'popularity-contest' paketearen arlora, eta "
 "erantsi zure konfigurazioaren informazioa."
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Erabili HTTP erroreen berri emateko?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Posta elektronikoa erabil dezakezu HTTPren ordez."
+
