@@ -37,7 +37,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated French from Christian Perrier
     - Updated Norwegian Bokmål from Petter Reinholdtsen
     - Updated Basque from Iñaki Larranaga Murgoitio
-    - Updated Galician from Jacobo Tarrío
+    - Updated Galician from Jacobo Tarrío. (Closes: #317135)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 
