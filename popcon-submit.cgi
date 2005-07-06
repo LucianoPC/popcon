@@ -2,7 +2,7 @@
 
 use strict;
 
-my $email='test@popcon.debian.org';
+my $email='survey@popcon.debian.org';
 
 $ENV{PATH}="";
 
@@ -10,6 +10,7 @@ print "Content-Type: text/plain\n\n";
 if ($ENV{REQUEST_METHOD} ne "POST")
 {
     print "Debian Popularity-Contest HTTP-POST submission URL\n";
+    print "Visit http://popcon.debian.org/ for more info.\n";
     exit 0;
 }
 open POPCON, "|/usr/lib/sendmail -oi $email" or die "sendmail";
