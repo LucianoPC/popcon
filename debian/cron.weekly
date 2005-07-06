@@ -9,7 +9,7 @@ unset MAILFROM
 unset MAILTO
 unset MY_HOSTID
 unset PARTICIPATE
-unset SUBMITURL
+unset SUBMITURLS
 unset USEHTTP
 
 # get configuration information
@@ -50,13 +50,15 @@ run_popcon > $POPCON
 SUBMITTED=no
 
 # try to post the report through http POST
-if [ "$SUBMITURL" ] && [ "yes" = "$USEHTTP" ]; then
+if [ "$SUBMITURLS" ] && [ "yes" = "$USEHTTP" ]; then
+    for URL in $SUBMITURLS ; do
 	if setsid /usr/share/popularity-contest/popcon-upload \
-	    -u $SUBMITURL -f $POPCON 2>/dev/null ; then
+	    -u $URL -f $POPCON 2>/dev/null ; then
 		SUBMITTED=yes
 	else
-		logger -t popularity-contest "unable to submit report using http."
+		logger -t popularity-contest "unable to submit report to $URL."
 	fi
+    done
 fi
 
 # try to email the popularity contest data
