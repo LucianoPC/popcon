@@ -36,6 +36,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Add info in README about the linux counter. (Closes: #259004)
   * Translations (Done by Christian Perrier)
     - Updated French from Christian Perrier
+    - Updated Norwegian Bokmål from Petter Reinholdtsen
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 
