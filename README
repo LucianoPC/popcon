@@ -93,6 +93,16 @@ The result of the survey is available at
 You can find some sample analysis scripts in
 /usr/share/doc/popularity-contest as part of this package.
 
+RELATED PROJECTS
+================
+
+There are several projects trying to count users and machines.  First
+and foremost is the Linux Counter at http://counter.li.org/.  It tries
+to estimate the amount of Linux users worldwide.  Second, we are aware
+of a separate popcon installation at Ubuntu, http://popcon.ubuntu.com,
+receiving information about the ubuntu users.  We are sure there are
+others.
+
 QUESTIONS ?
 ===========
 

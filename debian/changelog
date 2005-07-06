@@ -32,6 +32,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     package mime-construct is installed.  Disabled until the server
     side is enabled. (Debian bug #149425)
   * Do not send email if http POST method was successfull.
+  * Add info in README about the linux counter. (Closes: #259004)
   * Translations (Done by Christian Perrier)
     - Updated French from Christian Perrier
 
