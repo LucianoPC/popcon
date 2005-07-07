@@ -29,7 +29,8 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Souhaitez-vous participer au concours de popularité des paquets Debian ?"
+msgstr ""
+"Souhaitez-vous participer au concours de popularité des paquets Debian ?"
 
 #. Type: boolean
 #. Description
@@ -105,4 +106,3 @@ msgstr "Faut-il utiliser HTTP pour l'envoi des rapports ?"
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
 msgstr "Si vous ne souhaitez pas utiliser HTTP, l'envoi se fera par courriel."
-
