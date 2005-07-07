@@ -52,6 +52,8 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated Portuguese from Miguel Figueiredo. (Closes: #317172)
     - Updated Finnish from Tapio Lehtonen. (Closes: #317276)
     - Updated Spanish from Ruben Porras. (Closes: #317281)
+    - Updated Indonesian from Parlin Imanuel. (Closes: #317326)
+    - Updated Bulgarian from Ognyan Kulev. (Closes: #317328)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 
