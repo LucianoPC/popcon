@@ -1,4 +1,4 @@
-popularity-contest (1.30) UNRELEASED; urgency=low
+popularity-contest (1.30) unstable; urgency=low
 
   * Add support for reporting using http POST to a list of URLs.
     Uploading using content-type text/plain, content-encoding
@@ -55,7 +55,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated Indonesian from Parlin Imanuel. (Closes: #317326)
     - Updated Bulgarian from Ognyan Kulev. (Closes: #317328)
 
- -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Thu,  7 Jul 2005 20:12:53 +0200
 
 popularity-contest (1.29) unstable; urgency=low
 
