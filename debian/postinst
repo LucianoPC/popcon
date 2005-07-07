@@ -66,16 +66,6 @@ case "$1" in
 	if [ ! -e $conffile ]; then
 	    generate_conffile
 	else
-	    # Make sure the config file have the USEHTTP entry if we
-	    # are to enable HTTP.
-	    if [ "yes" = "$USEHTTP" ] ; then
-		if grep -q USEHTTP $conffile; then
-		    :
-		else
-		    echo "USEHTTP=\"$USEHTTP\"" >> $conffile
-		fi
-	    fi
-
             OLDHOSTID="$MY_HOSTID";
             case $MY_HOSTID in
             # Workaround for bug #237874 triggered on hurd.  The

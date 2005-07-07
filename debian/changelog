@@ -3,6 +3,8 @@ popularity-contest (1.30) UNRELEASED; urgency=low
   * Add support for reporting using http POST to a list of URLs.
     Uploading using content-type text/plain, content-encoding
     x-gzip, with 30 second timeout. (Closes: #239097)
+  * HTTP submissions are enabled by default for new installs, but
+    disabled by default for upgrades.
   * New client script /usr/share/popularity-contest/popcon-upload.
   * New server CGI /usr/share/doc/popularity-contest/popcon.cgi.
   * Added simple FAQ entry about the http POST feature.
@@ -17,11 +19,13 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     method used.
   * debian/cron.weekly:
     - Try to run /usr/share/popularity-contest/popcon-upload if
-      USEHTTP is enabled, disabled by default.
+      USEHTTP is enabled
     - Do not send email if http POST method was successfull.
-    - Do not run sendmail if it is not available.  This will make it
-      possible to downgrade mail-transport-agent from Depend to
-      Recommends if we enable HTTP submissoin by default.
+    - Do not run sendmail if it is not available, to work without
+      mail-transport-agent.  Redused depend on mail-transport-agent to
+      recommends, as the default for new installs is HTTP, and
+      existing installations are expected to already have
+      mail-transport-agent installed.
   * Depend on ${misc:Depends} instead of debconf, to get the updated
     debconf dependency.
   * Rewrote popularity-contest to use dpkg-awk if dpkg-query is

@@ -2,10 +2,21 @@
 
 set -e
 
+conffile=/etc/popularity-contest.conf
+
 . /usr/share/debconf/confmodule
 
-if [ -f /etc/popularity-contest.conf ] ; then
-       . /etc/popularity-contest.conf
+if [ -f $conffile ] ; then
+       # Make sure the config file have the USEHTTP entry
+       if grep -q USEHTTP $conffile; then
+           :
+       else
+           # Assume existing installations do not want to use HTTP
+           # Changed below if the user asked for it.
+           echo "USEHTTP=\"no\"" >> $conffile
+       fi
+
+       . $conffile
        if [ yes = "$PARTICIPATE" ] ; then
                PARTICIPATE=true
        else
