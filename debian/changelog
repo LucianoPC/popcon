@@ -50,6 +50,8 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated Hebrew from Lior Kaplan. (Closes: #317153)
     - Updated Slovak from Peter Mann. (Closes: #317154)
     - Updated Portuguese from Miguel Figueiredo. (Closes: #317172)
+    - Updated Finnish from Tapio Lehtonen. (Closes: #317276)
+    - Updated Spanish from Ruben Porras. (Closes: #317281)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 

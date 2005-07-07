@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-08-05 07:41+0300\n"
+"PO-Revision-Date: 2005-07-07 12:48+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,27 +31,25 @@ msgstr "Osallistutko Debianin pakettimittariin?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Koneesi voi lähettää nimettömänä sähköpostina Debianin kehittäjille "
-"tilastotietoa eniten käytetyistä Debianin paketeista. Tämä tieto on yhtenä "
-"päätösperusteena esimerkiksi valittaessa ensimmäiselle Debian-rompulle "
-"tulevia paketteja."
+"Voit sallia koneesi lähettävän nimettömänä Debianin kehittäjille "
+"tilastotietoa eniten käytetyistä Debianin paketeista. Tämän tiedon "
+"perusteella valitaan esimerkiksi ensimmäiselle Debian-rompulle tulevia "
+"paketteja."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
-"Jos päätät osallistua, lähetetään tilastot kerran viikossa automaattisesti "
-"Debianin kehittäjille."
+"Jos päätät osallistua, kerran viikossa suoritettava komentotiedosto lähettää "
+"tilastoja Debianin kehittäjille."
 
 #. Type: boolean
 #. Description
@@ -94,10 +92,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Käytetäänkö HTTP:tä tilastojen lähettämiseen?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Ellei käytetä HTTP:tä, käytetään sähköpostia."
