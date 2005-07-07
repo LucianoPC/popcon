@@ -11,8 +11,9 @@ if [ -f $conffile ] ; then
        if grep -q USEHTTP $conffile; then
            :
        else
-           # Assume existing installations do not want to use HTTP
-           # Changed below if the user asked for it.
+           # Make sure existing installations keep using SMTP as
+           # before, until the administrator enables HTTP manually.
+	   # [pere 2005-07-07]
            echo "USEHTTP=\"no\"" >> $conffile
        fi
 
