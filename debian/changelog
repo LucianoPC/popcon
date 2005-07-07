@@ -40,6 +40,11 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     - Updated Galician from Jacobo Tarrío. (Closes: #317135)
     - Updated Simplified Chinese from Carlos Z.F. Liu. (Closes: #317136)
     - Updated Lithuanian from Gintautas Miliauskas. (Closes: #317139)
+    - Updated Czech from Miroslav Kure. (Closes: #317141)
+    - Updated Ukrainian from Eugeniy Meshcheryakov. (Closes: #317151)
+    - Updated Hebrew from Lior Kaplan. (Closes: #317153)
+    - Updated Slovak from Peter Mann. (Closes: #317154)
+    - Updated Portuguese from Miguel Figueiredo. (Closes: #317172)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Jul 2005 16:58:28 +0200
 

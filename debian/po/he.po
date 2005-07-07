@@ -8,7 +8,7 @@
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
 # , fuzzy
-# 		 <>, 2004.
+# <>, 2004.
 # 
 # 
 msgid ""
@@ -16,9 +16,9 @@ msgstr ""
 "Project-Id-Version: popcon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-06-12 23:59+0300\n"
+"PO-Revision-Date: 2005-07-06 20:16+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
-"Language-Team: Hebrew\n"
+"Language-Team: Hebrew <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,26 +32,24 @@ msgstr "להשתתף בתחרות הפופולריות של חבילות Debian?
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"ניתן לשלוח באופן אנונימי מידע למפתחי Debian על הסטטיסטיקה בנוגע לחבילות הכי "
-"שמישות אצלך במערכת. מידע זה משפיע על ההחלטות איזה חבילות ילכו לדיסק הראשון "
-"של Debian."
+"ניתן לשלוח באופן אנונימי מידע למפתחי דביאן על הסטטיסטיקה בנוגע לחבילות הכי "
+"שמישות אצלך במערכת. מידע זה משפיע על ההחלטות כגון איזה חבילות יכללו בדיסק "
+"הראשון של דביאן."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "אם בחרת להשתתף, סקריפט השליחה ירוץ פעם בשבוע באופן אוטומטי, ויעדכן את מפתחי "
-"Debian בסטטיסטיקה."
+"דביאן בסטטיסטיקה."
 
 #. Type: boolean
 #. Description
@@ -94,10 +92,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "להשתמש ב-HTTP כדי לשלוח את הדוחות?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "אם HTTP אינה הדרך הרצויה, יבוצע שימוש בדואר אלקטרוני במקום."

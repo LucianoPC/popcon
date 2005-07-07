@@ -1,3 +1,4 @@
+# translation of uk.po to Ukrainian
 # translation of popularity-contest-templates.po to Ukrainian
 #
 #    Translators, if you are not familiar with the PO format, gettext
@@ -13,12 +14,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest-templates\n"
+"Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2005-01-16 15:25+0200\n"
+"PO-Revision-Date: 2005-07-06 19:40+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <ukrainian>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,27 +38,24 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Ваша система може анонімно відправляти статистику про пакунки, які ви "
-"використовуєте, до розробників Debian. Ця інформація впливатиме на такі "
-"рішення, як які пакунки повинні знаходитись на першому CD."
+"використовуєте, до розробників Debian. Ця інформація впливатиме на рішення "
+"на кшталт які пакунки повинні знаходитись на першому CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Якщо ви вирішите взяти участь, то скрипт автоматичного відсилання буде "
-"запускатися один раз на тиждень, відправляючи поштою статистику до "
-"розробників Debian."
+"запускатися один раз на тиждень, відправляючи статистику розробникам Debian."
 
 #. Type: boolean
 #. Description
@@ -101,10 +99,11 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Використовувати HTTP для відсилання звітів?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
 msgstr ""
+"Якщо ви не бажаєте використовувати HTTP, буде використано електронну пошту."

@@ -1,13 +1,14 @@
 # Miguel Figueiredo <elmig@debianpt.org>, 2004
 #
 # 17-05-2005 - Miguel Figueiredo <elmig@debianpt.org> - fixed typos.
+# 06-07-2005 - Miguel Figueiredo <elmig@debianpt-org> - 2u2f
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest 1.21\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2005-05-17 21:50+0000\n"
+"PO-Revision-Date: 2005-07-07 20:56+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianptorg>\n"
 "MIME-Version: 1.0\n"
@@ -23,27 +24,25 @@ msgstr "Participar no Concurso de Popularidade de Pacotes Debian?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Você pode ter o seu sistema a enviar anonimamente por e-mail aos "
-"desenvolvedores de Debian estatísticas acerca dos seus pacotes Debian mais "
-"utilizados.  Esta informação influencia decisões tais como que pacotes devem "
-"ser incluídos no primeiro CD de Debian."
+"Você pode ter o seu sistema a fornecer anonimamente aos desenvolvedores de "
+"Debian estatísticas acerca dos seus pacotes Debian mais utilizados.  Esta "
+"informação influencia decisões tais como que pacotes devem ser incluídos no "
+"primeiro CD de Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
-"Se escolher participar, o script automático de submissão correrá uma vez por "
-"semana, enviando por e-mail estatísticas aos desenvolvedores de Debian."
+"Se escolher participar, o script de submissão automática correrá uma vez por "
+"semana, enviando estatísticas aos desenvolvedores de Debian."
 
 #. Type: boolean
 #. Description
@@ -87,13 +86,13 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Utilizar HTTP para submeter relatórios?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Se não desejar utilizar HTTP, em vez disso será utilizado o email."
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "

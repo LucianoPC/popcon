@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-06-22 16:46+0200\n"
-"Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
+"PO-Revision-Date: 2005-07-06 19:20+0200\n"
+"Last-Translator: Peter Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,27 +32,24 @@ msgstr "Pripojiť sa k súťaži o najpopulárnejšie balíky?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Môžete nechať systém, aby anonymne poslal vývojárom Debianu elektronickú "
-"poštu so štatistikou o najviac používaných balíkoch na vašom systéme. Táto "
-"informácia pomôže v rozhodovaní, ktoré balíky by mali byť na prvom CD "
-"Debianu."
+"Môžete nechať systém, aby anonymne poskytol vývojárom Debianu štatistiku o "
+"najviac používaných Debian balíkoch na vašom systéme. Táto informácia pomôže "
+"v rozhodovaní, ktoré balíky by mali byť na prvom Debian CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Ak sa zúčastníte tejto súťaže, raz týždenne sa spustí automatický skript, "
-"ktorý bude odosielať štatistiku vývojárom Debianu."
+"ktorý odošle štatistiku vývojárom Debianu."
 
 #. Type: boolean
 #. Description
@@ -96,10 +93,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Použiť HTTP na odosielanie reportov?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Ak nechcete použiť HTTP, použije sa e-mail."
