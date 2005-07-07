@@ -36,6 +36,7 @@ popularity-contest (1.30) UNRELEASED; urgency=low
     package mime-construct is installed.  Disabled until the server
     side is implemented. (Debian bug #149425)
   * Add info in README about the linux counter. (Closes: #259004)
+  * Updated to Standards-Version 3.6.2.  No changes required.
   * Translations (Done by Christian Perrier)
     - Updated Italian from Cristian Rigamonti
     - Updated French from Christian Perrier
