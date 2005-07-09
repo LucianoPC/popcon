@@ -315,4 +315,305 @@ popularity-contest (1.15) unstable; urgency=low
     - Updated Japaned debconf translation by Kenshi Muto
     - s/are unable to/could not/ in templates. Unfuzzy translations
     - Updated Simplified Chinese translation by Carlos Z.F. Liu
-    - Updated Lithuanian translation by K
+    - Updated Lithuanian translation by Kęstutis Biliūnas.
+    - Updated Czech translation by Miroslav Kure. Closes: #239051
+    - Updated German translation by Dennis Stampfer
+    - Updated Portuguese translation by Miguel Figueiredo. Closes: #239077
+    - Added Russian translation by Ruslan Batdalov. Closes: #238210
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 21 Mar 2004 10:11:41 +0100
+
+popularity-contest (1.14) unstable; urgency=HIGH
+
+  * Petter Reinholdtsen
+    - Urgency HIGH to get the translations into Sarge in time for
+      the d-i beta3.
+    - Make symlink from po/no.po to po/nb.po, to make it more
+      obvious that it is the same file.
+    - Added Catalan debconf translation received from Aleix
+      Badia i Bosch. (Closes: #236639)
+    - Added Italian debconf translation received from
+      Cristian Rigamonti.  (Closes: #236956)
+    - Added Swedish debconf translation received from
+      André Dahlqvist. (Closes: #237129)
+    - Added Lithuanian debconf translation received from
+      Kęstutis Biliūnas. (Closes: #237288)
+    - Added Korean debconf translation received from
+      Changwoo Ryu. (Closes: #237620)
+    - Added Portuguese debconf translation received from
+      Miguel Figueiredo. (Closes: #237858)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 15:37:51 +0100
+
+popularity-contest (1.13) unstable; urgency=low
+
+  * Bill Allombert
+    - Update server-side scripts to current popcon.debian.org version.
+  * Petter Reinholdtsen
+    - Move Norwegian Bokmål debconf translation to nb.po, and
+      install it using language codes 'nb' and 'no' as part of the
+      Norwegian language code transition.
+    - Add info in the README on where to report bugs and how to
+      reach the developers.
+    - Use UTF-8 in debconf template.
+    - Update Brazilian Portuguese debconf translation.  Got new file
+      from Andre Luis Lopes. (Closes: #235387)
+    - Add Greek debconf translation received from Konstantinos
+      Margaritis.  (Closes: #235448)
+    - Add Czech debconf translation received from Miroslav Kure
+      (Closes: #235989)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  6 Mar 2004 09:15:43 +0100
+
+popularity-contest (1.12) unstable; urgency=low
+
+  * Use dpkg --print-installation-architecture instead of $Config{archname}
+    to report the platform.
+  * Update server-side scripts to current popcon.debian.org version.
+  * Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
+  * Update French debconf translation, thanks Christian Perrier. 
+    (Closes: #231294)
+  * Update Dutch debconf translation, thanks Bart Cornelis. (Closes: #229752)
+
+ -- Bill Allombert <ballombe@debian.org>  Tue, 10 Feb 2004 17:24:10 +0100
+
+popularity-contest (1.11) unstable; urgency=medium
+
+  * Raise the priority of the participation question from medium to
+    high to make sure it is displayed in the normal Sarge install.
+  * Add Danish debconf translation, thanks to Morten Brix
+    Pedersen (Closing: #230022)
+  * Only generate host ID when it is needed.
+  * Use quotes for all variables in the config file.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 31 Jan 2004 17:39:19 +0100
+
+popularity-contest (1.10) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Added Japanese debconf translation thanks to Kenshi
+      Muto. (Closes: #229538)
+    - Make sure /etc/popularity-contest.conf is readable by user
+      nobody, no matter the umask of root.
+    - Drop the intro note, and show the explanation as part of the
+      participate question. (Closes: #229573)
+    - Update Norwegian Bokmål debconf translation.
+    - Remove the question asking if it is ok to edit MAILTO address,
+      and move the default values into
+      /usr/share/popularity-contest/default.conf. (Closes: #229288, #229111)
+    - Change to use 'dh_perl -d' to only depend on the base perl packages.
+  * Bill Allombert
+    - Update server-side scripts to current popcon.debian.org version.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 26 Jan 2004 22:05:41 +0100
+
+popularity-contest (1.9) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Report error in popcon-largest-unused if
+      /var/log/popularity-contest is missing.
+    - Make sure db_input do not fail if the question already was
+      displayed earlier.  (Closes: #229091, #229092, #229112)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 23 Jan 2004 09:40:57 +0100
+
+popularity-contest (1.8) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Add Dutch debconf template translation (nl.po).  File from
+      Bart Cornelis. (Closes: #217038)
+    - Add URLs to the project home page in manual page and README file.
+    - Make it possible to reconfigure this package by calling
+      'dpkg-reconfigure popularity-contest', to get the code in
+      base-config working as it should. (Closes: #228535).
+      This should still fix bug #135273, as the current PARTICIPATE
+      value is taken from the current config file, and only that
+      variable is modified if the user using debconf change the value.
+    - Collect and report the content of /etc/debian_version.
+    - Start using generic address survey@popcon.debian.org. (Closes: #206830)
+    - Ask if the submit address should be changed on upgrades and
+      reconfigures.  This should activate the new address on old
+      installations.
+    - Updated all translation files with the new question text.
+    - Started on Norwegian Bokmål debconf translation (no.po).
+  * Bill Allombert
+    - control: change exim to exim4. (Closes: #228575)
+    - Update documentation to refer to popcon.debian.org.
+
+ -- Bill Allombert <ballombe@debian.org>  Mon, 22 Jan 2004 09:32:41 -0500
+
+popularity-contest (1.7) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Provide 'popcon', to make it easier to find this package by
+      its common short name. (Closes: #215563)
+    - Add new program popcon-largest-unused.  Script from Yann Dirson,
+      manual page from Petter Reinholdtsen. (Closes: #127633)
+  * Bill Allombert
+    - Rewrite popularity-contest in perl.
+      No user-visible changes outside speed.
+    - Don't use dpkg-architecture anymore. (Closes: #212736)
+    - control: use dpkg-query so depends on dpkg (>= 1.10)
+    - control: remove gawk and dpkg-awk from dependencies.
+    - update copyright notice.
+
+ -- Bill Allombert <ballombe@debian.org>  Mon, 20 Oct 2003 12:04:33 +0200
+
+popularity-contest (1.6) unstable; urgency=low
+
+  * Make new mailing list popcon-developers@lists.alioth.debian.org the
+    maintainer of this package, to make sure all developers get the
+    bug reports.  Updated uploaders to include the new addresses.
+  * Added Bill Allombert as co-maintainer and uploader.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 18 Oct 2003 10:45:58 +0200
+
+popularity-contest (1.5) unstable; urgency=low
+
+  * Set HOME to an existing directory before running
+    /usr/sbin/popularity-contest, to avoid access problems to ~root/. (Closes:
+    #212013)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 29 Sep 2003 23:32:01 +0200
+
+popularity-contest (1.4) unstable; urgency=low
+
+  * Petter Reinholdtsen
+    - Adding myself as uploader.
+    - Add link to Alioth summary page in the README.
+    - Include architecture info in the submissions.  (Closes: #148756, #187736)
+    - Remove useless call to dh_undocumented, previously commented out
+      by Christian Perrier.
+    - Updated popanal.py to process the new arch info, and store
+      resulting summary in results.host_arch and
+      results.host_gnu_type.
+  * Acknowledge NMUs.  (Closes: #135114, #135273, #136510, #137231,
+    #172824, #184608, #187871, #197178, #197230, #201704, #203841)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Sep 2003 14:25:27 +0200
+
+popularity-contest (1.3-1.3) unstable; urgency=low
+
+  * NMU again
+  * Removed the "Accept here" sentence in debconf templates 
+    as suggested by Joey Hess.
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 29 Aug 2003 11:54:13 +0200
+
+popularity-contest (1.3-1.2) unstable; urgency=low
+
+  * NMU.
+  * Switch to gettext-based debconf templates. Build dependency upon
+    debhelper versioned. Closes: #197178
+  * Debconf templates changed for avoiding "if you say yes". Closes: #197230
+  * Added French debconf templates translation
+  * Added German debconf templates translation. Closes: #137231
+  * Added Brazilian Portuguese debconf templates translation. Closes: #187871
+  * Added Spanish debconf templates translation. Closes: #135114
+  * Removed trailing dot in description synopsis in debian/control
+  * Commented call to now useless dh_undocumented in debian/rules
+  * Get PARTICIPATE value from old config file from potato. Applied
+    patch from Petter Reinholdtsen. Closes: #172824
+  * Lowered the question about participating to medium so that the note
+    is always displayed before asking the question. Closes: #201704
+  * Removed the trailing '  -' in HOSTID generated from new md5sum
+    Closes: #203841
+  * Updated to Standards: 3.6.1 (no change other than above..:-))
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 28 Aug 2003 19:19:50 +0200
+
+popularity-contest (1.3-1.1) unstable; urgency=high
+
+  * NMU.
+  * Do not ship /etc/popularity-contest.conf; don't change it using
+    debconf if it already exists; don't mark it as a conffile (since we
+    don't ship it any more).  (Closes: #135273)
+    This should be sufficient to get popularity-contest back into woody.
+  * #136510 appears to have been fixed in 1.2 or 1.3-1.  (Closes: #136510)
+    (If you want to participate question is now boolean.)
+
+ -- Chris Lawrence <lawrencc@debian.org>  Mon,  1 Apr 2002 21:21:22 -0600
+
+popularity-contest (1.3-1) unstable; urgency=high
+
+  * Change default MAILTO back to apenwarr-survey@debian.org.  Oops!
+    (Closes: #137224)
+
+ -- Avery Pennarun <apenwarr@debian.org>  Thu,  7 Mar 2002 12:39:49 -0500
+
+
+popularity-contest (1.2) unstable; urgency=low
+
+  * Use debconf.
+
+  * use full path in su (Closes: #125701)
+
+  * repaired description (Closes: #129539)
+
+  * correct handling of sender (sendmail -f) (Closes: #123765)
+
+  * Mostly thanks to Erich Schubert <erich@debian.org>
+
+ -- Avery Pennarun <apenwarr@debian.org>  Thu, 21 Feb 2002 09:11:58 -0500
+
+
+popularity-contest (1.1-1) unstable; urgency=low
+
+  * Allow overriding the From: and Sender: headers in outgoing mail by
+    adding a new MAIL_FROM variable in /etc/popularity-contest.conf.  Also
+    drop to user "nobody" before running.  Closes: #89530, #39501, #69823, 
+    #74809, #57257, #57709, #65218.  Okay, this was obviously a popular
+    request, but if people would just configure their mailers not to use
+    invalid From: lines by default, they would be a lot happier.
+    
+  * Added a popularity-contest.8 manpage.  Closes: #39501.
+  
+  * Updated README.  Closes: #105668.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Tue,  6 Nov 2001 21:19:38 -0500
+
+
+popularity-contest (1.0-1) unstable; urgency=low
+
+  * Now runs only once a week instead of once a day.  Fixes bug#53768.
+  
+  * Let sendmail auto-generate the From header.  Fixes bug#48195, bug#48200.
+  
+  * Warnings about Received and Message-Id e-mail lines that may reveal the
+    sender.  Fixes bug#31205.
+    
+  * Actually even version 0.1-2 saved the popcon results to a log file, so
+    that fixes bug#44801.
+    
+  * Uses a more unique ID string than just the hostname, and it persists
+    across hostname changes.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
+
+
+popularity-contest (0.1-2) frozen unstable; urgency=low
+
+  * Added a missing dependency on mail-transport-agent; fixed bug#31010.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
+
+
+popularity-contest (0.1) frozen unstable; urgency=low
+
+  * Use a valid From_ address for sendmail; fixes bug#30341.
+  
+  * popularity-contest.8 is a link to the undocumented(8) man page, and we
+    provide a README file in /usr/doc; downgrades bug#28745.
+    
+  * Include my post-processing scripts in /usr/doc/popularity-contest/examples
+  
+  * No longer tries to report on packages that aren't installed.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Sun, 20 Dec 1998 16:11:02 -0500
+
+
+popularity-contest (0.00) unstable; urgency=low
+
+  * Initial test release.
+
+ -- Avery Pennarun <apenwarr@debian.org>  Sat, 24 Oct 1998 22:33:58 -0400
