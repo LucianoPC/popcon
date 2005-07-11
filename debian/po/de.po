@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: popularity contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-08-25 21:43GMT\n"
+"PO-Revision-Date: 2005-07-11 21:17GMT\n"
 "Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,33 +30,31 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Am Beliebtheitswettbewerb für Debian-Pakete teilnehmen?"
+msgstr "Am Beliebtheitswettbewerb teilnehmen?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
 "Sie können anonym Statistiken über Ihre am meisten verwendeten Debian-Pakete "
-"per E-Mail an die Debian-Entwickler schicken lassen. Diese Informationen "
+"an die Debian-Entwickler schicken lassen. Diese Informationen "
 "beeinflussen beispielsweise die Entscheidungen, welche Pakete auf die erste "
 "CD kommen."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Wenn Sie sich entscheiden teilzunehmen, wird das automatische "
-"Übertragungsprogramm wöchentlich ausgeführt und eine Statistik an die Debian-"
-"Entwickler geschickt."
+"Übertragungsprogramm wöchentlich ausgeführt und Statistiken an die Debian-"
+"Entwickler gesendet."
 
 #. Type: boolean
 #. Description
@@ -101,10 +99,11 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Berichte über HTTP versenden?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Wenn Sie kein HTTP benutzen möchten, wird stattdessen E-Mail verwendet."
+
