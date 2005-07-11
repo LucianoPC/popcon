@@ -1,8 +1,9 @@
 popularity-contest (1.31) UNRELEASED; urgency=low
 
-  * Mohammed Adnène Trojette
+  * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)
+    - Updated Vietnamese from Phan Vinh Thinh. (Closes: #317630)
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat,  9 Jul 2005 11:55:01 +0200
 
