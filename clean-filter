@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+#
+# Author: Alain Schroeder
+# Date:   2005-07-09
+# Modified by Petter Reinholdtsen 2005-07-15
+
+
+use strict;
+
+my %table;
+my $foundentry = 0;
+my $ignorecount = 0;
+my $debug = 0;
+
+open (PACKAGES, '< packages') or
+    die ("packages not found. please run get-packages.sh first\n");
+
+while (<PACKAGES>) {
+    chomp;
+    $table{$_} = "1";
+}
+close PACKAGES;
+
+while (my $line = <STDIN>) {
+    
+    if ($line =~ m/^POPULARITY-CONTEST-0/i) {
+	$foundentry = 1;
+	$ignorecount = 0;
+    }
+    if ($line =~ m/^END-POPULARITY-CONTEST-0/i) {
+	$foundentry = 0;
+	print "# Ignored $ignorecount entries\n";
+    } if ($line =~ m/^\d* \d* (\S*).*/i && !exists $table{$1}) {
+	print STDERR "Ignoring package $1\n" if $debug;
+	$ignorecount++;
+	next;
+    }
+    print $line;
+}
