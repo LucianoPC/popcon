@@ -21,19 +21,31 @@ while (<PACKAGES>) {
 }
 close PACKAGES;
 
+# Truncate timestamps to the start of the day, to avoid giving out
+# timezone information.
+sub fuzzy_timestamp {
+    my $timestamp = shift;
+    return 86400 * int($timestamp / 86400);
+}
+
 while (my $line = <STDIN>) {
     
     if ($line =~ m/^POPULARITY-CONTEST-0/i) {
 	$foundentry = 1;
 	$ignorecount = 0;
-    }
-    if ($line =~ m/^END-POPULARITY-CONTEST-0/i) {
+	$line =~ s/\b(TIME:)(\d+)\b/sprintf("%s%s", $1,fuzzy_timestamp($2))/e;
+    } elsif ($line =~ m/^END-POPULARITY-CONTEST-0/i) {
 	$foundentry = 0;
 	print "# Ignored $ignorecount entries\n";
-    } if ($line =~ m/^\d* \d* (\S*).*/i && !exists $table{$1}) {
+	$line =~ s/\b(TIME:)(\d+)\b/sprintf("%s%s", $1,fuzzy_timestamp($2))/e;
+    } elsif ($line =~ m/^\d+ \d+ (\S*).*/i && !exists $table{$1}) {
 	print STDERR "Ignoring package $1\n" if $debug;
 	$ignorecount++;
 	next;
+    } elsif ($line =~ m/^(\d+) (\d+) (\S+) (.+)$/i && exists $table{$3}) {
+	# Package entry
+	$line = sprintf("%d %d %s %s\n", fuzzy_timestamp($1),
+			fuzzy_timestamp($2), $3, $4);
     }
     print $line;
 }
