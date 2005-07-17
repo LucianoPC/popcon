@@ -35,7 +35,7 @@ binary-indep: build install
 	dh_testdir
 	dh_testroot
 	dh_installdocs README FAQ
-	dh_installexamples prepop.pl popcon-process.sh popanal.py popcon.pl popcon-stat.pl popcon-submit.cgi README.examples
+	dh_installexamples prepop.pl popcon-process.sh popanal.py popcon.pl popcon-stat.pl popcon-submit.cgi clean-filter clean-genpkglist README.examples
 	dh_installmenu
 	dh_installcron
 	dh_installman debian/popularity-contest.8 debian/popcon-largest-unused.8
