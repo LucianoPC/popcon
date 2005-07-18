@@ -4,6 +4,8 @@ popularity-contest (1.31) UNRELEASED; urgency=low
     - Add scripts to clean out non-debian packages from the entries,
       to make it possible to publish anonymous raw data.  Based on
       code from Alain Schroeder.
+    - Change code for detecting old dpkg version to avoid error message
+      when dpkg-query is missing.
   * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)

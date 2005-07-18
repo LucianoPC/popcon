@@ -60,12 +60,16 @@ chomp $debarch;
 
 # Set if dpkg package version is older than 1.10, thus missing dpkg-query.
 my $olddpkg = 0;
+if ( ! -x "/usr/bin/dpkg-query" ) {
+    $olddpkg = 1;
+}
 
 # Popcon release
-my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest 2>/dev/null`;
-if ($?) {
+my $popconver;
+if ($olddpkg) {
     $popconver = `dpkg-awk "Package: *popularity-contest.*" -- Version|grep ^Version|sed 's/^Version: //'`;
-    $olddpkg = 1;
+} else {
+    $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest 2>/dev/null`;
 }
 
 # Initialise time computations
