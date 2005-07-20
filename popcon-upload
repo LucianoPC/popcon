@@ -7,12 +7,27 @@ use IO::Socket;
 use Getopt::Std;
 
 my %opts;
-getopt("uf", \%opts);
+getopts("Cdu:f:", \%opts);
+
+sub usage {
+    print <<"EOF";
+Usage: $0 [-Cd] [-u <url>] [-f <file>]
+  -C        send submissions in clear text, and not compressed
+  -d        enable debugging
+  -u <url>  submit to the given URL (default popcon.debian.org)
+  -f <file> read popcon report from file (default stdin)
+EOF
+}
+
+my $compressed = 1; # Submit reports in a compressed form?
 
 my ($submiturl)  = $opts{'u'} || "http://popcon.debian.org/cgi-bin/popcon.cgi";
 my ($file)  = $opts{'f'} || "-";
+$compressed = 0 if ($opts{'C'});
 
 my ($host) = $submiturl =~ m%http://([^/]+)%;
+
+print "Unable to parse url\n" if ($opts{'d'} && ! $host);
 
 # Configure the proxy:
 my ($http_proxy,$proxy,$port,$remote);
@@ -30,9 +45,16 @@ $port=80 unless (defined($port));
 
 # Compress the report:
 my ($str,$len);
-open GZIP, "gzip -c $file |" or die "gzip -c $file";
-$str .= $_ while(<GZIP>); 
-close(GZIP);
+my $encoding;
+if ($compressed) {
+    open FILE, "gzip -c $file |" or die "gzip -c $file";
+    $encoding = "x-gzip";
+} else {
+    open FILE, "< $file" or die "reading from '$file'";
+    $encoding = "identity";
+}
+$str .= $_ while(<FILE>); 
+close(FILE);
 $len = length($str);
 
 # 30 second timeout on http connections
@@ -44,20 +66,38 @@ $remote = IO::Socket::INET->new(Proto => "tcp", PeerAddr => $proxy,
                                                 PeerPort => $port); 
 unless ($remote) { die "cannot connect to $proxy:$port" }
 
+my $boundary = "----------ThIs_Is_tHe_bouNdaRY_\$";
+
+#Content-Length: $len
+# text/plain; charset=utf-8
+my $ORS = "\r\n"; # Use DOS line endings to make HTTP happy
+my $form;
+$form .= "--${boundary}$ORS";
+$form .= "Content-Disposition: form-data; name=\"popcondata\"; filename=\"popcon-data\"$ORS";
+$form .= "Content-Encoding: $encoding$ORS";
+$form .= "Content-Type: application/octet-stream$ORS$ORS";
+$form .= "$str$ORS";
+$form .= "--${boundary}--$ORS";
+$form .= "$ORS";
+
+my $formlen = length($form);
+
 #Send data
 print $remote <<"EOF";
 POST $submiturl HTTP/1.1
+User-Agent: popcon-upload
 Host: $host
-Content-Type: text/plain; charset=utf-8
-Content-Encoding: x-gzip
-Content-Length: $len
+content-type: multipart/form-data; boundary=$boundary
+content-length: $formlen
 
+$form
 EOF
-print $remote $str;
 
 #Get answer
 my($answer)="";
 $answer.=$_ while(<$remote>);
 close ($remote);
 #Check answer
-exit (($answer =~ m/DEBIAN POPCON HTTP-POST OK/)?0:1);
+my $status = ($answer =~ m/DEBIAN POPCON HTTP-POST OK/) ? 0 : 1;
+print "Failed to upload, answer '$answer'\n" if $status && $opts{'d'};
+exit $status;
