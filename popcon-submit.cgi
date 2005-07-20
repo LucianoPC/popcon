@@ -17,6 +17,10 @@ use Compress::Zlib;
 
 my $email='survey@popcon.debian.org';
 
+my $directsave = 0; # Enable to store on disk instead of sending an email
+my $basedir   = "/var/lib/popcon";
+my $uploaddir = "$basedir/popcon-data/";
+
 $ENV{PATH}="";
 
 print "Content-Type: text/plain\n\n";
@@ -69,15 +73,31 @@ if (exists $ENV{CONTENT_TYPE} && $ENV{CONTENT_TYPE} =~ m%multipart/form-data%){
     @entry = <GZIP>;
 }
 
-open POPCON, "|/usr/lib/sendmail -oi $email" or die "sendmail";
-print POPCON <<"EOF";
+my ($id1, $id2) =
+    $entry[0] =~ m/POPULARITY-CONTEST-0 .+ ID:(\S\S)(\S+) /;
+if ($id1) {
+    if ($directsave) {
+	-d $uploaddir || mkdir $uploaddir;
+	my $dir = "$uploaddir/$id1";
+	-d $dir || mkdir $dir;
+	open(POPCON, ">$dir/$id1$id2") || die "Unable to write to '$dir/$id1$id2'";
+	print POPCON @entry;
+	close POPCON;
+    } else {
+	open POPCON, "|/usr/lib/sendmail -oi $email" or die "sendmail";
+	print POPCON <<"EOF";
 To: $email
 Subject: popularity-contest submission
 
 EOF
-print POPCON @entry;
-close POPCON;
-
-print "Thanks for your submission to Debian Popularity-Contest!\n";
-print "DEBIAN POPCON HTTP-POST OK\n";
+        print POPCON @entry;
+	close POPCON;
+    }
+}
+if ($id1) {
+    print "Thanks for your submission to Debian Popularity-Contest!\n";
+    print "DEBIAN POPCON HTTP-POST OK\n";
+} else {
+    print "The submission to Debian Popularity-Contest!\n";
+}
 exit 0;
