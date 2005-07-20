@@ -14,6 +14,9 @@ popularity-contest (1.31) UNRELEASED; urgency=low
       (uncompressed) format.
     - Add support in popcon-submit.cgi to save directly to disk
       instead of sending emails.
+    - Change popcon-submit-ubuntu.cgi to make it easier to run with
+      older python versions, and make sure the reply matches the
+      "success" string used by popcon-upload.
   * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)

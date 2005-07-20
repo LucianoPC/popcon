@@ -1,9 +1,20 @@
 #!/usr/bin/python
+#
+# Script to receive popcon reports using HTTP POST, and store them in
+# a directory.
+#
+# Require at least python version 2.2 to use the cgitb module.
 
 import os, sys, cgi, errno
-import cgitb; cgitb.enable()
-uploadDir = '/srv/popcon.ubuntu.com/popcon-data/'
-logDir = '/srv/popcon.ubuntu.com/logs/'
+try: # Use cgitb when available
+    import cgitb
+    cgitb.enable()
+except:
+    sys.stderr = sys.stdout
+
+basedir   = '/srv/popcon.ubuntu.com'
+uploadDir = '%s/popcon-data/' % basedir
+logDir    = '%s/logs/' % basedir
 
 def mkdirs(newdir,mode=0777):
         try: os.makedirs(newdir,mode)
@@ -11,7 +22,7 @@ def mkdirs(newdir,mode=0777):
                 if err.errno != errno.EEXIST or not os.path.isdir(newdir):
                         raise
 
-
+error = 0
 formStorage = cgi.FieldStorage()
 fileitem = formStorage["popcondata"]
 if fileitem.file:
@@ -31,8 +42,13 @@ if fileitem.file:
         data.writelines(header)
         data.writelines(fileitem.file)
         data.close()
+else:
+	error = "Unable to find uploaded file in POST request"
 
 print """Content-Type: text/plain
-
-Thanks!
 """
+if error:
+	print error
+else:
+	print "Thanks for your submission to Debian Popularity-Contest!"
+	print "DEBIAN POPCON HTTP-POST OK\n"
