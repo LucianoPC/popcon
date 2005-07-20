@@ -98,6 +98,6 @@ if ($id1) {
     print "Thanks for your submission to Debian Popularity-Contest!\n";
     print "DEBIAN POPCON HTTP-POST OK\n";
 } else {
-    print "The submission to Debian Popularity-Contest!\n";
+    print "The submission to Debian Popularity-Contest failed!\n";
 }
 exit 0;
