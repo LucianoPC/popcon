@@ -1,4 +1,6 @@
 #! /usr/bin/perl -wT
+#
+# Require the debian package libchart-perl.
 
 BEGIN {
 @INC=(@INC, map { "./$_" } @INC);
