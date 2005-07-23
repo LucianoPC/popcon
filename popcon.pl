@@ -2,6 +2,7 @@
 
 $results="../popcon-mail/results";
 $popcon="../www";
+my $mirrorbase "/org/ftp.root/debian";
 
 sub htmlheader
 {
@@ -207,7 +208,7 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS","woody","woody-nonUS")
 }
 mark "Reading legacy packages...";
 
-for $file (glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages"),glob("/org/ftp.root/debian/dists/sid/*/binary-*/Packages"))
+for $file (glob("$mirrorbase/dists/testing/*/binary-*/Packages"),glob("$mirrorbase/dists/sid/*/binary-*/Packages"))
 {
   open AVAIL, "$file";
   while(<AVAIL>)
