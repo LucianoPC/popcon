@@ -5,6 +5,7 @@ MAILDIR=../Mail
 WEBDIR=../www
 LOGDIR=$BASEDIR/../logs
 BINDIR=$BASEDIR/../bin
+SUMMARYDIR=$BASEDIR/all-popcon-results
 
 set -e
 cd $BASEDIR
@@ -24,11 +25,10 @@ find popcon-entries -type f | xargs cat \
         | nice -15 $BINDIR/popanal.py >$LOGDIR/popanal.out 2>&1
 cp results $WEBDIR/all-popcon-results.txt
 gzip -f $WEBDIR/all-popcon-results.txt
-cp $WEBDIR/all-popcon-results.txt.gz all-popcon-results/popcon-`date +"%Y-%m-%d"`.gz
+cp $WEBDIR/all-popcon-results.txt.gz $SUMMARYDIR/popcon-`date +"%Y-%m-%d"`.gz
 
 cd ../popcon-stat
-find ../popcon-mail/all-popcon-results -type f -print | sort | \
-  $BINDIR/popcon-stat.pl
+find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl
 
 cd ../popcon-web
 $BINDIR/popcon.pl >$LOGDIR/popcon.log
