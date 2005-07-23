@@ -208,7 +208,9 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS","woody","woody-nonUS")
 }
 mark "Reading legacy packages...";
 
-for $file (glob("$mirrorbase/dists/testing/*/binary-*/Packages"),glob("$mirrorbase/dists/sid/*/binary-*/Packages"))
+for $file (glob("$mirrorbase/dists/stable/*/binary-*/Packages"),
+           glob("$mirrorbase/dists/testing/*/binary-*/Packages"),
+           glob("$mirrorbase/dists/sid/*/binary-*/Packages"))
 {
   open AVAIL, "$file";
   while(<AVAIL>)
@@ -296,6 +298,7 @@ mark "Building by sections pages";
 for $sec (".",@dists)
 {
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
+  make_sec $sec;
   make_by ($sec, $_, \%pkg, @list) for (@fields);
 }
 make_sec "maint";
@@ -408,7 +411,9 @@ EOF
 		$port="kfreebsd-gnu/" if ($port eq "kfreebsd/");
                 printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
         }
-        printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"};
+        if (exists $arch{"unknown"}) {
+            printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"}
+        }
 	print HTML  <<'EOF';
 </pre></td>
 <td>
@@ -423,7 +428,9 @@ EOF
         {
                 printf HTML "%-16s : %-10s \n",$f,$release{$f};
         }
-        printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
+        if (exists $release{"unknown"}) {
+            printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
+        }
 	print HTML  <<'EOF';
 </pre></td>
 <td>
