@@ -3,7 +3,7 @@
 BASEDIR=/org/popcon.debian.org/popcon-mail
 MAILDIR=../Mail
 WEBDIR=../www
-LOGDIR=$BASEDIR/logs
+LOGDIR=$BASEDIR/../logs
 
 set -e
 cd $BASEDIR
