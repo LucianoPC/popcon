@@ -26,6 +26,7 @@ popularity-contest (1.31) UNRELEASED; urgency=low
     - Updated Vietnamese from Phan Vinh Thinh. (Closes: #317630)
     - Updated German by Dennis Stampfer.
     - Updated Albanian by Elian Myftiu. (Closes: #319079)
+    - Updated Arabic by Ossama M. Khayat.
 
  -- Dennis Stampfer <seppy@debian.org>  Mon, 11 Jul 2005 21:18:26 +0300
 

@@ -1,3 +1,4 @@
+# translation of popularity-contest_debian_po.po to Arabic
 # translation of popularity-contest_debian_po_ar.po to Arabic
 #
 #    Translators, if you are not familiar with the PO format, gettext
@@ -10,19 +11,20 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
 # Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004.
+# Ossama M. Khayat <okhayat@yahoo.com>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_debian_po_ar\n"
+"Project-Id-Version: popularity-contest_debian_po\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-07-21 00:41+0300\n"
-"Last-Translator: Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>\n"
+"PO-Revision-Date: 2005-07-24 00:55+0300\n"
+"Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -33,26 +35,24 @@ msgstr "هل تريد المشاركة في مسابقة شعبيّة حزم د�
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"يمكنك أن تجعل نظامك يرسل بسريّة إحصائيّاتٍ عن حزم دبيان الأكثر استعمالاً عندك "
-"إلى مطوّري دبيان. هذه المعلومات تؤثّر على القرارات مثل أيّ الحزم يفترض أن توضع "
+"يمكنك أن تجعل نظامك يرسل بسريّة إحصائيّاتٍ عن حزم ديبيان الأكثر استعمالاً عندك "
+"إلى مطوّري ديبيان. هذه المعلومات تؤثّر على القرارات مثل أيّ الحزم يفترض أن توضع "
 "على قرص المدمج الأوّل لدبيان."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "إذا اخترت المشاركة فنصّ التّسليم البرمجي الآلي سيعمل أسبوعيّاً مرسلاً الإحصائيّات "
-"إلى مطوّري دبيان عن طريق البريد الإلكتروني."
+"إلى مطوّري ديبيان."
 
 #. Type: boolean
 #. Description
@@ -95,10 +95,11 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "استخدام HTTP لإرسال التقارير؟"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "إن لم تكن تريد استخدام HTTP، يستخدم البريد الالكتروني بدلاً منه."
+
