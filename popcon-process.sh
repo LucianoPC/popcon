@@ -5,6 +5,7 @@ MAILDIR=../Mail
 WEBDIR=../www
 LOGDIR=$BASEDIR/../logs
 BINDIR=$BASEDIR/../bin
+DATADIR=$BASEDIR/popcon-entries
 SUMMARYDIR=$BASEDIR/all-popcon-results
 
 # Remove entries older than # number of days
@@ -23,8 +24,8 @@ $BINDIR/prepop.pl <new-popcon-entries >$LOGDIR/prepop.out 2>&1
 
 # delete outdated entries
 rm -f results
-find popcon-entries -type f -mtime +$DAYLIMIT -print0 | xargs -0 rm -f --
-find popcon-entries -type f | xargs cat \
+find $DATADIR -type f -mtime +$DAYLIMIT -print0 | xargs -0 rm -f --
+find $DATADIR -type f | xargs cat \
         | nice -15 $BINDIR/popanal.py >$LOGDIR/popanal.out 2>&1
 cp results $WEBDIR/all-popcon-results.txt
 gzip -f $WEBDIR/all-popcon-results.txt
