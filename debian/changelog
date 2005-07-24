@@ -22,6 +22,8 @@ popularity-contest (1.31) UNRELEASED; urgency=low
       are empty.
     - Use more variables in popcon-process.sh to make it easier to
       deploy on other servers.
+    - Modify dependency to depend on 'dpkg (>= 1.10) | dpkg-awk'.
+      This should make sure it work on woody as well.
   * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)
