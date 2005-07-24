@@ -2,7 +2,8 @@
 
 $results="../popcon-mail/results";
 $popcon="../www";
-my $mirrorbase "/org/ftp.root/debian";
+my $mirrorbase = "/org/ftp.root/debian";
+my $docurlbase = "";
 
 sub htmlheader
 {
@@ -58,8 +59,8 @@ sub popconintro
   package. This package sends every week the list of packages installed and the
   access time of relevant files to the server via email. Every day the server
   anonymizes the result and publishes this survey.
-  For more information, read the <a href="README">README</a> and the 
-  <a href="FAQ">FAQ</a>.
+  For more information, read the <a href="${docurlbase}README">README</a> and the 
+  <a href="${docurlbase}FAQ">FAQ</a>.
   </em> <p>
 EOH
 }
