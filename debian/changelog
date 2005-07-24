@@ -1,29 +1,30 @@
 popularity-contest (1.31) UNRELEASED; urgency=low
 
-  * Petter Reinholdtsen
-    - Add scripts to clean out non-debian packages from the entries,
-      to make it possible to publish anonymous raw data.  Based on
-      code from Alain Schroeder.
-    - Change code for detecting old dpkg version to avoid error message
-      when dpkg-query is missing.
-    - Rewrote popcon-upload to submit reports using MIME-encoded file
-      uploads to match the common practice for browser-based file
-      uploads.
-    - Change popcon-submit.cgi to handle uploads in both the old
-      upload format and the new upload format, as well as the ubuntu
-      (uncompressed) format.
-    - Add support in popcon-submit.cgi to save directly to disk
-      instead of sending emails.
-    - Change popcon-submit-ubuntu.cgi to make it easier to run with
-      older python versions, and make sure the reply matches the
-      "success" string used by popcon-upload.
-    - Change popcon.pl to read section info from the stable branch as
-      well, and make sure it keep working even if one of the sections
-      are empty.
-    - Use more variables in popcon-process.sh to make it easier to
-      deploy on other servers.
-    - Modify dependency to depend on 'dpkg (>= 1.10) | dpkg-awk'.
-      This should make sure it work on woody as well.
+  [Petter Reinholdtsen]
+  * Add scripts to clean out non-debian packages from the entries, to
+    make it possible to publish anonymous raw data.  Based on code
+    from Alain Schroeder.
+  * Rewrote popcon-upload to submit reports using MIME-encoded file
+    uploads to match the common practice for browser-based file
+    uploads.
+  * Change popcon-submit.cgi to handle uploads in both the old upload
+    format and the new upload format, as well as the ubuntu
+    (uncompressed) format.
+  * Add support in popcon-submit.cgi to save directly to disk instead
+    of sending emails.
+  * Change popcon-submit-ubuntu.cgi to make it easier to run with
+    older python versions, and make sure the reply matches the
+    "success" string used by popcon-upload.
+  * Change popcon.pl to read section info from the stable branch as
+    well, and make sure it keep working even if one of the sections
+    are empty.
+  * Use more variables in popcon-process.sh to make it easier to
+    deploy on other servers.
+  * Change code for detecting old dpkg version and using dpkg-awk
+    instead to avoid error message when dpkg-query is missing. Modify
+    dependency to depend on 'dpkg (>= 1.10) | dpkg-awk'.  This should
+    make sure it work on woody as well.
+
   * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)
