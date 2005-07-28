@@ -6,7 +6,7 @@ popularity-contest (1.31) unstable; urgency=low
     from Alain Schroeder.
   * Rewrote popcon-upload to submit reports using MIME-encoded file
     uploads to match the common practice for browser-based file
-    uploads.
+    uploads. (Closes: #319019)
   * Change popcon-submit.cgi to handle uploads in both the old upload
     format and the new upload format, as well as the ubuntu
     (uncompressed) format.
