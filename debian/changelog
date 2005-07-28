@@ -24,7 +24,8 @@ popularity-contest (1.31) UNRELEASED; urgency=low
     instead to avoid error message when dpkg-query is missing. Modify
     dependency to depend on 'dpkg (>= 1.10) | dpkg-awk'.  This should
     make sure it work on woody as well.
-
+  * Make sure the server scripts are installed uncompressed, for easy
+    access when setting up a server.
   * Translations
     - Updated Japanese from Kenshi Muto. (Closes: #317402)
     - Updated Russian from Yuri Kozlov. (Closes: #317449)
