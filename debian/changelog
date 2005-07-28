@@ -1,4 +1,4 @@
-popularity-contest (1.31) UNRELEASED; urgency=low
+popularity-contest (1.31) unstable; urgency=low
 
   [Petter Reinholdtsen]
   * Add scripts to clean out non-debian packages from the entries, to
@@ -35,7 +35,7 @@ popularity-contest (1.31) UNRELEASED; urgency=low
     - Updated Arabic by Ossama M. Khayat.
     - Updated Polish by Bartosz Fenski. (Closes: #320132)
 
- -- Dennis Stampfer <seppy@debian.org>  Mon, 11 Jul 2005 21:18:26 +0300
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 29 Jul 2005 01:54:43 +0200
 
 popularity-contest (1.30) unstable; urgency=low
 
