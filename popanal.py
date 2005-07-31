@@ -38,6 +38,7 @@ release_list = {}
 arch_list = {}
 subcount = 0
 
+mirrorbase = "/org/ftp.debian.org/ftp"
 
 def parse_depends(depline):
     l = []
@@ -236,9 +237,9 @@ def read_submissions(stream):
 
 # main program
 
-for d in glob.glob('/org/ftp.debian.org/ftp/dists/stable/*/binary-i386/Packages'):
+for d in glob.glob('%s/dists/stable/*/binary-i386/Packages' % mirrorbase):
     read_depends(d)
-for d in glob.glob('/org/ftp.debian.org/ftp/dists/unstable/*/binary-i386/Packages'):
+for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages' % mirrorbase):
     read_depends(d)
 read_submissions(sys.stdin)
 

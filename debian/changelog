@@ -1,3 +1,11 @@
+popularity-contest (1.32) UNRELEASED; urgency=low
+
+  [Petter Reinholdtsen]
+  * Add variable mirrorbase to popanal.py, to make it easier to set up
+    a new server.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
+
 popularity-contest (1.31) unstable; urgency=low
 
   [Petter Reinholdtsen]
