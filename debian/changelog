@@ -6,6 +6,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   * Remove listing email as the transport method in the package
     description, and make the description independend of the method
     used.  This reflect the new HTTP transport support.
+  * Update the FAQ to better reflect the support for HTTP submissions.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
