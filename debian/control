@@ -13,9 +13,9 @@ Recommends: cron, exim4 | mail-transport-agent, mime-construct
 Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
- When you install this package, it sets up a cron job that will anonymously
- e-mail the Debian developers periodically with statistics about your
- most used Debian packages.
+ When you install this package, it sets up a cron job that will
+ anonymously submit statistics about your most used Debian packages
+ periodically to the Debian developers.
  .
  This information helps us make decisions such as which packages should go
  on the first Debian CD.  Also, we can improve future versions of Debian

@@ -3,6 +3,9 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   [Petter Reinholdtsen]
   * Add variable mirrorbase to popanal.py, to make it easier to set up
     a new server.
+  * Remove listing email as the transport method in the package
+    description, and make the description independend of the method
+    used.  This reflect the new HTTP transport support.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
