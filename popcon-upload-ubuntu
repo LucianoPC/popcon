@@ -42,7 +42,7 @@ uploadname = 'popcondata'
 val = sys.stdin.read()
 
 data = ((uploadname,upfile,val),)
-ret= post_multipart('popcon.ubuntulinux.org', '/popcon-submit.cgi', '' , data)
+ret= post_multipart('popcon.ubuntu.com', '/popcon-submit.cgi', '' , data)
 if not ret == 'Thanks!\n': 
     sys.stderr.write("%s\n" % ret)
     sys.exit(1)
