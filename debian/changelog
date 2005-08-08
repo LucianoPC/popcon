@@ -4,7 +4,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   * Add variable mirrorbase to popanal.py, to make it easier to set up
     a new server.
   * Remove listing email as the transport method in the package
-    description, and make the description independend of the method
+    description, and make the description independent of the method
     used.  This reflect the new HTTP transport support.
   * Update the FAQ to better reflect the support for HTTP submissions.
 
