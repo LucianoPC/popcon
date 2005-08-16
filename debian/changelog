@@ -48,6 +48,7 @@ popularity-contest (1.31) unstable; urgency=low
     - Updated Albanian by Elian Myftiu. (Closes: #319079)
     - Updated Arabic by Ossama M. Khayat.
     - Updated Polish by Bartosz Fenski. (Closes: #320132)
+    - Updated Romanian by Eddy Petrisor. (Closes: #323225)
 
  -- Petter Reinholdtsen <pere@debian.org>  Fri, 29 Jul 2005 01:54:43 +0200
 
