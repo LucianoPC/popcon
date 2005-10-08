@@ -10,6 +10,10 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   * popcon-upload-ubuntu: Replace ubuntulinux.org with ubuntu.com.  Patch
     from Colin Watson and Ubuntu.
 
+  [Mohammed Adnène Trojette]
+  * Translations:
+    - Updated Swedish from Daniel Nylander. (Closes: #332710)
+
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
 popularity-contest (1.31) unstable; urgency=low
