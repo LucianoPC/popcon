@@ -15,7 +15,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   * Added debian/compat to set debhelper compatibility level to 4, and
     remove debian/conffiles as it is no longer needed.
 
-  [Mohammed Adnène Trojette]
+  [Mohammed AdnÃ¨ne Trojette]
   * Translations:
     - Updated Romanian by Eddy Petrisor. (Closes: #323225)
     - Updated Swedish from Daniel Nylander. (Closes: #332710)
