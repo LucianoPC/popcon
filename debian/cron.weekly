@@ -16,8 +16,8 @@ unset USEHTTP
 . /usr/share/popularity-contest/default.conf
 . /etc/popularity-contest.conf
 
-# don't run if MAILTO address is blank!
-if [ -z "$MAILTO" ]; then exit 0; fi
+# don't run if MAILTO address is blank, or not configured to use HTTP POST!
+if [ -z "$MAILTO" ] && [ "yes" != "$USEHTTP" ]; then exit 0; fi
 
 # don't run if PARTICIPATE is "no" or unset!
 [ "$PARTICIPATE" = "no" ] || [ -z "$PARTICIPATE" ] && exit 0
@@ -63,7 +63,7 @@ fi
 
 # try to email the popularity contest data
 
-if [ yes != "$SUBMITTED" ]; then
+if [ yes != "$SUBMITTED" ] && [ "$MAILTO" ]; then
     if [ -x "`which sendmail 2>/dev/null`" ]; then
 	# Sending compressed emails are disabled as the receiving end
 	# isn't implemented yet.
