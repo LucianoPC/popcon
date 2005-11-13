@@ -1,14 +1,16 @@
 # translation of popularity-contest_debian_po.po to tagalog
 # Copyright (c) 2005 Debian Tagalog Translation Team
 # Rick Bahague Jr <rickjr@cp-union.org>, 2005.
+# Eric Pareja <xenos@upm.edu.ph>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian_po_tl\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: Eric Pareja <xenos@upm.edu.ph>\n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2005-02-22 09:50+0800\n"
-"Last-Translator: Rick Bahague Jr <rickjr@cp-union.org>\n"
+"PO-Revision-Date: 2005-11-11 22:58+0800\n"
+"Last-Translator: Eric Pareja <xenos@upm.edu.ph> \n"
+"Last-Previous-Translator: Rick Bahague Jr <rickjr@cp-union.org>\n"
 "Language-Team: tagalog <debian-tl@banwa.upm.edu.ph>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,28 +26,19 @@ msgstr "Nais nyo bang sumali sa Debian Package Popularity Contest?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr ""
-"Maaring ipadala na inyong sistema sa Debian developers, sa pamamagitan ng "
-"email ang mga istatistika hinggil sa mga pakete ng Debian na madalas nyong "
-"gamitin. Ang mga impormasyong nakakalap sa paraang ito ay nakakaimpluwensya "
-"sa pagdesisyon kung ano ang mga paketeng isinasama sa unang CD ng Debian."
+msgstr "Maaring ipadala ng inyong sistema sa Debian developers ang mga istatistika hinggil sa mga pakete ng Debian na madalas niyong gamitin. Ang mga impormasyong nakakalap sa paraang ito ay nakakaimpluwensya sa pagdesisyon kung ano ang mga paketeng isinasama sa unang CD ng Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
-msgstr ""
-"Kung pipiliin nyong sumali, ang awtomatikong script sa pagpasa ay tatakbo "
-"minsan sa isang linggo. Ipapadala nito sa mga Debian developers ang mga "
-"istatistika sa pamamagitan ng email."
+msgstr "Kung pipiliin niyong sumali, ang awtomatikong script sa pagpasa ay tatakbo minsan sa isang linggo, at magpapadala ng istatistika sa mga debeloper ng Debian."
 
 #. Type: boolean
 #. Description
@@ -89,10 +82,10 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Gamitin ang HTTP upang magpadala ng mga ulat?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Email ang gagamitin kung ayaw ninyong gumamit ng HTTP."
