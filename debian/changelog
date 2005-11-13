@@ -12,6 +12,8 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   * Correct use of 'su' in cron-script.  (Closes: #331438)
   * Make it possible to get popcon to only report using HTTP.  Patch
     from Vagrant Cascadian. (Closes: #325030)
+  * Added debian/compat to set debhelper compatibility level to 4, and
+    remove debian/conffiles as it is no longer needed.
 
   [Mohammed Adnène Trojette]
   * Translations:
