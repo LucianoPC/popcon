@@ -31,7 +31,7 @@ POPCON=/var/log/popularity-contest
 run_popcon()
 {
 	# Set HOME to avoid bug #212013.
-	HOME=/tmp su nobody -pc "sh -c /usr/sbin/popularity-contest"
+	HOME=/tmp su -pc "sh -c /usr/sbin/popularity-contest" nobody
 }
 
 do_sendmail()
