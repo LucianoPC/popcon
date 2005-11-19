@@ -3,7 +3,7 @@
 # Require the debian package libchart-perl.
 
 BEGIN {
-@INC=(@INC, map { "./$_" } @INC);
+@INC=("./usr/share/perl5/", @INC);
 }
 
 $ENV{PATH}="/usr/bin:/bin";
@@ -79,7 +79,7 @@ $obj->set ('pt_size' => 7);
 $obj->set ('max_val' => $maxv+1);
 $obj->set ('y_ticks' => int $maxv +1);
 $obj->set ('x_ticks' => 'vertical');
-$obj->set ('skip_x_ticks' => 14);
+$obj->set ('skip_x_ticks' => 28);
 $obj->png ("$dirpng/submission.png", \@data);
 
 use Chart::Composite;
@@ -101,7 +101,7 @@ for $arch (@arch)
   $obj->set ('brush_size' => 3);
   $obj->set ('pt_size' => 7);
   $obj->set ('x_ticks' => 'vertical');
-  $obj->set ('skip_x_ticks' => 14);
+  $obj->set ('skip_x_ticks' => 28);
   $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]); 
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
@@ -126,5 +126,5 @@ $obj->set ('legend_labels' => [@release]);
 $obj->set ('brush_size' => 3);
 $obj->set ('pt_size' => 7);
 $obj->set ('x_ticks' => 'vertical');
-$obj->set ('skip_x_ticks' => 14);
+$obj->set ('skip_x_ticks' => 28);
 $obj->png ("$dirpng/release.png", \@data);
