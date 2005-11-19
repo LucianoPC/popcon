@@ -169,6 +169,12 @@ EOF
   close DAT;
 }
 
+sub make
+{
+  my ($sec,$pkg,@list)=@_;
+  make_sec $sec;
+  make_by ($sec, $_, $pkg, @list) for (@fields);
+}
 sub print_pkg
 {
   my ($pkg)=@_;
@@ -289,8 +295,7 @@ mark "Reading stats...";
 for $sec (@sections)
 {
   my @list = grep {$section{$_} eq $sec} @pkgs;
-  make_sec $sec;
-  make_by ($sec, $_, \%pkg, @list) for (@fields);
+  make ($sec, \%pkg, @list);
 }
 
 mark "Building by sections pages";
@@ -302,13 +307,11 @@ mark "Building by sections pages";
 for $sec (".",@dists)
 {
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
-  make_sec $sec;
-  make_by ($sec, $_, \%pkg, @list) for (@fields);
+  make ($sec, \%pkg, @list);
 }
-make_sec "maint";
-make_by ("maint", $_, \%maintpkg, @maints) for (@fields);
-make_sec "source";
-make_by ("source", $_, \%sourcepkg, @sources) for (@fields);
+make ("maint", \%maintpkg, @maints);
+make ("source", \%sourcepkg, @sources);
+
 for $sec (@dists)
 {
   open HTML , "> $popcon/$sec/index.html";
