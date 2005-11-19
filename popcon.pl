@@ -165,7 +165,7 @@ EOF
     $sum{$_}+=$pkg->{$p}->{$_} for (@fields);
   }
   print  DAT '-'x66,"\n";
-  printf DAT $format, $rank, "Total", map {defined($sum{$_})?$sum{$_}:0} @fields;
+  printf DAT $format, $rank, "Total", map {defined($sum{$_})?$sum{$_}:0} @fields, "";
   close DAT;
 }
 
@@ -192,7 +192,8 @@ sub mark
 %sourcepkg=();
 @fields=("inst","vote","old","recent","no-files");
 
-for $file ("slink","slink-nonUS","potato","potato-nonUS","woody","woody-nonUS")
+for $file ("slink","slink-nonUS","potato","potato-nonUS",
+           "woody","woody-nonUS","sarge")
 {
   open AVAIL, "< $file.sections" or die "Cannot open $file.sections";
   while(<AVAIL>)
@@ -208,12 +209,15 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS","woody","woody-nonUS")
   close AVAIL;
 }
 mark "Reading legacy packages...";
+$ENV{PATH}="/bin:/usr/bin";
 
-for $file (glob("$mirrorbase/dists/stable/*/binary-*/Packages"),
-           glob("$mirrorbase/dists/testing/*/binary-*/Packages"),
-           glob("$mirrorbase/dists/sid/*/binary-*/Packages"))
+for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
+           glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages.gz"),
+           glob("/org/ftp.root/debian/dists/sid/*/binary-*/Packages.gz"))
 {
-  open AVAIL, "$file";
+  /([^[:space:]]+)/ or die("incorrect package name");
+  $file = $1;#Untaint
+  open AVAIL, "zcat $file|";
   while(<AVAIL>)
   {
 /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
@@ -228,7 +232,6 @@ for $file (glob("$mirrorbase/dists/stable/*/binary-*/Packages"),
 }
 mark "Reading current packages...";
 
-$ENV{PATH}="/bin:/usr/bin";
 
 #Format
 #<name> <vote> <old> <recent> <no-files>
@@ -412,7 +415,7 @@ EOF
 		$port="kfreebsd-gnu/" if ($port eq "kfreebsd/");
                 printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
         }
-        if (exists $arch{"unknown"}) {
+        if (defined $arch{"unknown"}) {
             printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"}
         }
 	print HTML  <<'EOF';
@@ -429,7 +432,7 @@ EOF
         {
                 printf HTML "%-16s : %-10s \n",$f,$release{$f};
         }
-        if (exists $release{"unknown"}) {
+        if (defined $release{"unknown"}) {
             printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
         }
 	print HTML  <<'EOF';
