@@ -3,7 +3,7 @@
 # Read Debian popularity-contest submission data on stdin and produce
 # some statistics about it.
 #
-import sys, string, time, glob
+import sys, string, time, glob, gzip
 
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
@@ -51,7 +51,7 @@ def parse_depends(depline):
 
 
 def read_depends(filename):
-    file = open(filename, 'r')
+    file = gzip.open(filename, 'r')
     package = None
 
     while 1:
@@ -237,9 +237,9 @@ def read_submissions(stream):
 
 # main program
 
-for d in glob.glob('%s/dists/stable/*/binary-i386/Packages' % mirrorbase):
+for d in glob.glob('%s/dists/stable/*/binary-i386/Packages.gz' % mirrorbase):
     read_depends(d)
-for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages' % mirrorbase):
+for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages.gz' % mirrorbase):
     read_depends(d)
 read_submissions(sys.stdin)
 
