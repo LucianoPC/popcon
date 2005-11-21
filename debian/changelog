@@ -24,6 +24,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     - Updated Romanian by Eddy Petrisor. (Closes: #323225)
     - Updated Swedish from Daniel Nylander. (Closes: #332710)
     - Updated Tagalog from Eric Pareja. (Closes: #338614)
+    - Updated Danish from Morten Brix Pedersen. (Closes: #340129)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
