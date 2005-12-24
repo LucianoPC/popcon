@@ -16,27 +16,23 @@ msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-08-11 13:35+0300\n"
+"PO-Revision-Date: 2005-12-19 13:16+0200\n"
 "Last-Translator: George Papamichelakis <george@step.gr>\n"
 "Language-Team:  <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr ""
-"Θέλετε να συμμετάσχετε στον Διαγωνισμό Δημοτικότητας Πακέτων του Debian;"
+msgstr "Θέλετε να συμμετάσχετε στον Διαγωνισμό Δημοτικότητας Πακέτων του Debian;"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
@@ -51,7 +47,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
@@ -74,8 +69,7 @@ msgstr ""
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr ""
-"Η δημιουργία ενός μοναδικού αναγνωριστικού για τον υπολογιστή σας απέτυχε"
+msgstr "Η δημιουργία ενός μοναδικού αναγνωριστικού για τον υπολογιστή σας απέτυχε"
 
 #. Type: note
 #. Description
@@ -105,10 +99,11 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Να γίνεται χρήση HTTP για την υποβολή αναφορών;"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Αν δεν θέλετε να χρησιμοποιηθεί το HTTP, μπορείτε εναλλακτικά να χρησιμοποιήσετε το email."
+
