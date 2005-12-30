@@ -27,6 +27,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     - Updated Danish from Morten Brix Pedersen. (Closes: #340129)
     - Updated Korean from Sunjae Park. (Closes: #343688)
     - Updated Greek from George Papamichelakis. (Closes: #344584)
+    - Updated Catalan from Aleix Badia i Bosch. (Closes: #345228)
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 

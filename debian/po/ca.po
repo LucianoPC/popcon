@@ -1,6 +1,6 @@
 # popularity-contest (debconf) translation to Catalan.
-# Copyright (C) 2004 Free Software Foundation, Inc.
-# Aleix Badia i Bosch <abadia@ica.es>, 2004
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Aleix Badia i Bosch <abadia@ica.es>, 2005
 # Jordi Mallach <jordi@debian.org>, 2004
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest_1.12_templates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-06-29 00:10+0200\n"
+"PO-Revision-Date: 2005-12-27 09:03+0100\n"
 "Last-Translator: Aleix Badia i Bosch <abadia@ica.es>\n"
 "Language-Team: Debian L10n Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,28 +24,19 @@ msgstr "Voleu participar al concurs de popularitat dels paquets de Debian?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr ""
-"El vostre sistema pot enviar correus electrònics anònims als desenvolupadors "
-"de Debian amb les estadístiques dels paquets de Debian més utilitzats. "
-"Aquesta informació pot influir en les decisions a l'estil de quins paquets "
-"hauria d'incloure el primer CD de Debian."
+msgstr "El vostre sistema pot enviar anònimament estadístiques dels paquets de Debian més utilitzats als desenvolupadors. Aquesta informació pot influir en les decisions a l'estil de quins paquets hauria d'incloure el primer CD de Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
-msgstr ""
-"Si decidiu participar-hi, la seqüència de tramesa automàtica s'executarà "
-"automàticament un cop a la setmana i enviarà les estadístiques als "
-"desenvolupadors de Debian."
+msgstr "Si decidiu participar-hi, la seqüència d'enviament automàtic s'executarà automàticament un cop a la setmana i enviarà les estadístiques als desenvolupadors de Debian."
 
 #. Type: boolean
 #. Description
@@ -90,13 +81,13 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Voleu utilitzar l'HTTP per enviar els informes?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Si no voleu utilitzar l'HTTP, s'utilitzarà el correu electrònic."
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "
