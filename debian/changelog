@@ -29,6 +29,10 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     - Updated Greek from George Papamichelakis. (Closes: #344584)
     - Updated Catalan from Aleix Badia i Bosch. (Closes: #345228)
 
+  [Christian Perrier]
+  * Translations:
+    - Added Punjabi translation by Amanpreet Singh Alam
+
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
 popularity-contest (1.31) unstable; urgency=low

@@ -1,0 +1,94 @@
+# translation of popularity-contest_debian_po.po to Punjabi
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+#
+msgid	""
+msgstr	""
+"Project-Id-Version: popularity-contest_debian_po\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"PO-Revision-Date: 2005-11-08 07:21+0530\n"
+"Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
+"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid	"Participate in the Debian Package Popularity Contest?"
+msgstr	"ਕੀ ਡੇਬੀਅਨ ਪੈਕੇਜ ਹਰਮਨ ਪਿਆਰਾ ਪ੍ਰਤੀਯੋਗਤਾ ਵਿੱਚ ਭਾਗ ਲੈਣਾ ਹੈ?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid	"You can have your system anonymously supply the Debian developers "
+	"with statistics about your most used Debian packages.  This "
+	"information influences decisions such as which packages should go on "
+	"the first Debian CD."
+msgstr	"ਤੁਸੀਂ ਆਪਣੇ ਸਿਸਟਮ ਉੱਤੇ ਆਪਣੇ ਵਲੋਂ ਆਮ ਵਰਤੇ ਡੇਬੀਅਨ ਪੈਕੇਜਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨੂੰ ਡੇਬੀਅਨ ਖੋਜੀਆਂ ਨੂੰ "
+	"ਭੇਜ ਸਕਦੇ ਹੋ।  ਇਹ ਜਾਣਕਾਰੀ ਨੂੰ ਡੇਬੀਅਨ ਦੀ ਪਹਿਲੀ CD ਉੱਤੇ ਰੱਖੇ ਜਾਣ ਵਾਲੇ ਪੈਕੇਜ ਦੀ ਚੋਣ "
+	"ਕਰਨ ਸਮੇਂ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid	"If you choose to participate, the automatic submission script will "
+	"run once every week, sending statistics to the Debian developers."
+msgstr	"ਜੇਕਰ ਤੁਸੀਂ ਭਾਗ ਲੈਣ ਦੀ ਚੋਣ ਕੀਤੀ ਤਾਂ ਹਰੇਕ ਹਫ਼ਤੇ ਇਹ ਸਵੈ-ਚਾਲਤ ਭੇਜਣ ਸਕਰਿਪਟ ਚੱਲੇਗੀ ਅਤੇ "
+	"ਡੇਬੀਅਨ ਖੋਜੀਆਂ ਨੂੰ ਅੰਕੜੇ ਭੇਜੇਗੀ।"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid	"You can always change your mind after making this decision: \"dpkg-"
+	"reconfigure popularity-contest\""
+msgstr	"ਤੁਸੀਂ ਇਹ ਫੈਸਲਾ ਕਰਨ ਉਪਰੰਤ ਕਦੇ ਵੀ ਆਪਣਾ ਮਨ ਬਦਲ ਸਕਦੇ ਹੋ: \"dpkg-reconfigure "
+	"popularity-contest\""
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid	"Generating unique host identifier failed"
+msgstr	"ਵਿਲੱਖਣ ਮੇਜ਼ਬਾਨ ਪਛਾਣ ਬਣਾਉਣ ਦੌਰਾਨ ਗਲਤੀ"
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid	"The install script could not generate a unique host identifier. This "
+	"is a fatal error, as all hosts submitting information need to have "
+	"an unique identifier."
+msgstr	"ਇੰਸਟਾਲ ਸਕਰਿਪਟ ਇੱਕ ਵਿਲੱਖਣ ਮੇਜ਼ਬਾਨ ਪਛਾਣ ਨਹੀਂ ਬਣਾ ਸਕੀ ਹੈ। ਇਹ ਘਾਤਕ ਗਲਤੀ ਹੈ, "
+	"ਕਿਉਕਿ ਹਰੇਕ ਜਾਣਕਾਰੀ ਭੇਜਣ ਵਾਲੇ ਮੇਜ਼ਬਾਨ ਲਈ ਇੱਕ ਵਿਲੱਖਣ ਪਛਾਣ ਹੋਣੀ ਲਾਜ਼ਮੀ ਹੈ।"
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid	"Please report this problem as a bug against the popularity-contest "
+	"package, and include information about your configuration."
+msgstr	"ਕਿਰਪਾ ਕਰਕੇ ਇਹ ਸਮੱਸਿਆ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ popularity-contest ਪੈਕੇਜ ਲਈ ਇੱਕ ਬੱਗ ਦੇ ਰੂਪ "
+	"ਵਿੱਚ ਵੇਖਾਓ ਅਤੇ ਆਪਣੀ ਸੰਰਚਨਾ ਬਾਰੇ ਜਾਣਕਾਰੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ।"
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid	"Use HTTP to submit reports?"
+msgstr	"ਕੀ ਰਿਪੋਰਟ ਭੇਜਣ ਲਈ HTTP ਦੀ ਵਰਤੋਂ ਕਰਨੀ ਹੈ?"
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid	"If you do not want to use HTTP, email is used instead."
+msgstr	"ਜੇਕਰ ਤੁਸੀਂ HTTP ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਈ-ਪੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
