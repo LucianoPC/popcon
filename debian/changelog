@@ -32,6 +32,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
   [Christian Perrier]
   * Translations:
     - Added Punjabi translation by Amanpreet Singh Alam
+    - Updated Dutch translation by bart Cornelis
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
 
