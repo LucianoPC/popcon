@@ -14,6 +14,10 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     from Vagrant Cascadian. (Closes: #325030)
   * Added debian/compat to set debhelper compatibility level to 4, and
     remove debian/conffiles as it is no longer needed.
+  * Let popcon-submit.cgi pipe incoming reports through prepop.pl
+    instead of saving it directly to disk, to make sure the same
+    sanity checks are done for both HTTP and SMTP reports.  Thanks to
+    Bill Allombert for pointing out the risks of the old approach.
 
   [Bill Allombert]
   * Fix server-side scripts to use the Packages.gz files instead of the
