@@ -32,6 +32,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     - Updated Korean from Sunjae Park. (Closes: #343688)
     - Updated Greek from George Papamichelakis. (Closes: #344584)
     - Updated Catalan from Aleix Badia i Bosch. (Closes: #345228)
+    - Updated Turkish from Recai Oktas. (Closes: #347713)
 
   [Christian Perrier]
   * Translations:
