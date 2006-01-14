@@ -1,4 +1,4 @@
-popularity-contest (1.32) UNRELEASED; urgency=low
+popularity-contest (1.32) unstable; urgency=low
 
   [Petter Reinholdtsen]
   * Add variable mirrorbase to popanal.py, to make it easier to set up
@@ -39,7 +39,7 @@ popularity-contest (1.32) UNRELEASED; urgency=low
     - Added Punjabi translation by Amanpreet Singh Alam
     - Updated Dutch translation by bart Cornelis
 
- -- Petter Reinholdtsen <pere@debian.org>  Sun, 31 Jul 2005 21:42:57 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 14 Jan 2006 09:56:05 +0100
 
 popularity-contest (1.31) unstable; urgency=low
 
