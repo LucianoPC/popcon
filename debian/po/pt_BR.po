@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: popularity_contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-05-31 17:57-0300\n"
+"PO-Revision-Date: 2006-01-14 19:24-0200\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,28 +32,26 @@ msgstr "Participar do Concurso de Popularidade de Pacotes Debian ?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Você pode fazer com que seu sistema envie estatísticas sobre os pacotes mais "
-"usados para os desenvolvedores Debian via e-mail. Essa informação "
-"influenciará decisões como quais pacotes deverão ser incluídos no primeiro "
-"CD Debian."
+"Você pode fazer com que seu sistema forneça anonimamente aos "
+"desenvolvedores Debian estatísticas sobre seus pacotes Debian mais "
+"usados. Essa informação influencia em decisões como quais pacotes "
+"deverão ser incluídos no primeiro CD Debian."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
 "Caso você opte por participar, o script de envio automático será executado "
-"automaticamente uma vez por semana, enviando as estatísticas via e-mail para "
-"os desenvolvedores Debian."
+"automaticamente uma vez por semana, enviando as estatísticas para os "
+"desenvolvedores Debian."
 
 #. Type: boolean
 #. Description
@@ -97,13 +95,13 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "Utilizar HTTP para enviar os relatórios ?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Caso você não queira utilizar HTTP, e-mail será utilizado."
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "

@@ -1,3 +1,11 @@
+popularity-contest (1.33) unstable; urgency=low
+
+  [Mohammed Adnène Trojette]
+  * Translations:
+    - Updated Brazilian by André Luís Lopes. (Closes: #348107)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 15 Jan 2006 18:22:55 +0100
+
 popularity-contest (1.32) unstable; urgency=low
 
   [Petter Reinholdtsen]
