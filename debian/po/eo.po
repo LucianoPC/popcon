@@ -1,0 +1,80 @@
+# translation of eo.po to Esperanto
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"PO-Revision-Date: 2006-02-02 18:33+0100\n"
+"Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
+"Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "Ĉu vi volas partopreni en la populareca konkurso de Debianaj Pakoj ?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "You can have your system anonymously supply the Debian developers with statistics about your most used Debian packages.  This information influences decisions such as which packages should go on the first Debian CD."
+msgstr "Via sistemo povas anonime sciigi Debianajn administristojn pri statistikoj rilate uzantajn Debianajn pakojn. Tiuj informoj influas la elektojn de ĉeestantaj pakoj sur la unua Debiana lumdisko."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "If you choose to participate, the automatic submission script will run once every week, sending statistics to the Debian developers."
+msgstr "Se vi partoprenas, la aŭtomata submetata skripto estos ĉiu semajne plenumita por sendi statistikoj al Debiana administristoj."
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "You can always change your mind after making this decision: \"dpkg-reconfigure popularity-contest\""
+msgstr "Vi ĉiam povas ŝanĝi vian decidon per uzi la ordonon \"dpkg-reconfigure popularity-contest\"."
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "Generado de unika gasta identigilo fiaskis"
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "The install script could not generate a unique host identifier. This is a fatal error, as all hosts submitting information need to have an unique identifier."
+msgstr "La instala skripto ne povos generi unikan gastan identigilon. Tio estas malvenka ĉar ĉiuj gastoj, kiuj sendas informojn, bezonas unikan identigilon."
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Please report this problem as a bug against the popularity-contest package, and include information about your configuration."
+msgstr "Bonvolu sciigi ĉi tiun problemon per erara raporto pri \"popularity-contest\" pako. Enmetu en la raporto informojn pri via sistema agordo."
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "Use HTTP to submit reports?"
+msgstr "Uzu 'HTTP'-protokolon por submeti raportoj ?"
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "If you do not want to use HTTP, email is used instead."
+msgstr "Se vi ne volas uzi 'HTTP'-protokolon, anstataŭe uzu retmesaĝon."
+
