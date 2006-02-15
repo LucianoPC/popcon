@@ -1,3 +1,4 @@
+# translation of popularity-contest_debian_po_hu.po to Hungarian
 # Translators, if you are not familiar with the PO format, gettext
 # documentation is worth reading, especially sections dedicated to
 # this format, e.g. by running:
@@ -7,20 +8,22 @@
 # /usr/share/doc/po-debconf/README-trans
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
-# , fuzzy
-# 
-# 
+# , 2006.
+# Hajnalka Hegedus <heha@inf.elte.hu>, 2006.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest\n"
+"Project-Id-Version: popularity-contest_debian_po_hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2004-06-27 14:34+0200\n"
-"Last-Translator: VERÓK István <vi@fsf.hu>\n"
-"Language-Team: Hungarian <debian-l10n-hungarian@lists.debian.org>\n"
+"PO-Revision-Date: 2006-02-15 19:01+0100\n"
+"Last-Translator: Hajnalka Hegedus <heha@inf.elte.hu>\n"
+"Language-Team: Hungarian <Debian L10n Hungarian <debian-l10n-hungarian@lists.debian>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=2; plural>1;\n"
 
 #. Type: boolean
 #. Description
@@ -31,28 +34,24 @@ msgstr "Szolgáltat adatokat a Debian-csomagok népszerűségi nyilvántartásá
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
 msgstr ""
-"Névtelen elektronikus levélben statisztikákat közölhet a Debian-"
-"fejlesztőivel a leggyakrabban használt Debian-csomagokról. E statisztikák "
-"alapján szoktak dönteni (többek közt) az első Debian-CD-n szereplő programok "
-"listájáról."
+"Névtelenül statisztikákat közölhet a Debian fejlesztőivel a leggyakrabban "
+"használt Debian-csomagokról. E statisztikák alapján szoktak dönteni "
+"(többek közt) az első Debian-CD-n szereplő programok listájáról."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the Debian developers."
 msgstr ""
-"Ha az adatszolgáltatás mellett dönt, az adatok beküldését végző program "
-"automatikusan hetente lefut, és elektronikus levélben statisztikákat juttat "
-"el a Debian-fejlesztőkhöz."
+"Ha az adatszolgáltatás mellett dönt, az adatok beküldését végző program hetente"
+"automatikusan lefut és statisztikákat juttat el a Debian-fejlesztőkhöz."
 
 #. Type: boolean
 #. Description
@@ -96,30 +95,11 @@ msgstr ""
 #. Description
 #: ../templates:28
 msgid "Use HTTP to submit reports?"
-msgstr ""
+msgstr "HTTP-t használjak a jelentések küldéséhez?"
 
 #. Type: boolean
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr ""
+msgstr "Ha nem szeretne HTTP-t használni, a jelentések e-mailben kerülnek elküldésre."
 
-#~ msgid ""
-#~ "This information helps us make decisions such as which packages should go "
-#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
-#~ "so that the most popular packages are the ones which are installed "
-#~ "automatically for new users."
-#~ msgstr ""
-#~ "Ezekre az adatokra aztán a Debian-fejlesztők különféle döntéseket "
-#~ "alapozhatnak, pl. mely csomagok kerüljenek az első Debian-CD-re. A Debian "
-#~ "jövőbeli változatainak is előnyére válik, ha az új felhasználók számára "
-#~ "valóban a leghasznosabbnak bizonyuló csomagok települhetnek automatikusan "
-#~ "a gépeikre."
-
-#~ msgid ""
-#~ "(NOTE: e-mail servers add their own tracing information and your data "
-#~ "won't be completely anonymous while in transit.)"
-#~ msgstr ""
-#~ "(MEGJEGYZÉS: az elektronikus levelek továbbítását végző kiszolgálók "
-#~ "nyomkövetési információkat szoktak a levelekhez fűzni, a beküldött adat "
-#~ "tehát nem tekintendő teljes mértékben anonimnak.)"

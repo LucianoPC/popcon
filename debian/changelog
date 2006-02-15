@@ -5,6 +5,7 @@ popularity-contest (1.33) UNRELEASED; urgency=low
     - Updated Brazilian by André Luís Lopes. (Closes: #348107)
     - Updated Esperanto by Serge Leblanc. (Closes: #351085)
     - Updated Slovenian by Jure Cuhalev. (Closes: #351101)
+    - Updated Hungarian by Hajnalka Hegedus. (Closes: #353024)
 
   [Christian Perrier]
     - Added Macedonian by Georgi Stanojevski
