@@ -9,6 +9,8 @@ popularity-contest (1.33) UNRELEASED; urgency=low
 
   [Christian Perrier]
     - Added Macedonian by Georgi Stanojevski
+    - Rename the Punjabi translation file name from pa_IN to pa
+      to fit a decision taken in -i18n
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 15 Jan 2006 18:22:55 +0100
 
