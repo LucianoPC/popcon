@@ -38,19 +38,6 @@ A) Each popularity-contest host is identified by a random 128bit uuid
    especially with 2) above, especially for custom-build kernel packages.
    We are evaluating how far we can alleviate this problem.
    
-Q) My submissions bounce with 
-   550 [PERMFAIL] popcon.debian.org requires valid sender domain.
-
-A) when submitting using email, popularity-contest send the report as
-   root but the email address of the root user was not configured
-   properly.  With exim, you can add an entry for root in
-   /etc/email-addresses with a suitable address.
-
-   A better fix would be to change popcon.debian.org to not reject
-   emails with invalid sender domain in the first place, but it is out
-   of our reach for the time being.  A third possibility is to enable
-   HTTP submissions to bypass the restrictions of email.
-
 Q) /usr is mounted with 'noatime'.
 
 A) popularity-contest relies on atime to know what packages were used during
@@ -80,11 +67,12 @@ Make sure myuser account is properly configured to send email with a valid
 return address.
 
 Q) My system are unable to send email out to the Internet.  How can I
-participate.
+participate ?
 
-Since version 1.30 of popularity-contest, it is possible to use HTTP
+A) Since version 1.30 of popularity-contest, it is possible to use HTTP
 as the transport protocol.  This is the default for new installations,
 but need to be manually enabled for old installations.  To enable it,
 run this commmand as root:
 
   dpkg-reconfigure popularity-contest
+ 
