@@ -2,7 +2,7 @@
 
 Q) What information is reported by popularity-contest ?
 
-A) popularity-contest report the system architecture you use, the version of
+A) popularity-contest reports the system architecture you use, the version of
    popularity-contest you use and the list of packages installed on your
    system. For each package, popularity-contest looks at the most recently used
    (based on atime) files, and reports the filename, its last access time
