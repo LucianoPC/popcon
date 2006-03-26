@@ -43,4 +43,4 @@ cd ../popcon-stat
 find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl
 
 cd ../popcon-web
-$BINDIR/popcon.pl >$LOGDIR/popcon.log
+$BINDIR/popcon.pl >$LOGDIR/popcon.log 2>$LOGDIR/popcon.errors
