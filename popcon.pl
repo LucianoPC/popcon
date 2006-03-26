@@ -130,7 +130,7 @@ sub make_by
   my (%sum, $me);
   @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @list;
   $winner{"$sec/$order"}=$list[0];
-  open DAT , "| tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
+  open DAT , "|-:utf8", "tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
   if (defined($list_header{$sec}))
   {
     print DAT $list_header{$sec};
@@ -201,7 +201,7 @@ sub mark
 for $file ("slink","slink-nonUS","potato","potato-nonUS",
            "woody","woody-nonUS","sarge")
 {
-  open AVAIL, "< $file.sections" or die "Cannot open $file.sections";
+  open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
   while(<AVAIL>)
   {
 	  my ($p,$sec)=split(' ');
@@ -223,7 +223,7 @@ for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
 {
   /([^[:space:]]+)/ or die("incorrect package name");
   $file = $1;#Untaint
-  open AVAIL, "zcat $file|";
+  open AVAIL, "-|:utf8","zcat $file";
   while(<AVAIL>)
   {
 /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
@@ -249,7 +249,7 @@ mark "Reading current packages...";
 #<recent> is the number of people who upgraded this package recently;
 #<no-files> is the number of people whose entry didn't contain enough
 #        information (atime and ctime were 0).
-open PKG, "$results";
+open PKG, "<:utf8","$results";
 while(<PKG>)
 {
   my ($type,@values)=split(" ");
@@ -314,7 +314,7 @@ make ("source", \%sourcepkg, @sources);
 
 for $sec (@dists)
 {
-  open HTML , "> $popcon/$sec/index.html";
+  open HTML , ">:utf8", "$popcon/$sec/index.html";
   opendir SEC,"$popcon/$sec";
   &htmlheader;
   printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
@@ -338,7 +338,7 @@ for $sec (@dists)
 mark "Building by sub-sections pages";
 for $sec (@dists)
 {
-  open HTML , "> $popcon/$sec/first.html";
+  open HTML , ">:utf8", "$popcon/$sec/first.html";
   opendir SEC,"$popcon/$sec";
   &htmlheader;
   printf HTML ("<p>First package in section %-16s for fields: ",$sec);
@@ -375,7 +375,7 @@ for $sec (@dists)
 mark "Building winner pages";
 
 {
-	open HTML , "> $popcon/index.html";
+	open HTML , ">:utf8", "$popcon/index.html";
 	&htmlheader;
 	&popconintro;
 	printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>",$sec);
