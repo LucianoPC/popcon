@@ -7,6 +7,7 @@ popularity-contest (1.33) UNRELEASED; urgency=low
     - Updated Slovenian by Jure Cuhalev. (Closes: #351101)
     - Updated Hungarian by Hajnalka Hegedus. (Closes: #353024)
     - Updated Korean by Sunjae Park. (Closes: #339013)
+    - Updated Khmer by Khoem Sokhem. (Closes: #359672)
 
   [Christian Perrier]
     - Added Macedonian by Georgi Stanojevski
