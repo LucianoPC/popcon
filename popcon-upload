@@ -95,7 +95,11 @@ EOF
 
 #Get answer
 my($answer)="";
-$answer.=$_ while(<$remote>);
+while(<$remote>)
+{
+  $answer.=$_;
+  m/DEBIAN POPCON HTTP-POST OK/ and last;
+}
 close ($remote);
 #Check answer
 my $status = ($answer =~ m/DEBIAN POPCON HTTP-POST OK/) ? 0 : 1;

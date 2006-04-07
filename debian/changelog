@@ -1,4 +1,4 @@
-popularity-contest (1.33) UNRELEASED; urgency=low
+popularity-contest (1.33) unstable; urgency=low
 
   [Mohammed Adnène Trojette]
   * Translations:
@@ -25,8 +25,11 @@ popularity-contest (1.33) UNRELEASED; urgency=low
        (Closes: #321365). Thanks Nathan Stratton Treadway.
    * popcon.pl: switch I/O to UTF-8. As a side effect this fix the indenting
      (Closes: #333597). Thanks Gürkan Sengün.
+   * popcon-upload: parse server output for success as it is received instead
+     of waiting for the socket to close which might happen after the timeout,
+     thuse reporting spurious failure. (Closes: #350934). Thanks Javier Kohen.
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 26 Mar 2006 16:16:12 +0200
+ -- Bill Allombert <ballombe@debian.org>  Fri,  7 Apr 2006 15:37:00 +0200
 
 popularity-contest (1.32) unstable; urgency=low
 
