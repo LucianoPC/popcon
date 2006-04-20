@@ -1,8 +1,8 @@
 popularity-contest (1.34) UNRELEASED; urgency=low
 
-  * nothing so far.
+  * popcon.pl: add support for favicon.
 
- -- Bill Allombert <ballombe@debian.org>  Tue, 11 Apr 2006 19:43:21 +0200
+ -- Bill Allombert <ballombe@debian.org>  Thu, 20 Apr 2006 22:19:09 +0200
 
 popularity-contest (1.33) unstable; urgency=low
 

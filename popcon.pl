@@ -14,6 +14,7 @@ sub htmlheader
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
       <title> Debian Popularity Contest </title>
         <link rev="made" href="mailto:ballombe\@debian.org">
+        <link rel="shortcut icon" href="/favicon.ico">
         </head>
         <body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#800080" alink="#FF0000">
         <div align="center">
