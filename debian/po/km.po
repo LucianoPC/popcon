@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest_debian_po_km\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2006-03-27 16:40+0700\n"
+"PO-Revision-Date: 2006-04-21 09:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgid ""
 "You can have your system anonymously supply the Debian developers with "
 "statistics about your most used Debian packages.  This information "
 "influences decisions such as which packages should go on the first Debian CD."
-msgstr "អ្នក​អាច​ឲ្យ​ប្រព័ន្ធ​របស់​អ្នក​អនុវត្ត​ដោយ​អនាមិក​ទៅ​អ្នក​អភិវឌ្ឍន៍​ដេបៀន​​ជាមួយ​នឹង​ស្ថិតិ​អំពី​កញ្ចប់​ដេបៀន​ដែល​បាន​ប្រើ​ញឹកញាប់​បំផុត​របស់​អ្នក ។  ព័ត៌មាន​នេះ​ប៉ះពាល់​ដល់​ការ​សម្រេច​ចិត្ត​ ដូច​ជា​ថាតើ​កញ្ចប់​មួយ​​ណា​គួ​ដាក់​ក្នុង​ស៊ីឌី​ដេបៀន​ទី​ ១ ។ "
+msgstr "អ្នក​អាច​ឲ្យ​ប្រព័ន្ធ​របស់​អ្នក​អនុវត្ត​ដោយ​អនាមិក​ទៅ​អ្នក​អភិវឌ្ឍន៍​ដេបៀន​​ជាមួយ​នឹង​ស្ថិតិ​អំពី​កញ្ចប់​ដេបៀន​ដែល​បាន​ប្រើ​ញឹកញាប់​បំផុត​របស់​អ្នក ។ ព័ត៌មាន​នេះ​ប៉ះពាល់​ដល់​ការ​សម្រេច​ចិត្ត​ ដូច​ជា​ថាតើ​កញ្ចប់​មួយ​​ណា​គួ​ដាក់​ក្នុង​ស៊ីឌី​ដេបៀន​ទី​ ១ ។"
 
 #. Type: boolean
 #. Description
@@ -54,7 +54,7 @@ msgstr ""
 #. Description
 #: ../templates:17
 msgid "Generating unique host identifier failed"
-msgstr "ការ​បង្កើត​គ្រឿង​សម្គាល់​ម៉ាស៊ីន​​តែ​មួយ ​បាន​បរាជ័យ"
+msgstr "ការ​បង្កើត​គ្រឿង​សម្គាល់​ម៉ាស៊ីន​​តែ​មួយ​​បាន​បរាជ័យ"
 
 #. Type: note
 #. Description
