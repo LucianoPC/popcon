@@ -4,8 +4,10 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   * popcon.pl: add support for favicon.
 
   [Petter Reinholdtsen]
-  * Change popcon-submit.cgi to only report success when it is able to extract
+  * Changed popcon-submit.cgi to only report success when it is able to extract
     the submitter ID from the report.
+  * Changed prepop.pl to only fail if mkdir fails when the directory is
+    missing in the first place.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)

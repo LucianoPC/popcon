@@ -38,6 +38,9 @@ while(<>)
        $mtime=int $1; #untaint $mtime;
        $mtime=$now if ($mtime > $now);
        my $dir=substr($id,0,2);
+       unless (-d "$dirname/$dir") {
+         mkdir("$dirname/$dir",0755) or do {$state='reject';next;};
+       };
        $file="$dirname/$dir/$id"; 
        open REPORT, ">",$file or do {$state='reject';next;};
        print REPORT $_;
