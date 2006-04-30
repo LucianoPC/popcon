@@ -89,7 +89,8 @@ EOF
         print POPCON @entry;
 	close POPCON;
     }
-
+}
+if ($id) {
     print "Thanks for your submission to Debian Popularity-Contest!\n";
     print "DEBIAN POPCON HTTP-POST OK\n";
 } else {

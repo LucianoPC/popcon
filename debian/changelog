@@ -3,6 +3,10 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   [ Bill Allombert ]
   * popcon.pl: add support for favicon.
 
+  [Petter Reinholdtsen]
+  * Change popcon-submit.cgi to only report success when it is able to extract
+    the submitter ID from the report.
+
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
 
