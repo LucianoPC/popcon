@@ -11,6 +11,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
+    - Updated Norwegian Nynorsk by Håvard Korsvoll. (Closes: #367248)
 
  -- Christian Perrier <bubulle@debian.org>  Fri, 21 Apr 2006 07:42:09 +0200
 
