@@ -1,0 +1,83 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: popularity-contest_debian_po\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"PO-Revision-Date: 2006-05-23 14:07+0530\n"
+"Last-Translator: Dorji Tashi <dorjee_doss@hotmil.com>\n"
+"Language-Team: Dzongkha <pegyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: Bhutan\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "Participate in the Debian Package Popularity Contest?"
+msgstr "ཌེ་བི་ཡཱན་ཐུམ་སྒྲིལ་ཡོངས་གྲགས་ཆན་གྱི་་འགྲན་སྡུར་ནང་ལུ་ བཅའ་མར་གཏོགས་ནི་ཨིན་ན?"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "You can have your system anonymously supply the Debian developers with statistics about your most used Debian packages.  This information influences decisions such as which packages should go on the first Debian CD."
+msgstr "ཁྱོད་ཀྱིས་ ཁྱོད་རའི་རིམ་ལུགས་དེ་ མིང་མེད་ཐོག་ལས་འཐོབ་ཚུགས། ཌེ་བི་ཡཱན་བཟོ་མི་ཚུ་ ཁྱོད་ཀྱིས་ལག་ལེན་མང་ཤོས་འཐབ་ཡོད་མི་ཌེ་བི་ཡཱན་ཐུམ་སྒྲིལ་་གྱི་སྐོར་གྱི་ ཚད་རྩིས་དང་གཅིག་ཁར་བཀྲམ་སྤེལ་འབད། བརྡ་དོན་འདི་གིས་ ཐུམ་སྒྲིལ་ག་དེ་ ཌེ་བི་ཡཱན་སི་ཌི་དང་པའི་གུར་འགྱོ་ནི་ཨིན་ན་ ལ་སོགས་པ་བཟུམ་གྱི་ གྲོས་ཆོད་ཚུ་ལུ་རྒྱུད་བསྐུལ་འབདཝ་ཨིན།"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "If you choose to participate, the automatic submission script will run once every week, sending statistics to the Debian developers."
+msgstr "ཁྱོད་ཀྱིས་གདམ་བཅའ་མར་གཏོགས་ནི་ནང་ལུ་གདམ་ཁ་རྐྱབ་པ་ཅིན་ རང་བཞིན་གྱིས་ཞུ་འབུལ་ཡིག་ཚུགས་དེ་གིས་ ཌེ་བི་ཡཱན་བཟོ་མི་ཚུ་ནང་ལུ་ཚད་རྩིས་གཏང་སྟེ་ བདུན་ཕྲག་རེ་ནང་ཚར་རེ་ གཡོག་བཀོལ་འོང་།"
+
+#. Type: boolean
+#. Description
+#: ../templates:4
+msgid "You can always change your mind after making this decision: \"dpkg-reconfigure popularity-contest\""
+msgstr "གྲོས་ཆོད་འདི་བཟོ་ཚར་བའི་ཤུལ་ལས་ ཁྱོད་ཀྱིས་ཨ་རྟག་རང་ཁྱོད་རའི་སེམས་དེ་བསྒྱུར་བཅོས་འབད་ཚུགས:\"dpkg-reconfigure popularity-contest\""
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Generating unique host identifier failed"
+msgstr "མཐུན་མོངས་མ་ཡིན་པའི་ཧོསཊི་ངོས་འཛིན་པ་བཟོ་སྟོན་འབད་ནི་དེ་ འཐུས་ཤོར་འབྱུང་ཡོདཔ།"
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "The install script could not generate a unique host identifier. This is a fatal error, as all hosts submitting information need to have an unique identifier."
+msgstr "གཞི་བཙུགས་ཡིག་ཚུགས་དེ་གིས་ མཐུན་མོངས་མ་ཡིན་པའི་ཧོསཊི་ངོས་འཛིན་པ་ཅིག་ བཟོ་སྟོན་འབད་མ་ཚུགས། བརྡ་དོན་ཕུལ་མི་ཧོས་ཊི་ཚུ་་ཆ་མཉམ་ལུ་ མཐུན་མོང་མ་ཡིན་པའི་ངོས་འཛིན་པ་དགོཔ་ཡོདཔ་ལས་ འ་ནི་འདི་འཛོལ་བ་འཚུབ་ཅེན་ཨིན། "
+
+#. Type: note
+#. Description
+#: ../templates:17
+msgid "Please report this problem as a bug against the popularity-contest package, and include information about your configuration."
+msgstr "ཡོངས་གྲགས་ཅན་གྱི་-འགྲན་སྡུར་ཐུམ་སྒྲིལ་ལུ་ དཀའ་ངལ་འདི་རྐྱེན་སྦེ་སྙན་ཞུ་འབད་གནང་བཞིནམ་ལས་ དེ་ལས་ ཁྱོད་རའི་རིམ་སྒྲིག་གི་སྐོར་ལས་བརྡ་དོན་གྲངས་སུ་བཙུགས།"
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "Use HTTP to submit reports?"
+msgstr "སྙན་ཞུ་ཚུ་ཕུལ་ནིའི་དོན་ལུ་ ཨེཆ་ཊི་ཊི་པི་དེ་ལག་ལེན་འཐབ་ནི་ཨིན་ན?"
+
+#. Type: boolean
+#. Description
+#: ../templates:28
+msgid "If you do not want to use HTTP, email is used instead."
+msgstr "ཁྱོད་ཀྱིས་ཨེཆ་ཊི་ཊི་པི་དེ་ལག་ལེན་འཐབ་དགོ་མ་མནོ་བ་ཅིན་ དེ་གི་ཚབ་ལུ་གློག་འཕྲིན་ལག་ལེན་འཐབ་ཨིན།"
+

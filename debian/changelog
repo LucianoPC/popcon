@@ -12,6 +12,9 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
     - Updated Norwegian Nynorsk by Håvard Korsvoll. (Closes: #367248)
+    - Added Nepali by Paras Pradhan. (Closes: #369529)
+    - Added Dzongkha by Pema geyleg. (Closes: #368591)
+    - Added Thai by Theppitak Karoonboonyanan. (Closes: #367338)
 
  -- Christian Perrier <bubulle@debian.org>  Fri, 21 Apr 2006 07:42:09 +0200
 
