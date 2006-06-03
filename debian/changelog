@@ -15,6 +15,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Added Nepali by Paras Pradhan. (Closes: #369529)
     - Added Dzongkha by Pema geyleg. (Closes: #368591)
     - Added Thai by Theppitak Karoonboonyanan. (Closes: #367338)
+    - Updated Italian (typos) by Davide Viti. (Closes: #370010)
 
  -- Christian Perrier <bubulle@debian.org>  Fri, 21 Apr 2006 07:42:09 +0200
 
