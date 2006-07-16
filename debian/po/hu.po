@@ -16,52 +16,38 @@ msgstr ""
 "Project-Id-Version: popularity-contest_debian_po_hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2006-02-15 19:01+0100\n"
-"Last-Translator: Hajnalka Hegedus <heha@inf.elte.hu>\n"
+"PO-Revision-Date: 2006-07-15 20:18+0100\n"
+"Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <Debian L10n Hungarian <debian-l10n-hungarian@lists.debian>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=2; plural>1;\n"
+"Plural-Forms: nplurals=2; plural>1;\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Szolgáltat adatokat a Debian-csomagok népszerűségi nyilvántartásának?"
+msgstr "Szolgáltatsz adatokat a Debian csomagok népszerűségi nyilvántartásának?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"You can have your system anonymously supply the Debian developers with "
-"statistics about your most used Debian packages.  This information "
-"influences decisions such as which packages should go on the first Debian CD."
-msgstr ""
-"Névtelenül statisztikákat közölhet a Debian fejlesztőivel a leggyakrabban "
-"használt Debian-csomagokról. E statisztikák alapján szoktak dönteni "
-"(többek közt) az első Debian-CD-n szereplő programok listájáról."
+msgid "You can have your system anonymously supply the Debian developers with statistics about your most used Debian packages.  This information influences decisions such as which packages should go on the first Debian CD."
+msgstr "Névtelenül statisztikákat közölhetsz a Debian fejlesztőivel a leggyakrabban használt Debian csomagokról. E statisztikák alapján szoktak dönteni (többek közt) az első Debian-CD-n szereplő programok listájáról."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"If you choose to participate, the automatic submission script will run once "
-"every week, sending statistics to the Debian developers."
-msgstr ""
-"Ha az adatszolgáltatás mellett dönt, az adatok beküldését végző program hetente"
-"automatikusan lefut és statisztikákat juttat el a Debian-fejlesztőkhöz."
+msgid "If you choose to participate, the automatic submission script will run once every week, sending statistics to the Debian developers."
+msgstr "Ha az adatszolgáltatás mellett döntesz, az adatok beküldését végző program hetente lefut és statisztikákat juttat el a Debian fejlesztőkhöz."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
-msgstr ""
-"A későbbiekben bármikor felülbírálhatja a részvételről hozott döntését a "
-"\"dpkg-reconfigure popularity-contest\" paranccsal."
+msgid "You can always change your mind after making this decision: \"dpkg-reconfigure popularity-contest\""
+msgstr "Később bármikor felülbírálható a részvételről hozott döntés a \"dpkg-reconfigure popularity-contest\" paranccsal."
 
 #. Type: note
 #. Description
@@ -72,24 +58,14 @@ msgstr "Egyedi gazdagép-azonosító előállítása nem sikerült"
 #. Type: note
 #. Description
 #: ../templates:17
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
-"A telepítő nem tudott egy egyedi gazdagép-azonosítót előállítani. Ez "
-"megkerülhetetlen hiba, hiszen az adatszolgáltatásban résztvevő minden gépet "
-"külön azonosítónak kell jelölnie."
+msgid "The install script could not generate a unique host identifier. This is a fatal error, as all hosts submitting information need to have an unique identifier."
+msgstr "A telepítő nem tudott egy egyedi gazdagép-azonosítót előállítani. Ez megkerülhetetlen hiba, hiszen az adatszolgáltatásban résztvevő minden gépet külön azonosítónak kell jelölnie."
 
 #. Type: note
 #. Description
 #: ../templates:17
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
-"Kérjük, jelentse be a popularity-contest csomag e hibáját, és a "
-"hibajelentésben írja le az érintett gép jellemzőit is."
+msgid "Please report this problem as a bug against the popularity-contest package, and include information about your configuration."
+msgstr "Kérlek, jelentsd be a popularity-contest csomag e hibáját, és a hibajelentésben írd le az érintett gép jellemzőit is."
 
 #. Type: boolean
 #. Description
@@ -101,5 +77,5 @@ msgstr "HTTP-t használjak a jelentések küldéséhez?"
 #. Description
 #: ../templates:28
 msgid "If you do not want to use HTTP, email is used instead."
-msgstr "Ha nem szeretne HTTP-t használni, a jelentések e-mailben kerülnek elküldésre."
+msgstr "Ha nem kívánsz HTTP-t használni, a jelentések e-mailben kerülnek elküldésre."
 
