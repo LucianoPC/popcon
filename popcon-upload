@@ -83,15 +83,13 @@ $form .= "$ORS";
 my $formlen = length($form);
 
 #Send data
-print $remote <<"EOF";
-POST $submiturl HTTP/1.1
-User-Agent: popcon-upload
-Host: $host
-content-type: multipart/form-data; boundary=$boundary
-content-length: $formlen
-
-$form
-EOF
+print $remote "POST $submiturl HTTP/1.1\r\n";
+print $remote "User-Agent: popcon-upload\r\n";
+print $remote "Host: $host\r\n";
+print $remote "Content-Type: multipart/form-data; boundary=$boundary\r\n";
+print $remote "Content-Length: $formlen\r\n";
+print $remote "\r\n";
+print $remote "$form";
 
 #Get answer
 my($answer)="";
