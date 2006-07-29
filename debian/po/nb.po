@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"POT-Creation-Date: 2006-07-29 12:23+0200\n"
 "PO-Revision-Date: 2004-07-10 19:22GMT+2\n"
 "Last-Translator: Petter Reinholdtsen <pere@hungry.com>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -28,16 +28,19 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "Participate in the Debian Package Popularity Contest?"
+#, fuzzy
+msgid "Participate in the package usage survey?"
 msgstr "Vil du delta i avstemmingen om populære Debian-pakker?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously supply the Debian developers with "
-"statistics about your most used Debian packages.  This information "
-"influences decisions such as which packages should go on the first Debian CD."
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
 msgstr ""
 "Du kan gjøre slik at systemet ditt sender anonym informasjon til Debian-"
 "utviklerne med statistikk om dine mest brukte Debian-pakkker. Disse "
@@ -47,9 +50,11 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, sending statistics to the Debian developers."
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Hvis du velger å delta, så vil et skript kjøres en gang i uka, som "
 "automatisk sender inn statistikk til Debian-utviklerne."
@@ -57,48 +62,34 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
 msgstr ""
 "Du kan alltid ombestemme deg senere: «dpkg reconfigure popularity-contest»"
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid "Generating unique host identifier failed"
-msgstr "Det lyktes ikke å lage en unik verts-identifikasjon"
+#~ msgid "Generating unique host identifier failed"
+#~ msgstr "Det lyktes ikke å lage en unik verts-identifikasjon"
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
-"Installasjonsskriptet klarte ikke å lage en entydig identifikasjon for denne "
-"verten. Dette er en fatal feil, fordi alle vertsmaskiner som sender inn "
-"informasjon må ha en entydig identifikasjon."
+#~ msgid ""
+#~ "The install script could not generate a unique host identifier. This is a "
+#~ "fatal error, as all hosts submitting information need to have an unique "
+#~ "identifier."
+#~ msgstr ""
+#~ "Installasjonsskriptet klarte ikke å lage en entydig identifikasjon for "
+#~ "denne verten. Dette er en fatal feil, fordi alle vertsmaskiner som sender "
+#~ "inn informasjon må ha en entydig identifikasjon."
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
-"Vennligst meld inn dette problemet som feil i pakka popularity-contest, og "
-"legg ved informasjon om oppsettet."
+#~ msgid ""
+#~ "Please report this problem as a bug against the popularity-contest "
+#~ "package, and include information about your configuration."
+#~ msgstr ""
+#~ "Vennligst meld inn dette problemet som feil i pakka popularity-contest, "
+#~ "og legg ved informasjon om oppsettet."
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "Use HTTP to submit reports?"
-msgstr "Send inn rapporter ved hjelp av HTTP?"
+#~ msgid "Use HTTP to submit reports?"
+#~ msgstr "Send inn rapporter ved hjelp av HTTP?"
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "If you do not want to use HTTP, email is used instead."
-msgstr "Hvis du ikke ønsker å bruke HTTP, så vil e-post bli brukt i stedet."
+#~ msgid "If you do not want to use HTTP, email is used instead."
+#~ msgstr "Hvis du ikke ønsker å bruke HTTP, så vil e-post bli brukt i stedet."

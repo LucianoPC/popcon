@@ -43,8 +43,8 @@ msgid ""
 msgstr ""
 "Se si sceglie di partecipare, lo script di invio verrà eseguito "
 "automaticamente una volta alla settimana, spedendo le statistiche agli "
-"sviluppatori Debian. Le statistiche possono essere consultate su on "
-"http://popcon.debian.org/."
+"sviluppatori Debian. Le statistiche possono essere consultate su on http://"
+"popcon.debian.org/."
 
 #. Type: boolean
 #. Description

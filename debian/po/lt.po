@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 08:46+0200\n"
+"POT-Creation-Date: 2006-07-29 12:23+0200\n"
 "PO-Revision-Date: 2005-07-07 10:42+0300\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -29,16 +29,19 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "Participate in the Debian Package Popularity Contest?"
+#, fuzzy
+msgid "Participate in the package usage survey?"
 msgstr "Dalyvauti Debian paketų populiarumo konkurse?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously supply the Debian developers with "
-"statistics about your most used Debian packages.  This information "
-"influences decisions such as which packages should go on the first Debian CD."
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
 msgstr ""
 "Galite leisti el. paštu anonimiškai siųsti Debian kūrėjams jūsų sistemoje "
 "naudojamų Debian paketų statistinius duomenis.  Ši informacija padeda "
@@ -48,9 +51,11 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, sending statistics to the Debian developers."
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Jei nuspręsite dalyvauti, siuntimo programa bus paleidžiama ir siųs "
 "statistinius duomenis Debian kūrėjams vieną kartą per savaitę."
@@ -58,49 +63,36 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
 msgstr ""
 "Savo sprendimą dėl dalyvavimo galite pakeisti bet kada, pasinaudoję komanda "
 "\"dpkg-reconfigure popularity-contest\""
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid "Generating unique host identifier failed"
-msgstr "Nepavyko sugeneruoti unikalaus kompiuterio identifikatoriaus"
+#~ msgid "Generating unique host identifier failed"
+#~ msgstr "Nepavyko sugeneruoti unikalaus kompiuterio identifikatoriaus"
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
-"Instaliavimo programai nepavyko sugeneruoti unikalaus kompiuterio "
-"identifikatoriaus. Tai esminė klaida, nes kiekvienas kompiuteris, "
-"siunčiantis informaciją, privalo turėti identifikatorių."
+#~ msgid ""
+#~ "The install script could not generate a unique host identifier. This is a "
+#~ "fatal error, as all hosts submitting information need to have an unique "
+#~ "identifier."
+#~ msgstr ""
+#~ "Instaliavimo programai nepavyko sugeneruoti unikalaus kompiuterio "
+#~ "identifikatoriaus. Tai esminė klaida, nes kiekvienas kompiuteris, "
+#~ "siunčiantis informaciją, privalo turėti identifikatorių."
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
-"Praneškite apie šią problemą, išsiųsdami rikto aprašymą paketui popularity-"
-"contest (nepamirškite pridėti techninės informacijos apie savo kompiuterį)."
+#~ msgid ""
+#~ "Please report this problem as a bug against the popularity-contest "
+#~ "package, and include information about your configuration."
+#~ msgstr ""
+#~ "Praneškite apie šią problemą, išsiųsdami rikto aprašymą paketui "
+#~ "popularity-contest (nepamirškite pridėti techninės informacijos apie savo "
+#~ "kompiuterį)."
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "Use HTTP to submit reports?"
-msgstr "Naudoti HTTP duomenų siuntimui?"
+#~ msgid "Use HTTP to submit reports?"
+#~ msgstr "Naudoti HTTP duomenų siuntimui?"
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "If you do not want to use HTTP, email is used instead."
-msgstr "Jei nenorite naudoti HTTP, bus naudojamas el. paštas."
+#~ msgid "If you do not want to use HTTP, email is used instead."
+#~ msgstr "Jei nenorite naudoti HTTP, bus naudojamas el. paštas."

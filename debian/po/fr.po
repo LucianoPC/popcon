@@ -29,8 +29,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the package usage survey?"
-msgstr ""
-"Souhaitez-vous participer à l'enquête sur l'utilisation des paquets ?"
+msgstr "Souhaitez-vous participer à l'enquête sur l'utilisation des paquets ?"
 
 #. Type: boolean
 #. Description
@@ -41,10 +40,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Le système peut envoyer anonymement des courriers aux responsables "
-"de la distribution, avec des statistiques sur les paquets les plus "
-"utilisés. Cette information influence le choix des paquets qui sont placés "
-"sur le premier cédérom de la distribution."
+"Le système peut envoyer anonymement des courriers aux responsables de la "
+"distribution, avec des statistiques sur les paquets les plus utilisés. Cette "
+"information influence le choix des paquets qui sont placés sur le premier "
+"cédérom de la distribution."
 
 #. Type: boolean
 #. Description
@@ -55,9 +54,9 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Si vous choisissez de participer, le script d'envoi automatique sera exécuté "
-"chaque semaine et enverra par courriel les statistiques aux responsables "
-"de la distribution. Les statistiques collectées sont consultables sur "
-"http://popcon.debian.org/."
+"chaque semaine et enverra par courriel les statistiques aux responsables de "
+"la distribution. Les statistiques collectées sont consultables sur http://"
+"popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -66,8 +65,8 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Le choix suivant pourra être modifié par la suite en utilisant la "
-"commande « dpkg-reconfigure popularity-contest »."
+"Le choix suivant pourra être modifié par la suite en utilisant la commande "
+"« dpkg-reconfigure popularity-contest »."
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "Échec de la génération d'un identifiant unique d'hôte"

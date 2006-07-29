@@ -31,7 +31,12 @@ msgid ""
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr "Maaring ipadala ng anonima ng inyong sistema sa mga debeloper ng inyong pamudmod ng mga estadistika tungkol sa mga pakete na madalas gamitin sa sistemang ito. Ang mga impormasyong nakakalap sa paraang ito ay nakakaimpluwensya sa pagdesisyon kung ano ang mga paketeng isinasama sa unang CD ng pamudmod."
+msgstr ""
+"Maaring ipadala ng anonima ng inyong sistema sa mga debeloper ng inyong "
+"pamudmod ng mga estadistika tungkol sa mga pakete na madalas gamitin sa "
+"sistemang ito. Ang mga impormasyong nakakalap sa paraang ito ay "
+"nakakaimpluwensya sa pagdesisyon kung ano ang mga paketeng isinasama sa "
+"unang CD ng pamudmod."
 
 #. Type: boolean
 #. Description
@@ -40,7 +45,11 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
-msgstr "Kung pipiliin niyong makilahok, ang awtomatikong script sa pagpasa ay tatakbo minsan sa isang linggo, at magpapadala ng estadistika sa mga debeloper ng pamudmod. Ang natipon na estadistika ay maaaring makita sa http://popcon.debian.org/."
+msgstr ""
+"Kung pipiliin niyong makilahok, ang awtomatikong script sa pagpasa ay "
+"tatakbo minsan sa isang linggo, at magpapadala ng estadistika sa mga "
+"debeloper ng pamudmod. Ang natipon na estadistika ay maaaring makita sa "
+"http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -48,7 +57,9 @@ msgstr "Kung pipiliin niyong makilahok, ang awtomatikong script sa pagpasa ay ta
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
-msgstr "Maaaring baguhin ang pinili ninyo sa pagpapatakbo ng:  \"dpkg-reconfigure popularity-contest\""
+msgstr ""
+"Maaaring baguhin ang pinili ninyo sa pagpapatakbo ng:  \"dpkg-reconfigure "
+"popularity-contest\""
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "Ang paggawang ng nag-iisang pagkakakilanlan sa host ay nabigo."

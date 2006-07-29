@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 03:31-0600\n"
+"POT-Creation-Date: 2006-07-29 12:23+0200\n"
 "PO-Revision-Date: 2005-07-10 17:52+0930\n"
 "Last-Translator: Phan Vinh Thinh <teppi@vnoss.org>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -18,7 +18,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "Participate in the Debian Package Popularity Contest?"
+#, fuzzy
+msgid "Participate in the package usage survey?"
 msgstr ""
 "Tham gia vào Cuộc thi phổ biến gói Debian (Debian Package Popularity "
 "Contest) không?"
@@ -26,10 +27,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can have your system anonymously supply the Debian developers with "
-"statistics about your most used Debian packages.  This information "
-"influences decisions such as which packages should go on the first Debian CD."
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
 msgstr ""
 "Có thể gửi thư điện tử giấu tên cho các nhà phát triển Debian thống kê về "
 "những gói chương trình Debian thường dùng.  Thông tin này giúp giải quyết "
@@ -38,9 +41,11 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, sending statistics to the Debian developers."
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Nếu quyết định tham gia, một tập lệnh đệ trình sẽ tự động chạy hàng tuần, để "
 "gửi thống kê tới các nhà phát triển Debian."
@@ -48,48 +53,34 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
+#, fuzzy
 msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
 msgstr ""
 "Luôn luôn có thể thay đổi ý muốn sau này bằng: \"dpkg-reconfigure popularity-"
 "contest\""
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid "Generating unique host identifier failed"
-msgstr "Tạo tên duy nhất cho máy không thành công"
+#~ msgid "Generating unique host identifier failed"
+#~ msgstr "Tạo tên duy nhất cho máy không thành công"
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
-"Tập lệnh cài đặt không tạo được tên duy nhất cho máy. Đây là một lỗi nặng, "
-"vì mỗi máy gửi thông tin phải có một tên duy nhất như vậy."
+#~ msgid ""
+#~ "The install script could not generate a unique host identifier. This is a "
+#~ "fatal error, as all hosts submitting information need to have an unique "
+#~ "identifier."
+#~ msgstr ""
+#~ "Tập lệnh cài đặt không tạo được tên duy nhất cho máy. Đây là một lỗi "
+#~ "nặng, vì mỗi máy gửi thông tin phải có một tên duy nhất như vậy."
 
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
-"Xin hãy báo cáo vấn đề này như một lỗi bug đến cho Gói Popularity Contest, "
-"cùng với thông tin về cấu hình."
+#~ msgid ""
+#~ "Please report this problem as a bug against the popularity-contest "
+#~ "package, and include information about your configuration."
+#~ msgstr ""
+#~ "Xin hãy báo cáo vấn đề này như một lỗi bug đến cho Gói Popularity "
+#~ "Contest, cùng với thông tin về cấu hình."
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "Use HTTP to submit reports?"
-msgstr "Dùng HTTP để đệ trình thông báo không?"
+#~ msgid "Use HTTP to submit reports?"
+#~ msgstr "Dùng HTTP để đệ trình thông báo không?"
 
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "If you do not want to use HTTP, email is used instead."
-msgstr "Nếu bạn không muốn dùng HTTP thì sẽ dùng thư điện tử thay vào đó."
+#~ msgid "If you do not want to use HTTP, email is used instead."
+#~ msgstr "Nếu bạn không muốn dùng HTTP thì sẽ dùng thư điện tử thay vào đó."
