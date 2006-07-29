@@ -32,7 +32,9 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   * Update standards-version from 3.6.2 to 3.7.2.  No changes needed.
   * Add Build-Depends with the same dependencies as
     Build-Depends-Indep, to keep lintian happy.
-  * Updated Italian by Davide Viti.
+  * Translations
+    - Updated Italian (it) by Davide Viti.
+    - Updated Tagalog (tl) by Eric Pareja.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
