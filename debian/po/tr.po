@@ -1,7 +1,7 @@
 # Turkish translation of popularity-contest.
 # This file is distributed under the same license as the popularity-contest package.
-# Özgür Murat Homurlu <ozgurmurat@gmx.net>, 2004.
-# Recai Oktaş <roktas@debian.org>, 2006
+# Ã–zgÃ¼r Murat Homurlu <ozgurmurat@gmx.net>, 2004.
+# Recai OktaÃ¾ <roktas@debian.org>, 2006
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
 "PO-Revision-Date: 2006-07-29 14:02+0300\n"
-"Last-Translator: Recai Oktaş <roktas@debian.org>\n"
+"Last-Translator: Recai OktaÃ¾ <roktas@debian.org>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the package usage survey?"
-msgstr "Paket kullanım anketine katılmak ister miydiniz?"
+msgstr "Paket kullanÃ½m anketine katÃ½lmak ister miydiniz?"
 
 #. Type: boolean
 #. Description
@@ -32,10 +32,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Bu sistemde en çok kullanılan paketler hakkındaki istatistiksel bilgiler isimsiz "
-"(anonim) şekilde dağıtım geliştiricilerine iletilebilir. Bu bilgiler, dağıtımın "
-"birinci CD'si içinde olması gereken paketlerin belirlenmesi gibi bazı kararlar "
-"üzerinde etkili olacaktır."
+"Bu sistemde en Ã§ok kullanÃ½lan paketler hakkÃ½ndaki istatistiksel bilgiler isimsiz "
+"(anonim) Ã¾ekilde daÃ°Ã½tÃ½m geliÃ¾tiricilerine iletilebilir. Bu bilgiler, daÃ°Ã½tÃ½mÃ½n "
+"birinci CD'si iÃ§inde olmasÃ½ gereken paketlerin belirlenmesi gibi bazÃ½ kararlar "
+"Ã¼zerinde etkili olacaktÃ½r."
 
 #. Type: boolean
 #. Description
@@ -45,9 +45,9 @@ msgid ""
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Katılmak isterseniz otomatik gönderim betiği haftada bir kez çalışacak ve toplanan "
-"istatistikleri dağıtım geliştiricilerine gönderecektir. Bu istatistiklere "
-"http://popcon.debian.org/ adresinden erişilebilir."
+"KatÃ½lmak isterseniz otomatik gÃ¶nderim betiÃ°i haftada bir kez Ã§alÃ½Ã¾acak ve toplanan "
+"istatistikleri daÃ°Ã½tÃ½m geliÃ¾tiricilerine gÃ¶nderecektir. Bu istatistiklere "
+"http://popcon.debian.org/ adresinden eriÃ¾ilebilir."
 
 #. Type: boolean
 #. Description
@@ -56,5 +56,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Burada yapılan seçim, \"dpkg-reconfigure popularity-contest\" komutu çalıştırılarak "
-"daha sonra değiştirilebilir."
+"Burada yapÃ½lan seÃ§im, \"dpkg-reconfigure popularity-contest\" komutu Ã§alÃ½Ã¾tÃ½rÃ½larak "
+"daha sonra deÃ°iÃ¾tirilebilir."

@@ -48,9 +48,12 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   [ Mohammed Adnène Trojette ]
   * Translations:
     - Updated French.
+    - Updated Korean by Sunjae Park. (Closes: #380362)
+    - Updated Thai by Theppitak Karoonboonyanan. (Closes: #380358)
     - Updated Turkish by Recai Oktaþ. (Closes: #380334)
+    - Updated Vietnamese by Clytie Siddall. (Closes: #380359)
 
- -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 29 Jul 2006 15:50:52 +0200
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 29 Jul 2006 18:04:11 +0200
 
 popularity-contest (1.33) unstable; urgency=low
 
