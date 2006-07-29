@@ -25,7 +25,7 @@ msgstr ""
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -42,8 +42,8 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"ระบบของคุณอาจให้ข้อมูลสถิติแบบนิรนามกับนักพัฒนาดิสทริบิวชัน "
-"เกี่ยวกับแพกเกจที่คุณใช้มากที่สุดได้ ข้อมูลดังกล่าวจะมีผลต่อการตัดสินใจบางอย่าง เช่น "
+"ระบบของคุณอาจให้ข้อมูลสถิติแบบนิรนามกับนักพัฒนาดิสทริบิวชัน เกี่ยวกับแพกเกจที่คุณใช้มากที่สุดได้ "
+"ข้อมูลดังกล่าวจะมีผลต่อการตัดสินใจบางอย่าง เช่น "
 "การคัดเลือกแพกเกจที่จะเข้าไปอยู่ในซีดีแผ่นแรกของดิสทริบิวชัน เป็นต้น"
 
 #. Type: boolean
@@ -55,8 +55,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "ถ้าคุณเลือกที่จะเข้าร่วม สคริปต์ส่งข้อมูลอัตโนมัติจะทำงานสัปดาห์ละครั้ง "
-"โดยส่งข้อมูลสถิติไปยังนักพัฒนาดิสทริบิวชัน ซึ่งข้อมูลสถิติที่รวบรวมไว้ทั้งหมดสามารถดูได้ที่ "
-"http://popcon.debian.org/"
+"โดยส่งข้อมูลสถิติไปยังนักพัฒนาดิสทริบิวชัน ซึ่งข้อมูลสถิติที่รวบรวมไว้ทั้งหมดสามารถดูได้ที่ http://"
+"popcon.debian.org/"
 
 #. Type: boolean
 #. Description

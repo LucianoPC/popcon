@@ -29,9 +29,9 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"가장 많이 사용되는 꾸러미에 관한 통계를 익명으로 배포판 개발자들에게 "
-"보낼 수 있습니다.  이 정보는 첫번째 배포판 CD에 어떤 꾸러미를 넣을 것인가와 "
-"같은 결정을 하는 데 이용됩니다."
+"가장 많이 사용되는 꾸러미에 관한 통계를 익명으로 배포판 개발자들에게 보낼 수 "
+"있습니다.  이 정보는 첫번째 배포판 CD에 어떤 꾸러미를 넣을 것인가와 같은 결정"
+"을 하는 데 이용됩니다."
 
 #. Type: boolean
 #. Description
@@ -52,8 +52,8 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"이 결정은 다음 명령을 실행함으로써 언제든지 변경할 수 있습니다: "
-"\"dpkg-reconfigure popularity-contest\""
+"이 결정은 다음 명령을 실행함으로써 언제든지 변경할 수 있습니다: \"dpkg-"
+"reconfigure popularity-contest\""
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "호스트 고유 ID를 만드는 데 실패했습니다"
