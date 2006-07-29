@@ -27,6 +27,8 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     debian specific and avoid indication that only Debian packages are
     reported (also non-Debian packages are reported).  Based on patch
     from Ubuntu.
+  * Adjust the popularity-contest(8) manual page to only say 'submit',
+    instead of 'email', to avoid confusing users. (Closes: #341144)
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
