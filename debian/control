@@ -13,14 +13,14 @@ Recommends: cron, exim4 | mail-transport-agent, mime-construct
 Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
- When you install this package, it sets up a cron job that will
- anonymously submit statistics about your most used packages
- periodically to the distribution developers.
+ The popularity-contest package sets up a cron job that will
+ periodically anonymously submit, to the distribution developers,
+ statistics about the most used packages on this system.
  .
- This information helps us make decisions such as which packages should go
- on the first Debian CD.  Also, we can improve future versions of Debian
- so that the most popular packages are the ones which are installed
- automatically for new users.
+ This information helps making decisions such as which packages should
+ go on the first CD.  Also, it helps improving can improve future
+ versions of the distribution so that the most popular packages are
+ the ones which are installed automatically for new users.
  .
  Homepage: http://popcon.debian.org
 

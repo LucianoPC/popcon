@@ -1,9 +1,9 @@
 Template: popularity-contest/participate
 Type: boolean
 Default: false
-_Description: Participate in the Debian package usage survey?
- You can have your system anonymously supply the distribution
- developers with statistics about your most used packages.  This
+_Description: Participate in the package usage survey?
+ The system may anonymously supply the distribution developers with
+ statistics about the most used packages on this system.  This
  information influences decisions such as which packages should go on
  the first distribution CD.
  .
@@ -11,5 +11,5 @@ _Description: Participate in the Debian package usage survey?
  run once every week, sending statistics to the distribution developers.
  The collected statistics can be viewed on http://popcon.debian.org/.
  .
- You can always change your mind after making this decision:
- "dpkg-reconfigure popularity-contest"
+ This choice can be later modified by running "dpkg-reconfigure
+ popularity-contest".
