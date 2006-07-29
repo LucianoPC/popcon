@@ -42,7 +42,12 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Updated Italian (typos) by Davide Viti. (Closes: #370010)
     - Updated Hungarian by SZERVAC Attila. (Closes: #378371)
 
- -- Christian Perrier <bubulle@debian.org>  Fri, 21 Apr 2006 07:42:09 +0200
+  [ Mohammed Adnène Trojette ]
+  * Translations:
+    - Updated French.
+    - Updated Turkish by Recai Oktaþ. (Closes: #380334)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 29 Jul 2006 15:50:52 +0200
 
 popularity-contest (1.33) unstable; urgency=low
 

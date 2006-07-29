@@ -1,15 +1,15 @@
 # Turkish translation of popularity-contest.
 # This file is distributed under the same license as the popularity-contest package.
-# ÃzgÃ¼r Murat Homurlu <ozgurmurat@gmx.net>, 2004.
-# Recai OktaÅ <roktas@debian.org>, 2006
+# �zg�r Murat Homurlu <ozgurmurat@gmx.net>, 2004.
+# Recai Okta� <roktas@debian.org>, 2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-04 08:46+0200\n"
-"PO-Revision-Date: 2006-01-12 10:54+0200\n"
-"Last-Translator: Recai OktaÅ <roktas@debian.org>\n"
+"POT-Creation-Date: 2006-07-29 12:23+0200\n"
+"PO-Revision-Date: 2006-07-29 14:02+0300\n"
+"Last-Translator: Recai Okta� <roktas@debian.org>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,79 +20,41 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "Participate in the Debian Package Popularity Contest?"
-msgstr "Debian PopÃ¼ler Paketler YarÄ±ÅmasÄ±'nda yer almak ister misiniz?"
+msgid "Participate in the package usage survey?"
+msgstr "Paket kullan�m anketine kat�lmak ister miydiniz?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
-"You can have your system anonymously supply the Debian developers with "
-"statistics about your most used Debian packages.  This information "
-"influences decisions such as which packages should go on the first Debian CD."
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
 msgstr ""
-"Sisteminizin, en Ã§ok kullandÄ±ÄÄ±nÄ±z Debian paketleri hakkÄ±nda Debian "
-"geliÅtiricilerine isimsiz bir e-posta gÃ¶ndermesini saÄlayabilirsiniz.  Bu "
-"bilgi, birinci Debian CD'si iÃ§inde olmasÄ± gereken paketler gibi bazÄ± "
-"kararlarÄ± etkileyecektir."
+"Bu sistemde en �ok kullan�lan paketler hakk�ndaki istatistiksel bilgiler isimsiz "
+"(anonim) �ekilde da��t�m geli�tiricilerine iletilebilir. Bu bilgiler, da��t�m�n "
+"birinci CD'si i�inde olmas� gereken paketlerin belirlenmesi gibi baz� kararlar "
+"�zerinde etkili olacakt�r."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
-"every week, sending statistics to the Debian developers."
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"KatÄ±lmak isterseniz otomatik gÃ¶nderim betiÄi haftada bir kez Ã§alÄ±Åacak ve "
-"istatistikleri Debian geliÅtiricilerine e-posta ile gÃ¶nderecektir."
+"Kat�lmak isterseniz otomatik g�nderim beti�i haftada bir kez �al��acak ve toplanan "
+"istatistikleri da��t�m geli�tiricilerine g�nderecektir. Bu istatistiklere "
+"http://popcon.debian.org/ adresinden eri�ilebilir."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
 msgid ""
-"You can always change your mind after making this decision: \"dpkg-"
-"reconfigure popularity-contest\""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
 msgstr ""
-"Bu kararÄ± verdikten sonra tercihinizi Åu komutla istediÄiniz zaman "
-"deÄiÅtirebilirsiniz: \"dpkg-reconfigure popularity-contest\""
-
-#. Type: note
-#. Description
-#: ../templates:17
-msgid "Generating unique host identifier failed"
-msgstr "Makineyi tanÄ±mlayan benzersiz bir tanÄ±tÄ±cÄ± Ã¼retilemedi"
-
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"The install script could not generate a unique host identifier. This is a "
-"fatal error, as all hosts submitting information need to have an unique "
-"identifier."
-msgstr ""
-"Kurulum betiÄi benzersiz bir makine tanÄ±tÄ±cÄ±sÄ± Ã¼retemedi.  Bilgi gÃ¶nderen "
-"tÃ¼m makinelerin farklÄ± bir tanÄ±tÄ±cÄ±ya sahip olmasÄ± gerektiÄinden bu Ã¶lÃ¼mcÃ¼l "
-"bir hata."
-
-#. Type: note
-#. Description
-#: ../templates:17
-msgid ""
-"Please report this problem as a bug against the popularity-contest package, "
-"and include information about your configuration."
-msgstr ""
-"LÃ¼tfen bu hatayÄ± popularity-contest paketine iliÅkin bir hata olarak "
-"yapÄ±landÄ±rma bilgileriyle birlikte raporlayÄ±n."
-
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "Use HTTP to submit reports?"
-msgstr "RaporlarÄ± gÃ¶ndermek iÃ§in HTTP kullanÄ±lsÄ±n mÄ±?"
-
-#. Type: boolean
-#. Description
-#: ../templates:28
-msgid "If you do not want to use HTTP, email is used instead."
-msgstr "HTTP'nin kullanÄ±lmasÄ±nÄ± istemiyorsanÄ±z onun yerine e-posta "
-"kullanÄ±lacaktÄ±r."
+"Burada yap�lan se�im, \"dpkg-reconfigure popularity-contest\" komutu �al��t�r�larak "
+"daha sonra de�i�tirilebilir."
