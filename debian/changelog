@@ -23,6 +23,10 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     installations, and existing installations will continue to only
     use SMTP.  This removes the unclear question. (Closes: #317527)
   * Remove unused template popularity-contest/hostid-failed.
+  * Change package description and question text to make it less
+    debian specific and avoid indication that only Debian packages are
+    reported (also non-Debian packages are reported).  Based on patch
+    from Ubuntu.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)

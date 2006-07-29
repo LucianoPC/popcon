@@ -2,12 +2,13 @@ Template: popularity-contest/participate
 Type: boolean
 Default: false
 _Description: Participate in the Debian package usage survey?
- You can have your system anonymously supply the Debian developers with
- statistics about your most used Debian packages.  This information influences
- decisions such as which packages should go on the first Debian CD.
+ You can have your system anonymously supply the distribution
+ developers with statistics about your most used packages.  This
+ information influences decisions such as which packages should go on
+ the first distribution CD.
  .
  If you choose to participate, the automatic submission script will
- run once every week, sending statistics to the Debian developers.
+ run once every week, sending statistics to the distribution developers.
  The collected statistics can be viewed on http://popcon.debian.org/.
  .
  You can always change your mind after making this decision:

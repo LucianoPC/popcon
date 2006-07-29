@@ -14,8 +14,8 @@ Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
  When you install this package, it sets up a cron job that will
- anonymously submit statistics about your most used Debian packages
- periodically to the Debian developers.
+ anonymously submit statistics about your most used packages
+ periodically to the distribution developers.
  .
  This information helps us make decisions such as which packages should go
  on the first Debian CD.  Also, we can improve future versions of Debian
