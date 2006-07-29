@@ -22,6 +22,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     method is and should be the primary submit method for new
     installations, and existing installations will continue to only
     use SMTP.  This removes the unclear question. (Closes: #317527)
+  * Remove unused template popularity-contest/hostid-failed.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)

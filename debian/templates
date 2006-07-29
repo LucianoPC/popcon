@@ -12,13 +12,3 @@ _Description: Participate in the Debian package usage survey?
  .
  You can always change your mind after making this decision:
  "dpkg-reconfigure popularity-contest"
-
-Template: popularity-contest/hostid-failed
-Type: note
-_Description: Generating unique host identifier failed
- The install script could not generate a unique host identifier.
- This is a fatal error, as all hosts submitting information need to have
- an unique identifier.
- .
- Please report this problem as a bug against the popularity-contest
- package, and include information about your configuration.
