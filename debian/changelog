@@ -29,6 +29,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     from Ubuntu and input from Christian Perrier.
   * Adjust the popularity-contest(8) manual page to only say 'submit',
     instead of 'email', to avoid confusing users. (Closes: #341144)
+  * Update standards-version from 3.6.2 to 3.7.2.  No changes needed.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
