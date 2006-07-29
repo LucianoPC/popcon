@@ -22,9 +22,3 @@ _Description: Generating unique host identifier failed
  .
  Please report this problem as a bug against the popularity-contest
  package, and include information about your configuration.
-
-Template: popularity-contest/use-http
-Type: boolean
-Default: true
-_Description: Use HTTP to submit reports?
- If you do not want to use HTTP, email is used instead.
