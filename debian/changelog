@@ -16,6 +16,8 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   * Clarify participation question, to make it easier to understand
     for those that do not know what the popularity contest
     is.  Based on patch from Thijs Kinkhorst.  (Closes: #361840)
+  * Change the default HTTP submission setting, from no to yes.  It is
+    well tested and work fine.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
