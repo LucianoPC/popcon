@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2005-07-06 19:20+0200\n"
+"PO-Revision-Date: 2006-07-30 09:01+0200\n"
 "Last-Translator: Peter Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -26,68 +26,41 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Pripojiť sa k súťaži o najpopulárnejšie balíky?"
+msgstr "Pripojiť sa k prehľadu najpoužívanejších balíkov?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Môžete nechať systém, aby anonymne poskytol vývojárom Debianu štatistiku o "
-"najviac používaných Debian balíkoch na vašom systéme. Táto informácia pomôže "
-"v rozhodovaní, ktoré balíky by mali byť na prvom Debian CD."
+"Môžete nechať systém, aby anonymne poskytol vývojárom distribúcie štatistiku "
+"o najviac používaných balíkoch na vašom systéme. Táto informácia pomôže "
+"v rozhodovaní, ktoré balíky by mali byť na prvom distribučnom CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Ak sa zúčastníte tejto súťaže, raz týždenne sa spustí automatický skript, "
-"ktorý odošle štatistiku vývojárom Debianu."
+"Ak sa zúčastníte tohto prehľadu, raz týždenne sa spustí automatický skript, "
+"ktorý odošle štatistiku vývojárom distribúcie. Prehľad štatistických údajov "
+"si môžete pozrieť na http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu: \"dpkg-"
-"reconfigure popularity-contest\""
+"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu "
+"\"dpkg-reconfigure popularity-contest\"."
 
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "Zlyhalo vytvorenie jednoznačnej identifikácie počítača"
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "Inštalačný skript nemohol vytvoriť jednoznačný identifikátor počítača. "
-#~ "Toto je závažná chyba, pretože každý počítač zasielajúci tieto údaje musí "
-#~ "mať jednoznačnú identifikáciu."
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "Nahláste to, prosím, ako chybu balíka popularity-contest a uveďte údaje o "
-#~ "svojej konfigurácii."
-
-#~ msgid "Use HTTP to submit reports?"
-#~ msgstr "Použiť HTTP na odosielanie reportov?"
-
-#~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr "Ak nechcete použiť HTTP, použije sa e-mail."

@@ -1,3 +1,4 @@
+# translation of popularity-contest_ru.po to Russian
 # translation of popularity-contest-debconf_ru.po to Russian
 # translation of popularity-contest-debconf_ru.po to Русский язык
 #
@@ -13,15 +14,15 @@
 #
 #    Developers do not need to manually edit POT or PO files.
 # Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
-# Yuri Kozlov <yuray@id.ru>, 2004, 2005.
+# Yuri Kozlov <kozlov.y@gmail.com>, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest-debconf_ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2005-07-08 19:34+0400\n"
-"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
+"PO-Revision-Date: 2006-07-30 10:20+0300\n"
+"Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,71 +34,42 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr ""
-"Хотите ли вы предоставлять информацию для учёта популярности пакетов Debian?"
+msgstr "Участвовать в опросе популярности пакетов?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Ваша система может отправлять разработчикам Debian анонимные электронные "
-"сообщения с информацией о наиболее часто используемых вами пакетах Debian. "
-"Эта информация повлияет на то, какие пакеты попадут на первый Debian CD."
+"Система может отправлять разработчикам дистрибутива анонимные электронные "
+"сообщения с информацией о наиболее часто используемых вами пакетах "
+"в системе. Эта информация повлияет на то, какие пакеты попадут "
+"на первый CD диск дистрибутива."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Если у вы примете участие, автоматический скрипт будет еженедельно "
-"отправлять статистику разработчикам Debian."
+"Если у вы примете участие, автоматический сценарий будет еженедельно "
+"отправлять статистику разработчикам дистрибутива. Собранную статистику "
+"можно посмотреть на http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
 "Вы всегда можете изменить своё решение, выполнив команду: \"dpkg-reconfigure "
-"popularity-contest\""
+"popularity-contest\"."
 
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "Не удалось создать уникальный номер компьютера"
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "Сценарию установки не удалось создать уникальный номер компьютера. Это "
-#~ "неисправимая ошибка, так как любому компьютеру, отсылающему информацию, "
-#~ "требуется уникальный номер."
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "Сообщите об этой ошибке как об ошибке в пакете popularity-contest и не "
-#~ "забудьте описать настройки вашей системы."
-
-#~ msgid "Use HTTP to submit reports?"
-#~ msgstr "Использовать HTTP протокол для отправки статистики?"
-
-#~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr ""
-#~ "Если вы не хотите использовать HTTP, будет использован метод отправки по "
-#~ "электронной почте."
