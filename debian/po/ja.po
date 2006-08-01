@@ -16,78 +16,42 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2005-07-08 18:43+0900\n"
+"PO-Revision-Date: 2006-07-30 22:18+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Debian ¥Ñ¥Ã¥±¡¼¥¸¿Íµ¤¥³¥ó¥Æ¥¹¥È¤Ë»²²Ã¤·¤Ş¤¹¤«?"
+msgstr "Debian ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åˆ©ç”¨èª¿æŸ»ã«å‚åŠ ã—ã¾ã™ã‹?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr ""
-"¤¢¤Ê¤¿¤¬ºÇ¤âÍøÍÑ¤·¤¿ Debian ¥Ñ¥Ã¥±¡¼¥¸¤Ë¤Ä¤¤¤Æ¤ÎÅı·×¤ò Debian ³«È¯¼Ô¤ËÆ¿Ì¾¤Ç"
-"Äó¶¡¤¹¤ë¤è¤¦¥·¥¹¥Æ¥à¤òÀßÄê¤Ç¤­¤Ş¤¹¡£¤³¤Î¾ğÊó¤Ï»ä¤¿¤Á¤¬ 1 ÈÖÌÜ¤Î Debian CD ¤Ë"
-"Æş¤ì¤ë¤Ù¤­¥Ñ¥Ã¥±¡¼¥¸¤Ç¤¢¤ë¤«¤É¤¦¤«¤ò·èÄê¤¹¤ë¤Î¤ËÌòÎ©¤Á¤Ş¤¹¡£"
+msgstr "ã“ã®ã‚·ã‚¹ãƒ†ãƒ ã§ã‚ãªãŸãŒæœ€ã‚‚åˆ©ç”¨ã—ãŸãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã«ã¤ã„ã¦ã®çµ±è¨ˆã‚’ãƒ‡ã‚£ã‚¹ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³é–‹ç™ºè€…ã«åŒ¿åã§æä¾›ã™ã‚‹ã‚ˆã†ã‚·ã‚¹ãƒ†ãƒ ã‚’è¨­å®šã§ãã¾ã™ã€‚ã“ã®æƒ…å ±ã¯ç§ãŸã¡ãŒ 1 ç•ªç›®ã®é…å¸ƒ CD ã«å…¥ã‚Œã‚‹ã¹ããƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã§ã‚ã‚‹ã‹ã©ã†ã‹ãªã©ã‚’æ±ºå®šã™ã‚‹éš›ã«å½¹ç«‹ã¡ã¾ã™ã€‚"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
-msgstr ""
-"»²²Ã¤¹¤ë¤³¤È¤òÁª¤Ö¤È¡¢¼«Æ°Äó½Ğ¥¹¥¯¥ê¥×¥È¤¬Ëè½µ 1 ²ó¼«Æ°Åª¤Ë¼Â¹Ô¤µ¤ì¡¢Debian "
-"³«È¯¼Ô¤ËÅı·×¤¬Á÷¤é¤ì¤Ş¤¹¡£"
+msgstr "å‚åŠ ã™ã‚‹ã“ã¨ã‚’é¸ã¶ã¨ã€è‡ªå‹•æå‡ºã‚¹ã‚¯ãƒªãƒ—ãƒˆãŒæ¯é€± 1 å›è‡ªå‹•çš„ã«å®Ÿè¡Œã•ã‚Œã€ãƒ‡ã‚£ã‚¹ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³é–‹ç™ºè€…ã«çµ±è¨ˆãŒé€ã‚‰ã‚Œã¾ã™ã€‚åé›†ã•ã‚ŒãŸçµ±è¨ˆã¯ã€http://popcon.debian.org/ ã§è¦‹ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
-msgstr ""
-"¤³¤Î·èÄê¤Ï¡¢¤¢¤È¤Ç¤¤¤Ä¤Ç¤âÊÑ¹¹¤Ç¤­¤Ş¤¹: \"dpkg-reconfigure popularity-contest"
-"\""
-
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "¸ÇÍ­¤Î¥Û¥¹¥È¼±ÊÌ»Ò¤òÀ¸À®¤¹¤ë¤Î¤Ë¼ºÇÔ¤·¤Ş¤·¤¿"
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "¥¤¥ó¥¹¥È¡¼¥ë¥¹¥¯¥ê¥×¥È¤Ï¸ÇÍ­¤Î¥Û¥¹¥È¼±ÊÌ»Ò¤òÀ¸À®¤¹¤ë¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·"
-#~ "¤¿¡£¾ğÊó¤òÁ÷¤ë¤¹¤Ù¤Æ¤Î¥Û¥¹¥È¤Ï¸ÇÍ­¤Î¼±ÊÌ»Ò¤ò»ı¤¿¤Ê¤±¤ì¤Ğ¤Ê¤é¤Ê¤¤¤¿¤á¡¢¤³¤ì"
-#~ "¤Ï¿¼¹ï¤Ê¥¨¥é¡¼¤Ç¤¹¡£"
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "¤¢¤Ê¤¿¤ÎÀßÄê¤Ë¤Ä¤¤¤Æ¤Î¾ğÊó¤òÅº¤¨¤Æ¡¢popularity-contest ¥Ñ¥Ã¥±¡¼¥¸¤Ø¤Î¥Ğ¥°"
-#~ "¤È¤·¤Æ¤³¤ÎÌäÂê¤òÊó¹ğ¤·¤Æ¤¯¤À¤µ¤¤¡£"
-
-#~ msgid "Use HTTP to submit reports?"
-#~ msgstr "Êó¹ğ¤ÎÁ÷½Ğ¤Ë HTTP ¤ò»È¤¤¤Ş¤¹¤«?"
-
-#~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr "HTTP ¤ò»È¤¤¤¿¤¯¤Ê¤¤¤È¤­¤Ë¤Ï¡¢ÅÅ»Ò¥á¡¼¥ë¤¬Âå¤ï¤ê¤Ë»È¤ï¤ì¤Ş¤¹¡£"
+msgstr "ã“ã®æ±ºå®šã¯ã€ã‚ã¨ã§ã„ã¤ã§ã‚‚ \"dpkg-reconfigure popularity-contest\" ã‚’å®Ÿè¡Œã—ã¦å¤‰æ›´ã§ãã¾ã™ã€‚"
