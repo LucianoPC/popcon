@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2006-02-02 18:33+0100\n"
+"PO-Revision-Date: 2006-07-31 17:19+0200\n"
 "Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +27,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Ĉu vi volas partopreni en la populareca konkurso de Debianaj Pakoj ?"
+msgstr "Ĉu vi volas partopreni en la populareca enketo de Debianaj pakoj?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
@@ -42,30 +40,29 @@ msgid ""
 "distribution CD."
 msgstr ""
 "Via sistemo povas anonime sciigi Debianajn administristojn pri statistikoj "
-"rilate uzantajn Debianajn pakojn. Tiuj informoj influas la elektojn de "
-"ĉeestantaj pakoj sur la unua Debiana lumdisko."
+"rilate la plej uzitaj Debianaj pakoj. Tiuj informoj influas la elektojn de "
+"ĉeestontaj pakoj sur la unua Debiana lumdisko."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Se vi partoprenas, la aŭtomata submetata skripto estos ĉiu semajne plenumita "
-"por sendi statistikoj al Debiana administristoj."
+"por sendi statistikoj al Debianaj administristoj. Statistikoj estas videblaj "
+"tie: 'http://popcon.debian.org/'."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Vi ĉiam povas ŝanĝi vian decidon per uzi la ordonon \"dpkg-reconfigure "
+"Vi ĉiam povas ŝanĝi vian decidon per la ordonon \"dpkg-reconfigure "
 "popularity-contest\"."
 
 #~ msgid "Generating unique host identifier failed"

@@ -35,6 +35,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   * Translations
     - Updated Italian (it) by Davide Viti.
     - Updated Tagalog (tl) by Eric Pareja.
+    - Updated Esperanto (eo) by Serge Leblanc.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
