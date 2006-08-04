@@ -32,7 +32,7 @@ msgstr ""
 #: ../templates:4
 msgid "Participate in the package usage survey?"
 msgstr ""
-"Souhaitez-vous participer à l'étude statistiques sur l'utilisation des "
+"Souhaitez-vous participer à l'étude statistique sur l'utilisation des "
 "paquets ?"
 
 #. Type: boolean
