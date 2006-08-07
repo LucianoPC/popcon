@@ -46,6 +46,8 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Added Thai by Theppitak Karoonboonyanan. (Closes: #367338)
     - Updated Italian (typos) by Davide Viti. (Closes: #370010)
     - Updated Hungarian by SZERVAC Attila. (Closes: #378371)
+    - Updated Basque by Piarres Beobide. (Closes: #381845)
+    - Updated Slovenian by Jure Cuhalev. (Closes: #381862)
 
   [ Mohammed Adnène Trojette ]
   * Translations:
@@ -67,7 +69,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Updated Turkish by Recai Oktaþ. (Closes: #380334)
     - Updated Vietnamese by Clytie Siddall. (Closes: #380359)
 
- -- Dennis Stampfer <seppy@debian.org>  Thu,  3 Aug 2006 15:29:32 +0200
+ -- Christian Perrier <bubulle@debian.org>  Mon,  7 Aug 2006 08:48:07 -0500
 
 popularity-contest (1.33) unstable; urgency=low
 

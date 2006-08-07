@@ -1,16 +1,16 @@
 # translation of sl.po to Slovenian
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
-#    Developers do not need to manually edit POT or PO files.
+# 
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+# Developers do not need to manually edit POT or PO files.
 # Jure Cuhalev <gandalf@owca.info>, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
@@ -29,46 +29,43 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Želite sodelovati v Debianovem tekmovanju popularnosti paketov?"
+msgstr "Želite sodelovati v anketi o popularnosti paketov?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Vaš sistem lahko anonimno oskrbuje Debian razvijalce s statistikami o vaših "
-"najbolj uporabljanih Debian paketih. Ta informacija vpliva na odločitev "
-"kateri paketi so vključeni na prvem Debian CD-ju."
+"Vaš sistem lahko anonimno oskrbuje razvijalce distribucije s statistikami o "
+"vaših najbolj uporabljanih paketih. Ta informacija vpliva na odločitev "
+"kateri paketi so vključeni na prvem CD-ju distribucije."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Če se odločite sodelovati, bo skripta samodejno vsak teden poslala "
-"statistike Debian razvijalcem."
+"Če se odločite sodelovati, bo skripta vsak teden samodejno poslala "
+"statistike razvijalcem distribucije. Zbrana statistika je na ogled na http://"
+"popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Če si premislite lahko vedno spremenite vašo odločitev s: \"dpkg-reconfigure "
-"popularity-contest\""
+"Vašo odločitev lahko vedno spremenite s: \"dpkg-reconfigure popularity-"
+"contest\"."
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "Ustvarjanje enoznačnega identifikatorja računalnika ni uspelo"
