@@ -1,5 +1,4 @@
-# translation of popularity-contest_debian_po.po to Nepali
-# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2006.
+# translation of popularity-contest_debian_po.po to Arabic
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian_po\n"
@@ -17,67 +16,41 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "डेवियन प्याकेज प्रसिद्धि प्रतिस्पर्धामा सहभागी हुनुहुन्छ ?"
+msgstr "प्याकेज उपयोग सर्वेक्षणमा भाग लिनुहुन्छ ?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"तपाईँको धेरै प्रयोग हुने डेवियन प्याकेजहरुको बारेमा तथ्याङ्कहरू संगै डेवियन विकासकर्तालाई "
-"तपाईँको प्रणालीले वेनामी आपूर्ति गर्न सक्छ । यो सूचनाले कुन प्याकेजहरू पहिलो डेवियन सी डी "
-"मा जाने भन्ने निर्णयहरुमा प्रभाव पार्दछ । "
+"प्रणालीले यस प्रणालीमा सबैभन्दा बढी प्रयोग हुने प्याकेजहरूको तथ्याङ्कहरू "
+"वितरण विकासकर्ताहरूलाई अज्ञात रूपमा पठाउन सक्छ "
+"यो सुचनाले कुन कुन प्याकेजहरू पहिलो वितरण सी डी मा " 
+" जानुपर्छ भन्ने कुरा निर्णय गर्न प्रोत्साहित गर्दछ ।"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"यदि तपाईँ सहभागी हुन रोज्नु भयो भने, डेवियन विकासकर्ताहरुलाई तथ्याङ्कहरू पठाएर स्वचालित "
-"अधिनता स्क्रिप्ट प्रत्येक हप्ता एक चोटी चल्नेछ । "
+"यदि तपाईँले भाग लिनका लागि रोज्नुभयो भने, वितरण विकासकर्ताहरूलाई तथ्याङ्क पठाउँदै "
+"स्वाचालित दाखिला स्क्रिप्ट हरेक हप्तामा एक पटक चल्छ।"
+"तथ्याङ्क http://popcon.debian.org/ मा हेर्न सकिन्छ ।"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"तपाईँ यो निर्णय बनाइसके पछि सधै आफ्नो दिमाग परिवर्तन गर्न सक्नुहुन्छ: \"dpkg-"
-"reconfigure popularity-contest\""
-
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "अनुपम होस्ट परिचयकर्ताको सिर्जना असफल भयो "
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "स्थापना भएको स्क्रिप्टले अनुपम होस्ट परिचयकर्ता सिर्जना गर्न सक्दैन । यो सबै होस्टहरुले "
-#~ "अनुपम परिचयकर्ता प्राप्त गर्न सूचना पेश गरे जस्तै घातक त्रुटि हो । "
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "कृपया यो समस्यालाई प्रसिद्धि प्रतिस्पर्धी प्याकेजको विरुद्धमा बगको रुपमा रिपोर्ट "
-#~ "गर्नुहोस्, र तपाईँको कनफिगरेसनको बारेमा सूचना समावेश गर्नुहोस् ।"
-
-#~ msgid "Use HTTP to submit reports?"
-#~ msgstr "प्रतिवेदनहरू दाखिला गर्न HTTP प्रयोग गर्नुहुन्छ ?"
-
-#~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr "यदि तपाईँ HTTP प्रयोग गर्न चाहनुहुन्न भने, सट्टामा इमेल प्रयोग हुन्छ । "
+" यो रोजाइ \"dpkg-reconfigure popularity-contest\" "
+"चलाएर पछि परिमार्जन गर्न सकिन्छ ।"
