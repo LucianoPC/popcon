@@ -48,6 +48,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Updated Hungarian by SZERVAC Attila. (Closes: #378371)
     - Updated Basque by Piarres Beobide. (Closes: #381845)
     - Updated Slovenian by Jure Cuhalev. (Closes: #381862)
+    - Updated Dutch by Thijs Kinkhorst. (Closes: #381931)
 
   [ Mohammed Adnène Trojette ]
   * Translations:
