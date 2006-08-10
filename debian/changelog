@@ -54,6 +54,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
   * Translations:
     - Updated Arabic by Ossama Khayat.
     - Updated Czech by Miroslav Kure. (Closes: #380436)
+    - Updated Dzongkha by Dorji Tashi. (Closes: #368591)
     - Updated Finnish by Tapio Lehtonen. (Closes: #380445)
     - Updated French by Florentin Duneau.
     - Updated Japanese by Kenshi Muto. (Closes: #380475)
