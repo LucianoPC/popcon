@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2005-07-06 17:29+0200\n"
+"PO-Revision-Date: 2006-07-31 09:47+0200\n"
 "Last-Translator: Jacobo Tarrío <jtarrio@debian.org>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -16,47 +16,44 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "¿Participar no Concurso de Popularidade dos Paquetes Debian?"
+msgstr "¿Participar na enquisa de utilización dos paquetes?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Pode facer que o seu sistema envíe aos desenvolvedores de Debian "
-"estatísticas anónimas sobre os paquetes Debian que máis usa. Esta "
-"información inflúe en decisións tales coma os paquetes que van no primeiro "
-"CD de Debian."
+"O sistema pódelle fornecer aos desenvolvedores da distribución estatísticas "
+"sobre os paquetes máis utilizados neste sistema. Esta información ten "
+"influencia sobre decisións coma que paquetes van no primeiro CD da "
+"distribución."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Se quere participar, o programa de envío automático ha funcionar unha vez "
-"por semana, enviándolle estatísticas aos desenvolvedores de Debian."
+"por semana, enviándolle estatísticas aos desenvolvedores da distribución. As "
+"estatísticas colleitadas pódense ver en http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Sempre pode cambiar de idea despois de tomar esta decisión: \"dpkg-"
-"reconfigure popularity-contest\""
+"Esta elección pódese cambiar a posteriori executando \"dpkg-reconfigure "
+"popularity-contest\"."
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "A xeración do identificador único da máquina fallou"
