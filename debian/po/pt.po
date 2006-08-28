@@ -18,46 +18,43 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Participar no Concurso de Popularidade de Pacotes Debian?"
+msgstr "Participar no inquérito de utilização de pacotes?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Você pode ter o seu sistema a fornecer anonimamente aos desenvolvedores de "
-"Debian estatísticas acerca dos seus pacotes Debian mais utilizados.  Esta "
+"O seu sistema pode fornecer anonimamente, aos criadores da distribuição, "
+"estatísticas acerca dos pacotes mais utilizados neste sistema.  Esta "
 "informação influencia decisões tais como que pacotes devem ser incluídos no "
-"primeiro CD de Debian."
+"primeiro CD da distribuição."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Se escolher participar, o script de submissão automática correrá uma vez por "
-"semana, enviando estatísticas aos desenvolvedores de Debian."
+"Se escolher participar, o script de submissão automática irá correr uma vez "
+"por semana, enviando estatísticas aos criadores da distribuição. "
+"As estatísticas adquiridas podem ser vistas em http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Pode sempre mudar de ideias após tomar esta decisão: \"dpkg-reconfigure "
+"Esta escolha pode ser posteriormente alterada correndo \"dpkg-reconfigure "
 "popularity-contest\""
 
 #~ msgid "Generating unique host identifier failed"
