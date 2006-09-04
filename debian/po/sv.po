@@ -32,23 +32,42 @@ msgstr "Delta i en kartläggning om användandet av Debianpaket?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "The system may anonymously supply the distribution developers with statistics about the most used packages on this system.  This information influences decisions such as which packages should go on the first distribution CD."
-msgstr "Du kan låta ditt system anonymt skicka e-post till Debianutvecklarna med statistik om de mest använda paketen på detta system.  Denna information influerar de val som görs om vilka paket som ska hamna på den första Debian-CD:n."
+msgid ""
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
+msgstr ""
+"Du kan låta ditt system anonymt skicka e-post till Debianutvecklarna med "
+"statistik om de mest använda paketen på detta system.  Denna information "
+"influerar de val som görs om vilka paket som ska hamna på den första Debian-"
+"CD:n."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "If you choose to participate, the automatic submission script will run once every week, sending statistics to the distribution developers. The collected statistics can be viewed on http://popcon.debian.org/."
-msgstr "Om du väljer att delta kommer det automatiska inlämningsskriptet att köras automatiskt veckovis och skicka statistik till Debianutvecklarna. Den insamlade statistiken kan ses på http://popcon.debian.org/."
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
+msgstr ""
+"Om du väljer att delta kommer det automatiska inlämningsskriptet att köras "
+"automatiskt veckovis och skicka statistik till Debianutvecklarna. Den "
+"insamlade statistiken kan ses på http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "This choice can be later modified by running \"dpkg-reconfigure popularity-contest\"."
-msgstr "Du kan alltid ändra detta val senare genom att köra \"dpkg-reconfigure popularity-contest\"."
+msgid ""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
+msgstr ""
+"Du kan alltid ändra detta val senare genom att köra \"dpkg-reconfigure "
+"popularity-contest\"."
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "Generering av unik värdidentifierare misslyckades"
+
 #~ msgid ""
 #~ "The install script could not generate a unique host identifier. This is a "
 #~ "fatal error, as all hosts submitting information need to have an unique "
@@ -57,16 +76,20 @@ msgstr "Du kan alltid ändra detta val senare genom att köra \"dpkg-reconfigure p
 #~ "Installationsskriptet kunde inte generera en unik värdidentifierare. "
 #~ "Detta är ett ödesdigert fel eftersom alla värdar som skickar information "
 #~ "måste ha en unik identifierare."
+
 #~ msgid ""
 #~ "Please report this problem as a bug against the popularity-contest "
 #~ "package, and include information about your configuration."
 #~ msgstr ""
 #~ "Rapportera detta problem som en bugg i paketet popularity-contest och "
 #~ "inkludera information om din konfiguration."
+
 #~ msgid "Use HTTP to submit reports?"
 #~ msgstr "Använda HTTP för att skicka rapporter?"
+
 #~ msgid "If you do not want to use HTTP, email is used instead."
 #~ msgstr "Om du inte vill använda HTTP kommer istället e-post att användas."
+
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "
 #~ "on the first Debian CD.  Also, we can improve future versions of Debian "
@@ -77,10 +100,10 @@ msgstr "Du kan alltid ändra detta val senare genom att köra \"dpkg-reconfigure p
 #~ "som ska lÃ¤ggas pÃ¥ den fÃ¶rsta Debian-cd:n. Vi kan ocksÃ¥ fÃ¶rbÃ¤ttra "
 #~ "framtida versioner av Debian sÃ¥ att de mest populÃ¤ra paketen Ã¤r de som "
 #~ "installeras automatiskt fÃ¶r nya anvÃ¤ndare."
+
 #~ msgid ""
 #~ "(NOTE: e-mail servers add their own tracing information and your data "
 #~ "won't be completely anonymous while in transit.)"
 #~ msgstr ""
 #~ "(NOTERA: e-postservrar lÃ¤gger till sin egen spÃ¥rningsinformation och "
 #~ "din data kommer inte att vara helt anonym under transporten.)"
-

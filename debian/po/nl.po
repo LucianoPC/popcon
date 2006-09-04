@@ -41,11 +41,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"U kunt uw systeem instellen zodat anonieme statistieken naar "
-"de ontwikkelaars van de distributie verstuurd worden. Deze statistieken "
-"hebben betrekking op welke pakketten het meest gebruikt worden, en beïnvloeden "
-"beslissingen zoals welke paketten op de eerste installatie-CD terecht "
-"komen."
+"U kunt uw systeem instellen zodat anonieme statistieken naar de "
+"ontwikkelaars van de distributie verstuurd worden. Deze statistieken hebben "
+"betrekking op welke pakketten het meest gebruikt worden, en beïnvloeden "
+"beslissingen zoals welke paketten op de eerste installatie-CD terecht komen."
 
 #  Description
 #. Type: boolean
@@ -56,9 +55,9 @@ msgid ""
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Indien u wilt deelnemen zal eenmaal per week een script uitgevoerd worden dat "
-"de statistieken naar de ontwikkelaars stuurt. De verzamelde statistieken kunnen "
-"bekeken worden op http://popcon.debian.org/."
+"Indien u wilt deelnemen zal eenmaal per week een script uitgevoerd worden "
+"dat de statistieken naar de ontwikkelaars stuurt. De verzamelde statistieken "
+"kunnen bekeken worden op http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -67,6 +66,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"U kunt uw keuze altijd nog herzien via het commando "
-"'dpkg-reconfigure popularity-contest'"
-
+"U kunt uw keuze altijd nog herzien via het commando 'dpkg-reconfigure "
+"popularity-contest'"

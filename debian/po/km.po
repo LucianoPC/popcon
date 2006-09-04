@@ -31,7 +31,9 @@ msgid ""
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr "ប្រព័ន្ធ​អាច​ផ្ដល់​ទៅ​អ្នក​អភិវឌ្ឍន៍​ចែកចាយ​ដោយ​អនាមិក​រួមជា​មួយ​នឹង​ស្ថិតិ​អំពី​កញ្ចប់​ដែល​បាន​ប្រើ​ច្រើន​បំផុត​នៅ​ក្នុង​ប្រព័ន្ធ ។  ព័ត៌មាន​នេះ​មាន​ឥទ្ធិពល​លើ​ការ​សម្រេច​ចិត្ត ដូច​ជា​កញ្ចប់​មួយណា​គួរ​នៅ​លើ​គេ​ក្នុង​ការ​ចែកចាយ​ស៊ីឌី ។"
+msgstr ""
+"ប្រព័ន្ធ​អាច​ផ្ដល់​ទៅ​អ្នក​អភិវឌ្ឍន៍​ចែកចាយ​ដោយ​អនាមិក​រួមជា​មួយ​នឹង​ស្ថិតិ​អំពី​កញ្ចប់​ដែល​បាន​ប្រើ​ច្រើន​បំផុត​នៅ​ក្នុង​"
+"ប្រព័ន្ធ ។  ព័ត៌មាន​នេះ​មាន​ឥទ្ធិពល​លើ​ការ​សម្រេច​ចិត្ត ដូច​ជា​កញ្ចប់​មួយណា​គួរ​នៅ​លើ​គេ​ក្នុង​ការ​ចែកចាយ​ស៊ីឌី ។"
 
 #. Type: boolean
 #. Description
@@ -41,8 +43,8 @@ msgid ""
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"ប្រសិន​បើ​អ្នក​ជ្រើស​ដើម្បី​ចូល​រួម ស្គ្រីប​ចែកចាយ​ដោយ​ស្វ័យប្រវត្តិ​នឹង​រត់​ម្ដង​ក្នុង​មួយ "
-"សប្ដាហ៍ ការ​ផ្ញើ​ស្ថិតិ​ទៅ​អភិវឌ្ឍន៍​ចែកចាយ ។ ស្ថិតិ​ដែល​បាន​ប្រមូលផ្ដុំ​អាច​ត្រូវ​បាន​មើល​នៅ​លើ http://popcon.debian.org/ ។"
+"ប្រសិន​បើ​អ្នក​ជ្រើស​ដើម្បី​ចូល​រួម ស្គ្រីប​ចែកចាយ​ដោយ​ស្វ័យប្រវត្តិ​នឹង​រត់​ម្ដង​ក្នុង​មួយ សប្ដាហ៍ ការ​ផ្ញើ​ស្ថិតិ​ទៅ​"
+"អភិវឌ្ឍន៍​ចែកចាយ ។ ស្ថិតិ​ដែល​បាន​ប្រមូលផ្ដុំ​អាច​ត្រូវ​បាន​មើល​នៅ​លើ http://popcon.debian.org/ ។"
 
 #. Type: boolean
 #. Description
@@ -51,6 +53,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"ជម្រើសនេះអាចត្រូវបានកែប្រែនៅពេលក្រោយដោយរត់ \"dpkg-reconfigure popularity-"
-"contest\" ។"
-
+"ជម្រើសនេះអាចត្រូវបានកែប្រែនៅពេលក្រោយដោយរត់ \"dpkg-reconfigure popularity-contest"
+"\" ។"

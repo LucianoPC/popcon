@@ -2,7 +2,6 @@
 # translation of popularity-contest_debian_po-eu.po to Basque
 # Iñaki Larranaga Murgoitio <dooteo@euskalgnu.org>, 2005.
 # Piarres Beobide <pi@beobide.net> , 2006
-
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf.eu\n"
@@ -31,9 +30,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Zure sistema anonimoki garatzaileei posta elektronikoa bidaliz "
-"(erabiltzen dituzun paketeen estatistikeekin). Informazio honek erabakiak hartzen "
-"lagunduko du, aurreneko CDak edukiko dituen paketeen zerrenda osatzen adibidez."
+"Zure sistema anonimoki garatzaileei posta elektronikoa bidaliz (erabiltzen "
+"dituzun paketeen estatistikeekin). Informazio honek erabakiak hartzen "
+"lagunduko du, aurreneko CDak edukiko dituen paketeen zerrenda osatzen "
+"adibidez."
 
 #. Type: boolean
 #. Description
@@ -43,9 +43,9 @@ msgid ""
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Parte hartzea hautatu baduzu, astean behin bidalketa automatiko script-a exekutatuko "
-"da,  garatzaileei estatistikak bidaliaz. Jaostako estatististikak hemen ikus daitezke:"
-"http://popcon.debian.org/."
+"Parte hartzea hautatu baduzu, astean behin bidalketa automatiko script-a "
+"exekutatuko da,  garatzaileei estatistikak bidaliaz. Jaostako "
+"estatististikak hemen ikus daitezke:http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description

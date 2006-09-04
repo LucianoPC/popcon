@@ -53,8 +53,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "إذا اخترت المشاركة فنصّ التّسليم البرمجي الآلي سيعمل أسبوعيّاً مرسلاً الإحصائيّات "
-"إلى مطوّري ديبيان. يمكن الاطلاع على الاحصائيات عبر الموقع: "
-"http://popcon.debian.org/."
+"إلى مطوّري ديبيان. يمكن الاطلاع على الاحصائيات عبر الموقع: http://popcon."
+"debian.org/."
 
 #. Type: boolean
 #. Description
@@ -62,5 +62,6 @@ msgstr ""
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
-msgstr "يمكنك دائماً تغيير رأيك بعد اتّخاذ هذا بتنفذ الأمر \"dpkg-reconfigure popularity-contest\""
-
+msgstr ""
+"يمكنك دائماً تغيير رأيك بعد اتّخاذ هذا بتنفذ الأمر \"dpkg-reconfigure "
+"popularity-contest\""

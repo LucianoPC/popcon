@@ -23,7 +23,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -39,7 +40,11 @@ msgid ""
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr "Sistema gali anonimiškai siųsti distribucijos kūrėjams dažniausiai naudojamų paketų šiame kompiuteryje statistiką.  Ši informacija padeda priimti sprendimus, pavyzdžiui, kurie paketai turėtų būti įtraukti į pirmąjį Debian CD."
+msgstr ""
+"Sistema gali anonimiškai siųsti distribucijos kūrėjams dažniausiai naudojamų "
+"paketų šiame kompiuteryje statistiką.  Ši informacija padeda priimti "
+"sprendimus, pavyzdžiui, kurie paketai turėtų būti įtraukti į pirmąjį Debian "
+"CD."
 
 #. Type: boolean
 #. Description
@@ -48,7 +53,10 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
-msgstr "Jei nuspręsite dalyvauti, siuntimo programa bus vykdoma ir siųs statistinius duomenis Debian kūrėjams vieną kartą per savaitę. Surinktą statistiką galima rasti adresu http://popcon.debian.org/."
+msgstr ""
+"Jei nuspręsite dalyvauti, siuntimo programa bus vykdoma ir siųs statistinius "
+"duomenis Debian kūrėjams vieną kartą per savaitę. Surinktą statistiką galima "
+"rasti adresu http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -56,5 +64,6 @@ msgstr "Jei nuspręsite dalyvauti, siuntimo programa bus vykdoma ir siųs statis
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
-msgstr "Savo sprendimą dėl dalyvavimo galite pakeisti įvykdę komandą \"dpkg-reconfigure popularity-contest\"."
-
+msgstr ""
+"Savo sprendimą dėl dalyvavimo galite pakeisti įvykdę komandą \"dpkg-"
+"reconfigure popularity-contest\"."

@@ -44,8 +44,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Se escolher participar, o script de submissão automática irá correr uma vez "
-"por semana, enviando estatísticas aos criadores da distribuição. "
-"As estatísticas adquiridas podem ser vistas em http://popcon.debian.org/."
+"por semana, enviando estatísticas aos criadores da distribuição. As "
+"estatísticas adquiridas podem ser vistas em http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description

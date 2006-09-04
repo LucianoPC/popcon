@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Popularity-contest\n"
-"Report-Msgid-Bugs-To: popcon-developers@lists.alioth.debian.org\n"
-"POT-Creation-Date: 2006-07-30 13:20+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-29 12:23+0200\n"
 "PO-Revision-Date: 2006-07-30 12:57+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -24,13 +24,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:4
 msgid "Participate in the package usage survey?"
 msgstr "Osallistutko Debianin pakettimittariin?"
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:4
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
@@ -44,7 +44,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:4
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
@@ -56,7 +56,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:1001
+#: ../templates:4
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."

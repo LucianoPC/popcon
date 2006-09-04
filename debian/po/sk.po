@@ -39,8 +39,8 @@ msgid ""
 "distribution CD."
 msgstr ""
 "Môžete nechať systém, aby anonymne poskytol vývojárom distribúcie štatistiku "
-"o najviac používaných balíkoch na vašom systéme. Táto informácia pomôže "
-"v rozhodovaní, ktoré balíky by mali byť na prvom distribučnom CD."
+"o najviac používaných balíkoch na vašom systéme. Táto informácia pomôže v "
+"rozhodovaní, ktoré balíky by mali byť na prvom distribučnom CD."
 
 #. Type: boolean
 #. Description
@@ -61,6 +61,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu "
-"\"dpkg-reconfigure popularity-contest\"."
-
+"Svoje rozhodnutie môžete kedykoľvek zmeniť spustením príkazu \"dpkg-"
+"reconfigure popularity-contest\"."

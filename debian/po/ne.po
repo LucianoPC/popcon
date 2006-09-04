@@ -28,10 +28,9 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"प्रणालीले यस प्रणालीमा सबैभन्दा बढी प्रयोग हुने प्याकेजहरूको तथ्याङ्कहरू "
-"वितरण विकासकर्ताहरूलाई अज्ञात रूपमा पठाउन सक्छ "
-"यो सुचनाले कुन कुन प्याकेजहरू पहिलो वितरण सी डी मा " 
-" जानुपर्छ भन्ने कुरा निर्णय गर्न प्रोत्साहित गर्दछ ।"
+"प्रणालीले यस प्रणालीमा सबैभन्दा बढी प्रयोग हुने प्याकेजहरूको तथ्याङ्कहरू वितरण "
+"विकासकर्ताहरूलाई अज्ञात रूपमा पठाउन सक्छ यो सुचनाले कुन कुन प्याकेजहरू पहिलो वितरण सी डी "
+"मा  जानुपर्छ भन्ने कुरा निर्णय गर्न प्रोत्साहित गर्दछ ।"
 
 #. Type: boolean
 #. Description
@@ -42,8 +41,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "यदि तपाईँले भाग लिनका लागि रोज्नुभयो भने, वितरण विकासकर्ताहरूलाई तथ्याङ्क पठाउँदै "
-"स्वाचालित दाखिला स्क्रिप्ट हरेक हप्तामा एक पटक चल्छ।"
-"तथ्याङ्क http://popcon.debian.org/ मा हेर्न सकिन्छ ।"
+"स्वाचालित दाखिला स्क्रिप्ट हरेक हप्तामा एक पटक चल्छ।तथ्याङ्क http://popcon.debian."
+"org/ मा हेर्न सकिन्छ ।"
 
 #. Type: boolean
 #. Description
@@ -52,5 +51,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-" यो रोजाइ \"dpkg-reconfigure popularity-contest\" "
-"चलाएर पछि परिमार्जन गर्न सकिन्छ ।"
+" यो रोजाइ \"dpkg-reconfigure popularity-contest\" चलाएर पछि परिमार्जन गर्न "
+"सकिन्छ ।"

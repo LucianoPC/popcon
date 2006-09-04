@@ -37,10 +37,11 @@ msgid ""
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr "Puede hacer que su sistema envíe anónimamente estadísticas a los "
+msgstr ""
+"Puede hacer que su sistema envíe anónimamente estadísticas a los "
 "desarrolladores sobre los paquetes que más usa. Esta información tiene "
-"influencia sobre ciertas decisiones, como qué paquetes deben incluirse en "
-"el primer CD de la distribución."
+"influencia sobre ciertas decisiones, como qué paquetes deben incluirse en el "
+"primer CD de la distribución."
 
 #. Type: boolean
 #. Description

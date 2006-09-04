@@ -39,8 +39,8 @@ msgid ""
 "distribution CD."
 msgstr ""
 "Systém může anonymně posílat vývojářům distribuce statistiku o nejvíce "
-"využívaných balících na tomto systému. Tyto informace pomáhají vývojářům "
-"v rozhodování, které balíky by měly být umístěny na prvním instalačním CD."
+"využívaných balících na tomto systému. Tyto informace pomáhají vývojářům v "
+"rozhodování, které balíky by měly být umístěny na prvním instalačním CD."
 
 #. Type: boolean
 #. Description

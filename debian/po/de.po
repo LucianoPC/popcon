@@ -41,9 +41,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Das System kann anonym Statistiken über die am meisten verwendeten Pakete auf diesem System "
-"an die Distributions-Entwickler schicken lassen. Diese Informationen beeinflussen "
-"beispielsweise die Entscheidungen, welche Pakete auf die erste CD kommen."
+"Das System kann anonym Statistiken über die am meisten verwendeten Pakete "
+"auf diesem System an die Distributions-Entwickler schicken lassen. Diese "
+"Informationen beeinflussen beispielsweise die Entscheidungen, welche Pakete "
+"auf die erste CD kommen."
 
 #. Type: boolean
 #. Description
@@ -54,8 +55,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Wenn Sie sich entscheiden teilzunehmen, wird das automatische "
-"Übertragungsprogramm wöchentlich ausgeführt und Statistiken an die Distributions-"
-"Entwickler senden. Die vollständigen Statistiken können unter "
+"Übertragungsprogramm wöchentlich ausgeführt und Statistiken an die "
+"Distributions-Entwickler senden. Die vollständigen Statistiken können unter "
 "http://popcon.debian.org/ eingesehen werden."
 
 #. Type: boolean
@@ -67,4 +68,3 @@ msgid ""
 msgstr ""
 "Die Wahl kann später durch Ausführen von »dpkg-reconfigure popularity-"
 "contest« geändert werden."
-

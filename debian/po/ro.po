@@ -24,7 +24,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.2\n"
-"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))"
+"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1))\n"
 
 #. Type: boolean
 #. Description
@@ -41,10 +42,10 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Puteţi permite sistemului dvs. să trimită către programatorii distribuţiei, mesaje "
-"electronice anonime cu statistici despre cele mai utilizate pachete din sistem "
-"de către dvs. Aceste informaţii influenţează decizii precum cele legate de "
-"pachetele care ar trebui să se afle pe primul CD al distribuţiei."
+"Puteţi permite sistemului dvs. să trimită către programatorii distribuţiei, "
+"mesaje electronice anonime cu statistici despre cele mai utilizate pachete "
+"din sistem de către dvs. Aceste informaţii influenţează decizii precum cele "
+"legate de pachetele care ar trebui să se afle pe primul CD al distribuţiei."
 
 #. Type: boolean
 #. Description
@@ -55,7 +56,8 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Dacă doriţi să participaţi, scriptul de trimitere automată va rula "
-"săptămânal, trimiţând prin statistici dezvoltatorilor distribuţiei. Statisticile colectate pot fi vizualizate la http://popcon.debian.org/."
+"săptămânal, trimiţând prin statistici dezvoltatorilor distribuţiei. "
+"Statisticile colectate pot fi vizualizate la http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -64,8 +66,8 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Această decizie poate fi schimbată oricând rulând „dpkg-"
-"reconfigure popularity-contest”."
+"Această decizie poate fi schimbată oricând rulând „dpkg-reconfigure "
+"popularity-contest”."
 
 #~ msgid "Generating unique host identifier failed"
 #~ msgstr "Generarea identificatorului unic de calculator a eşuat"
@@ -92,4 +94,3 @@ msgstr ""
 
 #~ msgid "If you do not want to use HTTP, email is used instead."
 #~ msgstr "Dacă nu doriţi să folosiţi HTTP, se va folosi poşta electronică."
-

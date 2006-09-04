@@ -37,7 +37,11 @@ msgid ""
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
-msgstr "このシステムであなたが最も利用したパッケージについての統計をディストリビューション開発者に匿名で提供するようシステムを設定できます。この情報は私たちが 1 番目の配布 CD に入れるべきパッケージであるかどうかなどを決定する際に役立ちます。"
+msgstr ""
+"このシステムであなたが最も利用したパッケージについての統計をディストリビュー"
+"ション開発者に匿名で提供するようシステムを設定できます。この情報は私たちが 1 "
+"番目の配布 CD に入れるべきパッケージであるかどうかなどを決定する際に役立ちま"
+"す。"
 
 #. Type: boolean
 #. Description
@@ -46,7 +50,10 @@ msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
-msgstr "参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、ディストリビューション開発者に統計が送られます。収集された統計は、http://popcon.debian.org/ で見ることができます。"
+msgstr ""
+"参加することを選ぶと、自動提出スクリプトが毎週 1 回自動的に実行され、ディスト"
+"リビューション開発者に統計が送られます。収集された統計は、http://popcon."
+"debian.org/ で見ることができます。"
 
 #. Type: boolean
 #. Description
@@ -54,4 +61,6 @@ msgstr "参加することを選ぶと、自動提出スクリプトが毎週 1 
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
-msgstr "この決定は、あとでいつでも \"dpkg-reconfigure popularity-contest\" を実行して変更できます。"
+msgstr ""
+"この決定は、あとでいつでも \"dpkg-reconfigure popularity-contest\" を実行して"
+"変更できます。"
