@@ -42,6 +42,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Updated Esperanto (eo) by Serge Leblanc.
     - Updated German (de) by Jens Seidel.
     - Updated Greek (el) by Emmanuel Galatoulas.
+    - Updated Norwegian Bokmål from Petter Reinholdtsen.
 
   [ Christian Perrier ]
     - Updated Khmer by Khoem Sokhem. (Closes: #359672)
