@@ -37,9 +37,9 @@ run_popcon()
 do_sendmail()
 {
 	if [ -n "$MAILFROM" ]; then
-		sendmail -oi -f "$MAILFROM" "$MAILTO"
+		sendmail -oi -f "$MAILFROM" $MAILTO
 	else
-		sendmail -oi "$MAILTO"
+		sendmail -oi $MAILTO
 	fi
 }
 

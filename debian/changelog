@@ -34,6 +34,8 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     Build-Depends-Indep, to keep lintian happy.
   * Add hidden debconf question popularity-contest/submiturls to
     support preseeding to the submission URL. (Closes: #384144)
+  * Remove double quotes around $MAILTO to allow users to request a
+    copy of the reports submitted using email.  (Closes: #326593)
   * Translations
     - Updated Italian (it) by Davide Viti.
     - Updated Tagalog (tl) by Eric Pareja.
