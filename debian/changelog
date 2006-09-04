@@ -1,4 +1,4 @@
-popularity-contest (1.34) UNRELEASED; urgency=low
+popularity-contest (1.34) unstable; urgency=low
 
   [ Bill Allombert ]
   * popcon.pl: add support for favicon.
@@ -80,7 +80,7 @@ popularity-contest (1.34) UNRELEASED; urgency=low
     - Updated Turkish by Recai Oktaþ. (Closes: #380334)
     - Updated Vietnamese by Clytie Siddall. (Closes: #380359)
 
- -- Christian Perrier <bubulle@debian.org>  Mon,  7 Aug 2006 08:48:07 -0500
+ -- Petter Reinholdtsen <pere@debian.org>  Mon,  4 Sep 2006 19:09:06 +0200
 
 popularity-contest (1.33) unstable; urgency=low
 
