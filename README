@@ -103,6 +103,14 @@ separate popcon installations at Fink, http://fink.opendarwin.org/popcon/
 and Ubuntu, http://popcon.ubuntu.com, receiving information about the Ubuntu
 users.  We are sure there are others.
 
+INSTALLATION PRESEEDING
+=======================
+
+The package support preseeding during installation to change the URL
+used to submit reports.  The template name is
+'popularity-contest/submiturls', and it expect one or more space
+separated URLs to use when submitting.
+
 QUESTIONS ?
 ===========
 

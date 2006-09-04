@@ -13,3 +13,9 @@ _Description: Participate in the package usage survey?
  .
  This choice can be later modified by running "dpkg-reconfigure
  popularity-contest".
+
+Template: popularity-contest/submiturls
+Type: string
+Description: for internal use
+ Preseed this during installation to replace the URL used for
+ submitting reports.
