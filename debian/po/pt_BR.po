@@ -16,83 +16,80 @@ msgstr ""
 "Project-Id-Version: popularity_contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2006-01-14 19:24-0200\n"
-"Last-Translator: AndrÈ LuÌs Lopes <andrelop@debian.org>\n"
+"PO-Revision-Date: 2006-09-18 03:28-0300\n"
+"Last-Translator: Andr√© Lu√≠s Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Participar do Concurso de Popularidade de Pacotes Debian ?"
+msgstr "Participar do concurso de utiliza√ß√£o de pacotes ?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"VocÍ pode fazer com que seu sistema forneÁa anonimamente aos desenvolvedores "
-"Debian estatÌsticas sobre seus pacotes Debian mais usados. Essa informaÁ„o "
-"influencia em decisıes como quais pacotes dever„o ser incluÌdos no primeiro "
-"CD Debian."
+"O sistema pode fornecer anonimamente aos desenvolvedores da "
+"distribui√ß√£o estat√≠sticas sobre os pacotes mais utilizados em "
+"seu sistema. Esta informa√ß√£o influencia decis√µes como quais "
+"pacotes dever√£o ser colocados no primeiro CD da distribui√ß√£o."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Caso vocÍ opte por participar, o script de envio autom·tico ser· executado "
-"automaticamente uma vez por semana, enviando as estatÌsticas para os "
-"desenvolvedores Debian."
+"Caso voc√™ opte por participar, o script de envio autom√°tico ser√° executado "
+"uma vez por semana, enviando as estat√≠sticas para os desenvolvedores da "
+"distribui√ß√£o. As estat√≠sticas coletadas podem ser visualizadas em "
+"http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"VocÍ poder· sempre mudar sua opini„o apÛs fazer sua decis„o : \"dpkg-"
-"reconfigure popularity-contest\""
+"Sua escolha pode ser modificada posteriormente atrav√©s da execu√ß√£o do "
+"comando \"dpkg-reconfigure popularity-contest\"."
 
 #~ msgid "Generating unique host identifier failed"
-#~ msgstr "A geraÁ„o do identificador ˙nico de host falhou"
+#~ msgstr "A gera√ß√£o do identificador √∫nico de host falhou"
 
 #~ msgid ""
 #~ "The install script could not generate a unique host identifier. This is a "
 #~ "fatal error, as all hosts submitting information need to have an unique "
 #~ "identifier."
 #~ msgstr ""
-#~ "O script de instalaÁ„o n„o pÙde gerar um identificador ˙nico de host. "
-#~ "Esse È um erro fatal, uma vez que todos os hosts que enviam informaÁıes "
-#~ "precisam possuir um identificador ˙nico."
+#~ "O script de instala√ß√£o n√£o p√¥de gerar um identificador √∫nico de host. "
+#~ "Esse √© um erro fatal, uma vez que todos os hosts que enviam informa√ß√µes "
+#~ "precisam possuir um identificador √∫nico."
 
 #~ msgid ""
 #~ "Please report this problem as a bug against the popularity-contest "
 #~ "package, and include information about your configuration."
 #~ msgstr ""
-#~ "Por favor, relate este problema enviando um relatÛrio de bug para o "
-#~ "pacote popularity-contest e inclua informaÁıes sobre a sua configuraÁ„o."
+#~ "Por favor, relate este problema enviando um relat√≥rio de bug para o "
+#~ "pacote popularity-contest e inclua informa√ß√µes sobre a sua configura√ß√£o."
 
 #~ msgid "Use HTTP to submit reports?"
-#~ msgstr "Utilizar HTTP para enviar os relatÛrios ?"
+#~ msgstr "Utilizar HTTP para enviar os relat√≥rios ?"
 
 #~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr "Caso vocÍ n„o queira utilizar HTTP, e-mail ser· utilizado."
+#~ msgstr "Caso voc√™ n√£o queira utilizar HTTP, e-mail ser√° utilizado."
 
 #~ msgid ""
 #~ "This information helps us make decisions such as which packages should go "
@@ -100,15 +97,15 @@ msgstr ""
 #~ "so that the most popular packages are the ones which are installed "
 #~ "automatically for new users."
 #~ msgstr ""
-#~ "Essa informaÁ„o nos ajudar· a tomar decisıes como quais pacotes dever„o "
-#~ "ser colocados no primeiro CD Debian. TambÈm ser· possÌvel melhorar "
-#~ "futuras versıes do Debian de forma que os pacotes mais populares sejam "
-#~ "instalados automaticamente para novos usu·rios."
+#~ "Essa informa√ß√£o nos ajudar√° a tomar decis√µes como quais pacotes dever√£o "
+#~ "ser colocados no primeiro CD Debian. Tamb√©m ser√° poss√≠vel melhorar "
+#~ "futuras vers√µes do Debian de forma que os pacotes mais populares sejam "
+#~ "instalados automaticamente para novos usu√°rios."
 
 #~ msgid ""
 #~ "(NOTE: e-mail servers add their own tracing information and your data "
 #~ "won't be completely anonymous while in transit.)"
 #~ msgstr ""
-#~ "(NOTA: Servidores de e-mail adicionam suas prÛprias informaÁıes de "
-#~ "rastreamento e seus dados n„o ficar„o completamente anÙnimos enquanto "
-#~ "estiverem em tr‚nsito.)"
+#~ "(NOTA: Servidores de e-mail adicionam suas pr√≥prias informa√ß√µes de "
+#~ "rastreamento e seus dados n√£o ficar√£o completamente an√¥nimos enquanto "
+#~ "estiverem em tr√¢nsito.)"
