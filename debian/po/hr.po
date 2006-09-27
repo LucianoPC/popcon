@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: Debian-installer HR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2004-07-25 19:38+0200\n"
-"Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
+"PO-Revision-Date: 2006-09-27 12:50+0200\n"
+"Last-Translator: Josip Rodin <joy+ditrans@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -14,61 +14,40 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "Sudjeluj u Natjeèaju popularnosti Debianovih paketa?"
+msgstr "Sudjelovati u anketi kori¹tenja paketa?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Va¹ sustav mo¾e anonimno slati e-po¹tu razvijateljima Debiana sa "
+"Va¹ sustav mo¾e anonimno slati e-po¹tu razvijateljima distribucije sa "
 "statistikama o paketima koje najvi¹e koristite. Ti podaci utjeèu na odluke "
-"koji paketi æe biti stavljeni na prvi Debianov CD."
+"kao ¹to je izbor paketa koji æe biti stavljeni na prvi CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"Ako odluèite sudjelovati, automatska skrtipta æe razvijateljima Debiana "
-"jednom tjedno slati e-po¹tu sa statistikama."
+"Ako odluèite sudjelovati, automatska skripta æe se pokretati svaki tjedan "
+"i slati statistike razvijateljima distribucije. Sabrane statistike se mogu "
+"vidjeti na http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Uvijek se mo¾ete predomisliti pomoæu: \"dpkg-reconfigure popularity-contest\""
-
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "Stvaranje jedinstvenog naziva domaæina neuspjelo."
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "Instalacijska skripta nije uspjela naèiniti jedinstveni naziv domaæina. "
-#~ "To je kobna pogre¹ka, jer svaki domaèin koji ¹alje podatke mora imati "
-#~ "jedinstveni identifikacijski naziv."
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "Molim dojavite ovaj problem kao bubu u popularity-contest paketu, a "
-#~ "dodajte i obavijesti o va¹em raèunalu i sustavu."
+"Uvijek se mo¾ete predomisliti i promijeniti svoj izbor pokretanjem: "
+"\"dpkg-reconfigure popularity-contest\"."

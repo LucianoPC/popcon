@@ -4,6 +4,7 @@ popularity-contest (1.35) UNRELEASED; urgency=low
     - Added Bengali by Mahay Alam Khan.
     - Updated Hebrew by Lior Kaplan.
     - Updated Brazilian Portuguese by Andre Luis Lopes
+    - Updated Croatian by Josip Rodin. Closes: #389708
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 13 Sep 2006 16:02:41 +0200
 
