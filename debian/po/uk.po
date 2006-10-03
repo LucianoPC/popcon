@@ -1,5 +1,4 @@
-# translation of uk.po to Ukrainian
-# translation of popularity-contest-templates.po to Ukrainian
+# translation of popularity-contest_debian_po_uk.po to Ukrainian
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -10,92 +9,58 @@
 #            /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
-# Eugeniy Meshcheryakov <eugen@univ.kiev.ua>, 2004, 2005.
 #
+# Eugeniy Meshcheryakov <eugen@debian.org>, 2004 - 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: uk\n"
+"Project-Id-Version: popularity-contest_debian_po_uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2005-07-06 19:40+0300\n"
-"Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2006-10-02 21:46+0200\n"
+"Last-Translator: Eugeniy Meshcheryakov <eugen@debian.org>\n"
+"Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr ""
-"Чи бажаєте ви надавати інформацію для змагання пакунків Debian по "
-"популярності?"
+msgstr "Приймати участь в опитуванні про використання пакунків?"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"Ваша система може анонімно відправляти статистику про пакунки, які ви "
-"використовуєте, до розробників Debian. Ця інформація впливатиме на рішення "
+"Система може анонімно відправляти статистику про пакунки, які найчастіше використовуються, до розробників дистрибутиву. Ця інформація впливатиме на рішення "
 "на кшталт які пакунки повинні знаходитись на першому CD."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Якщо ви вирішите взяти участь, то скрипт автоматичного відсилання буде "
-"запускатися один раз на тиждень, відправляючи статистику розробникам Debian."
+"запускатися один раз на тиждень, відправляючи статистику розробникам дистрибутиву. Отриману статистику можна переглянути на http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"Ви завжди можете передумати після прийняття рішення: \"dpkg-reconfigure "
-"popularity-contest\""
+"Вибір можна змінити пізніше запустивши „dpkg-reconfigure "
+"popularity-contest“."
 
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "Не вдалося створити унікальний ідентифікатор вузла"
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "Скрипт встановлення не може створити унікальний ідентифікатор вузла. Це "
-#~ "фатальна помилка, оскільки всі вузли, що відсилають інформацію, повинні "
-#~ "мати унікальний ідентифікатор."
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "Повідомте про цю проблему як про помилку (баг) в пакунку popularity-"
-#~ "contest, та додайте інформацію про вашу конфігурацію."
-
-#~ msgid "Use HTTP to submit reports?"
-#~ msgstr "Використовувати HTTP для відсилання звітів?"
-
-#~ msgid "If you do not want to use HTTP, email is used instead."
-#~ msgstr ""
-#~ "Якщо ви не бажаєте використовувати HTTP, буде використано електронну "
-#~ "пошту."
