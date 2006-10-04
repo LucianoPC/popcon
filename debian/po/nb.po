@@ -29,7 +29,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the package usage survey?"
-msgstr "Delta i en pakkebrukskartlegging?"
+msgstr "Delta i pakkebrukskartleggingen?"
 
 #. Type: boolean
 #. Description
