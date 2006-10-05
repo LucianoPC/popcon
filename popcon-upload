@@ -4,12 +4,22 @@
 
 use strict;
 use IO::Socket;
-use Getopt::Std;
 
 my %opts;
-getopts("Cdu:f:", \%opts);
+
+# Not using Getopt::Std to avoid perl-modules dependency
+while($#ARGV >= 0 && ($_ = $ARGV[0]) =~ /^-/) {
+        shift @ARGV;
+        if (/^-C$/) { $opts{'C'} = 1; next }
+        if (/^-d$/) { $opts{'d'} = 1; next }
+        if (/^-u$/) { $opts{'u'} = shift; next }
+        if (/^-f$/) { $opts{'f'} = shift; next }
+        &usage("unknown option");
+	exit 1;
+}
 
 sub usage {
+    print "popcon-upload: error: @_\n" if ($#_ >= 0);
     print <<"EOF";
 Usage: $0 [-Cd] [-u <url>] [-f <file>]
   -C        send submissions in clear text, and not compressed

@@ -1,5 +1,10 @@
 popularity-contest (1.35) UNRELEASED; urgency=low
 
+  [Petter Reinholdtsen]
+  * Rewrite argument parsing code in popcon-upload to avoid the
+    perl-modules dependency and to keep the disk footprint for popcon
+    small. (Closes: #386879)
+
   * Translations
     - Added Bengali by Mahay Alam Khan.
     - Updated Hebrew by Lior Kaplan. Closes: #387635
