@@ -1,4 +1,4 @@
-popularity-contest (1.35) UNRELEASED; urgency=low
+popularity-contest (1.35) unstable; urgency=low
 
   [Petter Reinholdtsen]
   * Rewrite argument parsing code in popcon-upload to avoid the
@@ -17,7 +17,7 @@ popularity-contest (1.35) UNRELEASED; urgency=low
     - Updated Macedonian by Georgi Stanojevski. Closes: #390804
     - Updated Norwegian Bokmål from Petter Reinholdtsen.
 
- -- Christian Perrier <bubulle@debian.org>  Wed, 13 Sep 2006 16:02:41 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  7 Oct 2006 00:19:23 +0200
 
 popularity-contest (1.34) unstable; urgency=low
 
