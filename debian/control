@@ -3,13 +3,12 @@ Section: misc
 Priority: optional
 Maintainer: Popularity Contest Developers <popcon-developers@lists.alioth.debian.org>
 Uploaders: Petter Reinholdtsen <pere@debian.org>, Bill Allombert <ballombe@debian.org>
-Build-Depends: debhelper (>=4.1.16)
 Build-Depends-Indep: debhelper (>=4.1.16)
 Standards-Version: 3.7.2
 
 Package: popularity-contest
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10) | dpkg-awk
+Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10)
 Recommends: cron, exim4 | mail-transport-agent, mime-construct
 Suggests: anacron
 Provides: popcon

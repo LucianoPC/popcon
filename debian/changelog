@@ -7,6 +7,9 @@ popularity-contest (1.36) UNRELEASED; urgency=low
    + Remove support for sending compressed email since there is no support
      for that feature on the server side, and debian/cron.weekly being a 
      conffile should be kept simple.
+  * debian/control:
+   + Do not Depends on '| dpkg-awk' for woody support.
+   + Remove spurious Build-Depends line.
 
  -- Bill Allombert <ballombe@debian.org>  Sat,  7 Oct 2006 16:21:10 +0200
 
