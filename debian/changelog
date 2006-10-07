@@ -1,7 +1,12 @@
 popularity-contest (1.36) UNRELEASED; urgency=low
 
-  * Remove support for woody.
-  * Do not report atimes of files in /boot since they are equal to mtimes.
+  * popularity-contest:
+   + Remove support for woody.
+   + Do not report atimes of files in /boot since they are equal to mtimes.
+  * debian/cron.weekly: 
+   + Remove support for sending compressed email since there is no support
+     for that feature on the server side, and debian/cron.weekly being a 
+     conffile should be kept simple.
 
  -- Bill Allombert <ballombe@debian.org>  Sat,  7 Oct 2006 16:21:10 +0200
 

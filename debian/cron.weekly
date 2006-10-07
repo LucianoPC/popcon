@@ -16,7 +16,7 @@ unset USEHTTP
 . /usr/share/popularity-contest/default.conf
 . /etc/popularity-contest.conf
 
-# don't run if MAILTO address is blank, or not configured to use HTTP POST!
+# don't run if MAILTO address is blank, and not configured to use HTTP POST!
 if [ -z "$MAILTO" ] && [ "yes" != "$USEHTTP" ]; then exit 0; fi
 
 # don't run if PARTICIPATE is "no" or unset!
@@ -65,42 +65,18 @@ fi
 
 if [ yes != "$SUBMITTED" ] && [ "$MAILTO" ]; then
     if [ -x "`which sendmail 2>/dev/null`" ]; then
-	# Sending compressed emails are disabled as the receiving end
-	# isn't implemented yet.
-	if false && [ -x "`which mime-construct 2>/dev/null`" ]; then
-        	# Make compresssed email
-		if [ -n "$MAILFROM" ]; then
-			gzip -9 < $POPCON | mime-construct \
-			    --type application/x-popcon-compressed \
-			    --encoding base64 --file - \
-			    --subject "popularity-contest submission" \
-			    --to "$MAILTO" \
-			    --header "From: <$MAILFROM>" \
-			    --header "Sender: <$MAILFROM>" \
-			    --output | do_sendmail
-		else
-			gzip -9 < $POPCON | mime-construct \
-			    --type application/x-popcon-compressed \
-			    --encoding base64 --file - \
-			    --subject "popularity-contest submission" \
-			    --to "$MAILTO" \
-			    --output | do_sendmail
-		fi
-	else
-            # Not able to make compressed email, send uncompressed
-	    (
-		if [ -n "$MAILFROM" ]; then
-		    	echo "From: <$MAILFROM>"
-			echo "Sender: <$MAILFROM>"
-		fi
-		echo "To: $MAILTO"
-		echo "Subject: popularity-contest submission"
-		echo "MIME-Version: 1.0"
-		echo "Content-Type: text/plain"
-		echo
-		cat $POPCON
-	    ) | do_sendmail
-	fi
+	(
+	    if [ -n "$MAILFROM" ]; then
+	        	echo "From: <$MAILFROM>"
+	    	echo "Sender: <$MAILFROM>"
+	    fi
+	    echo "To: $MAILTO"
+	    echo "Subject: popularity-contest submission"
+	    echo "MIME-Version: 1.0"
+	    echo "Content-Type: text/plain"
+	    echo
+	    cat $POPCON
+	) | do_sendmail
 	SUBMITTED=yes
     else
 	logger -t popularity-contest "unable to submit report using sendmail."
