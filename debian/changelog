@@ -1,8 +1,9 @@
 popularity-contest (1.36) UNRELEASED; urgency=low
 
-  * Not released yet.
+  * Remove support for woody.
+  * Do not report atimes of files in /boot since they are equal to mtimes.
 
- -- Petter Reinholdtsen <pere@debian.org>  Sat,  7 Oct 2006 00:25:35 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sat,  7 Oct 2006 16:21:10 +0200
 
 popularity-contest (1.35) unstable; urgency=low
 

@@ -58,19 +58,8 @@ if ( $HOSTID !~ /^([a-f0-9]{32})$/)
 my $debarch = `dpkg --print-installation-architecture`;
 chomp $debarch;
 
-# Set if dpkg package version is older than 1.10, thus missing dpkg-query.
-my $olddpkg = 0;
-if ( ! -x "/usr/bin/dpkg-query" ) {
-    $olddpkg = 1;
-}
-
 # Popcon release
-my $popconver;
-if ($olddpkg) {
-    $popconver = `dpkg-awk "Package: *popularity-contest.*" -- Version|grep ^Version|sed 's/^Version: //'`;
-} else {
-    $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest 2>/dev/null`;
-}
+my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest`;
 
 # Initialise time computations
 
@@ -82,11 +71,8 @@ my $lastmonth = $now - $monthlen;
 my %popcon=();
 
 #Read dpkg database of installed packages
-if ($olddpkg) {
-    open PACKAGES, "dpkg-awk 'Status: .* installed' -- Package | grep '^Package:' | sed 's/^Package: /install ok installed /'|";
-} else {
-    open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
-}
+
+open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
 while (<PACKAGES>)
 {
   /^.*installed *(.+)$/ or next;
@@ -97,7 +83,7 @@ while (<PACKAGES>)
   while (<FILES>)
   {
     chop;
-    m{/bin/|/sbin/|^/usr/games/|^/boot/|\.[ah]$|\.pm$} or next;
+    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$} or next;
     -f $_ or next;
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                       $atime,$mtime,$ctime,$blksize,$blocks)
