@@ -2,17 +2,16 @@ popularity-contest (1.36) UNRELEASED; urgency=low
 
   * popularity-contest:
    + Remove support for woody.
-   + Do not report atimes of files in /boot since they are equal to mtimes.
-     (Reopen #229237)
-  * debian/cron.weekly: 
+   + Report atimes of System.map files in /boot. (Closes: #229237)
+  * debian/cron.weekly:
    + Remove support for sending compressed email since there is no support
-     for that feature on the server side, and debian/cron.weekly being a 
+     for that feature on the server side, and debian/cron.weekly being a
      conffile should be kept simple.
   * debian/control:
    + Do not Depends on '| dpkg-awk' for woody support.
    + Remove spurious Build-Depends line.
 
- -- Bill Allombert <ballombe@debian.org>  Sat,  7 Oct 2006 16:21:10 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun,  8 Oct 2006 18:32:27 +0200
 
 popularity-contest (1.35) unstable; urgency=low
 
