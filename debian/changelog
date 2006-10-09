@@ -10,6 +10,8 @@ popularity-contest (1.36) UNRELEASED; urgency=low
   * debian/control:
    + Do not Depends on '| dpkg-awk' for woody support.
    + Remove spurious Build-Depends line.
+  * Translations
+    - Updated Traditional Chinese by Tetralet.
 
  -- Bill Allombert <ballombe@debian.org>  Sun,  8 Oct 2006 18:32:27 +0200
 

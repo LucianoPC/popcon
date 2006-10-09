@@ -17,10 +17,9 @@ msgstr ""
 "Project-Id-Version: popularity-contest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2004-07-31 23:01+0800\n"
-"Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
-"debian.org>\n"
+"PO-Revision-Date: 2006-07-30 18:53+0800\n"
+"Last-Translator: Tetralet <tetralet@gmail.com>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,78 +28,37 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid "Participate in the package usage survey?"
-msgstr "是否要參加 Debian 熱門套件競賽？"
+msgstr "是否要參加套件使用狀況調查？"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "The system may anonymously supply the distribution developers with "
 "statistics about the most used packages on this system.  This information "
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"您可以讓系統藉由匿名的電子郵件來向 Debian 的開發人員提交您最常使用的 Debian "
-"套件的統計數據。這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光"
-"碟中。"
+"這套系統可以匿名得向負責發行版本的開發人員提交系統中所最常使用的套件的統計資訊。"
+"這些資訊將有助於決定像是要將哪些套件放到第一張 Debian 光碟中。"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "If you choose to participate, the automatic submission script will run once "
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"如果您決定要參與，自動提交的 Script 將會每週一次，將統計數據以 E-mail 寄送給 "
-"Debian 開發人員。"
+"如果您決定要參與，自動提交的 Script 將會每週一次，將統計數據傳送給負責發行版本的開發人員。"
+"而這些被收集的資料您可以到 http://popcon.debian.org/ 上查閱。"
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-#, fuzzy
 msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"在您決定之後，您還是可以在日後隨時改變心意：『dpkg-reconfigure popularity-"
-"contest』"
-
-#~ msgid "Generating unique host identifier failed"
-#~ msgstr "無法產生獨一無二的主機識別碼"
-
-#~ msgid ""
-#~ "The install script could not generate a unique host identifier. This is a "
-#~ "fatal error, as all hosts submitting information need to have an unique "
-#~ "identifier."
-#~ msgstr ""
-#~ "安裝 Script 無法產生獨一無二的主機識別碼。這是一個嚴重錯誤，因為所有提交資"
-#~ "訊的主機都需要擁有一個獨一無二的主機識別碼。。"
-
-#~ msgid ""
-#~ "Please report this problem as a bug against the popularity-contest "
-#~ "package, and include information about your configuration."
-#~ msgstr ""
-#~ "請將此問題向 popularity-contest 套件進行 Bug 報告，並請一併附上您所使用的"
-#~ "設定之相關資訊。"
-
-#~ msgid ""
-#~ "This information helps us make decisions such as which packages should go "
-#~ "on the first Debian CD.  Also, we can improve future versions of Debian "
-#~ "so that the most popular packages are the ones which are installed "
-#~ "automatically for new users."
-#~ msgstr ""
-#~ "這些資訊將有助於我們決定像是要將哪些套件放到第一張 Debian 光碟中。而且，我"
-#~ "們也能據此在 Debian 的未來版本中進行修正，來讓這些最熱門的套件能夠被自動安"
-#~ "裝到使用者的新系統中。"
-
-#~ msgid ""
-#~ "(NOTE: e-mail servers add their own tracing information and your data "
-#~ "won't be completely anonymous while in transit.)"
-#~ msgstr ""
-#~ "（注意：郵件伺服器會自行加入一些追蹤資訊，因此您的資料在傳送過程中並不算是"
-#~ "完全匿名的。）"
+"您可以在日後執行『dpkg-reconfigure popularity-contest』來修改這些設定。"
