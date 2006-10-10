@@ -18,7 +18,7 @@ Description: Vote for your favourite packages automatically
  statistics about the most used Debian packages on this system.
  .
  This information helps us making decisions such as which packages 
- should go on the first CD. It also let us improve future versions
+ should go on the first CD. It also lets us improve future versions
  of Debian so that the most popular packages are the ones which are
  installed automatically for new users.
  .
