@@ -1,5 +1,6 @@
-popularity-contest (1.36) UNRELEASED; urgency=low
+popularity-contest (1.36) unstable; urgency=medium
 
+  * medium urgency: #386879 fix a missing dependency.
   * popularity-contest:
    + Remove support for woody.
    + Report atimes of System.map files in /boot. (Closes: #229237)
@@ -10,10 +11,12 @@ popularity-contest (1.36) UNRELEASED; urgency=low
   * debian/control:
    + Do not Depends on '| dpkg-awk' for woody support.
    + Remove spurious Build-Depends line.
+   + Fix the long description.
   * Translations
+    - Added Wolof by Mouhamadou Mamoune Mbacke. (Closes: #392151)
     - Updated Traditional Chinese by Tetralet.
 
- -- Bill Allombert <ballombe@debian.org>  Sun,  8 Oct 2006 18:32:27 +0200
+ -- Bill Allombert <ballombe@debian.org>  Tue, 10 Oct 2006 18:10:27 +0200
 
 popularity-contest (1.35) unstable; urgency=low
 
