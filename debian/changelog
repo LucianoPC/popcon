@@ -1,6 +1,7 @@
 popularity-contest (1.37) UNRELEASED ; urgency=low
 
-  * This line is reserved for Christian.
+  * Translations
+    - Added Gujarati by Kartik Mistry. Closes: #393444
 
  -- Bill Allombert <ballombe@debian.org>  Wed, 11 Oct 2006 23:10:29 +0200
 
