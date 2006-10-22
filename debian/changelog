@@ -2,6 +2,7 @@ popularity-contest (1.37) UNRELEASED ; urgency=low
 
   * Translations
     - Added Gujarati by Kartik Mistry. Closes: #393444
+    - Added Hindi by Ravishankar Shrivastava
     - Updated Gujarati by Arief S Fitrianto.
 
  -- Bill Allombert <ballombe@debian.org>  Wed, 11 Oct 2006 23:10:29 +0200
