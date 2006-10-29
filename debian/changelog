@@ -1,3 +1,10 @@
+popularity-contest (1.38) unstable; urgency=medium
+
+  * Fix typo in postinst preseeding code (SUBMITRULS -> SUBMITURLS).
+  * Medium urgency to get this fix quickly into etch.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 29 Oct 2006 09:54:57 +0100
+
 popularity-contest (1.37) unstable; urgency=low
 
   * Translations
