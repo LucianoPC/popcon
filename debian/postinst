@@ -55,7 +55,7 @@ generate_conffile() {
 	# preseeding is only allowed on first time install
 	db_get popularity-contest/submiturls || true
 	if [ -n "$RET" ] ; then
-	    echo "SUBMITRULS=\"$RET\"" >> $conffile
+	    echo "SUBMITURLS=\"$RET\"" >> $conffile
 	fi
 
 	# Make sure user nobody can read the file.
