@@ -1,3 +1,10 @@
+popularity-contest (1.39) UNRELEASED; urgency=low
+
+  * Translations
+    - Updated Bosnian by Safir Secerovic. Closes: #396367
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 31 Oct 2006 19:44:21 +0100
+
 popularity-contest (1.38) unstable; urgency=medium
 
   * Fix typo in postinst preseeding code (SUBMITRULS -> SUBMITURLS).
