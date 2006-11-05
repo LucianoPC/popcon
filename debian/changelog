@@ -3,7 +3,7 @@ popularity-contest (1.39) UNRELEASED; urgency=low
   * Translations
     - Updated Bosnian by Safir Secerovic. Closes: #396367
     - Updated Bulgarian by Damyan Ivanov. Closes: #396530
-    - Updated Polich by Bartosz Fenski. Closes: #396714
+    - Updated Polish by Bartosz Fenski. Closes: #396714
 
  -- Christian Perrier <bubulle@debian.org>  Tue, 31 Oct 2006 19:44:21 +0100
 
