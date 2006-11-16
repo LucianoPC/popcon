@@ -1,4 +1,4 @@
-popularity-contest (1.39) UNRELEASED; urgency=low
+popularity-contest (1.39) unstable; urgency=low
 
   * Translations
     - Updated Bosnian by Safir Secerovic. Closes: #396367
@@ -6,7 +6,7 @@ popularity-contest (1.39) UNRELEASED; urgency=low
     - Updated Polish by Bartosz Fenski. Closes: #396714
     - Updated Punjabi by Amanpreet Singh Alam.
 
- -- Christian Perrier <bubulle@debian.org>  Tue, 31 Oct 2006 19:44:21 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 16 Nov 2006 08:41:35 +0100
 
 popularity-contest (1.38) unstable; urgency=medium
 
