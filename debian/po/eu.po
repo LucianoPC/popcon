@@ -1,6 +1,6 @@
 # translation of debconf.eu.po to Basque
 # translation of popularity-contest_debian_po-eu.po to Basque
-# Iñaki Larranaga Murgoitio <dooteo@euskalgnu.org>, 2005.
+# Inaki Larranaga Murgoitio <dooteo@euskalgnu.org>, 2005.
 # Piarres Beobide <pi@beobide.net> , 2006
 msgid ""
 msgstr ""
