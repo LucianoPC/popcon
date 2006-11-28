@@ -801,7 +801,6 @@ popularity-contest (1.3-1) unstable; urgency=high
 
  -- Avery Pennarun <apenwarr@debian.org>  Thu,  7 Mar 2002 12:39:49 -0500
 
-
 popularity-contest (1.2) unstable; urgency=low
 
   * Use debconf.
@@ -815,7 +814,6 @@ popularity-contest (1.2) unstable; urgency=low
   * Mostly thanks to Erich Schubert <erich@debian.org>
 
  -- Avery Pennarun <apenwarr@debian.org>  Thu, 21 Feb 2002 09:11:58 -0500
-
 
 popularity-contest (1.1-1) unstable; urgency=low
 
@@ -831,7 +829,6 @@ popularity-contest (1.1-1) unstable; urgency=low
   * Updated README.  Closes: #105668.
 
  -- Avery Pennarun <apenwarr@debian.org>  Tue,  6 Nov 2001 21:19:38 -0500
-
 
 popularity-contest (1.0-1) unstable; urgency=low
 
@@ -850,13 +847,11 @@ popularity-contest (1.0-1) unstable; urgency=low
 
  -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
 
-
 popularity-contest (0.1-2) frozen unstable; urgency=low
 
   * Added a missing dependency on mail-transport-agent; fixed bug#31010.
 
  -- Avery Pennarun <apenwarr@debian.org>  Wed, 23 Dec 1998 14:28:37 -0500
-
 
 popularity-contest (0.1) frozen unstable; urgency=low
 
@@ -870,7 +865,6 @@ popularity-contest (0.1) frozen unstable; urgency=low
   * No longer tries to report on packages that aren't installed.
 
  -- Avery Pennarun <apenwarr@debian.org>  Sun, 20 Dec 1998 16:11:02 -0500
-
 
 popularity-contest (0.00) unstable; urgency=low
 
