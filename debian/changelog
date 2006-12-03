@@ -2,6 +2,7 @@ popularity-contest (1.40) UNRELEASED; urgency=low
 
   * Translations
     - Updated Basque by Piarres Beobide. Closes: #400911
+    - Added Basque by Praveen. Closes: #401437
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 29 Nov 2006 19:32:48 +0100
 
