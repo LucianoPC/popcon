@@ -3,6 +3,7 @@ popularity-contest (1.40) UNRELEASED; urgency=low
   * Translations
     - Updated Basque by Piarres Beobide. Closes: #400911
     - Added Basque by Praveen. Closes: #401437
+    - Added Tamil by Senthil Kumar
     - Updated Norwegian Nynorsk by Håvard Korsvoll. Closes: #402789
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 29 Nov 2006 19:32:48 +0100
