@@ -5,6 +5,7 @@ popularity-contest (1.40) UNRELEASED; urgency=low
     - Added Malayalam by Praveen. Closes: #401437
     - Added Tamil by Senthil Kumar
     - Updated Norwegian Nynorsk by Håvard Korsvoll. Closes: #402789
+    - Updated Slovenian by Matej Kovacic
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 29 Nov 2006 19:32:48 +0100
 
