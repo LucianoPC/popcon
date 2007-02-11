@@ -7,6 +7,7 @@ popularity-contest (1.40) UNRELEASED; urgency=low
     - Updated Norwegian Nynorsk by Håvard Korsvoll. Closes: #402789
     - Updated Esperanto by Serge Leblanc. Closes: #409430
     - Updated Slovenian by Matej Kovacic
+    - Updated Turkish by Recai Oktas. Closes: #406996
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 29 Nov 2006 19:32:48 +0100
 
