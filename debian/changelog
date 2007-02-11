@@ -1,5 +1,7 @@
-popularity-contest (1.40) UNRELEASED; urgency=low
+popularity-contest (1.40) unstable; urgency=medium
 
+  * Medium urgency for i18n only upload.
+  [ Christian Perrier ]
   * Translations
     - Updated Basque by Piarres Beobide. Closes: #400911
     - Added Malayalam by Praveen. Closes: #401437
@@ -8,8 +10,10 @@ popularity-contest (1.40) UNRELEASED; urgency=low
     - Updated Esperanto by Serge Leblanc. Closes: #409430
     - Updated Slovenian by Matej Kovacic
     - Updated Turkish by Recai Oktas. Closes: #406996
+  [ Petter Reinholdtsen ]
+  * Minor cleanup to the changelog formatting.
 
- -- Christian Perrier <bubulle@debian.org>  Wed, 29 Nov 2006 19:32:48 +0100
+ -- Bill Allombert <ballombe@debian.org>  Sun, 11 Feb 2007 15:35:03 +0100
 
 popularity-contest (1.39) unstable; urgency=low
 
