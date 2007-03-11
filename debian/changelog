@@ -1,3 +1,10 @@
+popularity-contest (1.41) UNRELEASED; urgency=low
+
+  * Remove first person use and Debian branding from the package description
+    Closes: #414340
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 11 Mar 2007 09:07:36 +0100
+
 popularity-contest (1.40) unstable; urgency=medium
 
   * Medium urgency for i18n only upload.
