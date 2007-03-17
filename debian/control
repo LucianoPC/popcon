@@ -14,13 +14,13 @@ Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
  The popularity-contest package sets up a cron job that will
- periodically anonymously submit to the distribution developers
- statistics about the most used packages on this system.
+ periodically anonymously submit to the Debian developers
+ statistics about the most used Debian packages on this system.
  .
- This information influences decisions such as which packages should
- go on the first distribution CD. It also helps improving future
- versions of the distribution so that the most popular packages are
- the ones which are installed automatically for new users.
+ This information helps Debian making decisions such as which packages 
+ should go on the first CD. It also lets Debian improve future versions
+ of the distribution so that the most popular packages are the ones which
+ are installed automatically for new users.
  .
  Homepage: http://popcon.debian.org
 
