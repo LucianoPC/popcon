@@ -1,3 +1,10 @@
+popularity-contest (1.42) UNRELEASED; urgency=low
+
+  * Translations:
+    - Catalan minor update. Closes: #416945
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 31 Mar 2007 19:36:35 +0200
+
 popularity-contest (1.41) unstable; urgency=low
 
   * debian/control: Remove first person use from the package description

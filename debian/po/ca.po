@@ -40,7 +40,7 @@ msgid ""
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
 "Si decidiu participar-hi, la seqüència d'enviament automàtic s'executarà "
-"automàticament un cop a la setmana i enviarà les estadístiques als "
+"un cop a la setmana i enviarà les estadístiques als "
 "desenvolupadors de la distribució. Les estadístiques recollides es poden "
 "consultar a http://popcon.debian.org/."
 
