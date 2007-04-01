@@ -2,8 +2,9 @@ popularity-contest (1.42) UNRELEASED; urgency=low
 
   * Translations:
     - Catalan minor update. Closes: #416945
+    - Marathi added. Closes: #416793
 
- -- Christian Perrier <bubulle@debian.org>  Sat, 31 Mar 2007 19:36:35 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun, 01 Apr 2007 14:07:32 +0200
 
 popularity-contest (1.41) unstable; urgency=low
 
