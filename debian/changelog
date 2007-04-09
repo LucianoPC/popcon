@@ -1,10 +1,14 @@
-popularity-contest (1.42) UNRELEASED; urgency=low
+popularity-contest (1.42) unstable; urgency=low
 
+  [ Christian Perrier ]
   * Translations:
     - Catalan minor update. Closes: #416945
     - Marathi added. Closes: #416793
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 01 Apr 2007 14:07:32 +0200
+  [ Bill Allombert ]
+  * Please note when reading stats that etch was released with 1.41.
+
+ -- Bill Allombert <ballombe@debian.org>  Mon,  9 Apr 2007 20:50:55 +0200
 
 popularity-contest (1.41) unstable; urgency=low
 
