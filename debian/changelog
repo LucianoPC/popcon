@@ -4,7 +4,10 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * Translations:
     - Kannada added. Closes: #422031
 
- -- Christian Perrier <bubulle@debian.org>  Fri, 04 May 2007 20:11:18 +0200
+  [ Bill Allombert ]
+  * Remove popcon-upload-ubuntu, dropped by Ubuntu.
+
+ -- Bill Allombert <ballombe@debian.org>  Thu,  7 Jun 2007 14:49:59 +0200
 
 popularity-contest (1.42) unstable; urgency=low
 
