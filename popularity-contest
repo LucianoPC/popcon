@@ -83,7 +83,7 @@ while (<PACKAGES>)
   while (<FILES>)
   {
     chop;
-    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm|^/boot/System\.map-} or next;
+    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm|\.php|^/boot/System\.map-} or next;
     -f $_ or next;
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                       $atime,$mtime,$ctime,$blksize,$blocks)
