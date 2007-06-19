@@ -30,7 +30,7 @@ POPCON=/var/log/popularity-contest
 
 run_popcon()
 {
-	su -c "sh -c /usr/sbin/popularity-contest" nobody
+	su -c "/usr/sbin/popularity-contest" nobody
 }
 
 do_sendmail()

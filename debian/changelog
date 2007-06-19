@@ -7,8 +7,9 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   [ Bill Allombert ]
   * Remove popcon-upload-ubuntu and popcon-submit-ubuntu.cgi, dropped by Ubuntu.
   * Change regexp used to find files with relevant atime to handle php.
+  * cron.weekly: remove spurious 'sh -c' in run_popcon()
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 15 Jun 2007 20:37:54 +0200
+ -- Bill Allombert <ballombe@debian.org>  Tue, 19 Jun 2007 17:04:48 +0200
 
 popularity-contest (1.42) unstable; urgency=low
 
