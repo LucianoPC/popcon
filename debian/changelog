@@ -9,7 +9,9 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * popularity-contest used files regexp:
     - add support for php scripts
     - Add missing $ after .pm. Closes #431535, Thanks Gerfried Fuchs.
-  * cron.weekly: remove spurious 'sh -c' in run_popcon()
+  * cron.weekly, function run_popcon(): 
+    - remove spurious 'sh -c'
+    - add -s /bin/sh in case nobody has no shell. Closes: #429405, #431867.
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 19 Jun 2007 17:04:48 +0200
 
