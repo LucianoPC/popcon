@@ -8,7 +8,7 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * Remove popcon-upload-ubuntu and popcon-submit-ubuntu.cgi, dropped by Ubuntu.
   * popularity-contest used files regexp:
     - add support for php scripts
-    - Add missing $ after .pm. Closes #431535, Thanks Gerfried Fuchs.
+    - Add missing $ after .pm. Closes: #431535, Thanks Gerfried Fuchs.
   * cron.weekly, function run_popcon(): 
     - remove spurious 'sh -c'
     - add -s /bin/sh in case nobody has no shell. Closes: #429405, #431867.
