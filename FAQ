@@ -31,8 +31,9 @@ A) Each popularity-contest host is identified by a random 128bit uuid
    
    Known weaknesses of the system:
    
-   1) Your email submission might be intercepted. We evaluate the possibility
-   to use public-key cryptography to protect the email.
+   1) Your submission might be eavesdropped. We evaluate the possibility
+   to use public-key cryptography to protect the submission while in
+   transit.
    
    2) Someone who knows that you are very likely to use a particular package
    reported by only one person (e.g. you are the maintainer) might infer you
