@@ -3,13 +3,14 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   [ Christian Perrier ]
   * Translations:
     - Kannada added. Closes: #422031
+    - Hebrew updated. Closes: #445532
 
   [ Bill Allombert ]
   * Remove popcon-upload-ubuntu and popcon-submit-ubuntu.cgi, dropped by Ubuntu.
   * popularity-contest used files regexp:
     - add support for php scripts
     - Add missing $ after .pm. Closes: #431535, Thanks Gerfried Fuchs.
-  * cron.weekly, function run_popcon(): 
+  * cron.weekly, function run_popcon():
     - remove spurious 'sh -c'
     - add -s /bin/sh in case nobody has no shell. Closes: #429405, #431867.
   * cron.weekly, default.conf, FAQ:

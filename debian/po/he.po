@@ -1,22 +1,22 @@
-# translation of popularity-contest_1.34_he.po to Hebrew
-# Translators, if you are not familiar with the PO format, gettext
-# documentation is worth reading, especially sections dedicated to
-# this format, e.g. by running:
-# info -n '(gettext)PO Files'
-# info -n '(gettext)Header Entry'
-# Some information specific to po-debconf are available at
-# /usr/share/doc/po-debconf/README-trans
-# or http://www.debian.org/intl/l10n/po-debconf/README-trans
-# Developers do not need to manually edit POT or PO files.
+# translation of popularity-contest_debian_po_he.po to Hebrew
 #
-# <>, 2004.
-# Lior Kaplan <kaplan@debian.org>, 2006.
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+#
+# Lior Kaplan <kaplan@debian.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: popularity-contest_1.34_he\n"
+"Project-Id-Version: popularity-contest_debian_po_he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-29 12:23+0200\n"
-"PO-Revision-Date: 2006-09-15 16:10+0300\n"
+"PO-Revision-Date: 2007-10-06 17:38+0200\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../templates:4
 msgid "Participate in the package usage survey?"
-msgstr "להשתתף בסקר השימוש של החבילות?"
+msgstr "להשתתף בסקר השימוש בחבילות?"
 
 #. Type: boolean
 #. Description
@@ -39,9 +39,9 @@ msgid ""
 "influences decisions such as which packages should go on the first "
 "distribution CD."
 msgstr ""
-"ניתן לשלוח באופן אנונימי מידע למפתחי ההפצה על הסטטיסטיקה בנוגע לחבילות הכי "
-"שימושיות אצלך במערכת. מידע זה משפיע על ההחלטות כגון איזה חבילות יכללו בדיסק "
-"הראשון של ההפצה."
+"המערכת יכולה לספק באופן אנונימי מידע למפתחי ההפצה לגבי סטטיסטיקת שימוש "
+"בחבילות על מערכת זאת. מידע זה משפיע על החלטות כמו איזה חבילות יופיעו על "
+"הדיסק הראשון של ההפצה."
 
 #. Type: boolean
 #. Description
@@ -51,8 +51,8 @@ msgid ""
 "every week, sending statistics to the distribution developers. The collected "
 "statistics can be viewed on http://popcon.debian.org/."
 msgstr ""
-"אם בחרת להשתתף, סקריפט השליחה ירוץ פעם בשבוע באופן אוטומטי, ויעדכן את מפתחי "
-"ההפצה בסטטיסטיקה. המידע שנאסף ניתן לצפייה בכתובת http://popcon.debian.org/."
+"אם בחרת להשתתף, סקריפט השליחה האוטומטי ירוץ פעם בשבוע וישלח את המידע למפתחי "
+"ההפצה. הסטטיסטיקה הנאספת ניתנת לצפייה בכתובת: http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
@@ -61,5 +61,5 @@ msgid ""
 "This choice can be later modified by running \"dpkg-reconfigure popularity-"
 "contest\"."
 msgstr ""
-"הבחירה ניתנת לשינוי בעתיד על ידי הרצת הפקודה: \"dpkg-reconfigure popularity-"
-"contest\"."
+"בחירה זאת ניתנת לשינוי בעתיד על ידי הרצת הפקודה \"dpkg-reconfigure "
+"popularity-contest\""
