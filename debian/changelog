@@ -14,8 +14,10 @@ popularity-contest (1.43) UNRELEASED; urgency=low
     - add -s /bin/sh in case nobody has no shell. Closes: #429405, #431867.
   * cron.weekly, default.conf, FAQ:
     - Add support for HTTP_PROXY. Closes: #365681.
+  * Apply patch from Johan Walles to treat all mapped files as recently used
+    (which they obviously are).  Closes: #457441, #327693.
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 30 Nov 2007 11:33:58 +0100
+ -- Bill Allombert <ballombe@debian.org>  Tue, 08 Jan 2008 19:40:31 +0100
 
 popularity-contest (1.42) unstable; urgency=low
 

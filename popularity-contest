@@ -70,8 +70,29 @@ my $lastmonth = $now - $monthlen;
 
 my %popcon=();
 
-#Read dpkg database of installed packages
+# List all mapped files
+my %mapped;
+if (opendir(PROC, "/proc"))
+{
+  my @procfiles = readdir(PROC);
+  closedir(PROC);
+  
+  foreach (@procfiles)
+  {
+    -d "/proc/$_" or next;
+    m{^[0-9]+$} or next;
+    
+    open MAPS, "/proc/$_/maps" or next;
+    while (<MAPS>)
+    {
+      m{(/.*)} or next;
+      $mapped{$1} = 1;
+    }
+    close MAPS;
+  }
+}
 
+# Read dpkg database of installed packages
 open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
 while (<PACKAGES>)
 {
@@ -83,11 +104,17 @@ while (<PACKAGES>)
   while (<FILES>)
   {
     chop;
-    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-} or next;
-    -f $_ or next;
+    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
+      || -f $_ 
+      || defined $mapped{$_}
+      || next;
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                       $atime,$mtime,$ctime,$blksize,$blocks)
                           = stat;
+    if (defined $mapped{$_}) {
+      # It's currently being accessed by a process
+      $atime = time();
+    }
     print STDERR if (!defined($atime));
     if (!defined($bestatime) || $atime >= $bestatime)
     {
