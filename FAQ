@@ -81,6 +81,15 @@ run this commmand as root:
 
   dpkg-reconfigure popularity-contest
 
+Q) How can I specify a HTTP proxy server for the HTTP submission ?
+
+Popularity-contest honors the environment variable http_proxy that you can
+set in /etc/environment. Alternatively you can specify a proxy server
+specifically for popularity-contest by adding a line 
+
+HTTP_PROXY="http://<proxy hostname>:<port>"
+to /etc/popularity-contest.conf.
+
 Q) How can I convert the timestamps in the popcon report to human-readable 
 dates ?
 

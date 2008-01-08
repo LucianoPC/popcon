@@ -12,8 +12,10 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * cron.weekly, function run_popcon(): 
     - remove spurious 'sh -c'
     - add -s /bin/sh in case nobody has no shell. Closes: #429405, #431867.
+  * cron.weekly, default.conf, FAQ:
+    - Add support for HTTP_PROXY. Closes: #365681.
 
- -- Bill Allombert <ballombe@debian.org>  Tue, 19 Jun 2007 17:04:48 +0200
+ -- Bill Allombert <ballombe@debian.org>  Fri, 30 Nov 2007 11:33:58 +0100
 
 popularity-contest (1.42) unstable; urgency=low
 
