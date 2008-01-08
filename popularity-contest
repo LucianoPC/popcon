@@ -104,10 +104,10 @@ while (<PACKAGES>)
   while (<FILES>)
   {
     chop;
-    m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
-      || -f $_ 
-      || defined $mapped{$_}
-      || next;
+    next unless (
+     ( m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
+       || defined $mapped{$_} )
+       && -f $_);
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                       $atime,$mtime,$ctime,$blksize,$blocks)
                           = stat;
