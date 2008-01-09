@@ -11,6 +11,7 @@ unset MY_HOSTID
 unset PARTICIPATE
 unset SUBMITURLS
 unset USEHTTP
+unset RUNSLEEP
 
 # get configuration information
 . /usr/share/popularity-contest/default.conf
