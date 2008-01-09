@@ -18,6 +18,11 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * Apply patch from Johan Walles to treat all mapped files as recently used
     (which they obviously are).  Closes: #457441, #327693.
 
+  [ Petter Reinholdtsen ]
+  * Add code in cron.weekly to sleep a random period of time up to an
+    hour, to make sure all clients do not connect at the same time.
+    Closes: #440493, #459910.
+
  -- Bill Allombert <ballombe@debian.org>  Tue, 08 Jan 2008 19:40:31 +0100
 
 popularity-contest (1.42) unstable; urgency=low
