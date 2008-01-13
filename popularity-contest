@@ -16,14 +16,14 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# based on a design and a bash/gawk script 
-# 
+# based on a design and a bash/gawk script
+#
 # Copyright (C) 1998,2000 by Avery Pennarun, for the Debian Project.
 # Use, modify, and redistribute modified or unmodified versions in any
 # way you wish.
 
 use strict;
-use 5.6.0;  
+use 5.6.0;
 
 my $dpkg_db="/var/lib/dpkg/info";
 my $popcon_conf="/etc/popularity-contest.conf";
@@ -76,12 +76,12 @@ if (opendir(PROC, "/proc"))
 {
   my @procfiles = readdir(PROC);
   closedir(PROC);
-  
+
   foreach (@procfiles)
   {
     -d "/proc/$_" or next;
     m{^[0-9]+$} or next;
-    
+
     open MAPS, "/proc/$_/maps" or next;
     while (<MAPS>)
     {
@@ -120,13 +120,13 @@ while (<PACKAGES>)
     {
       $bestatime=$atime;
       if ($atime < $lastmonth)
-      { 
+      {
         # Not accessed since more than 30 days.
         $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<OLD>"];
       }
       elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
       {
-        # Installed/upgraded less than a month ago and not used after 
+        # Installed/upgraded less than a month ago and not used after
         # install/upgrade day.
         $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<RECENT-CTIME>"];
       }
@@ -144,7 +144,7 @@ close PACKAGES;
 
 # We're not done yet.  Sort the output in reverse by atime, and
 # add a header/footer.
-	
+
 print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ".
     "ARCH:$debarch POPCONVER:$popconver\n";
 
