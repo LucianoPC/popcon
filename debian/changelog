@@ -6,7 +6,8 @@ popularity-contest (1.43) UNRELEASED; urgency=low
     - Hebrew updated. Closes: #445532
 
   [ Bill Allombert ]
-  * Remove popcon-upload-ubuntu and popcon-submit-ubuntu.cgi, dropped by Ubuntu.
+  * Remove popcon-upload-ubuntu and popcon-submit-ubuntu.cgi, dropped
+    by Ubuntu.
   * popularity-contest used files regexp:
     - add support for php scripts
     - Add missing $ after .pm. Closes: #431535, Thanks Gerfried Fuchs.
@@ -26,6 +27,7 @@ popularity-contest (1.43) UNRELEASED; urgency=low
   * Include files in subdirectories under */lib/, to avoid files
     updated by ldconfig file still counting such packages as used
     (Closes: #457432)
+  * Move homepage URL to the new Homepage control file tag.
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 08 Jan 2008 19:40:31 +0100
 

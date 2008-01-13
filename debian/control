@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Popularity Contest Developers <popcon-developers@lists.alioth.debian.org>
 Uploaders: Petter Reinholdtsen <pere@debian.org>, Bill Allombert <ballombe@debian.org>
 Build-Depends: debhelper (>=4.1.16)
+Homepage: http://popcon.debian.org/
 Standards-Version: 3.7.3
 
 Package: popularity-contest
@@ -21,6 +22,4 @@ Description: Vote for your favourite packages automatically
  should go on the first CD. It also lets Debian improve future versions
  of the distribution so that the most popular packages are the ones which
  are installed automatically for new users.
- .
- Homepage: http://popcon.debian.org
 
