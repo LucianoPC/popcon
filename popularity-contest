@@ -105,7 +105,7 @@ while (<PACKAGES>)
   {
     chop;
     next unless (
-     ( m{/bin/|/sbin/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
+     ( m{/bin/|/sbin/|/lib/.+/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
        || defined $mapped{$_} )
        && -f $_);
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
