@@ -1,4 +1,4 @@
-popularity-contest (1.44) UNRELEASED; urgency=low
+popularity-contest (1.44) unstable; urgency=low
 
   [ Petter Reinholdtsen ]
   * Make sure popanal do not crash when an invalid timestamp is found
@@ -11,7 +11,7 @@ popularity-contest (1.44) UNRELEASED; urgency=low
     /org/ftp.root/debian/dists/stable/main/binary-*/Packages.gz is not
     UTF-8.  Otherwise it would croak on a name containing 'ó'.
 
- -- Petter Reinholdtsen <pere@debian.org>  Sun, 13 Jan 2008 14:32:32 +0100
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 18 Mar 2008 20:17:48 +0100
 
 popularity-contest (1.43) unstable; urgency=low
 
