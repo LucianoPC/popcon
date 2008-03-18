@@ -3,6 +3,10 @@ popularity-contest (1.44) UNRELEASED; urgency=low
   [ Petter Reinholdtsen ]
   * Make sure popanal do not crash when an invalid timestamp is found
     in the POPULARITY-CONTEST-0 header.
+  * Remove code in cron.weekly to sleep a random period of time up to
+    an hour, to test hypothesis that this was not the reason for the
+    increase in submissions seen the last few months.  Possibly
+    reopens #440493, #459910.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 13 Jan 2008 14:32:32 +0100
 

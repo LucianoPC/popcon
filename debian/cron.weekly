@@ -11,7 +11,6 @@ unset MY_HOSTID
 unset PARTICIPATE
 unset SUBMITURLS
 unset USEHTTP
-unset RUNSLEEP
 
 # get configuration information
 . /usr/share/popularity-contest/default.conf
@@ -26,21 +25,6 @@ if [ -z "$MAILTO" ] && [ "yes" != "$USEHTTP" ]; then exit 0; fi
 if [ -n "$HTTP_PROXY" ]; then
   export http_proxy="$HTTP_PROXY";
 fi
-
-# Sleep a random number of seconds to avoid all clients connecting to
-# the server at the same time.  Based on code from the cron-apt and
-# sitesummary package.
-if [ -n "$RUNSLEEP" ] ; then
-    if [ $RUNSLEEP -gt 0 ] ; then
-        if [ -z "$RANDOM" ] ; then
-            # A fix for shells that do not have this bash feature.
-            RANDOM=$(dd if=/dev/urandom count=1 2> /dev/null | cksum | cut -c"1-5")
-        fi
-        TIME=$(($RANDOM % $RUNSLEEP))
-        sleep $TIME
-    fi
-fi
-
 
 # keep old logs
 cd /var/log
