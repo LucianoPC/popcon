@@ -7,6 +7,9 @@ popularity-contest (1.44) UNRELEASED; urgency=low
     an hour, to test hypothesis that this was not the reason for the
     increase in submissions seen the last few months.  Possibly
     reopens #440493, #459910.
+  * Change popcon.pl to handle the fact that
+    /org/ftp.root/debian/dists/stable/main/binary-*/Packages.gz is not
+    UTF-8.  Otherwise it would croak on a name containing 'ó'.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sun, 13 Jan 2008 14:32:32 +0100
 

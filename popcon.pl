@@ -224,7 +224,12 @@ for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
 {
   /([^[:space:]]+)/ or die("incorrect package name");
   $file = $1;#Untaint
-  open AVAIL, "-|:utf8","zcat $file";
+  if ($file =~ m%/dists/stable/%) {
+    # Stable release (Etch) do not use UTF-8 in its package files
+    open AVAIL, "-|:iso-8859-1","zcat $file";
+  } else {
+    open AVAIL, "-|:utf8","zcat $file";
+  }
   while(<AVAIL>)
   {
 /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
