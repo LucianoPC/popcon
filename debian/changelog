@@ -1,3 +1,11 @@
+popularity-contest (1.44) UNRELEASED; urgency=low
+
+  [ Petter Reinholdtsen ]
+  * Make sure popanal do not crash when an invalid timestamp is found
+    in the POPULARITY-CONTEST-0 header.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 13 Jan 2008 14:32:32 +0100
+
 popularity-contest (1.43) unstable; urgency=low
 
   [ Christian Perrier ]

@@ -198,7 +198,12 @@ def read_submissions(stream):
 
 	    subcount = subcount + 1
 	    ewrite('#%s' % subcount)
-	    e = Submission(0, header['ID'], header['TIME'])
+	    e = None
+	    try:
+		e = Submission(0, header['ID'], header['TIME'])
+	    except:
+		ewrite('Invalid date: ' + header['TIME'] + ' for ID ' + header['ID'])
+		continue
 
             if header.has_key('POPCONVER'):
 		if header['POPCONVER']=='':
