@@ -57,7 +57,7 @@ while(<>)
       {
         close REPORT; 
         unlink $file; 
-        print STDERR "Bad report $file";
+        print STDERR "Bad report $file\n";
         $state='initial';
         next;
       };
@@ -75,5 +75,5 @@ if ($state eq 'accept')
 {
         close REPORT;
         unlink $file; #Reject
-        print STDERR "Bad report $file";
+        print STDERR "Bad report $file\n";
 }
