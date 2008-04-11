@@ -226,7 +226,7 @@ for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
   $file = $1;#Untaint
   if ($file =~ m%/dists/stable/%) {
     # Stable release (Etch) do not use UTF-8 in its package files
-    open AVAIL, "-|:iso-8859-1","zcat $file";
+    open AVAIL, "-|:encoding(iso-8859-1)","zcat $file";
   } else {
     open AVAIL, "-|:utf8","zcat $file";
   }

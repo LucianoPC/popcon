@@ -1,6 +1,7 @@
 popularity-contest (1.45) UNRELEASED; urgency=low
 
   * Fix typo in debug message emitted from prepop.pl.
+  * Correct charset handling in popcon.pl for ISO-8859-1.
 
  -- Petter Reinholdtsen <pere@debian.org>  Sat, 12 Apr 2008 00:57:32 +0200
 
