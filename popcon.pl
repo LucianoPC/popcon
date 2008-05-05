@@ -63,6 +63,10 @@ sub popconintro
   For more information, read the <a href="${docurlbase}README">README</a> and the 
   <a href="${docurlbase}FAQ">FAQ</a>.
   </em> <p>
+<form method="GET" action="http://qa.debian.org/popcon.php">Popcon statistics
+for source package <input type="text" size="30" maxlength="80" name="package">
+<input type="submit" value="Go">
+</form> <p>
 EOH
 }
 
@@ -224,12 +228,7 @@ for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
 {
   /([^[:space:]]+)/ or die("incorrect package name");
   $file = $1;#Untaint
-  if ($file =~ m%/dists/stable/%) {
-    # Stable release (Etch) do not use UTF-8 in its package files
-    open AVAIL, "-|:encoding(iso-8859-1)","zcat $file";
-  } else {
-    open AVAIL, "-|:utf8","zcat $file";
-  }
+  open AVAIL, "-|:encoding(UTF-8)","zcat $file";
   while(<AVAIL>)
   {
 /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
