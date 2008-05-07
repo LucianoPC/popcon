@@ -53,13 +53,14 @@ A) popularity-contest relies on atime to know what packages were used during
 
 Q) When does popularity-contest run ?
 
-A) popularity-contest is run by the weekly cron job 
-   "/etc/cron.weekly/popularity-contest".
+A) popularity-contest is run by the daily cron job 
+"/etc/cron.daily/popularity-contest", but only one day in the week,
+whci is specified in the configuration file. This day is chosen randomly
+to spread the load on the server.
 
-Under the default configuration of cron, this happens every Sunday
-at 6:47 in the morning. This can be changed by editing /etc/crontab
-but if your computer is not always turned on, we really recommend you
-install the anacron package.
+Under the default configuration of cron, this happens at 6:47 in the morning.
+This can be changed by editing /etc/crontab but if your computer is not always
+turned on, we really recommend you install the anacron package.
 
 Q) I don't want popcon email to be sent by root! How can I change that ?
 

@@ -26,6 +26,11 @@ if [ -n "$HTTP_PROXY" ]; then
   export http_proxy="$HTTP_PROXY";
 fi
 
+# Only run on the given day, to spread the load on the server a bit
+if [ "$DAY" ] && [ "$DAY" != "$(date +%w)" ] ; then
+  exit 0
+fi
+
 # keep old logs
 cd /var/log
 umask 022

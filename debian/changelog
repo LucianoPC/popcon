@@ -8,6 +8,8 @@ popularity-contest (1.45) UNRELEASED; urgency=low
     - revert changes introduced in 1.44.
     - Use :encoding(UTF-8) instead of :utf8 when reapding packages files
     - Add query box linking to <http://qa.debian.org/popcon.php>
+  * Instead of reporting on Sunday, now a random day in the week is 
+    chosen. This spread the load on the server. Closes: #440493, #459910.
 
  -- Bill Allombert <ballombe@debian.org>  Mon, 05 May 2008 22:00:55 +0200
 

@@ -34,8 +34,14 @@ generate_id() {
         fi
 }
 
+# Select a random day to submit on, to spread the load over time, unless it is already set.
+select_random_day() {
+        DAY=`bash -c 'echo $(($RANDOM % 7))'`
+}
+
 generate_conffile() {
         generate_id
+	select_random_day
 	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.
 		#
@@ -50,6 +56,7 @@ generate_conffile() {
 		MY_HOSTID="$MY_HOSTID"
 		PARTICIPATE="$PARTICIPATE"
 		USEHTTP="yes"
+		DAY="$DAY"
 	EOF
 
 	# preseeding is only allowed on first time install
@@ -77,6 +84,13 @@ case "$1" in
             # of behaviour with stdin. version 1.17, 2004-04-12.
               *-)  MY_HOSTID="${MY_HOSTID%  -}";;
             esac;
+
+	    # If DAY is not set, add it.
+	    if [ -z "$DAY" ] ; then
+	        select_random_day
+	        echo "DAY=\"$DAY\"" >> $conffile
+	    fi
+
 	    # Replace only if the content changed, to avoid changing the
 	    # config file date when no change was done.
 
