@@ -10,7 +10,7 @@ Standards-Version: 3.7.3
 Package: popularity-contest
 Architecture: all
 Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10)
-Recommends: cron, exim4 | mail-transport-agent, mime-construct
+Recommends: cron | fcron, exim4 | mail-transport-agent
 Suggests: anacron
 Provides: popcon
 Description: Vote for your favourite packages automatically
