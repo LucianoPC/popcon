@@ -6,7 +6,7 @@ popularity-contest (1.45) UNRELEASED; urgency=low
   [ Bill Allombert ]
   * popcon.pl:
     - revert changes introduced in 1.44.
-    - Use :encoding(UTF-8) instead of :utf8 when reapding packages files
+    - Use :encoding(UTF-8) instead of :utf8 when reading packages files
     - Add query box linking to <http://qa.debian.org/popcon.php>
   * debian/control:
     - No more Recommends mime-construct. Closes: #466352.
@@ -14,7 +14,7 @@ popularity-contest (1.45) UNRELEASED; urgency=low
   * Instead of reporting on Sunday, now a random day in the week is 
     chosen. This spread the load on the server. Closes: #440493, #459910.
 
- -- Bill Allombert <ballombe@debian.org>  Mon, 05 May 2008 22:00:55 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 11 May 2008 11:45:13 +0200
 
 popularity-contest (1.44) unstable; urgency=low
 
