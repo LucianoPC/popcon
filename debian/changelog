@@ -1,8 +1,8 @@
-popularity-contest (1.45) UNRELEASED; urgency=low
+popularity-contest (1.45) unstable; urgency=low
 
   [ Petter Reinholdtsen ]
   * Fix typo in debug message emitted from prepop.pl.
-  
+
   [ Bill Allombert ]
   * popcon.pl:
     - revert changes introduced in 1.44.
@@ -11,10 +11,10 @@ popularity-contest (1.45) UNRELEASED; urgency=low
   * debian/control:
     - No more Recommends mime-construct. Closes: #466352.
     - Recommends cron | fcron. Closes: #479664.
-  * Instead of reporting on Sunday, now a random day in the week is 
+  * Instead of reporting on Sunday, now a random day in the week is
     chosen. This spread the load on the server. Closes: #440493, #459910.
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 11 May 2008 11:45:13 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sun, 11 May 2008 12:20:19 +0200
 
 popularity-contest (1.44) unstable; urgency=low
 
