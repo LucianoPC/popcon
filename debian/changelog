@@ -1,5 +1,10 @@
 popularity-contest (1.46) UNRELEASED; urgency=low
 
+  [ Petter Reinholdtsen ]
+  * Make sure to reinsert the ID if it is missing in the configuration
+    file.  Based on bug reported by Alf-Tonny Batz.
+
+  [ Christian Perrier ]
   * Translations:
     - Belarusian added (directly sent by the team)
 

@@ -74,8 +74,14 @@ case "$1" in
 	if [ ! -e $conffile ]; then
 	    generate_conffile
 	else
+	    # If MY_HOSTID is not set, add it.  This is useful when disk images are prepared
+	    if [ -z "$MY_HOSTID" ] ; then
+	        generate_id
+	        echo "MY_HOSTID=\"$MY_HOSTID\"" >> $conffile
+	    fi
+
             OLDHOSTID="$MY_HOSTID";
-            case $MY_HOSTID in
+            case "$MY_HOSTID" in
             # Workaround for bug #237874 triggered on hurd.  The
             # problem was fixed in version 1.15, 2004-03-20.
 
