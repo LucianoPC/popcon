@@ -6,7 +6,10 @@ popularity-contest (1.46) UNRELEASED; urgency=low
 
   [ Christian Perrier ]
   * Translations:
-    - Belarusian added (directly sent by the team)
+    - Irish. Closes: #480871
+    - Belarusian. Closes: #483527
+    - Korean. Closes: #491413
+    - Georgian. Closes: #498418
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 12 May 2008 21:11:01 +0200
 
