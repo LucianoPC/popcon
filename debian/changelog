@@ -11,7 +11,11 @@ popularity-contest (1.46) UNRELEASED; urgency=low
     - Korean. Closes: #491413
     - Georgian. Closes: #498418
 
- -- Christian Perrier <bubulle@debian.org>  Mon, 12 May 2008 21:11:01 +0200
+  [ Bill Allombert ]
+  * popcon-stat.pl: sync with popcon.debian.org version: add graphs
+    restricted to last 3 month.
+
+ -- Bill Allombert <ballombe@debian.org>  Thu, 18 Sep 2008 22:46:12 +0200
 
 popularity-contest (1.45) unstable; urgency=low
 
