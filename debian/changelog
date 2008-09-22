@@ -1,4 +1,4 @@
-popularity-contest (1.46) UNRELEASED; urgency=low
+popularity-contest (1.46) unstable; urgency=low
 
   [ Petter Reinholdtsen ]
   * Make sure to reinsert the ID if it is missing in the configuration
@@ -12,10 +12,12 @@ popularity-contest (1.46) UNRELEASED; urgency=low
     - Georgian. Closes: #498418
 
   [ Bill Allombert ]
-  * popcon-stat.pl: sync with popcon.debian.org version: add graphs
-    restricted to last 3 month.
+  * popcon-stat.pl:
+    - sync with popcon.debian.org version: add graphs restricted to last 3
+      months.
+  * Updated standards-version from 3.7.3 to 3.8.0.  No change needed.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 18 Sep 2008 22:46:12 +0200
+ -- Bill Allombert <ballombe@debian.org>  Mon, 22 Sep 2008 21:01:29 +0200
 
 popularity-contest (1.45) unstable; urgency=low
 
