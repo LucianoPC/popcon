@@ -3,6 +3,7 @@ popularity-contest (1.47) UNRELEASED; urgency=low
   [ Christian Perrier ]
   * Translations:
     - Macedonian
+    - Asturian added. Closes: #511141
 
  -- Christian Perrier <bubulle@debian.org>  Fri, 26 Sep 2008 20:35:18 +0200
 
