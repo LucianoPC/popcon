@@ -1,6 +1,6 @@
 popularity-contest (1.47) unstable; urgency=low
 
-  * Please note when reading stats that Lenny was released with 1.46.
+  * Please note when reading stats that lenny was released with 1.46.
   [ Christian Perrier ]
   * Translations:
     - Macedonian
@@ -8,11 +8,12 @@ popularity-contest (1.47) unstable; urgency=low
     - Kazakh added. Closes: #514590
 
   [ Bill Allombert ]
-  * debian/popularity-contest.8, FAQ :
+  * debian/popularity-contest.8, FAQ:
     - Updated to reflect move to /etc/cron.daily. Closes: #500431
       Thanks William Dode.
+  * FAQ: Fix typo reported by Raphael Geissert. Closes: #496605
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 19 Feb 2009 18:48:33 +0100
+ -- Bill Allombert <ballombe@debian.org>  Thu, 19 Feb 2009 21:22:53 +0100
 
 popularity-contest (1.46) unstable; urgency=low
 
