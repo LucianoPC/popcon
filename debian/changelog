@@ -8,7 +8,7 @@ popularity-contest (1.47) unstable; urgency=low
     - Kazakh added. Closes: #514590
 
   [ Bill Allombert ]
-  * debian/popularity-contest.8:
+  * debian/popularity-contest.8, FAQ :
     - Updated to reflect move to /etc/cron.daily. Closes: #500431
       Thanks William Dode.
 
