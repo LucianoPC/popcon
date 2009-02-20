@@ -12,8 +12,10 @@ popularity-contest (1.47) unstable; urgency=low
     - Updated to reflect move to /etc/cron.daily. Closes: #500431
       Thanks William Dode.
   * FAQ: Fix typo reported by Raphael Geissert. Closes: #496605
+  * debian/preinst, debian/postrm:
+    - Add 'set -e'.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 19 Feb 2009 21:22:53 +0100
+ -- Bill Allombert <ballombe@debian.org>  Fri, 20 Feb 2009 11:33:21 +0100
 
 popularity-contest (1.46) unstable; urgency=low
 

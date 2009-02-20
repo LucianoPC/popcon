@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 case "$1" in
 install|upgrade)
 # Move a conffile without triggering a dpkg question if it was not modified.
