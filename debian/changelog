@@ -1,8 +1,10 @@
 popularity-contest (1.48) UNRELEASED; urgency=low
 
-  * 
+  [ Bill Allombert ]
+  * popcon.pl:
+    - sync with popcon.debian.org version: add release names.
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 20 Feb 2009 11:45:01 +0100
+ -- Bill Allombert <ballombe@debian.org>  Wed, 25 Feb 2009 18:37:47 +0100
 
 popularity-contest (1.47) unstable; urgency=low
 

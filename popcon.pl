@@ -4,6 +4,7 @@ $results="../popcon-mail/results";
 $popcon="../www";
 my $mirrorbase = "/org/ftp.root/debian";
 my $docurlbase = "";
+%popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny");
 
 sub htmlheader
 {
@@ -204,7 +205,7 @@ sub mark
 @fields=("inst","vote","old","recent","no-files");
 
 for $file ("slink","slink-nonUS","potato","potato-nonUS",
-           "woody","woody-nonUS","sarge")
+           "woody","woody-nonUS","sarge","etch")
 {
   open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
   while(<AVAIL>)
@@ -222,9 +223,9 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS",
 mark "Reading legacy packages...";
 $ENV{PATH}="/bin:/usr/bin";
 
-for (glob("/org/ftp.root/debian/dists/stable/*/binary-*/Packages.gz"),
-           glob("/org/ftp.root/debian/dists/testing/*/binary-*/Packages.gz"),
-           glob("/org/ftp.root/debian/dists/sid/*/binary-*/Packages.gz"))
+for (glob("$mirrorbase/dists/stable/*/binary-*/Packages.gz"),
+           glob("$mirrorbase/dists/testing/*/binary-*/Packages.gz"),
+           glob("$mirrorbase/dists/sid/*/binary-*/Packages.gz"))
 {
   /([^[:space:]]+)/ or die("incorrect package name");
   $file = $1;#Untaint
@@ -429,8 +430,16 @@ EOF
 	print HTML  <<'EOF';
 </pre></td>
 <td>
+<table>
+  <tr><td>
  <img alt="Graph of number of submissions per architectures"
  width="600" height="400" src="stat/submission.png">
+  </td></tr>
+  <tr><td>
+ <img alt="Graph of number of submissions per architectures (last 12 months)"
+ width="600" height="400" src="stat/submission-1year.png">
+  </td></tr>
+</table>
 </td></tr>
 <tr><td>
 Statistics per popularity-contest releases:
@@ -438,7 +447,9 @@ Statistics per popularity-contest releases:
 EOF
         for $f (grep { $_ ne 'unknown' } sort keys %release)
         {
-                printf HTML "%-16s : %-10s \n",$f,$release{$f};
+                my($name) = $f;
+                $name = "$f ($popconver{$f})" if (defined($popconver{$f}));
+                printf HTML "%-16s : %-15s \n",$name,$release{$f};
         }
         if (defined $release{"unknown"}) {
             printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
@@ -446,9 +457,18 @@ EOF
 	print HTML  <<'EOF';
 </pre></td>
 <td>
- <img alt="Graph of popularity-contest versions in use"
-  width="600" height="400" src="stat/release.png">
-</td></tr>
+<table>
+  <tr><td>
+   <img alt="Graph of popularity-contest versions in use"
+    width="600" height="400" src="stat/release.png">
+  </td></tr>
+  <tr><td>
+ <img alt="Graph of popularity-contest versions in use (12 last months)"
+  width="600" height="400" src="stat/release-1year.png">
+  </td></tr>
+</table>
+</td>
+</tr>
 </table>
 <p>
 EOF
