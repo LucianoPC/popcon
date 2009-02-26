@@ -4,6 +4,10 @@ popularity-contest (1.48) UNRELEASED; urgency=low
   * popcon.pl:
     - sync with popcon.debian.org version: add release names.
 
+  [ Christian Perrier ]
+  * Translations:
+    - Slovak updated. Closes: #517101
+
  -- Bill Allombert <ballombe@debian.org>  Wed, 25 Feb 2009 18:37:47 +0100
 
 popularity-contest (1.47) unstable; urgency=low
