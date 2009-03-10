@@ -5,6 +5,7 @@ $popcon="../www";
 my $mirrorbase = "/org/ftp.root/debian";
 my $docurlbase = "";
 %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny");
+%popver=();
 
 sub htmlheader
 {
@@ -223,25 +224,35 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS",
 mark "Reading legacy packages...";
 $ENV{PATH}="/bin:/usr/bin";
 
-for (glob("$mirrorbase/dists/stable/*/binary-*/Packages.gz"),
-           glob("$mirrorbase/dists/testing/*/binary-*/Packages.gz"),
-           glob("$mirrorbase/dists/sid/*/binary-*/Packages.gz"))
+for $dist ("stable", "testing", "unstable")
 {
-  /([^[:space:]]+)/ or die("incorrect package name");
-  $file = $1;#Untaint
-  open AVAIL, "-|:encoding(UTF-8)","zcat $file";
-  while(<AVAIL>)
+  for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.gz"))
   {
-/^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
-/^Maintainer: ([^()]+) (\(.+\) )*<.+>/ and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};
-/^Source: (\S+)/ and do { $source{$p}=$1;next;};
-/^Section: (.+)/ or next;
-          $sec=$1;
-          $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
-          $section{$p}=$sec;
+    /([^[:space:]]+)/ or die("incorrect package name");
+    $file = $1;#Untaint
+    open AVAIL, "-|:encoding(UTF-8)","zcat $file";
+    while(<AVAIL>)
+    {
+  /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
+  /^Version: (.+)/ && $p eq "popularity-contest" 
+        and do { $popver{$dist}=$1; next;};
+  /^Maintainer: ([^()]+) (\(.+\) )*<.+>/
+        and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};
+  /^Source: (\S+)/ and do { $source{$p}=$1;next;};
+  /^Section: (.+)/ or next;
+            $sec=$1;
+            $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
+            $section{$p}=$sec;
+    }
+    close AVAIL;
   }
-  close AVAIL;
 }
+for $dist ("stable", "testing", "unstable")
+{
+  my($v)=$popver{$dist};
+  $popconver{$v}=defined($popconver{$v})?"$popconver{$v}/$dist":$dist;
+}
+
 mark "Reading current packages...";
 
 
@@ -449,10 +460,10 @@ EOF
         {
                 my($name) = $f;
                 $name = "$f ($popconver{$f})" if (defined($popconver{$f}));
-                printf HTML "%-16s : %-15s \n",$name,$release{$f};
+                printf HTML "%-25s : %-10s \n",$name,$release{$f};
         }
         if (defined $release{"unknown"}) {
-            printf HTML "%-16s : %-10s \n","unknown",$release{"unknown"};
+            printf HTML "%-25s : %-10s \n","unknown",$release{"unknown"};
         }
 	print HTML  <<'EOF';
 </pre></td>
