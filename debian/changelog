@@ -3,12 +3,15 @@ popularity-contest (1.48) UNRELEASED; urgency=low
   [ Bill Allombert ]
   * popcon.pl:
     - sync with popcon.debian.org version: add release names.
+  * popularity-contest: 
+    - use "dpkg --print-architecture" instead of 
+          "dpkg --print-installation-architecture". Closes: #529393
 
   [ Christian Perrier ]
   * Translations:
     - Slovak updated. Closes: #517101
 
- -- Bill Allombert <ballombe@debian.org>  Wed, 25 Feb 2009 18:37:47 +0100
+ -- Bill Allombert <ballombe@debian.org>  Sat, 13 Jun 2009 16:01:43 +0200
 
 popularity-contest (1.47) unstable; urgency=low
 

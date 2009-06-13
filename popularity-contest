@@ -55,7 +55,7 @@ if ( $HOSTID !~ /^([a-f0-9]{32})$/)
 }
 
 # Architecture.
-my $debarch = `dpkg --print-installation-architecture`;
+my $debarch = `dpkg --print-architecture`;
 chomp $debarch;
 
 # Popcon release
