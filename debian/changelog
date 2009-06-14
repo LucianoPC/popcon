@@ -6,12 +6,16 @@ popularity-contest (1.48) unstable; urgency=low
   * popularity-contest: 
     - use "dpkg --print-architecture" instead of 
           "dpkg --print-installation-architecture". Closes: #529393
+  * debian/control: 
+    - Updated Standards-Version from 3.8.0 to 3.8.1.  No change needed.
+  * debian/compat:
+    - Set debhelper compatibility level to 5
 
   [ Christian Perrier ]
   * Translations:
     - Slovak updated. Closes: #517101
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 14 Jun 2009 12:47:38 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 14 Jun 2009 18:10:30 +0200
 
 popularity-contest (1.47) unstable; urgency=low
 
