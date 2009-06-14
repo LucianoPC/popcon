@@ -1,4 +1,4 @@
-popularity-contest (1.48) UNRELEASED; urgency=low
+popularity-contest (1.48) unstable; urgency=low
 
   [ Bill Allombert ]
   * popcon.pl:
@@ -11,7 +11,7 @@ popularity-contest (1.48) UNRELEASED; urgency=low
   * Translations:
     - Slovak updated. Closes: #517101
 
- -- Bill Allombert <ballombe@debian.org>  Sat, 13 Jun 2009 16:01:43 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 14 Jun 2009 12:47:38 +0200
 
 popularity-contest (1.47) unstable; urgency=low
 
