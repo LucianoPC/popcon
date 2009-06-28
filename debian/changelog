@@ -1,8 +1,9 @@
 popularity-contest (1.49) UNRELEASED; urgency=low
 
-  * 
+  * debian/control: 
+    - Build-Depends: raise debhelper version to (>=5) to match compat.
 
- -- Bill Allombert <ballombe@debian.org>  Fri, 19 Jun 2009 11:06:47 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 28 Jun 2009 17:18:51 +0200
 
 popularity-contest (1.48) unstable; urgency=low
 
