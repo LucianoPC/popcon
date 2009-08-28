@@ -1,7 +1,12 @@
 popularity-contest (1.49) UNRELEASED; urgency=low
 
+  [ Bill Allombert ]
   * debian/control: 
     - Build-Depends: raise debhelper version to (>=5) to match compat.
+
+  [ Christian Perrier ]
+  * Translations:
+    - Telugu. Closes: #544044
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 28 Jun 2009 17:18:51 +0200
 
