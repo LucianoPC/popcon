@@ -1,6 +1,8 @@
 popularity-contest (1.49) UNRELEASED; urgency=low
 
   [ Bill Allombert ]
+  * popcon.pl:
+    - sync with popcon.debian.org version: add source (max) ratings.
   * debian/control: 
     - Build-Depends: raise debhelper version to (>=5) to match compat.
 
@@ -8,7 +10,7 @@ popularity-contest (1.49) UNRELEASED; urgency=low
   * Translations:
     - Telugu. Closes: #544044
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 28 Jun 2009 17:18:51 +0200
+ -- Bill Allombert <ballombe@debian.org>  Tue, 08 Sep 2009 17:02:37 +0200
 
 popularity-contest (1.48) unstable; urgency=low
 
