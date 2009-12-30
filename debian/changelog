@@ -10,6 +10,7 @@ popularity-contest (1.49) UNRELEASED; urgency=low
   * Translations:
     - Telugu. Closes: #544044
     - Italian (Milo Casagrande).  Closes: #559503
+    - Simplified Chinese (苏运强).
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 08 Sep 2009 17:02:37 +0200
 
