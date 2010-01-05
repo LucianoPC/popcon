@@ -5,6 +5,7 @@ popularity-contest (1.49) UNRELEASED; urgency=low
     - sync with popcon.debian.org version: add source (max) ratings.
   * debian/control: 
     - Build-Depends: raise debhelper version to (>=5) to match compat.
+    - Updated Standards-Version from 3.8.1 to 3.8.3.  No change needed.
 
   [ Christian Perrier ]
   * Translations:
