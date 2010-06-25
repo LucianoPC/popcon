@@ -13,7 +13,8 @@ popularity-contest (1.49) UNRELEASED; urgency=low
     - Italian (Milo Casagrande).  Closes: #559503
     - Simplified Chinese (苏运强).
     - Slovenian (Vanja Cvelbar).  Closes: #570103
-    - Persian added (Vahid Ghaderi).  Closes: #587010
+    - Persian added (Vahid Ghaderi).  Closes: #587010,#587078
+    - Kazakh (Sarsenov D.).  Closes: #587100
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 08 Sep 2009 17:02:37 +0200
 
