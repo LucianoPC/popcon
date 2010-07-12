@@ -15,6 +15,7 @@ popularity-contest (1.49) UNRELEASED; urgency=low
     - Slovenian (Vanja Cvelbar).  Closes: #570103
     - Persian added (Vahid Ghaderi).  Closes: #587010,#587078
     - Kazakh (Sarsenov D.).  Closes: #587100
+    - Bosnian (Safir Secerovic).
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 08 Sep 2009 17:02:37 +0200
 

@@ -19,6 +19,7 @@ msgstr ""
 "PO-Revision-Date: 2006-10-31 15:29+0100\n"
 "Last-Translator: Safir Secerovic <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
+"Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,18 +34,35 @@ msgstr "Da li želite sudjelovati u anketi o korištenju paketa?"
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "The system may anonymously supply the distribution developers with statistics about the most used packages on this system.  This information influences decisions such as which packages should go on the first distribution CD."
-msgstr "Sistem može anonimno poslati razvijateljima distribucije satistike o najčešće korištenim paketima na ovom sistemu.  Ova informacije utiču na odluke poput one koji bi se paketi trebali nalaziti na prvom CD-u distribucije."
+msgid ""
+"The system may anonymously supply the distribution developers with "
+"statistics about the most used packages on this system.  This information "
+"influences decisions such as which packages should go on the first "
+"distribution CD."
+msgstr ""
+"Sistem može anonimno poslati razvijateljima distribucije satistike o "
+"najčešće korištenim paketima na ovom sistemu.  Ova informacije utiču na "
+"odluke poput one koji bi se paketi trebali nalaziti na prvom CD-u "
+"distribucije."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "If you choose to participate, the automatic submission script will run once every week, sending statistics to the distribution developers. The collected statistics can be viewed on http://popcon.debian.org/."
-msgstr "Ako odlučite sudjelovati, skripta za automatsko podnošenje podataka će se pokretati jednom sedmično i slati statistike razvijateljima distribucije. Prikupljene statistike se mogu vidjeti na http://popcon.debian.org/."
+msgid ""
+"If you choose to participate, the automatic submission script will run once "
+"every week, sending statistics to the distribution developers. The collected "
+"statistics can be viewed on http://popcon.debian.org/."
+msgstr ""
+"Ako odlučite sudjelovati, skripta za automatsko podnošenje podataka će se "
+"pokretati jednom sedmično i slati statistike razvijateljima distribucije. "
+"Prikupljene statistike se mogu vidjeti na http://popcon.debian.org/."
 
 #. Type: boolean
 #. Description
 #: ../templates:4
-msgid "This choice can be later modified by running \"dpkg-reconfigure popularity-contest\"."
-msgstr "Ovu odluku možete kasnije promijeniti pokretanjem \"dpkg-reconfigure popularity-contest\"."
-
+msgid ""
+"This choice can be later modified by running \"dpkg-reconfigure popularity-"
+"contest\"."
+msgstr ""
+"Ovu odluku možete kasnije promijeniti pokretanjem \"dpkg-reconfigure "
+"popularity-contest\"."
