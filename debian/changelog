@@ -1,4 +1,4 @@
-popularity-contest (1.49) UNRELEASED; urgency=low
+popularity-contest (1.49) unstable; urgency=low
 
   [ Bill Allombert ]
   * popcon.pl:
@@ -17,7 +17,7 @@ popularity-contest (1.49) UNRELEASED; urgency=low
     - Kazakh (Sarsenov D.).  Closes: #587100
     - Bosnian (Safir Secerovic).
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 07 Oct 2010 15:32:44 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sat, 09 Oct 2010 19:13:27 +0200
 
 popularity-contest (1.48) unstable; urgency=low
 
