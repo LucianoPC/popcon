@@ -16,6 +16,8 @@ popularity-contest (1.49) unstable; urgency=low
     - Persian added (Vahid Ghaderi).  Closes: #587010,#587078
     - Kazakh (Sarsenov D.).  Closes: #587100
     - Bosnian (Safir Secerovic).
+  * Serbian (Janos Guljas).  Closes: #600123
+  * Serbian in Latin script (Janos Guljas).  Closes: #600124
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 09 Oct 2010 19:13:27 +0200
 
