@@ -1,4 +1,4 @@
-popularity-contest (1.50) UNRELEASED; urgency=low
+popularity-contest (1.50) unstable; urgency=low
 
   [ Christian Perrier ]
   * Pre-Depend on debconf (>= 1.5.34) to properly handle Serbian (Latin)
@@ -6,9 +6,8 @@ popularity-contest (1.50) UNRELEASED; urgency=low
   * Translations:
     - Serbian (Janos Guljas).  Closes: #600123
     - Serbian in Latin script (Janos Guljas).  Closes: #600124
-    - Greek, Modern (1453-) (quad-nrg.net).  Closes: #604449
 
- -- Christian Perrier <bubulle@debian.org>  Fri, 15 Oct 2010 08:47:03 +0200
+ -- Bill Allombert <ballombe@debian.org>  Thu, 23 Dec 2010 12:24:36 +0100
 
 popularity-contest (1.49) unstable; urgency=low
 
