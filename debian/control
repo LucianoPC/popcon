@@ -9,7 +9,7 @@ Standards-Version: 3.9.1
 
 Package: popularity-contest
 Architecture: all
-Pre-Depends: debconf (>= 1.5.34) | debconf-2.0
+Pre-Depends: debconf (>= 1.5.34) | cdebconf (>= 0.106)
 Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10)
 Recommends: cron | fcron, exim4 | mail-transport-agent
 Suggests: anacron
