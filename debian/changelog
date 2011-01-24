@@ -1,10 +1,11 @@
-popularity-contest (1.51) UNRELEASED; urgency=low
+popularity-contest (1.51) unstable; urgency=low
 
+  [ Christian Perrier ]
   * Really fix Pre-Depends "debconf (>= 1.5.34) | cdebconf (>= 0.106)"
     to properly handle Serbian (Latin) debconf translations.
     Closes: #610840
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 23 Jan 2011 09:13:26 +0100
+ -- Bill Allombert <ballombe@debian.org>  Mon, 24 Jan 2011 16:10:12 +0100
 
 popularity-contest (1.50) unstable; urgency=low
 
