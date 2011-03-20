@@ -1,10 +1,11 @@
 popularity-contest (1.52) UNRELEASED; urgency=low
 
+  * Please note when reading stats that squeeze was released with 1.49.
   [ Christian Perrier ]
   * Translations:
     - Nepali (Shyam Krishna Bal).  Closes: #614694
 
- -- Christian Perrier <bubulle@debian.org>  Wed, 23 Feb 2011 19:53:35 +0100
+ -- Bill Allombert <ballombe@debian.org>  Sat, 12 Mar 2011 19:34:55 +0100
 
 popularity-contest (1.51) unstable; urgency=low
 
