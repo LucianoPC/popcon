@@ -26,16 +26,26 @@ if [ -n "$HTTP_PROXY" ]; then
   export http_proxy="$HTTP_PROXY";
 fi
 
+POPCON=/var/log/popularity-contest
+
 # Only run on the given day, to spread the load on the server a bit
 if [ "$DAY" ] && [ "$DAY" != "$(date +%w)" ] ; then
-  exit 0
+	# Ensure that popcon runs at least once in the last week
+	if [ -f "$POPCON" ] ; then
+		now=$(date +%s)
+		lastrun=$(date -r $POPCON +%s)
+		# 6.5 days, in seconds
+		week=561600
+		if [ "$(( $now - $lastrun ))" -le "$week" ]; then
+			exit 0
+		fi
+	fi
 fi
 
 # keep old logs
 cd /var/log
 umask 022
 savelog -c 7 popularity-contest >/dev/null
-POPCON=/var/log/popularity-contest
 
 run_popcon()
 {

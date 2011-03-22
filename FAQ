@@ -62,6 +62,9 @@ Under the default configuration of cron, this happens at 6:47 in the morning.
 This can be changed by editing /etc/crontab but if your computer is not always
 turned on, we really recommend you install the anacron package.
 
+If /etc/cron.daily/popularity-contest has not run for more than a week, it will
+accept to run any day.
+
 Q) I don't want popcon email to be sent by root! How can I change that ?
 
 A) To send as user 'myuser', edit the function 'do_sendmail' in
