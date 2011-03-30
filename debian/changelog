@@ -7,14 +7,17 @@ popularity-contest (1.52) UNRELEASED; urgency=low
 
   [ Bill Allombert ]
   * Allow cron.daily to run if last run was more than 7 day ago. 
-    Patch from Vagrant Cascadian. Closes: #610876 
-  * FAQ: document how to disable sending report by email. Thanks, Ryo Furue.
-    Closes: #502159
+    Patch from Vagrant Cascadian.  Closes: #610876 
+  * FAQ: document how to disable sending report by email.  Closes: #502159
+    Thanks, Ryo Furue.
   * prepop.pl popcon-stat.pl popcon-process.sh popcon.pl:
     - sync with popcon.debian.org version: rename all-popcon-results.txt.gz to
       all-popcon-results.gz to avoid issues with content negotiation.
   * popularity-contest:
     - Check whether open(pkg.list) succeed.
+  * debian/cron.daily, FAQ:
+    - Add variable MTAOPS to pass extra options to sendmail.  Closes: #403916.
+      Thanks Michelle Konzack
 
  -- Bill Allombert <ballombe@debian.org>  Wed, 30 Mar 2011 18:01:48 +0200
 

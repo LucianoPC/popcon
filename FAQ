@@ -75,6 +75,11 @@ A) To send as user 'myuser', edit the function 'do_sendmail' in
     su myuser -s /bin/sh -c "/usr/sbin/sendmail -oi \"$MAILTO\""
   }
 
+Q) How can I pass extra options to sendmail ?
+
+A) Add a line in /etc/popularity-contest.conf as follow
+MTAOPS="-opt1 -opt2 -opt3"
+
 Q) How can I prevent popularity-contest from sending reports via email?
 
 A) This is not recommended. Reports are sent by email only when the HTTP

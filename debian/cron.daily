@@ -11,6 +11,7 @@ unset MY_HOSTID
 unset PARTICIPATE
 unset SUBMITURLS
 unset USEHTTP
+unset MTAOPS
 
 # get configuration information
 . /usr/share/popularity-contest/default.conf
@@ -55,9 +56,9 @@ run_popcon()
 do_sendmail()
 {
 	if [ -n "$MAILFROM" ]; then
-		sendmail -oi -f "$MAILFROM" $MAILTO
+		sendmail -oi $MTAOPS -f "$MAILFROM" $MAILTO
 	else
-		sendmail -oi $MAILTO
+		sendmail -oi $MTAOPS $MAILTO
 	fi
 }
 
