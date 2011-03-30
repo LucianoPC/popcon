@@ -75,15 +75,17 @@ A) To send as user 'myuser', edit the function 'do_sendmail' in
     su myuser -s /bin/sh -c "/usr/sbin/sendmail -oi \"$MAILTO\""
   }
 
-Q) My system is unable to send email out to the Internet.  How can I
-participate ?
+Q) How can I prevent popularity-contest from sending reports via email?
 
-A) Since version 1.30 of popularity-contest, it is possible to use HTTP
-as the transport protocol.  This is the default for new installations,
-but needs to be manually enabled for old installations.  To enable it,
-run this commmand as root:
+A) This is not recommended. Reports are sent by email only when the HTTP
+submission fails, which is generally caused by a temporary lack of internet
+connectivity. By contrast, reports sent by email are stored in the mail server
+queue until the internet connectivity is back.
 
-  dpkg-reconfigure popularity-contest
+Nevertheless, you can prevent popularity-contest from sending reports via email
+by adding
+MAILTO= 
+to /etc/popularity-contest.conf
 
 Q) How can I specify a HTTP proxy server for the HTTP submission ?
 

@@ -8,6 +8,8 @@ popularity-contest (1.52) UNRELEASED; urgency=low
   [ Bill Allombert ]
   * Allow cron.daily to run if last run was more than 7 day ago. 
     Patch from Vagrant Cascadian. Closes: #610876 
+  * FAQ: document how to disable sending report by email. Thanks, Ryo Furue.
+    Closes: #502159
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 20 Mar 2011 13:31:30 +0100
 
