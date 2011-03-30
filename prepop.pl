@@ -75,5 +75,5 @@ if ($state eq 'accept')
 {
         close REPORT;
         unlink $file; #Reject
-        print STDERR "Bad report $file\n";
+        print STDERR "Bad last report $file\n";
 }

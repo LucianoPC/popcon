@@ -10,6 +10,9 @@ popularity-contest (1.52) UNRELEASED; urgency=low
     Patch from Vagrant Cascadian. Closes: #610876 
   * FAQ: document how to disable sending report by email. Thanks, Ryo Furue.
     Closes: #502159
+  * prepop.pl popcon-stat.pl popcon-process.sh popcon.pl:
+    - sync with popcon.debian.org version: rename all-popcon-results.txt.gz to
+      all-popcon-results.gz to avoid issues with content negotiation.
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 20 Mar 2011 13:31:30 +0100
 

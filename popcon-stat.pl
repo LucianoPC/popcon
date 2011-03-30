@@ -102,7 +102,7 @@ sub submission_chart
   $obj->png ("$dirpng/submission$pngname.png", \@data);
 }
 
-submission_chart ("","0000-00-00",42,"");
+submission_chart ("","0000-00-00",63,"");
 submission_chart ("-1year",$oneyearago,14,"(last 12 months)");
 
 use Chart::Composite;
@@ -126,7 +126,7 @@ for $arch (@arch)
   $obj->set ('brush_size' => 3);
   $obj->set ('pt_size' => 7);
   $obj->set ('x_ticks' => 'vertical');
-  $obj->set ('skip_x_ticks' => 42);
+  $obj->set ('skip_x_ticks' => 63);
   $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]); 
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
@@ -164,5 +164,5 @@ sub release_chart
   $obj->set ('skip_x_ticks' => $ticks);
   $obj->png ("$dirpng/release$pngname.png", \@data);
 }
-release_chart ("","2004-05-14",42,"");
+release_chart ("","2004-05-14",63,"");
 release_chart ("-1year",$oneyearago,14,"(last 12 months)");

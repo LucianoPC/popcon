@@ -35,12 +35,12 @@ find $DATADIR -type f -mtime +$DAYLIMIT -print0 | xargs -0 rm -f --
 # Generate statistics
 find $DATADIR -type f | xargs cat \
         | nice -15 $BINDIR/popanal.py >$LOGDIR/popanal.out 2>&1
-cp results $WEBDIR/all-popcon-results.txt
-gzip -f $WEBDIR/all-popcon-results.txt
-cp $WEBDIR/all-popcon-results.txt.gz $SUMMARYDIR/popcon-`date +"%Y-%m-%d"`.gz
+cp results $WEBDIR/all-popcon-results
+gzip -f $WEBDIR/all-popcon-results
+cp $WEBDIR/all-popcon-results.gz $SUMMARYDIR/popcon-`date +"%Y-%m-%d"`.gz
 
 cd ../popcon-stat
-find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl
+find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl >$LOGDIR/popstat.log 2>&1 
 
 cd ../popcon-web
 $BINDIR/popcon.pl >$LOGDIR/popcon.log 2>$LOGDIR/popcon.errors

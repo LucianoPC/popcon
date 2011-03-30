@@ -4,7 +4,7 @@ $results="../popcon-mail/results";
 $popcon="../www";
 my $mirrorbase = "/org/ftp.debian.org/ftp";
 my $docurlbase = "";
-%popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny");
+%popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
 %popver=();
 
 sub htmlheader
@@ -498,7 +498,7 @@ EOF
 <p>
 EOF
 
-	print HTML "<a href=\"all-popcon-results.txt.gz\">Raw popularity-contest results</a>\n";
+	print HTML "<a href=\"all-popcon-results.gz\">Raw popularity-contest results</a>\n";
 	&htmlfooter;
 	close HTML;
 }
