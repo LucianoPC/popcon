@@ -99,7 +99,8 @@ while (<PACKAGES>)
   /^.*installed *(.+)$/ or next;
   my $pkg=$1;
   $popcon{$pkg}=[0,0,$pkg,"<NOFILES>"];
-  open FILES, "$dpkg_db/$pkg.list";
+  open FILES, "$dpkg_db/$pkg.list" or 
+    do { print STDERR "popcon: file $dpkg_db/$pkg.list is missing\n"; next; };
   my $bestatime = undef;
   while (<FILES>)
   {

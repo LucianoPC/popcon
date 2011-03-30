@@ -13,8 +13,10 @@ popularity-contest (1.52) UNRELEASED; urgency=low
   * prepop.pl popcon-stat.pl popcon-process.sh popcon.pl:
     - sync with popcon.debian.org version: rename all-popcon-results.txt.gz to
       all-popcon-results.gz to avoid issues with content negotiation.
+  * popularity-contest:
+    - Check whether open(pkg.list) succeed.
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 20 Mar 2011 13:31:30 +0100
+ -- Bill Allombert <ballombe@debian.org>  Wed, 30 Mar 2011 18:01:48 +0200
 
 popularity-contest (1.51) unstable; urgency=low
 
