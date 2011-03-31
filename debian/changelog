@@ -18,8 +18,9 @@ popularity-contest (1.52) UNRELEASED; urgency=low
   * debian/cron.daily, FAQ:
     - Add variable MTAOPS to pass extra options to sendmail.  Closes: #403916.
       Thanks Michelle Konzack
+  * examples/popcon-stat.pl was not executable.
 
- -- Bill Allombert <ballombe@debian.org>  Wed, 30 Mar 2011 18:01:48 +0200
+ -- Bill Allombert <ballombe@debian.org>  Thu, 31 Mar 2011 14:42:50 +0200
 
 popularity-contest (1.51) unstable; urgency=low
 
