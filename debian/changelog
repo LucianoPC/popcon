@@ -1,11 +1,6 @@
-popularity-contest (1.52) UNRELEASED; urgency=low
+popularity-contest (1.52) unstable; urgency=low
 
   * Please note when reading stats that squeeze was released with 1.49.
-  [ Christian Perrier ]
-  * Translations:
-    - Nepali (Shyam Krishna Bal).  Closes: #614694
-
-  [ Bill Allombert ]
   * Allow cron.daily to run if last run was more than 7 day ago. 
     Patch from Vagrant Cascadian.  Closes: #610876 
   * FAQ: document how to disable sending report by email.  Closes: #502159
@@ -20,7 +15,7 @@ popularity-contest (1.52) UNRELEASED; urgency=low
       Thanks Michelle Konzack
   * examples/popcon-stat.pl was not executable.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 31 Mar 2011 14:42:50 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 03 Apr 2011 17:27:18 +0200
 
 popularity-contest (1.51) unstable; urgency=low
 
