@@ -1,3 +1,10 @@
+popularity-contest (1.53) UNRELEASED; urgency=low
+
+  * popularity-contest: 
+    - find package files lists by running dpkg -L by batches.  Closes: #622322
+
+ -- Bill Allombert <ballombe@debian.org>  Mon, 30 May 2011 17:04:20 +0200
+
 popularity-contest (1.52) unstable; urgency=low
 
   * Please note when reading stats that squeeze was released with 1.49.
