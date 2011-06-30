@@ -1,9 +1,12 @@
-popularity-contest (1.53) UNRELEASED; urgency=low
+popularity-contest (1.53) unstable; urgency=low
 
   * popularity-contest: 
-    - find package files lists by running dpkg -L by batches.  Closes: #622322
+    - Find package files lists by running dpkg -L by batches.  Closes: #622322
+      This fix an issues with multiarch packages. (sorry for the delay) 
+  * debian/control:
+    - Updated Standards-Version from 3.9.1 to 3.9.2.  No change needed.
 
- -- Bill Allombert <ballombe@debian.org>  Mon, 30 May 2011 17:04:20 +0200
+ -- Bill Allombert <ballombe@debian.org>  Thu, 30 Jun 2011 21:16:58 +0200
 
 popularity-contest (1.52) unstable; urgency=low
 
