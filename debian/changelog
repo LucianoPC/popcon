@@ -1,6 +1,6 @@
 popularity-contest (1.54) UNRELEASED; urgency=low
 
-  * 
+  * README: mention move to subversion.
 
  -- Bill Allombert <ballombe@debian.org>  Thu, 07 Jul 2011 15:48:59 +0200
 
