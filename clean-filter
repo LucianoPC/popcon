@@ -13,7 +13,7 @@ my $ignorecount = 0;
 my $debug = 0;
 
 open (PACKAGES, '< packages') or
-    die ("packages not found. please run get-packages.sh first\n");
+    die ("packages not found. please run clean-genpkglist first\n");
 
 while (<PACKAGES>) {
     chomp;
