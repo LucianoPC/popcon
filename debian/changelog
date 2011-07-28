@@ -1,8 +1,12 @@
 popularity-contest (1.54) UNRELEASED; urgency=low
 
   * README: mention move to subversion.
+  * popanal.py:
+    - sync with popcon.debian.org version: sort packages by name in
+      all-popcon-results to prevent data leak.  Closes: #634474
+      Thanks Timo Juhani Lindfors for finding this issue.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 07 Jul 2011 15:48:59 +0200
+ -- Bill Allombert <ballombe@debian.org>  Thu, 28 Jul 2011 12:04:05 +0200
 
 popularity-contest (1.53) unstable; urgency=low
 

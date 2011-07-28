@@ -262,15 +262,19 @@ def nicename(s):
 # dump the results
 out = open('results', 'w')
 out.write("Submissions: %8d\n" % subcount)  
-for release in release_list.keys():
+releaselist = release_list.keys()
+releaselist.sort()
+for release in releaselist:
     out.write("Release: %-30s %5d\n"
                   % (release, release_list[release]))
-
-for arch in arch_list.keys():
+archlist = arch_list.keys()
+archlist.sort()
+for arch in archlist:
     out.write("Architecture: %-30s %5d\n"
                   % (arch, arch_list[arch]))
-for section in sectlist.keys():
-    for package in sectlist[section]:
+pkglist = votelist.keys()
+pkglist.sort()
+for package in pkglist:
 	fv = votelist[package]
 	out.write("Package: %-30s %5d %5d %5d %5d\n"
 		  % (package, fv.yes, fv.old_unused,
