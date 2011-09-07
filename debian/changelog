@@ -1,11 +1,15 @@
 popularity-contest (1.54) UNRELEASED; urgency=low
 
+  [ Bill Allombert ]
   * README: mention move to subversion.
   * popanal.py:
     - sync with popcon.debian.org version: sort packages by name in
       all-popcon-results to prevent data leak.  Closes: #634474
       Thanks Timo Juhani Lindfors for finding this issue.
   * clean-filter: fix typo in error message. Patch from Bryce Nesbitt.
+
+  [ Debconf translations ]
+  * Sinhala; (Danishka Navin).  Closes: #640757
 
  -- Bill Allombert <ballombe@debian.org>  Thu, 28 Jul 2011 12:18:08 +0200
 
