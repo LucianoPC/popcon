@@ -8,7 +8,6 @@ import sys, string, time, glob, gzip
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
 
-
 class Vote:
     yes = 0
     old_unused = 0
@@ -193,7 +192,7 @@ def read_submissions(stream):
 	    header = headersplit(split[1:])
 
 	    if not header.has_key('ID') or not header.has_key('TIME'):
-		ewrite('Invalid header: ' + split)
+		ewrite('Invalid header: ' + split[1])
 		continue
 
 	    subcount = subcount + 1
@@ -208,8 +207,6 @@ def read_submissions(stream):
             if header.has_key('POPCONVER'):
 		if header['POPCONVER']=='':
 	            e.release = 'unknown'
-                elif header['POPCONVER']=='1.27.bill.1':
-                    e.release = '1.27'
 		else:
 	            e.release = header['POPCONVER']
 	
@@ -247,17 +244,6 @@ for d in glob.glob('%s/dists/stable/*/binary-i386/Packages.gz' % mirrorbase):
 for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages.gz' % mirrorbase):
     read_depends(d)
 read_submissions(sys.stdin)
-
-def nicename(s):
-    new_s = ''
-    for c in s:
-    	if c == '/':
-    	    new_s = new_s + ',';
-	elif c in string.letters or c in string.digits or c=='-':
-	    new_s = new_s + c
-	else:
-	    new_s = new_s + '.'
-    return new_s
 
 # dump the results
 out = open('results', 'w')
