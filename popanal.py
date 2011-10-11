@@ -72,7 +72,6 @@ def read_depends(filename):
 		if not votelist.has_key(package):
 			sectlist[section].append(package)
 		votelist[package] = Vote()
-		ewrite(package)
 		package = None
 	    if line:
 		package = string.strip(split[1])
@@ -116,7 +115,6 @@ class Submission:
     def __init__(self, version, owner_id, date):
 	self.entries = {}
 	self.start_date = long(date)
-	ewrite('%s:\n\tSTART: %s' % (owner_id, time.ctime(long(date))))
 
     # process a line of input from the survey
     def addinfo(self, split):
@@ -136,8 +134,6 @@ class Submission:
 
     # we found the last line of the survey: finish it
     def done(self, date):
-	ewrite('\t STOP: after %d seconds, %d packages'
-	       % (date - self.start_date, len(self.entries)))
 	for package in self.entries.keys():
 	    e = self.entries[package]
 	    if deplist.has_key(package):
