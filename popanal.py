@@ -30,7 +30,6 @@ class Vote:
 
 deplist = {}
 provlist = {}
-complained = {}
 
 class Stat:
   vote = {}
@@ -68,7 +67,6 @@ def read_depends(filename):
                         provlist[d] = []
                     provlist[d].append(package)
             if package:
-                stat.vote[package] = Vote()
                 package = None
             if line:
                 package = string.strip(split[1])
@@ -138,10 +136,6 @@ class Submission:
                             self.update_atime(dd, package)
         for package in self.entries.keys():
             if not st.vote.has_key(package):
-                if not complained.has_key(package):
-                        ewrite(('Warning: package %s neither in '
-                                + 'stable nor unstable')  % package)
-                        complained[package] = 1
                 st.vote[package] = Vote()
             st.vote[package].vote_for(package, self.entries[package])
 
