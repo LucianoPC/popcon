@@ -28,14 +28,12 @@ class Vote:
 	else:			# otherwise, vote for this package
 	    vote.yes = vote.yes + 1
 
-UNKNOWN = '**UNKNOWN**'
 deplist = {}
 provlist = {}
 complained = {}
 
 class Stat:
   vote = {}
-  sect = { UNKNOWN : [] }
   release = {}
   arch = {}
   count = 0
@@ -70,19 +68,12 @@ def read_depends(filename):
 			provlist[d] = []
 		    provlist[d].append(package)
 	    if package:
-		if not stat.sect.has_key(section):
-		    stat.sect[section] = []
-		if not stat.vote.has_key(package):
-			stat.sect[section].append(package)
 		stat.vote[package] = Vote()
 		package = None
 	    if line:
 		package = string.strip(split[1])
-		section = UNKNOWN
 		dep = []
 		prov = []
-	elif split[0]=='Section':
-	    section = string.strip(split[1])
 	elif split[0]=='Depends' or split[0]=='Requires':
 	    dep = dep + parse_depends(split[1])
 	elif split[0]=='Provides':
@@ -152,7 +143,6 @@ class Submission:
 				+ 'stable nor unstable')  % package)
 			complained[package] = 1
 		stat.vote[package] = Vote()
-		stat.sect[UNKNOWN].append(package)
 	    stat.vote[package].vote_for(package, self.entries[package])
 
         if not stat.release.has_key(self.release):
