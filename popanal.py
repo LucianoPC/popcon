@@ -32,12 +32,36 @@ deplist = {}
 provlist = {}
 
 class Stat:
-  vote = {}
-  release = {}
-  arch = {}
-  count = 0
+  def __init__(self):
+    self.vote = {}
+    self.release = {}
+    self.arch = {}
+    self.count = 0
+
+  def output(self,filename):
+    out = open(filename, 'w')
+    out.write("Submissions: %8d\n" % self.count)
+    releaselist = self.release.keys()
+    releaselist.sort()
+    for release in releaselist:
+        out.write("Release: %-30s %5d\n"
+                      % (release, self.release[release]))
+    archlist = self.arch.keys()
+    archlist.sort()
+    for arch in archlist:
+        out.write("Architecture: %-30s %5d\n"
+                      % (arch, self.arch[arch]))
+    pkglist = self.vote.keys()
+    pkglist.sort()
+    for package in pkglist:
+            fv = self.vote[package]
+            out.write("Package: %-30s %5d %5d %5d %5d\n"
+                      % (package, fv.yes, fv.old_unused,
+                         fv.too_recent, fv.empty_package))
+    out.close()
 
 stat = Stat()
+stat_stable = Stat()
 
 def parse_depends(depline):
     l = []
@@ -126,8 +150,8 @@ class Submission:
 
     # we found the last line of the survey: finish it
     def done(self, date, st):
+        st.count = st.count + 1
         for package in self.entries.keys():
-            e = self.entries[package]
             if deplist.has_key(package):
                 for d in deplist[package]:
                     self.update_atime(d, package)
@@ -143,6 +167,7 @@ class Submission:
             st.release[self.release] = 1
         else:
             st.release[self.release] = st.release[self.release] + 1
+        ewrite("#%s %s" % (st.release[self.release], self.release))
 
         if not st.arch.has_key(self.arch):
             st.arch[self.arch] = 1
@@ -177,8 +202,6 @@ def read_submissions(stream):
                 ewrite('Invalid header: ' + split[1])
                 continue
 
-            stat.count = stat.count + 1
-            ewrite('#%s' % stat.count)
             e = None
             try:
                 e = Submission(0, header['ID'], header['TIME'])
@@ -211,12 +234,13 @@ def read_submissions(stream):
                   ewrite('Invalid date: ' + header['TIME'])
                   continue
                 e.done(date,stat)
+                if e.release=='1.49':
+                   e.done(date,stat_stable)
             e = None
 
         elif e != None:
             e.addinfo(split)
     # end of while loop
-    ewrite('Processed %d submissions.' % stat.count)
 
 
 # main program
@@ -226,25 +250,5 @@ for d in glob.glob('%s/dists/stable/*/binary-i386/Packages.gz' % mirrorbase):
 for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages.gz' % mirrorbase):
     read_depends(d)
 read_submissions(sys.stdin)
-
-# dump the results
-out = open('results', 'w')
-out.write("Submissions: %8d\n" % stat.count)  
-releaselist = stat.release.keys()
-releaselist.sort()
-for release in releaselist:
-    out.write("Release: %-30s %5d\n"
-                  % (release, stat.release[release]))
-archlist = stat.arch.keys()
-archlist.sort()
-for arch in archlist:
-    out.write("Architecture: %-30s %5d\n"
-                  % (arch, stat.arch[arch]))
-pkglist = stat.vote.keys()
-pkglist.sort()
-for package in pkglist:
-        fv = stat.vote[package]
-        out.write("Package: %-30s %5d %5d %5d %5d\n"
-                  % (package, fv.yes, fv.old_unused,
-                     fv.too_recent, fv.empty_package))
-
+stat.output("results")
+stat_stable.output("results.stable")
