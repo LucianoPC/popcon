@@ -5,6 +5,8 @@
 #
 import sys, string, time, glob, gzip
 
+mirrorbase = "/org/ftp.debian.org/ftp"
+
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
 
@@ -27,17 +29,18 @@ class Vote:
 	    vote.yes = vote.yes + 1
 
 UNKNOWN = '**UNKNOWN**'
-
-votelist = {}
-sectlist = { UNKNOWN : [] }
 deplist = {}
 provlist = {}
 complained = {}
-release_list = {}
-arch_list = {}
-subcount = 0
 
-mirrorbase = "/org/ftp.debian.org/ftp"
+class Stat:
+  vote = {}
+  sect = { UNKNOWN : [] }
+  release = {}
+  arch = {}
+  count = 0
+
+stat = Stat()
 
 def parse_depends(depline):
     l = []
@@ -67,11 +70,11 @@ def read_depends(filename):
 			provlist[d] = []
 		    provlist[d].append(package)
 	    if package:
-		if not sectlist.has_key(section):
-		    sectlist[section] = []
-		if not votelist.has_key(package):
-			sectlist[section].append(package)
-		votelist[package] = Vote()
+		if not stat.sect.has_key(section):
+		    stat.sect[section] = []
+		if not stat.vote.has_key(package):
+			stat.sect[section].append(package)
+		stat.vote[package] = Vote()
 		package = None
 	    if line:
 		package = string.strip(split[1])
@@ -143,24 +146,24 @@ class Submission:
 			for dd in provlist[d]:
 			    self.update_atime(dd, package)
 	for package in self.entries.keys():
-	    if not votelist.has_key(package):
+	    if not stat.vote.has_key(package):
 		if not complained.has_key(package):
 			ewrite(('Warning: package %s neither in '
 				+ 'stable nor unstable')  % package)
 			complained[package] = 1
-		votelist[package] = Vote()
-		sectlist[UNKNOWN].append(package)
-	    votelist[package].vote_for(package, self.entries[package])
+		stat.vote[package] = Vote()
+		stat.sect[UNKNOWN].append(package)
+	    stat.vote[package].vote_for(package, self.entries[package])
 
-        if not release_list.has_key(self.release):
-            release_list[self.release] = 1
+        if not stat.release.has_key(self.release):
+            stat.release[self.release] = 1
         else:
-            release_list[self.release] = release_list[self.release] + 1
+            stat.release[self.release] = stat.release[self.release] + 1
 
-        if not arch_list.has_key(self.arch):
-            arch_list[self.arch] = 1
+        if not stat.arch.has_key(self.arch):
+            stat.arch[self.arch] = 1
         else:
-            arch_list[self.arch] = arch_list[self.arch] + 1
+            stat.arch[self.arch] = stat.arch[self.arch] + 1
 
 def headersplit(pairs):
     header = {}
@@ -175,7 +178,6 @@ def headersplit(pairs):
 
 
 def read_submissions(stream):
-    global subcount
     e = None
     while 1:
 	line = stream.readline()
@@ -191,8 +193,8 @@ def read_submissions(stream):
 		ewrite('Invalid header: ' + split[1])
 		continue
 
-	    subcount = subcount + 1
-	    ewrite('#%s' % subcount)
+	    stat.count = stat.count + 1
+	    ewrite('#%s' % stat.count)
 	    e = None
 	    try:
 		e = Submission(0, header['ID'], header['TIME'])
@@ -230,7 +232,7 @@ def read_submissions(stream):
 	elif e != None:
 	    e.addinfo(split)
     # end of while loop
-    ewrite('Processed %d submissions.' % subcount)
+    ewrite('Processed %d submissions.' % stat.count)
 
 
 # main program
@@ -243,21 +245,21 @@ read_submissions(sys.stdin)
 
 # dump the results
 out = open('results', 'w')
-out.write("Submissions: %8d\n" % subcount)  
-releaselist = release_list.keys()
+out.write("Submissions: %8d\n" % stat.count)  
+releaselist = stat.release.keys()
 releaselist.sort()
 for release in releaselist:
     out.write("Release: %-30s %5d\n"
-                  % (release, release_list[release]))
-archlist = arch_list.keys()
+                  % (release, stat.release[release]))
+archlist = stat.arch.keys()
 archlist.sort()
 for arch in archlist:
     out.write("Architecture: %-30s %5d\n"
-                  % (arch, arch_list[arch]))
-pkglist = votelist.keys()
+                  % (arch, stat.arch[arch]))
+pkglist = stat.vote.keys()
 pkglist.sort()
 for package in pkglist:
-	fv = votelist[package]
+	fv = stat.vote[package]
 	out.write("Package: %-30s %5d %5d %5d %5d\n"
 		  % (package, fv.yes, fv.old_unused,
 		     fv.too_recent, fv.empty_package))
