@@ -127,7 +127,7 @@ class Submission:
 	    e.ctime = f.ctime
 
     # we found the last line of the survey: finish it
-    def done(self, date):
+    def done(self, date, st):
 	for package in self.entries.keys():
 	    e = self.entries[package]
 	    if deplist.has_key(package):
@@ -137,23 +137,23 @@ class Submission:
 			for dd in provlist[d]:
 			    self.update_atime(dd, package)
 	for package in self.entries.keys():
-	    if not stat.vote.has_key(package):
+	    if not st.vote.has_key(package):
 		if not complained.has_key(package):
 			ewrite(('Warning: package %s neither in '
 				+ 'stable nor unstable')  % package)
 			complained[package] = 1
-		stat.vote[package] = Vote()
-	    stat.vote[package].vote_for(package, self.entries[package])
+		st.vote[package] = Vote()
+	    st.vote[package].vote_for(package, self.entries[package])
 
-        if not stat.release.has_key(self.release):
-            stat.release[self.release] = 1
+        if not st.release.has_key(self.release):
+            st.release[self.release] = 1
         else:
-            stat.release[self.release] = stat.release[self.release] + 1
+            st.release[self.release] = st.release[self.release] + 1
 
-        if not stat.arch.has_key(self.arch):
-            stat.arch[self.arch] = 1
+        if not st.arch.has_key(self.arch):
+            st.arch[self.arch] = 1
         else:
-            stat.arch[self.arch] = stat.arch[self.arch] + 1
+            st.arch[self.arch] = st.arch[self.arch] + 1
 
 def headersplit(pairs):
     header = {}
@@ -216,7 +216,7 @@ def read_submissions(stream):
 		except: 
 		  ewrite('Invalid date: ' + header['TIME'])
 		  continue
-		e.done(date)
+		e.done(date,stat)
 	    e = None
 
 	elif e != None:
