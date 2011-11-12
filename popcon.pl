@@ -311,6 +311,30 @@ sub gen_sections
   make ($popcon, "maint", \%maintpkg, \%winner, \@maints);
   make ($popcon, "source", \%sourcepkg, \%winner, \@sources);
   make ($popcon, "sourcemax", \%sourcemax, \%winner, \@sources);
+
+  for $sec (@dists)
+  {
+    open HTML , ">:utf8", "$popcon/$sec/index.html";
+    opendir SEC,"$popcon/$sec";
+    &htmlheader;
+    printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
+    print_by (".",$_) for (@fields);
+    print HTML ("\n </p> \n");
+    printf HTML ("<p> <a href=\"first.html\"> First packages in subsections for each fields </a>\n");
+    printf HTML ("<p>Statistics for subsections sorted by fields\n <pre>\n");
+    for $dir (sort readdir SEC)
+    {
+      -d "$popcon/$sec/$dir" or next;
+      $dir !~ /^\./ or next;
+      printf HTML ("%-16s : ",$dir);
+      print_by ($dir,$_) for (@fields);
+      print HTML ("\n");
+    }
+    print HTML ("\n </pre>\n");
+    htmlfooter $numsub;
+    closedir SEC;
+    close HTML;
+  }
 }
 
 # Main code
@@ -384,30 +408,6 @@ my $numsub = $stat->{'numsub'};
 
 %sections = map {$section{$_} => 1} keys %section;
 @sections = sort keys %sections;
-
-for $sec (@dists)
-{
-  open HTML , ">:utf8", "$popcon/$sec/index.html";
-  opendir SEC,"$popcon/$sec";
-  &htmlheader;
-  printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
-  print_by (".",$_) for (@fields);
-  print HTML ("\n </p> \n");
-  printf HTML ("<p> <a href=\"first.html\"> First packages in subsections for each fields </a>\n");
-  printf HTML ("<p>Statistics for subsections sorted by fields\n <pre>\n");
-  for $dir (sort readdir SEC)
-  {
-    -d "$popcon/$sec/$dir" or next;
-    $dir !~ /^\./ or next;
-    printf HTML ("%-16s : ",$dir);
-    print_by ($dir,$_) for (@fields);
-    print HTML ("\n");
-  }
-  print HTML ("\n </pre>\n");
-  htmlfooter $numsub;
-  closedir SEC;
-  close HTML;
-}
 mark "Building by sub-sections pages";
 for $sec (@dists)
 {
