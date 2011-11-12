@@ -4,8 +4,8 @@ use strict;
 
 $ENV{PATH}="/bin:/usr/bin";
 
-my $results="../popcon-mail/results";
-my $popcon="../www";
+my %results=('all' => "../popcon-mail/results", 'stable' => "../popcon-mail/results.stable");
+my %popcon= ('all' => "../www", 'stable' => "../www/stable");
 my $mirrorbase = "/org/ftp.debian.org/ftp";
 my $docurlbase = "";
 my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
@@ -235,7 +235,7 @@ sub read_result
 {
   my ($results) = @_;
   my (%pkg,%maintpkg,%sourcepkg,%sourcemax,%arch,$numsub,%release);
-  open PKG, "<:utf8","$results";
+  open PKG, "<:utf8","$results" or die "$results not found";
   while(<PKG>)
   {
     my ($type,@values)=split(" ");
@@ -273,13 +273,14 @@ sub read_result
       $release{$a}=$nb;
     }
   }
-  return {'pkg' => \%pkg,
-          'maintpkg' => \%maintpkg,
+  close PKG;
+  return {'pkg'       => \%pkg,
+          'maintpkg'  => \%maintpkg,
           'sourcepkg' => \%sourcepkg,
           'sourcemax' => \%sourcemax,
-          'arch' => \%arch,
-          'release' => \%release,
-          'numsub' => $numsub };
+          'arch'      => \%arch,
+          'release'   => \%release,
+          'numsub'    => $numsub};
 }
 
 sub gen_sections
@@ -430,17 +431,22 @@ for $dist ("stable", "testing", "unstable")
 
 mark "Reading current packages...";
 
-my $stat = read_result $results;
+my %stat = ('all' => read_result($results{'all'}),
+            'stable' => read_result($results{'stable'}));
 
 mark "Reading stats...";
 
-gen_sections($popcon, $stat);
+for (keys %stat)
+{
+  gen_sections($popcon{$_}, $stat{$_});
+}
 
 mark "Building by sections pages";
 
-my %arch = %{$stat->{'arch'}};
-my %release = %{$stat->{'arch'}};
-my $numsub = $stat->{'numsub'};
+my %arch = %{$stat{'all'}->{'arch'}};
+my %release = %{$stat{'all'}->{'arch'}};
+my $numsub = $stat{'all'}->{'numsub'};
+my $popcon = $popcon{'all'};
 
 mark "Building by sub-sections pages";
 {
