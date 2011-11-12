@@ -141,15 +141,14 @@ EOF
 #that source package:
 EOF
 
-my %winner=();
 my %maint=();
 
 sub make_by
 {
-  my ($sec,$order,$pkg,@list) = @_;
+  my ($sec,$order,$pkg,$winner,$listp) = @_;
   my (%sum, $me);
-  @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @list;
-  $winner{"$sec/$order"}=$list[0];
+  @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @{$listp};
+  $winner->{"$sec/$order"}=$list[0];
   open DAT , "|-:utf8", "tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
   if (defined($list_header{$sec}))
   {
@@ -191,9 +190,9 @@ EOF
 
 sub make
 {
-  my ($sec,$pkg,@list)=@_;
+  my ($sec,$pkg,$winner,$list)=@_;
   make_sec $sec;
-  make_by ($sec, $_, $pkg, @list) for (@fields);
+  make_by ($sec, $_, $pkg, $winner, $list) for (@fields);
 }
 sub print_pkg
 {
@@ -209,6 +208,7 @@ sub mark
   print join(" ",$_[0],times),"\n";
 }
 
+my %winner=();
 my %section=();
 my %source=();
 
@@ -344,7 +344,7 @@ mark "Reading stats...";
 for $sec (@sections)
 {
   my @list = grep {$section{$_} eq $sec} @pkgs;
-  make ($sec, \%pkg, @list);
+  make ($sec, \%pkg, \%winner, \@list);
 }
 
 mark "Building by sections pages";
@@ -355,11 +355,11 @@ mark "Building by sections pages";
 for $sec (".",@dists)
 {
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
-  make ($sec, \%pkg, @list);
+  make ($sec, \%pkg, \%winner, \@list);
 }
-make ("maint", \%maintpkg, @maints);
-make ("source", \%sourcepkg, @sources);
-make ("sourcemax", \%sourcemax, @sources);
+make ("maint", \%maintpkg, \%winner, \@maints);
+make ("source", \%sourcepkg, \%winner, \@sources);
+make ("sourcemax", \%sourcemax, \%winner, \@sources);
 
 for $sec (@dists)
 {
