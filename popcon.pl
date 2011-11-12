@@ -74,6 +74,7 @@ EOH
 
 sub htmlfooter
 {
+  my ($numsub) = @_;
   my $date=gmtime();
   print HTML <<EOF;
 <pre>
@@ -202,6 +203,68 @@ sub mark
   print join(" ",$_[0],times),"\n";
 }
 
+#Format
+#<name> <vote> <old> <recent> <no-files>
+#   
+#<name> is the package name;
+#<vote> is the number of people who use this package regularly;
+#<old> is the number of people who installed, but don't use this package
+#        regularly;
+#<recent> is the number of people who upgraded this package recently;
+#<no-files> is the number of people whose entry didn't contain enough
+#        information (atime and ctime were 0).
+
+sub read_result
+{
+  my ($results) = @_;
+  my (%pkg,%maintpkg,%sourcepkg,%sourcemax,%arch,$numsub,%release);
+  open PKG, "<:utf8","$results";
+  while(<PKG>)
+  {
+    my ($type,@values)=split(" ");
+    if ($type eq "Package:")
+    {
+          my @votes = @values;
+          my $name = shift @votes;
+          unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
+  	  $section{$name}='unknown' unless (defined($section{$name}));
+  	  $maint{$name}='Not in sid' unless (defined($maint{$name}));
+  	  $source{$name}='Not in sid' unless (defined($source{$name}));
+  	  for(my $i=0;$i<=$#fields;$i++)
+  	  {
+  		  my ($f,$v)=($fields[$i],$votes[$i]);
+  		  $pkg{$name}->{$f}=$v;
+  		  $maintpkg{$maint{$name}}->{$f}+=$v;
+  		  $sourcepkg{$source{$name}}->{$f}+=$v;
+                    my($sm)=$sourcemax{$source{$name}}->{$f};
+  		  $sourcemax{$source{$name}}->{$f}=$v 
+                      if (!defined($sm) || $sm < $v);
+  	  }
+    }
+    elsif ($type eq "Architecture:")
+    {
+      my ($a,$nb)=@values;
+      $arch{$a}=$nb;
+    }
+    elsif ($type eq "Submissions:")
+    {
+      ($numsub)=@values;
+    }
+    elsif ($type eq "Release:")
+    {
+      my ($a,$nb)=@values;
+      $release{$a}=$nb;
+    }
+  }
+  return {'pkg' => \%pkg,
+          'maintpkg' => \%maintpkg,
+          'sourcepkg' => \%sourcepkg,
+          'sourcemax' => \%sourcemax,
+          'arch' => \%arch,
+          'release' => \%release,
+          'numsub' => $numsub };
+}
+
 %pkg=();
 %section=();
 %maint=();
@@ -263,55 +326,15 @@ for $dist ("stable", "testing", "unstable")
 
 mark "Reading current packages...";
 
+my $stat = read_result $results;
+my %pkg = %{$stat->{'pkg'}};
+my %maintpkg = %{$stat->{'maintpkg'}};
+my %sourcepkg = %{$stat->{'sourcepkg'}};
+my %sourcemax = %{$stat->{'sourcemax'}};
+my %arch = %{$stat->{'arch'}};
+my %release = %{$stat->{'arch'}};
+my $numsub = $stat->{'numsub'};
 
-#Format
-#<name> <vote> <old> <recent> <no-files>
-#   
-#<name> is the package name;
-#<vote> is the number of people who use this package regularly;
-#<old> is the number of people who installed, but don't use this package
-#        regularly;
-#<recent> is the number of people who upgraded this package recently;
-#<no-files> is the number of people whose entry didn't contain enough
-#        information (atime and ctime were 0).
-open PKG, "<:utf8","$results";
-while(<PKG>)
-{
-  my ($type,@values)=split(" ");
-  if ($type eq "Package:")
-  {
-          my @votes=@values;
-	  my $name = shift @votes;
-	  unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
-	  $section{$name}='unknown' unless (defined($section{$name}));
-	  $maint{$name}='Not in sid' unless (defined($maint{$name}));
-	  $source{$name}='Not in sid' unless (defined($source{$name}));
-	  for(my $i=0;$i<=$#fields;$i++)
-	  {
-		  my ($f,$v)=($fields[$i],$votes[$i]);
-		  $pkg{$name}->{$f}=$v;
-		  $maintpkg{$maint{$name}}->{$f}+=$v;
-		  $sourcepkg{$source{$name}}->{$f}+=$v;
-                  my($sm)=$sourcemax{$source{$name}}->{$f};
-		  $sourcemax{$source{$name}}->{$f}=$v 
-                    if (!defined($sm) || $sm < $v);
-	  }
-  }
-  elsif ($type eq "Architecture:")
-  {
-    my ($a,$nb)=@values;
-    $arch{$a}=$nb;
-  }
-  elsif ($type eq "Submissions:")
-  {
-    ($numsub)=@values;
-  }
-  elsif ($type eq "Release:")
-  {
-    my ($a,$nb)=@values;
-    $release{$a}=$nb;
-  }
-}
 mark "Reading stats...";
 
 @pkgs=sort keys %pkg;
@@ -360,7 +383,7 @@ for $sec (@dists)
     print HTML ("\n");
   }
   print HTML ("\n </pre>\n");
-  &htmlfooter;
+  htmlfooter $numsub;
   closedir SEC;
   close HTML;
 }
@@ -396,7 +419,7 @@ for $sec (@dists)
 	  print HTML ("\n");
   }
   print HTML ("\n </pre>\n");
-  &htmlfooter;
+  htmlfooter $numsub;
   closedir SEC;
   close HTML;
 }
@@ -500,7 +523,7 @@ EOF
 EOF
 
 	print HTML "<a href=\"all-popcon-results.gz\">Raw popularity-contest results</a>\n";
-	&htmlfooter;
+	htmlfooter $numsub;
 	close HTML;
 }
 mark "Building index.html";
