@@ -214,7 +214,6 @@ sub print_pkg
   ' 'x(20-$size);
 }
 
-my %winner=();
 my %section=();
 my %source=();
 
@@ -295,6 +294,7 @@ sub gen_sections
   my @sections = sort keys %sections;
   my @maints= sort keys %maintpkg;
   my @sources= sort keys %sourcepkg;
+  my %winner = ();
   my $sec;
   for $sec (@sections)
   {
@@ -329,6 +329,41 @@ sub gen_sections
       printf HTML ("%-16s : ",$dir);
       print_by ($dir,$_) for (@fields);
       print HTML ("\n");
+    }
+    print HTML ("\n </pre>\n");
+    htmlfooter $numsub;
+    closedir SEC;
+    close HTML;
+  }
+  for $sec (@dists)
+  {
+    open HTML , ">:utf8", "$popcon/$sec/first.html";
+    opendir SEC,"$popcon/$sec";
+    &htmlheader;
+    printf HTML ("<p>First package in section %-16s for fields: ",$sec);
+    for $f (@fields)
+    {
+  	  print_pkg $winner{"$sec/$f"};
+    }
+    print HTML ("\n </p> \n");
+    printf HTML ("<p> <a href=\"index.html\"> Statistics by subsections sorted by fields </a>\n");
+    printf HTML ("<p>First package in subsections for fields\n <pre>\n");
+    printf HTML ("%-16s : ","subsection");
+    for $f (@fields)
+    {
+  	  printf HTML ("%-20s ",$f);
+    }
+    print HTML ("\n","_"x120,"\n");
+    for $dir (sort readdir SEC)
+    {
+  	  -d "$popcon/$sec/$dir" or next;
+  	  $dir !~ /^\./ or next;
+  	  printf HTML ("%-16s : ",$dir);
+  	  for $f (@fields)
+  	  {
+  		  print_pkg $winner{"$sec/$dir/$f"};
+  	  }
+  	  print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
     htmlfooter $numsub;
@@ -409,44 +444,6 @@ my $numsub = $stat->{'numsub'};
 %sections = map {$section{$_} => 1} keys %section;
 @sections = sort keys %sections;
 mark "Building by sub-sections pages";
-for $sec (@dists)
-{
-  open HTML , ">:utf8", "$popcon/$sec/first.html";
-  opendir SEC,"$popcon/$sec";
-  &htmlheader;
-  printf HTML ("<p>First package in section %-16s for fields: ",$sec);
-  for $f (@fields)
-  {
-	  print_pkg $winner{"$sec/$f"};
-  }
-  print HTML ("\n </p> \n");
-  printf HTML ("<p> <a href=\"index.html\"> Statistics by subsections sorted by fields </a>\n");
-  printf HTML ("<p>First package in subsections for fields\n <pre>\n");
-  printf HTML ("%-16s : ","subsection");
-  for $f (@fields)
-  {
-	  printf HTML ("%-20s ",$f);
-  }
-  print HTML ("\n","_"x120,"\n");
-  for $dir (sort readdir SEC)
-  {
-	  -d "$popcon/$sec/$dir" or next;
-	  $dir !~ /^\./ or next;
-	  printf HTML ("%-16s : ",$dir);
-	  for $f (@fields)
-	  {
-		  print_pkg $winner{"$sec/$dir/$f"};
-	  }
-	  print HTML ("\n");
-  }
-  print HTML ("\n </pre>\n");
-  htmlfooter $numsub;
-  closedir SEC;
-  close HTML;
-}
-
-mark "Building winner pages";
-
 {
 	open HTML , ">:utf8", "$popcon/index.html";
 	&htmlheader;
