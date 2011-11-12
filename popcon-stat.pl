@@ -2,18 +2,15 @@
 #
 # Require the debian package libchart-perl.
 
-#BEGIN {
-#@INC=("./usr/share/perl5/", @INC);
-#}
-
 $ENV{PATH}="/usr/bin:/bin";
-$dirpng="../www/stat";
+$dirpng = shift @ARGV;
+$dirpng =~ m/(.*)/ and $dirpng=$1;
 $oneyearago = `date +"%Y-%m-%d" -d "1 year ago"`;
 
 while (<>)
 {
    my ($file);
-   m/^(.*\/popcon-([0-9-]+)\.gz)$/ or next;
+   m/^(.*\/popcon-([0-9-]+)(\.stable)?\.gz)$/ or next;
    $file=$1;
    $f=$2;
    push @date,$f;
