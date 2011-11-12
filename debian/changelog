@@ -2,10 +2,13 @@ popularity-contest (1.54) UNRELEASED; urgency=low
 
   [ Bill Allombert ]
   * README: mention move to subversion.
-  * popanal.py:
-    - sync with popcon.debian.org version: sort packages by name in
+  * popanal.py: sync with popcon.debian.org version: 
+    - sort packages by name in
       all-popcon-results to prevent data leak.  Closes: #634474
       Thanks Timo Juhani Lindfors for finding this issue.
+    - add support for generating stats for stable reports.
+  * popcon.pl, pocon-stat.pl, popcon-process.pl: sync:
+    - Add support for generating the stable reports part of the website.
   * clean-filter: fix typo in error message. Patch from Bryce Nesbitt.
 
   [ Debconf translations ]
