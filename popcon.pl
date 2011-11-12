@@ -1,5 +1,7 @@
 #! /usr/bin/perl -wT
 
+use strict;
+
 $ENV{PATH}="/bin:/usr/bin";
 
 my $results="../popcon-mail/results";
@@ -157,7 +159,7 @@ sub make_by
 {
   my ($popcon,$sec,$order,$pkg,$winner,$listp) = @_;
   my (%sum, $me);
-  @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @{$listp};
+  my @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @{$listp};
   $winner->{"$sec/$order"}=$list[0];
   open DAT , "|-:utf8", "tee $popcon/$sec/by_$order | gzip -c > $popcon/$sec/by_$order.gz";
   if (defined($list_header{$sec}))
@@ -184,8 +186,9 @@ EOF
 #           information (atime and ctime were 0).
 #rank name                            inst  vote   old recent no-files $me
 EOF
-  $format="%-5d %-30s".(" %5d"x($#fields+1))." %-32s\n";
+  my $format="%-5d %-30s".(" %5d"x($#fields+1))." %-32s\n";
   my $rank=0;
+  my $p;
   for $p (@list)
   {
     $rank++;
@@ -295,7 +298,7 @@ sub gen_sections
   my @maints= sort keys %maintpkg;
   my @sources= sort keys %sourcepkg;
   my %winner = ();
-  my $sec;
+  my ($sec, $dir, $f);
   for $sec (@sections)
   {
     my @list = grep {$section{$_} eq $sec} @pkgs;
@@ -374,6 +377,8 @@ sub gen_sections
 
 # Main code
 
+my ($file,$dist);
+
 for $file ("slink","slink-nonUS","potato","potato-nonUS",
            "woody","woody-nonUS","sarge","etch")
 {
@@ -433,18 +438,13 @@ gen_sections($popcon, $stat);
 
 mark "Building by sections pages";
 
-my %pkg = %{$stat->{'pkg'}};
-my %maintpkg = %{$stat->{'maintpkg'}};
-my %sourcepkg = %{$stat->{'sourcepkg'}};
-my %sourcemax = %{$stat->{'sourcemax'}};
 my %arch = %{$stat->{'arch'}};
 my %release = %{$stat->{'arch'}};
 my $numsub = $stat->{'numsub'};
 
-%sections = map {$section{$_} => 1} keys %section;
-@sections = sort keys %sections;
 mark "Building by sub-sections pages";
 {
+	my ($dir,$f);
 	open HTML , ">:utf8", "$popcon/index.html";
 	&htmlheader;
 	&popconintro;
