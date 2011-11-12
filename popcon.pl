@@ -274,6 +274,38 @@ sub read_result
           'numsub' => $numsub };
 }
 
+sub gen_sections
+{
+  my ($popcon,$stat) = @_;
+  my %pkg = %{$stat->{'pkg'}};
+  my %maintpkg = %{$stat->{'maintpkg'}};
+  my %sourcepkg = %{$stat->{'sourcepkg'}};
+  my %sourcemax = %{$stat->{'sourcemax'}};
+  my %arch = %{$stat->{'arch'}};
+  my %release = %{$stat->{'arch'}};
+  my $numsub = $stat->{'numsub'};
+  my @pkgs=sort keys %pkg;
+  my %sections = map {$section{$_} => 1} keys %section;
+  my @sections = sort keys %sections;
+  my @maints= sort keys %maintpkg;
+  my @sources= sort keys %sourcepkg;
+  for $sec (@sections)
+  {
+    my @list = grep {$section{$_} eq $sec} @pkgs;
+    make ($popcon, $sec, \%pkg, \%winner, \@list);
+  }
+  #There is a hack: '.' is both the current directory and
+  #the catchall regexp.
+  for $sec (".",@dists)
+  {
+    my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
+    make ($popcon, $sec, \%pkg, \%winner, \@list);
+  }
+  make ($popcon, "maint", \%maintpkg, \%winner, \@maints);
+  make ($popcon, "source", \%sourcepkg, \%winner, \@sources);
+  make ($popcon, "sourcemax", \%sourcemax, \%winner, \@sources);
+}
+
 for $file ("slink","slink-nonUS","potato","potato-nonUS",
            "woody","woody-nonUS","sarge","etch")
 {
@@ -325,6 +357,9 @@ for $dist ("stable", "testing", "unstable")
 mark "Reading current packages...";
 
 my $stat = read_result $results;
+
+gen_sections($popcon, $stat);
+
 my %pkg = %{$stat->{'pkg'}};
 my %maintpkg = %{$stat->{'maintpkg'}};
 my %sourcepkg = %{$stat->{'sourcepkg'}};
@@ -340,26 +375,6 @@ mark "Reading stats...";
 @sections = sort keys %sections;
 @maints= sort keys %maintpkg;
 @sources= sort keys %sourcepkg;
-
-for $sec (@sections)
-{
-  my @list = grep {$section{$_} eq $sec} @pkgs;
-  make ($popcon, $sec, \%pkg, \%winner, \@list);
-}
-
-mark "Building by sections pages";
-
-#There is a hack: '.' is both the current directory and
-#the catchall regexp.
-
-for $sec (".",@dists)
-{
-  my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
-  make ($popcon, $sec, \%pkg, \%winner, \@list);
-}
-make ($popcon, "maint", \%maintpkg, \%winner, \@maints);
-make ($popcon, "source", \%sourcepkg, \%winner, \@sources);
-make ($popcon, "sourcemax", \%sourcemax, \%winner, \@sources);
 
 for $sec (@dists)
 {
