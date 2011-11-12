@@ -236,8 +236,9 @@ for $dist ("stable", "testing", "unstable")
   for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.gz"))
   {
     /([^[:space:]]+)/ or die("incorrect package name");
-    $file = $1;#Untaint
+    my $file = $1;#Untaint
     open AVAIL, "-|:encoding(UTF-8)","zcat $file";
+    my $p;
     while(<AVAIL>)
     {
   /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
@@ -247,7 +248,7 @@ for $dist ("stable", "testing", "unstable")
         and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};
   /^Source: (\S+)/ and do { $source{$p}=$1;next;};
   /^Section: (.+)/ or next;
-            $sec=$1;
+            my $sec = $1;
             $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
             $section{$p}=$sec;
     }
@@ -280,7 +281,7 @@ while(<PKG>)
   if ($type eq "Package:")
   {
           my @votes=@values;
-	  $name = shift @votes;
+	  my $name = shift @votes;
 	  unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
 	  $section{$name}='unknown' unless (defined($section{$name}));
 	  $maint{$name}='Not in sid' unless (defined($maint{$name}));
