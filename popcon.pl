@@ -244,19 +244,19 @@ sub read_result
           my @votes = @values;
           my $name = shift @votes;
           unshift @votes,$votes[0]+$votes[1]+$votes[2]+$votes[3];
-  	  $section{$name}='unknown' unless (defined($section{$name}));
-  	  $maint{$name}='Not in sid' unless (defined($maint{$name}));
-  	  $source{$name}='Not in sid' unless (defined($source{$name}));
-  	  for(my $i=0;$i<=$#fields;$i++)
-  	  {
-  		  my ($f,$v)=($fields[$i],$votes[$i]);
-  		  $pkg{$name}->{$f}=$v;
-  		  $maintpkg{$maint{$name}}->{$f}+=$v;
-  		  $sourcepkg{$source{$name}}->{$f}+=$v;
+            $section{$name}='unknown' unless (defined($section{$name}));
+            $maint{$name}='Not in sid' unless (defined($maint{$name}));
+            $source{$name}='Not in sid' unless (defined($source{$name}));
+            for(my $i=0;$i<=$#fields;$i++)
+            {
+                    my ($f,$v)=($fields[$i],$votes[$i]);
+                    $pkg{$name}->{$f}=$v;
+                    $maintpkg{$maint{$name}}->{$f}+=$v;
+                    $sourcepkg{$source{$name}}->{$f}+=$v;
                     my($sm)=$sourcemax{$source{$name}}->{$f};
-  		  $sourcemax{$source{$name}}->{$f}=$v 
+                    $sourcemax{$source{$name}}->{$f}=$v 
                       if (!defined($sm) || $sm < $v);
-  	  }
+            }
     }
     elsif ($type eq "Architecture:")
     {
@@ -347,7 +347,7 @@ sub gen_sections
     printf HTML ("<p>First package in section %-16s for fields: ",$sec);
     for $f (@fields)
     {
-  	  print_pkg $winner{"$sec/$f"};
+            print_pkg $winner{"$sec/$f"};
     }
     print HTML ("\n </p> \n");
     printf HTML ("<p> <a href=\"index.html\"> Statistics by subsections sorted by fields </a>\n");
@@ -355,19 +355,19 @@ sub gen_sections
     printf HTML ("%-16s : ","subsection");
     for $f (@fields)
     {
-  	  printf HTML ("%-20s ",$f);
+            printf HTML ("%-20s ",$f);
     }
     print HTML ("\n","_"x120,"\n");
     for $dir (sort readdir SEC)
     {
-  	  -d "$popcon/$sec/$dir" or next;
-  	  $dir !~ /^\./ or next;
-  	  printf HTML ("%-16s : ",$dir);
-  	  for $f (@fields)
-  	  {
-  		  print_pkg $winner{"$sec/$dir/$f"};
-  	  }
-  	  print HTML ("\n");
+            -d "$popcon/$sec/$dir" or next;
+            $dir !~ /^\./ or next;
+            printf HTML ("%-16s : ",$dir);
+            for $f (@fields)
+            {
+                    print_pkg $winner{"$sec/$dir/$f"};
+            }
+            print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
     htmlfooter $numsub;
@@ -386,13 +386,13 @@ for $file ("slink","slink-nonUS","potato","potato-nonUS",
   open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
   while(<AVAIL>)
   {
-	  my ($p,$sec)=split(' ');
-	  defined($sec) or last;
-	  chomp $sec;
-	  $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
-	  $section{$p}=$sec;
-	  $maint{$p}="Not in sid";
-	  $source{$p}="Not in sid";
+          my ($p,$sec)=split(' ');
+          defined($sec) or last;
+          chomp $sec;
+          $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
+          $section{$p}=$sec;
+          $maint{$p}="Not in sid";
+          $source{$p}="Not in sid";
   }
   close AVAIL;
 }
@@ -450,39 +450,39 @@ my $popcon = $popcon{'all'};
 
 mark "Building by sub-sections pages";
 {
-	my ($dir,$f);
-	open HTML , ">:utf8", "$popcon/index.html";
-	&htmlheader;
-	&popconintro;
-	printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>");
-	print_by (".",$_) for (@fields);
-	print HTML ("</pre>\n </p> \n");
-	printf HTML ("<p>Statistics by maintainers sorted by fields: <pre>");
-	print_by ("maint",$_) for (@fields);
-	print HTML ("</pre>\n </p> \n");
-	printf HTML ("<p>Statistics by source packages (sum) sorted by fields: <pre>");
-	print_by ("source",$_) for (@fields);
-	print HTML ("</pre>\n </p> \n");
-	printf HTML ("<p>Statistics by source packages (max) sorted by fields: <pre>");
-	print_by ("sourcemax",$_) for (@fields);
-	print HTML ("</pre>\n </p> \n");
-	printf HTML ("<p>Statistics for sections sorted by fields\n <pre>\n");
-  	for $dir ("main","contrib","non-free","non-US","unknown")
-	{
-		-d "$popcon/$dir" or next;
-		$dir !~ /^\./ or next;
-		if ($dir eq "unknown")
-		{
-			printf HTML ("%-16s : ",$dir);
-		}
-		else
-		{
-			printf HTML ("<a href=\"$dir/index.html\">%-16s</a> : ",$dir);
-		}
-		print_by ($dir,$_) for (@fields);
-		print HTML ("\n");
-	}
-	print HTML  <<'EOF';
+  my ($dir,$f);
+  open HTML , ">:utf8", "$popcon/index.html";
+  &htmlheader;
+  &popconintro;
+  printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>");
+  print_by (".",$_) for (@fields);
+  print HTML ("</pre>\n </p> \n");
+  printf HTML ("<p>Statistics by maintainers sorted by fields: <pre>");
+  print_by ("maint",$_) for (@fields);
+  print HTML ("</pre>\n </p> \n");
+  printf HTML ("<p>Statistics by source packages (sum) sorted by fields: <pre>");
+  print_by ("source",$_) for (@fields);
+  print HTML ("</pre>\n </p> \n");
+  printf HTML ("<p>Statistics by source packages (max) sorted by fields: <pre>");
+  print_by ("sourcemax",$_) for (@fields);
+  print HTML ("</pre>\n </p> \n");
+  printf HTML ("<p>Statistics for sections sorted by fields\n <pre>\n");
+  for $dir ("main","contrib","non-free","non-US","unknown")
+  {
+    -d "$popcon/$dir" or next;
+    $dir !~ /^\./ or next;
+    if ($dir eq "unknown")
+    {
+      printf HTML ("%-16s : ",$dir);
+    }
+    else
+    {
+      printf HTML ("<a href=\"$dir/index.html\">%-16s</a> : ",$dir);
+    }
+    print_by ($dir,$_) for (@fields);
+    print HTML ("\n");
+  }
+  print HTML  <<'EOF';
 </pre>
 <table border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
@@ -490,27 +490,27 @@ mark "Building by sub-sections pages";
 Statistics per Debian architectures:
 <pre>
 EOF
-        for $f (grep { $_ ne 'unknown' } sort keys %arch)
-        {
-		my ($port)=split('-',$f);
-		$port="$port/";
-		$port="kfreebsd-gnu/" if ($port eq "kfreebsd/");
-                printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
-        }
-        if (defined $arch{"unknown"}) {
-            printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"}
-        }
-	print HTML  <<'EOF';
+    for $f (grep { $_ ne 'unknown' } sort keys %arch)
+    {
+      my ($port)=split('-',$f);
+      $port="$port/";
+      $port="kfreebsd-gnu/" if ($port eq "kfreebsd/");
+      printf HTML "<a href=\"http://www.debian.org/ports/$port\">%-16s</a> : %-10s <a href=\"stat/sub-$f.png\">graph</a>\n",$f,$arch{$f};
+    }
+  if (defined $arch{"unknown"}) {
+    printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"}
+  }
+  print HTML  <<'EOF';
 </pre></td>
 <td>
 <table>
   <tr><td>
- <img alt="Graph of number of submissions per architectures"
- width="600" height="400" src="stat/submission.png">
+    <img alt="Graph of number of submissions per architectures"
+    width="600" height="400" src="stat/submission.png">
   </td></tr>
   <tr><td>
- <img alt="Graph of number of submissions per architectures (last 12 months)"
- width="600" height="400" src="stat/submission-1year.png">
+    <img alt="Graph of number of submissions per architectures (last 12 months)"
+    width="600" height="400" src="stat/submission-1year.png">
   </td></tr>
 </table>
 </td></tr>
@@ -518,36 +518,36 @@ EOF
 Statistics per popularity-contest releases:
 <pre>
 EOF
-        for $f (grep { $_ ne 'unknown' } sort keys %release)
-        {
-                my($name) = $f;
-                $name = "$f ($popconver{$f})" if (defined($popconver{$f}));
-                printf HTML "%-25s : %-10s \n",$name,$release{$f};
-        }
-        if (defined $release{"unknown"}) {
-            printf HTML "%-25s : %-10s \n","unknown",$release{"unknown"};
-        }
-	print HTML  <<'EOF';
+    for $f (grep { $_ ne 'unknown' } sort keys %release)
+    {
+      my($name) = $f;
+      $name = "$f ($popconver{$f})" if (defined($popconver{$f}));
+      printf HTML "%-25s : %-10s \n",$name,$release{$f};
+    }
+  if (defined $release{"unknown"}) {
+    printf HTML "%-25s : %-10s \n","unknown",$release{"unknown"};
+  }
+  print HTML  <<'EOF';
 </pre></td>
 <td>
-<table>
-  <tr><td>
-   <img alt="Graph of popularity-contest versions in use"
-    width="600" height="400" src="stat/release.png">
-  </td></tr>
-  <tr><td>
- <img alt="Graph of popularity-contest versions in use (12 last months)"
-  width="600" height="400" src="stat/release-1year.png">
-  </td></tr>
-</table>
+  <table>
+    <tr><td>
+      <img alt="Graph of popularity-contest versions in use"
+       width="600" height="400" src="stat/release.png">
+    </td></tr>
+    <tr><td>
+      <img alt="Graph of popularity-contest versions in use (12 last months)"
+       width="600" height="400" src="stat/release-1year.png">
+    </td></tr>
+  </table>
 </td>
 </tr>
 </table>
 <p>
 EOF
 
-	print HTML "<a href=\"all-popcon-results.gz\">Raw popularity-contest results</a>\n";
-	htmlfooter $numsub;
-	close HTML;
+  print HTML "<a href=\"all-popcon-results.gz\">Raw popularity-contest results</a>\n";
+  htmlfooter $numsub;
+  close HTML;
 }
 mark "Building index.html";
