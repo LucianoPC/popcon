@@ -111,7 +111,7 @@ EOH
 
 sub make_sec
 {
-  my $sec="$popcon/$_[0]";
+  my $sec="$_[0]/$_[1]";
   -d $sec || system("mkdir","-p","$sec");
 }
 
@@ -145,7 +145,7 @@ my %maint=();
 
 sub make_by
 {
-  my ($sec,$order,$pkg,$winner,$listp) = @_;
+  my ($popcon,$sec,$order,$pkg,$winner,$listp) = @_;
   my (%sum, $me);
   @list = sort {$pkg->{$b}->{$order}<=> $pkg->{$a}->{$order} || $a cmp $b } @{$listp};
   $winner->{"$sec/$order"}=$list[0];
@@ -190,9 +190,9 @@ EOF
 
 sub make
 {
-  my ($sec,$pkg,$winner,$list)=@_;
-  make_sec $sec;
-  make_by ($sec, $_, $pkg, $winner, $list) for (@fields);
+  my ($popcon, $sec,$pkg,$winner,$list)=@_;
+  make_sec ($popcon,$sec);
+  make_by ($popcon, $sec, $_, $pkg, $winner, $list) for (@fields);
 }
 sub print_pkg
 {
@@ -344,7 +344,7 @@ mark "Reading stats...";
 for $sec (@sections)
 {
   my @list = grep {$section{$_} eq $sec} @pkgs;
-  make ($sec, \%pkg, \%winner, \@list);
+  make ($popcon, $sec, \%pkg, \%winner, \@list);
 }
 
 mark "Building by sections pages";
@@ -355,11 +355,11 @@ mark "Building by sections pages";
 for $sec (".",@dists)
 {
   my @list = grep {$section{$_} =~ /^$sec/ } @pkgs;
-  make ($sec, \%pkg, \%winner, \@list);
+  make ($popcon, $sec, \%pkg, \%winner, \@list);
 }
-make ("maint", \%maintpkg, \%winner, \@maints);
-make ("source", \%sourcepkg, \%winner, \@sources);
-make ("sourcemax", \%sourcemax, \%winner, \@sources);
+make ($popcon, "maint", \%maintpkg, \%winner, \@maints);
+make ($popcon, "source", \%sourcepkg, \%winner, \@sources);
+make ($popcon, "sourcemax", \%sourcemax, \%winner, \@sources);
 
 for $sec (@dists)
 {
