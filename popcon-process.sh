@@ -7,6 +7,7 @@ LOGDIR=$BASEDIR/../logs
 BINDIR=$BASEDIR/../bin
 DATADIR=$BASEDIR/popcon-entries
 SUMMARYDIR=$BASEDIR/all-popcon-results
+SUMMARYDIRSTABLE=$BASEDIR/all-popcon-results.stable
 
 # set to 'true' if email submissions should be processed
 READMAIL=true
@@ -29,18 +30,22 @@ if [ true = "$READMAIL" ] ; then
 fi
 
 # delete outdated entries
-rm -f results
+rm -f results results.stable
 find $DATADIR -type f -mtime +$DAYLIMIT -print0 | xargs -0 rm -f --
 
 # Generate statistics
 find $DATADIR -type f | xargs cat \
         | nice -15 $BINDIR/popanal.py >$LOGDIR/popanal.out 2>&1
 cp results $WEBDIR/all-popcon-results
+cp results.stable $WEBDIR/stable/stable-popcon-results
 gzip -f $WEBDIR/all-popcon-results
+gzip -f $WEBDIR/stable/stable-popcon-results
 cp $WEBDIR/all-popcon-results.gz $SUMMARYDIR/popcon-`date +"%Y-%m-%d"`.gz
+cp $WEBDIR/stable/stable-popcon-results.gz $SUMMARYDIRSTABLE/popcon-`date +"%Y-%m-%d"`.stable.gz
 
 cd ../popcon-stat
-find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl >$LOGDIR/popstat.log 2>&1 
+find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stat>$LOGDIR/popstat.log 2>&1 
+find $SUMMARYDIRSTABLE -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stable/stat >> $LOGDIR/popstat.log 2>&1 
 
 cd ../popcon-web
 $BINDIR/popcon.pl >$LOGDIR/popcon.log 2>$LOGDIR/popcon.errors
