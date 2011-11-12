@@ -5,8 +5,10 @@ use strict;
 $ENV{PATH}="/bin:/usr/bin";
 
 my %results=('all' => "../popcon-mail/results", 'stable' => "../popcon-mail/results.stable");
-my %popcon= ('all' => "../www", 'stable' => "../www/stable");
-my %popfile= ('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-results.gz");
+my $popbase = "../www";
+my %popcon= ('all' => "", 'stable' => "/stable");
+my %popfile=('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-results.gz");
+my %poptext=('all' => "All reports", 'stable' => "Stable reports");
 my $mirrorbase = "/org/ftp.debian.org/ftp";
 my $docurlbase = "";
 my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
@@ -90,7 +92,9 @@ EOH
 
 sub popconintro
 {
-  print HTML <<"EOH";
+  my ($name,$page) = @_;
+  &htmlheader;
+  print HTML <<"EOF";
   <p> <em> The popularity contest project is an attempt to map the usage of
   Debian packages.  This site publishes the statistics gathered from report
   sent by users of the <a
@@ -105,7 +109,38 @@ sub popconintro
 for source package <input type="text" size="30" maxlength="80" name="package">
 <input type="submit" value="Go">
 </form> <p>
-EOH
+
+<style type="text/css">
+  #tabs ul { padding: 0; margin: 0; background #DF0451; }
+  #tabs li {
+    display: inline;
+    border: 2px #DF0451 solid;
+    border-bottom-width: 0;
+    margin: 0 2px 0 0;
+    font-size: 140%;
+    padding: 0 2px;
+    -moz-border-radius: 15px 15px 0 0; border-radius: 15px 15px 0 0;
+  }
+  #tabs #current { background: #DF0451; color: #FFFF00; }
+  #main { border: 2px #DF0451 solid; 
+  -moz-border-radius: 0 15px 15px 15px; border-radius: 0 15px 15px 15px; }
+</style>
+<div id="tabs">
+  <ul>
+EOF
+  for (keys %poptext)
+  {
+    if ($_ eq $name) {
+      print HTML "<li id=\"current\">$poptext{$_}</li>\n";
+    } else {
+      print HTML "<li><a href=\"$popcon{$_}/$page\">$poptext{$_}</a></li>\n";
+    }
+  }
+  print HTML <<"EOF";
+  </ul>
+</div>
+<div id="main">
+EOF
 }
 
 sub htmlfooter
@@ -129,7 +164,7 @@ To participate in this survey, install the <a href="http://packages.debian.org/p
 EOF
   print HTML <<EOH
 <p>
-<HR>
+</div>
 <small>
 Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
 <a href="http://popcon.alioth.debian.org" > Popularity-contest project </a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
@@ -297,7 +332,7 @@ sub gen_sections
   my %arch = %{$stat->{'arch'}};
   my %release = %{$stat->{'release'}};
   my $numsub = $stat->{'numsub'};
-  my $popcon = $popcon{$name};
+  my $popcon = "$popbase$popcon{$name}";
   my $popfile = $popfile{$name};
   my @pkgs=sort keys %pkg;
   my %sections = map {$section{$_} => 1} keys %section;
@@ -326,7 +361,7 @@ sub gen_sections
   {
     open HTML , ">:utf8", "$popcon/$sec/index.html";
     opendir SEC,"$popcon/$sec";
-    &htmlheader;
+    popconintro($name,"$sec/index.html");
     printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
     print_by (".",$_) for (@fields);
     print HTML ("\n </p> \n");
@@ -349,7 +384,7 @@ sub gen_sections
   {
     open HTML , ">:utf8", "$popcon/$sec/first.html";
     opendir SEC,"$popcon/$sec";
-    &htmlheader;
+    popconintro($name,"$sec/first.html");
     printf HTML ("<p>First package in section %-16s for fields: ",$sec);
     for $f (@fields)
     {
@@ -381,8 +416,7 @@ sub gen_sections
     close HTML;
   }
   open HTML , ">:utf8", "$popcon/index.html";
-  &htmlheader;
-  &popconintro;
+  popconintro($name,"index.html");
   printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>");
   print_by (".",$_) for (@fields);
   print HTML ("</pre>\n </p> \n");
@@ -429,8 +463,8 @@ EOF
   if (defined $arch{"unknown"}) {
     printf HTML "%-16s : %-10s <a href=\"stat/sub-unknown.png\">graph</a>\n","unknown",$arch{"unknown"}
   }
+  print HTML "</pre></td>\n";
   print HTML  <<'EOF';
-</pre></td>
 <td>
 <table>
   <tr><td>
@@ -442,8 +476,10 @@ EOF
     width="600" height="400" src="stat/submission-1year.png">
   </td></tr>
 </table>
-</td></tr>
-<tr><td>
+</td>
+EOF
+  print HTML  <<'EOF';
+</tr><tr><td>
 Statistics per popularity-contest releases:
 <pre>
 EOF
@@ -456,8 +492,8 @@ EOF
   if (defined $release{"unknown"}) {
     printf HTML "%-25s : %-10s \n","unknown",$release{"unknown"};
   }
+  print HTML "</pre></td>\n";
   print HTML  <<'EOF';
-</pre></td>
 <td>
   <table>
     <tr><td>
@@ -470,11 +506,8 @@ EOF
     </td></tr>
   </table>
 </td>
-</tr>
-</table>
-<p>
 EOF
-
+  print HTML "</tr></table><p>\n";
   print HTML "<a href=\"$popfile\">Raw popularity-contest results</a>\n";
   htmlfooter $numsub;
   close HTML;
