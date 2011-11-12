@@ -6,6 +6,7 @@ $ENV{PATH}="/bin:/usr/bin";
 
 my %results=('all' => "../popcon-mail/results", 'stable' => "../popcon-mail/results.stable");
 my %popcon= ('all' => "../www", 'stable' => "../www/stable");
+my %popfile= ('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-results.gz");
 my $mirrorbase = "/org/ftp.debian.org/ftp";
 my $docurlbase = "";
 my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
@@ -233,7 +234,8 @@ my %source=();
 
 sub read_result
 {
-  my ($results) = @_;
+  my ($name) = @_;
+  my $results = $results{$name};
   my (%pkg,%maintpkg,%sourcepkg,%sourcemax,%arch,$numsub,%release);
   open PKG, "<:utf8","$results" or die "$results not found";
   while(<PKG>)
@@ -274,7 +276,8 @@ sub read_result
     }
   }
   close PKG;
-  return {'pkg'       => \%pkg,
+  return {'name'      => $name,
+          'pkg'       => \%pkg,
           'maintpkg'  => \%maintpkg,
           'sourcepkg' => \%sourcepkg,
           'sourcemax' => \%sourcemax,
@@ -285,14 +288,17 @@ sub read_result
 
 sub gen_sections
 {
-  my ($popcon,$stat) = @_;
+  my ($stat) = @_;
+  my $name = $stat->{'name'};
   my %pkg = %{$stat->{'pkg'}};
   my %maintpkg = %{$stat->{'maintpkg'}};
   my %sourcepkg = %{$stat->{'sourcepkg'}};
   my %sourcemax = %{$stat->{'sourcemax'}};
   my %arch = %{$stat->{'arch'}};
-  my %release = %{$stat->{'arch'}};
+  my %release = %{$stat->{'release'}};
   my $numsub = $stat->{'numsub'};
+  my $popcon = $popcon{$name};
+  my $popfile = $popfile{$name};
   my @pkgs=sort keys %pkg;
   my %sections = map {$section{$_} => 1} keys %section;
   my @sections = sort keys %sections;
@@ -374,83 +380,6 @@ sub gen_sections
     closedir SEC;
     close HTML;
   }
-}
-
-# Main code
-
-my ($file,$dist);
-
-for $file ("slink","slink-nonUS","potato","potato-nonUS",
-           "woody","woody-nonUS","sarge","etch")
-{
-  open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
-  while(<AVAIL>)
-  {
-          my ($p,$sec)=split(' ');
-          defined($sec) or last;
-          chomp $sec;
-          $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
-          $section{$p}=$sec;
-          $maint{$p}="Not in sid";
-          $source{$p}="Not in sid";
-  }
-  close AVAIL;
-}
-
-mark "Reading legacy packages...";
-
-for $dist ("stable", "testing", "unstable")
-{
-  for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.gz"))
-  {
-    /([^[:space:]]+)/ or die("incorrect package name");
-    my $file = $1;#Untaint
-    open AVAIL, "-|:encoding(UTF-8)","zcat $file";
-    my $p;
-    while(<AVAIL>)
-    {
-  /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
-  /^Version: (.+)/ && $p eq "popularity-contest" 
-        and do { $popver{$dist}=$1; next;};
-  /^Maintainer: ([^()]+) (\(.+\) )*<.+>/
-        and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};
-  /^Source: (\S+)/ and do { $source{$p}=$1;next;};
-  /^Section: (.+)/ or next;
-            my $sec = $1;
-            $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
-            $section{$p}=$sec;
-    }
-    close AVAIL;
-  }
-}
-for $dist ("stable", "testing", "unstable")
-{
-  my($v)=$popver{$dist};
-  $popconver{$v}=defined($popconver{$v})?"$popconver{$v}/$dist":$dist;
-}
-
-mark "Reading current packages...";
-
-my %stat = ('all' => read_result($results{'all'}),
-            'stable' => read_result($results{'stable'}));
-
-mark "Reading stats...";
-
-for (keys %stat)
-{
-  gen_sections($popcon{$_}, $stat{$_});
-}
-
-mark "Building by sections pages";
-
-my %arch = %{$stat{'all'}->{'arch'}};
-my %release = %{$stat{'all'}->{'arch'}};
-my $numsub = $stat{'all'}->{'numsub'};
-my $popcon = $popcon{'all'};
-
-mark "Building by sub-sections pages";
-{
-  my ($dir,$f);
   open HTML , ">:utf8", "$popcon/index.html";
   &htmlheader;
   &popconintro;
@@ -546,8 +475,77 @@ EOF
 <p>
 EOF
 
-  print HTML "<a href=\"all-popcon-results.gz\">Raw popularity-contest results</a>\n";
+  print HTML "<a href=\"$popfile\">Raw popularity-contest results</a>\n";
   htmlfooter $numsub;
   close HTML;
 }
-mark "Building index.html";
+
+sub read_packages
+{
+  my ($file,$dist);
+  for $file ("slink","slink-nonUS","potato","potato-nonUS",
+      "woody","woody-nonUS","sarge","etch")
+  {
+    open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
+    while(<AVAIL>)
+    {
+      my ($p,$sec)=split(' ');
+      defined($sec) or last;
+      chomp $sec;
+      $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
+      $section{$p}=$sec;
+      $maint{$p}="Not in sid";
+      $source{$p}="Not in sid";
+    }
+    close AVAIL;
+  }
+  mark "Reading legacy packages...";
+  for $dist ("stable", "testing", "unstable")
+  {
+    for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.gz"))
+    {
+      /([^[:space:]]+)/ or die("incorrect package name");
+      my $file = $1;#Untaint
+        open AVAIL, "-|:encoding(UTF-8)","zcat $file";
+      my $p;
+      while(<AVAIL>)
+      {
+        /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
+        /^Version: (.+)/ && $p eq "popularity-contest" 
+          and do { $popver{$dist}=$1; next;};
+        /^Maintainer: ([^()]+) (\(.+\) )*<.+>/
+          and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};
+        /^Source: (\S+)/ and do { $source{$p}=$1;next;};
+        /^Section: (.+)/ or next;
+        my $sec = $1;
+        $sec =~ m{^(non-US|contrib|non-free)/} or $sec="main/$sec";
+        $section{$p}=$sec;
+      }
+      close AVAIL;
+    }
+  }
+  mark "Reading current packages...";
+  for $dist ("stable", "testing", "unstable")
+  {
+    my($v)=$popver{$dist};
+    $popconver{$v}=defined($popconver{$v})?"$popconver{$v}/$dist":$dist;
+  }
+}
+
+# Main code
+
+read_packages();
+
+mark "Reading packages...";
+
+my %stat = ('all' => read_result('all'),
+            'stable' => read_result('stable'));
+
+mark "Reading stats...";
+
+for (keys %stat)
+{
+  gen_sections($stat{$_});
+}
+
+mark "Building pages";
