@@ -13,6 +13,7 @@ popularity-contest (1.54) UNRELEASED; urgency=low
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
+  * Icelandic (Sveinn í Felli). 
 
  -- Bill Allombert <ballombe@debian.org>  Thu, 28 Jul 2011 12:18:08 +0200
 
