@@ -51,9 +51,9 @@ while (<>)
 
 sub ytick
 {
-  my ($x)=$_[0]-.5;
-  $x < 0 and return 0;
-  return int 2**$x;
+  my ($x)=$_[0];
+  $x < 1 and return 0;
+  return int 2**($x-1);
 }
 
 use Chart::LinesPoints;
@@ -90,7 +90,7 @@ sub submission_chart
   $obj->set ('legend_labels' => [@arch]);
   $obj->set ('f_y_tick' => \&ytick);
   $obj->set ('brush_size' => 3);
-  $obj->set ('pt_size' => 7);
+  $obj->set ('pt_size' => 3);
   $obj->set ('max_val' => $maxv+1);
   $obj->set ('max_y_ticks' => 30);
   $obj->set ('y_ticks' => int $maxv +1);
@@ -156,7 +156,7 @@ sub release_chart
   $obj->set ('title' => "popularity-contest versions in use $title");
   $obj->set ('legend_labels' => [@release]);
   $obj->set ('brush_size' => 3);
-  $obj->set ('pt_size' => 7);
+  $obj->set ('pt_size' => 3);
   $obj->set ('x_ticks' => 'vertical');
   $obj->set ('skip_x_ticks' => $ticks);
   $obj->png ("$dirpng/release$pngname.png", \@data);

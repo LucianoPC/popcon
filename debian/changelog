@@ -10,6 +10,7 @@ popularity-contest (1.54) UNRELEASED; urgency=low
   * popcon.pl, pocon-stat.pl, popcon-process.pl: sync:
     - Add support for generating the stable reports part of the website.
   * clean-filter: fix typo in error message. Patch from Bryce Nesbitt.
+  * popcon-stat.pl: Fix y-scale. Closes: #651902 Thanks Ben Hutchings.
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
