@@ -28,8 +28,6 @@ use 5.6.0;
 my $dpkg_batch_size=32; #This is a time/space trade-off: higher = faster
 my $popcon_conf="/etc/popularity-contest.conf";
 
-my %opts=();
-
 # $popcon_conf is in shell-script format
 my $HOSTID = qx(unset MY_HOSTID; . $popcon_conf; echo \$MY_HOSTID );
 
