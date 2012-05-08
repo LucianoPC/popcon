@@ -11,13 +11,15 @@ popularity-contest (1.54) UNRELEASED; urgency=low
     - Add support for generating the stable reports part of the website.
   * clean-filter: fix typo in error message. Patch from Bryce Nesbitt.
   * popcon-stat.pl: Fix y-scale. Closes: #651902 Thanks Ben Hutchings.
+  * popanal.py, popcon-process.sh, popcon.pl:
+    - /org->/srv transition for new popcon.debian.org host.
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
   * Icelandic (Sveinn í Felli). 
   * Kannada (Vikram Vincent).  Closes: #659342
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 28 Jul 2011 12:18:08 +0200
+ -- Bill Allombert <ballombe@debian.org>  Tue, 08 May 2012 19:20:32 +0200
 
 popularity-contest (1.53) unstable; urgency=low
 

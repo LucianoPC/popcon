@@ -9,7 +9,7 @@ my $popbase = "../www";
 my %popcon= ('all' => "", 'stable' => "/stable");
 my %popfile=('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-results.gz");
 my %poptext=('all' => "All reports", 'stable' => "Stable reports");
-my $mirrorbase = "/org/ftp.debian.org/ftp";
+my $mirrorbase = "/srv/mirrors/debian";
 my $docurlbase = "/";
 my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
 my %popver=();

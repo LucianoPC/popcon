@@ -5,7 +5,7 @@
 #
 import sys, string, time, glob, gzip
 
-mirrorbase = "/org/ftp.debian.org/ftp"
+mirrorbase = "/srv/mirrors/debian"
 
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
