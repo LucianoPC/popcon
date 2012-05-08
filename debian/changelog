@@ -13,6 +13,8 @@ popularity-contest (1.54) UNRELEASED; urgency=low
   * popcon-stat.pl: Fix y-scale. Closes: #651902 Thanks Ben Hutchings.
   * popanal.py, popcon-process.sh, popcon.pl:
     - /org->/srv transition for new popcon.debian.org host.
+  * debian/control:
+    - Updated Standards-Version from 3.9.2 to 3.9.3.  No change needed.
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
