@@ -1,4 +1,4 @@
-popularity-contest (1.54) UNRELEASED; urgency=low
+popularity-contest (1.54) unstable; urgency=low
 
   [ Bill Allombert ]
   * README: mention move to subversion.
@@ -7,7 +7,7 @@ popularity-contest (1.54) UNRELEASED; urgency=low
       all-popcon-results to prevent data leak.  Closes: #634474
       Thanks Timo Juhani Lindfors for finding this issue.
     - add support for generating stats for stable reports.
-  * popcon.pl, pocon-stat.pl, popcon-process.pl: sync:
+  * popcon.pl, popcon-stat.pl, popcon-process.pl: sync:
     - Add support for generating the stable reports part of the website.
   * clean-filter: fix typo in error message. Patch from Bryce Nesbitt.
   * popcon-stat.pl: Fix y-scale. Closes: #651902 Thanks Ben Hutchings.
@@ -15,13 +15,16 @@ popularity-contest (1.54) UNRELEASED; urgency=low
     - /org->/srv transition for new popcon.debian.org host.
   * debian/control:
     - Updated Standards-Version from 3.9.2 to 3.9.3.  No change needed.
+  * popcon-largest-unused:
+    - Do not fail when there are no OLD packages. 
+      Closes: #666771 Thanks Jeffrey Sheinberg
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
   * Icelandic (Sveinn í Felli). 
   * Kannada (Vikram Vincent).  Closes: #659342
 
- -- Bill Allombert <ballombe@debian.org>  Tue, 08 May 2012 19:20:32 +0200
+ -- Bill Allombert <ballombe@debian.org>  Wed, 09 May 2012 00:03:32 +0200
 
 popularity-contest (1.53) unstable; urgency=low
 

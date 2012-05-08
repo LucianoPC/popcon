@@ -12,7 +12,7 @@ if [ ! -e $datafile ] ; then
 fi
 
 grep '<OLD>' $datafile | cut -d' ' -f3 |
-  xargs apt-cache -o 'APT::Cache::AllVersions=0' show |
+  xargs -r apt-cache -o 'APT::Cache::AllVersions=0' show |
   grep -E '^(Package|Installed-Size): ' |
   perl -ne 'if (/^Package: (.*)/) { $p = $1 };  if (/^Installed-Size: (.*)/) { print "$1 $p\n"; $p = 'BUG' }' |
   sort -rn
