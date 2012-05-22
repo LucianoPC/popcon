@@ -108,9 +108,5 @@ A) The timestamps are just the number of seconds since the epoch, namely
 1970-01-01 00:00:00 UTC.  You can convert e.g. 1139229934 to a human-readable
 date with
 
-  date -d '1970-01-01 UTC 1139229934 seconds'
-
-or on Etch and later systems, the following is shorter:
-
   date -d '@1139229934'
 
