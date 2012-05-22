@@ -1,3 +1,15 @@
+popularity-contest (1.55) unstable; urgency=low
+
+  * popularity-contest: fix multi-arch support:
+    - Temporarily revert change from 1.53:
+      'Find package files lists by running dpkg -L by batches.'
+      (dpkg -L does not provide a stable interface across upgrade).
+    - Instead add '$package:*.list' to the list of filelists. Closes: #660712
+    - Reject files in subdirectories of */lib/<triplet> since they are read
+      by ldconfig now.
+
+ -- Bill Allombert <ballombe@debian.org>  Tue, 22 May 2012 20:14:37 +0200
+
 popularity-contest (1.54) unstable; urgency=low
 
   [ Bill Allombert ]

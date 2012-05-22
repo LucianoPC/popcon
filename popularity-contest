@@ -96,47 +96,51 @@ while (<PACKAGES>)
 {
   /^.*installed *(.+)$/ or next;
   my $pkg=$1;
-  $popcon{$pkg}=[0,0,$pkg,"<NOFILES>"];
-  open FILES, "$dpkg_db/$pkg.list" or 
-    do { print STDERR "popcon: file $dpkg_db/$pkg.list is missing\n"; next; };
   my $bestatime = undef;
-  while (<FILES>)
+  my $list;
+  $popcon{$pkg}=[0,0,$pkg,"<NOFILES>"];
+  foreach ("$dpkg_db/$pkg.list", glob("$dpkg_db/$pkg:*.list"))
   {
-    chop;
-    next unless (
-     ( m{/bin/|/sbin/|/lib/.+/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
-       || defined $mapped{$_} )
-       && -f $_);
-    my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
-                      $atime,$mtime,$ctime,$blksize,$blocks)
-                          = stat;
-    if (defined $mapped{$_}) {
-      # It's currently being accessed by a process
-      $atime = time();
-    }
-    print STDERR if (!defined($atime));
-    if (!defined($bestatime) || $atime >= $bestatime)
+    open FILES, $_ or next;
+    while (<FILES>)
     {
-      $bestatime=$atime;
-      if ($atime < $lastmonth)
-      {
-        # Not accessed since more than 30 days.
-        $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<OLD>"];
+      chop;
+      next unless (
+          ( m{/bin/|/sbin/|/lib/.+/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
+            && ! m{/lib/.+-.+-.+/}
+            || defined $mapped{$_} )
+          && -f $_);
+      my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+          $atime,$mtime,$ctime,$blksize,$blocks)
+        = stat;
+      if (defined $mapped{$_}) {
+# It's currently being accessed by a process
+        $atime = time();
       }
-      elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
+      print STDERR if (!defined($atime));
+      if (!defined($bestatime) || $atime >= $bestatime)
       {
-        # Installed/upgraded less than a month ago and not used after
-        # install/upgrade day.
-        $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<RECENT-CTIME>"];
-      }
-      else
-      {
-        # Else we `vote' for the package.
-        $popcon{$pkg}=[$atime,$ctime,$pkg,$_];
+        $bestatime=$atime;
+        if ($atime < $lastmonth)
+        {
+# Not accessed since more than 30 days.
+          $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<OLD>"];
+        }
+        elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
+        {
+# Installed/upgraded less than a month ago and not used after
+# install/upgrade day.
+          $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<RECENT-CTIME>"];
+        }
+        else
+        {
+# Else we `vote' for the package.
+          $popcon{$pkg}=[$atime,$ctime,$pkg,$_];
+        }
       }
     }
+    close FILES;
   }
-  close FILES;
 }
 
 close PACKAGES;
