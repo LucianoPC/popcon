@@ -25,7 +25,7 @@
 use strict;
 use 5.6.0;
 
-my $dpkg_batch_size=32; #This is a time/space trade-off: higher = faster
+my $dpkg_db="/var/lib/dpkg/info";
 my $popcon_conf="/etc/popularity-contest.conf";
 
 # $popcon_conf is in shell-script format
@@ -90,14 +90,23 @@ if (opendir(PROC, "/proc"))
   }
 }
 
-#process the file list of a package
-sub proc_pkg
+# Read dpkg database of installed packages
+open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
+while (<PACKAGES>)
 {
-  my ($pkg,@list)=@_;
+  /^.*installed *(.+)$/ or next;
+  my $pkg=$1;
   $popcon{$pkg}=[0,0,$pkg,"<NOFILES>"];
+  open FILES, "$dpkg_db/$pkg.list" or 
+    do { print STDERR "popcon: file $dpkg_db/$pkg.list is missing\n"; next; };
   my $bestatime = undef;
-  for (@list)
+  while (<FILES>)
   {
+    chop;
+    next unless (
+     ( m{/bin/|/sbin/|/lib/.+/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
+       || defined $mapped{$_} )
+       && -f $_);
     my($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                       $atime,$mtime,$ctime,$blksize,$blocks)
                           = stat;
@@ -127,48 +136,9 @@ sub proc_pkg
       }
     }
   }
-}
-
-#process a list of packages.
-sub proc_pkgs
-{
-  my (@pkgs)=@_;
-  open FILES, "-|", "dpkg -L @pkgs";
-  my @list = ();
-  my $pkg = shift @pkgs;
-  while (<FILES>)
-  {
-    chop;
-    if ($_ eq "")
-    {
-      proc_pkg($pkg, @list);
-      $pkg = shift @pkgs;
-      @list = ();
-    }
-    next unless (
-     ( m{/bin/|/sbin/|/lib/.+/|^/usr/games/|\.[ah]$|\.pm$|\.php$|^/boot/System\.map-}
-       || defined $mapped{$_} )
-       && -f $_);
-    push @list, $_;
-  }
-  proc_pkg($pkg, @list);
   close FILES;
 }
 
-# Read dpkg database of installed packages
-open PACKAGES, "dpkg-query --show --showformat='\${status} \${package}\\n'|";
-my @pkglist = ();
-while (<PACKAGES>)
-{
-  /^.*installed *(.+)$/ or next;
-  push @pkglist, $1;
-  if (scalar @pkglist >= $dpkg_batch_size)
-  {
-    proc_pkgs(@pkglist);
-    @pkglist = ();
-  }
-}
-proc_pkgs(@pkglist) if (@pkglist);
 close PACKAGES;
 
 # We're not done yet.  Sort the output in reverse by atime, and
