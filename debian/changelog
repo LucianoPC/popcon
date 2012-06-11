@@ -2,9 +2,8 @@ popularity-contest (1.56) UNRELEASED; urgency=low
 
   [ Debconf translations ] 
   * Latvian (Rūdolfs Mazurs).  Closes: #674661
-
-  [ Christian Perrier ]
   * Lithuanian (Rimas Kudelis).  Closes: #675629
+  * Galician (Jorge Barreiro).  Closes: #676988
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 27 May 2012 08:52:25 +0200
 
