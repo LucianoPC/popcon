@@ -5,6 +5,7 @@ popularity-contest (1.56) UNRELEASED; urgency=low
   * Lithuanian (Rimas Kudelis).  Closes: #675629
   * Galician (Jorge Barreiro).  Closes: #676988
   * Welsh (Daffyd Tomos).
+  * Uyghur (Sahran).  Closes: #627009
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 27 May 2012 08:52:25 +0200
 
