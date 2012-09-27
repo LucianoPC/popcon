@@ -1,5 +1,6 @@
-popularity-contest (1.56) UNRELEASED; urgency=low
+popularity-contest (1.56) unstable; urgency=low
 
+  [ Christian Perrier ]
   [ Debconf translations ] 
   * Latvian (Rūdolfs Mazurs).  Closes: #674661
   * Lithuanian (Rimas Kudelis).  Closes: #675629
@@ -7,7 +8,7 @@ popularity-contest (1.56) UNRELEASED; urgency=low
   * Welsh (Daffyd Tomos).
   * Uyghur (Sahran).  Closes: #627009
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 27 May 2012 08:52:25 +0200
+ -- Bill Allombert <ballombe@debian.org>  Tue, 25 Sep 2012 21:13:44 +0200
 
 popularity-contest (1.55) unstable; urgency=low
 
