@@ -1,14 +1,15 @@
-popularity-contest (1.57) UNRELEASED; urgency=low
+popularity-contest (1.57) unstable; urgency=low
 
   * Please note when reading stats that wheezy was released with 1.56.
-  [ Bill Allombert ]
   * debian/control:
     - Fix grammar in Description. Closes: #699538 Thanks Chris Bannister.
+  * popcon.pl:
+    - add popcon version of wheezy
   [ Christian Perrier ]
   [ Debconf translations ] 
   * Kannada (Mallikarjuna).  Closes: #694411
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 05 May 2013 13:28:37 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 05 May 2013 21:21:15 +0200
 
 popularity-contest (1.56) unstable; urgency=low
 

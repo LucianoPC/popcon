@@ -11,7 +11,8 @@ my %popfile=('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-result
 my %poptext=('all' => "All reports", 'stable' => "Stable reports");
 my $mirrorbase = "/srv/mirrors/debian";
 my $docurlbase = "/";
-my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", "1.49" => "squeeze");
+my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", 
+               "1.49" => "squeeze", "1.56" => "wheezy");
 my %popver=();
 my @dists=("main","contrib","non-free","non-US");
 my @fields=("inst","vote","old","recent","no-files");
@@ -517,7 +518,7 @@ sub read_packages
 {
   my ($file,$dist);
   for $file ("slink","slink-nonUS","potato","potato-nonUS",
-      "woody","woody-nonUS","sarge","etch")
+      "woody","woody-nonUS", values %popconver)
   {
     open AVAIL, "<:utf8", "$file.sections" or die "Cannot open $file.sections";
     while(<AVAIL>)
