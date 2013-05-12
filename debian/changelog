@@ -1,3 +1,11 @@
+popularity-contest (1.58) UNRELEASED; urgency=low
+
+  * Move examples script to examples subdirectory.
+    - Add gensections.pl
+    - Do not install clean-filter/clean-genpkglist
+
+ -- Bill Allombert <ballombe@debian.org>  Tue, 14 May 2013 18:27:45 +0200
+
 popularity-contest (1.57) unstable; urgency=low
 
   * Please note when reading stats that wheezy was released with 1.56.
