@@ -9,11 +9,11 @@ submissions to a file called, say, new-popcon-entries.
 You should run popcon-process.sh once a day, or so.  It calls prepop.pl to
 split the mailbox file into a directory (popcon-entries) with one file per
 submission, and only one submission per participant.  (Since each
-participant makes a submission only once per day, it's very important to
+participant makes a submission once per week, it's very important to
 remove duplicates.)
 
 HINT: if you have an account on popcon.debian.org, you can find a pre-processed
-popcon-entries directory in /org/popcon.debian.org/popcon-mail.  Feel free to
+popcon-entries directory in /srv/popcon.debian.org/popcon-mail.  Feel free to
 use these files to generate your own statistics.
 
 Now you can do, for example:
