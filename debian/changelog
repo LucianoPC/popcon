@@ -4,6 +4,7 @@ popularity-contest (1.58) UNRELEASED; urgency=low
     - Add gensections.pl
     - Do not install clean-filter/clean-genpkglist
     - rename popcon-submit.cgi to popcon.cgi
+  * popcon now report the dpkg Vendor field. Suggested by Paul Wise.
 
  -- Bill Allombert <ballombe@debian.org>  Sat, 18 May 2013 23:18:28 +0200
 

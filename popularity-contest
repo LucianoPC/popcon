@@ -26,6 +26,7 @@ use strict;
 use 5.6.0;
 
 my $dpkg_db="/var/lib/dpkg/info";
+my $dpkg_origin="/etc/dpkg/origins/default";
 my $popcon_conf="/etc/popularity-contest.conf";
 
 # $popcon_conf is in shell-script format
@@ -58,6 +59,18 @@ chomp $debarch;
 
 # Popcon release
 my $popconver=`dpkg-query --showformat='\${version}' --show popularity-contest`;
+
+# Vendor
+my $vendor="unknown";
+
+if (open(VENDOR, "<", $dpkg_origin))
+{
+  while (<VENDOR>)
+  {
+    m/^Vendor: *(.*)/ and $vendor=$1;
+  }
+  close(VENDOR);
+}
 
 # Initialise time computations
 
@@ -149,7 +162,7 @@ close PACKAGES;
 # add a header/footer.
 
 print "POPULARITY-CONTEST-0 TIME:",time," ID:$HOSTID ".
-    "ARCH:$debarch POPCONVER:$popconver\n";
+    "ARCH:$debarch POPCONVER:$popconver VENDOR:$vendor\n";
 
 for (sort { $popcon{$b}[0] <=> $popcon{$a}[0] } keys %popcon)
 {

@@ -34,6 +34,7 @@ provlist = {}
 class Stat:
   def __init__(self):
     self.vote = {}
+    self.vendor = {}
     self.release = {}
     self.arch = {}
     self.count = 0
@@ -51,6 +52,11 @@ class Stat:
     for arch in archlist:
         out.write("Architecture: %-30s %5d\n"
                       % (arch, self.arch[arch]))
+    vendorlist = self.vendor.keys()
+    vendorlist.sort()
+    for vendor in vendorlist:
+        out.write("Vendor: %-30s %5d\n"
+                      % (vendor, self.vendor[vendor]))
     pkglist = self.vote.keys()
     pkglist.sort()
     for package in pkglist:
@@ -126,6 +132,7 @@ class Submission:
 
     arch = "unknown"
     release= "unknown"
+    vendor= "Debian"
 
     # initialize a new entry with known data
     def __init__(self, version, owner_id, date):
@@ -162,6 +169,11 @@ class Submission:
             if not st.vote.has_key(package):
                 st.vote[package] = Vote()
             st.vote[package].vote_for(package, self.entries[package])
+
+        if not st.vendor.has_key(self.vendor):
+            st.vendor[self.vendor] = 1
+        else:
+            st.vendor[self.vendor] = st.vendor[self.vendor] + 1
 
         if not st.release.has_key(self.release):
             st.release[self.release] = 1
@@ -208,6 +220,12 @@ def read_submissions(stream):
             except:
                 ewrite('Invalid date: ' + header['TIME'] + ' for ID ' + header['ID'])
                 continue
+
+            if header.has_key('VENDOR'):
+                if header['VENDOR']=='':
+                    e.vendor = 'unknown'
+                else:
+                    e.vendor = header['VENDOR']
 
             if header.has_key('POPCONVER'):
                 if header['POPCONVER']=='':
