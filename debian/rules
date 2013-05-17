@@ -29,6 +29,7 @@ install:
 	install popcon-upload debian/popularity-contest/usr/share/popularity-contest/
 	install popcon-largest-unused debian/popularity-contest/usr/sbin/
 	install -m 644 default.conf debian/popularity-contest/usr/share/popularity-contest/
+	install -m 644 debian-popcon.gpg debian/popularity-contest/usr/share/popularity-contest/
 
 # Build architecture-independent files here.
 binary-indep: build install

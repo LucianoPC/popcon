@@ -73,8 +73,9 @@ if (exists $ENV{CONTENT_TYPE} && $ENV{CONTENT_TYPE} =~ m%multipart/form-data%){
     @entry = <GZIP>;
 }
 
-my ($id) = $entry[0] =~ m/POPULARITY-CONTEST-0 .+ ID:(\S+) /;
-if ($id) {
+if ($entry[0] =~ m/POPULARITY-CONTEST-0/ 
+ || $entry[0] =~ m/-----BEGIN PGP MESSAGE-----/)
+{
     if ($directsave) {
 	open(POPCON, "|$bindir/prepop.pl") or die "Unable to pipe to prepop.pl";
 	print POPCON @entry;
@@ -89,8 +90,6 @@ EOF
         print POPCON @entry;
 	close POPCON;
     }
-}
-if ($id) {
     print "Thanks for your submission to Debian Popularity-Contest!\n";
     print "DEBIAN POPCON HTTP-POST OK\n";
 } else {

@@ -66,6 +66,16 @@ do_sendmail()
 
 run_popcon > $POPCON
 
+GPG=/usr/bin/gpg
+
+if [ "$ENCRYPT" = "yes" ] && [ -x "$GPG" ]; then
+  POPCONGPG="$POPCON.gpg"
+  rm -f "$POPCONGPG"
+  $GPG --no-default-keyring --keyring "$KEYRING" --trust-model=always \
+       --armor -o "$POPCONGPG" -r "$POPCONKEY" --encrypt "$POPCON"
+  POPCON="$POPCONGPG"
+fi
+
 SUBMITTED=no
 
 # try to post the report through http POST
