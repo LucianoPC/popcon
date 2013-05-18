@@ -3,8 +3,9 @@ popularity-contest (1.58) UNRELEASED; urgency=low
   * Move examples script to examples subdirectory.
     - Add gensections.pl
     - Do not install clean-filter/clean-genpkglist
+    - rename popcon-submit.cgi to popcon.cgi
 
- -- Bill Allombert <ballombe@debian.org>  Tue, 14 May 2013 18:27:45 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sat, 18 May 2013 23:18:28 +0200
 
 popularity-contest (1.57) unstable; urgency=low
 
