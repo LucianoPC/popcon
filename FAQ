@@ -7,7 +7,8 @@ A) popularity-contest reports the system vendor [1], the system architecture
    installed on your system. For each package, popularity-contest looks at the
    most recently used (based on atime) files, and reports the filename, its
    last access time (atime) and last change time (ctime).  However, some files
-   are not considered, because they have unreliable atime.
+   are not considered, because they have unreliable atime. For privacy reasons,
+   the times are truncated to multiple of twelve hours.
 
    [1] i.e. the dpkg Vendor field, see dpkg-vendor(1).
 

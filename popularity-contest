@@ -75,9 +75,13 @@ if (open(VENDOR, "<", $dpkg_origin))
 # Initialise time computations
 
 my $now = time;
-my $daylen = 24 * 60 * 60;
+my $halfdaylen = 12 * 60 *60;
+my $daylen = 2 * $halfdaylen;
 my $monthlen = $daylen * 30;
 my $lastmonth = $now - $monthlen;
+sub trunc_time {
+    return $halfdaylen * int($_[0] / $halfdaylen);
+}
 
 my %popcon=();
 
@@ -130,25 +134,27 @@ while (<PACKAGES>)
 # It's currently being accessed by a process
         $atime = time();
       }
-      print STDERR if (!defined($atime));
       if (!defined($bestatime) || $atime >= $bestatime)
       {
+# Truncate time to reduce informaton leak.
+        my $tatime = &trunc_time($atime);
+        my $tctime = &trunc_time($ctime);
         $bestatime=$atime;
         if ($atime < $lastmonth)
         {
 # Not accessed since more than 30 days.
-          $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<OLD>"];
+          $popcon{$pkg}=[$tatime,$tctime,$pkg,$_,"<OLD>"];
         }
         elsif ($ctime > $lastmonth && $atime-$ctime < $daylen)
         {
 # Installed/upgraded less than a month ago and not used after
 # install/upgrade day.
-          $popcon{$pkg}=[$atime,$ctime,$pkg,$_,"<RECENT-CTIME>"];
+          $popcon{$pkg}=[$tatime,$tctime,$pkg,$_,"<RECENT-CTIME>"];
         }
         else
         {
 # Else we `vote' for the package.
-          $popcon{$pkg}=[$atime,$ctime,$pkg,$_];
+          $popcon{$pkg}=[$tatime,$tctime,$pkg,$_];
         }
       }
     }
