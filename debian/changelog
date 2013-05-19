@@ -3,10 +3,17 @@ popularity-contest (1.58) UNRELEASED; urgency=low
   * Move examples script to examples subdirectory.
     - Add gensections.pl
     - Do not install clean-filter/clean-genpkglist
-    - rename popcon-submit.cgi to popcon.cgi
+    - Rename popcon-submit.cgi to popcon.cgi
   * popcon now report the dpkg Vendor field. Suggested by Paul Wise.
+  * popanal.py:
+    - Record the VENDOR field.
+    - Bump stable version to 1.56.
+  * debian/cron.daily:
+    - Encrypt submission with gnupg if available.
+  * debian/control:
+    - Recommends: gnupg so that encryption is enabled
 
- -- Bill Allombert <ballombe@debian.org>  Sat, 18 May 2013 23:18:28 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 19 May 2013 21:31:39 +0200
 
 popularity-contest (1.57) unstable; urgency=low
 

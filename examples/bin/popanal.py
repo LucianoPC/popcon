@@ -6,6 +6,7 @@
 import sys, string, time, glob, gzip
 
 mirrorbase = "/srv/mirrors/debian"
+stable_version = "1.56"
 
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
@@ -252,7 +253,7 @@ def read_submissions(stream):
                   ewrite('Invalid date: ' + header['TIME'])
                   continue
                 e.done(date,stat)
-                if e.release=='1.49':
+                if e.release==stable_version:
                    e.done(date,stat_stable)
             e = None
 
