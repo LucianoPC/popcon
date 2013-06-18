@@ -26,7 +26,13 @@ if [ true = "$READMAIL" ] ; then
     chmod go-rwx $MAILDIR/survey
 
     # process entries, splitting them into individual reports
+    rm -fr popcon-gpg
+    mkdir popcon-gpg
     $BINDIR/prepop.pl <new-popcon-entries >$LOGDIR/prepop.out 2>&1
+    #decrypt reports (to be parallelized)
+    find popcon-gpg -type f -name '*.gpg' -execdir gpg {} \;
+    #process decrypted reports
+    find popcon-gpg -type f -name '*.txt'| xargs cat | $BINDIR/prepop.pl
 fi
 
 # delete outdated entries
