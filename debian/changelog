@@ -1,3 +1,11 @@
+popularity-contest (1.59) UNRELEASED; urgency=low
+
+  * debian/cron.daily:
+    - Provide a temporary homedir to gpg so it does not create /root/.gnupg.
+      Also use 'set -e'. Closes: #714917 Thanks Ansgar Burchardt.
+
+ -- Bill Allombert <ballombe@debian.org>  Thu, 01 Aug 2013 16:26:31 +0200
+
 popularity-contest (1.58) unstable; urgency=low
 
   * Move examples script to examples subdirectory.

@@ -72,8 +72,11 @@ GPG=/usr/bin/gpg
 if [ "$ENCRYPT" = "yes" ] && [ -x "$GPG" ]; then
   POPCONGPG="$POPCON.gpg"
   rm -f "$POPCONGPG"
-  $GPG --no-default-keyring --keyring "$KEYRING" --trust-model=always \
+  GPGHOME=`mktemp -d`
+  $GPG --batch --no-options --no-default-keyring --trust-model=always \
+       --homedir "$GPGHOME" --keyring "$KEYRING" --quiet \
        --armor -o "$POPCONGPG" -r "$POPCONKEY" --encrypt "$POPCON"
+  rm -rf "$GPGHOME"
   POPCON="$POPCONGPG"
 fi
 
