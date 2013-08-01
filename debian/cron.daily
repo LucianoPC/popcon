@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # don't run if this package is removed but not purged
 if [ ! -f /usr/sbin/popularity-contest ]; then
@@ -21,7 +22,7 @@ unset MTAOPS
 if [ -z "$MAILTO" ] && [ "yes" != "$USEHTTP" ]; then exit 0; fi
 
 # don't run if PARTICIPATE is "no" or unset!
-[ "$PARTICIPATE" = "no" ] || [ -z "$PARTICIPATE" ] && exit 0
+if [ "$PARTICIPATE" = "no" ] || [ -z "$PARTICIPATE" ]; then exit 0; fi
 
 if [ -n "$HTTP_PROXY" ]; then
   export http_proxy="$HTTP_PROXY";
