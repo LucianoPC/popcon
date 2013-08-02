@@ -1,8 +1,10 @@
-popularity-contest (1.59) UNRELEASED; urgency=low
+popularity-contest (1.59) unstable; urgency=low
 
   * debian/cron.daily:
     - Provide a temporary homedir to gpg so it does not create /root/.gnupg.
       Also use 'set -e'. Closes: #714917 Thanks Ansgar Burchardt.
+    - Add setting ENCRYPT=maybe, which encrypt if gpg is available.
+      Make ENCRYPT=yes to fail if gpg is not available. Closes: #714918
 
  -- Bill Allombert <ballombe@debian.org>  Thu, 01 Aug 2013 16:26:31 +0200
 
