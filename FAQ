@@ -20,9 +20,10 @@ A) A computer 'vote' for a package if according to the data provided in the
 
 Q) Can submissions be eavesdropped ?
 
-A) Yes, however if the package gnupg is installed and ENCRYPT is set to 'yes'
-   in /etc/popularity-contest.conf, the reports are encrypted using public key
-   cryptography, so the eavesdropper should not be able to decrypt them.
+A) Yes, however if the package gnupg is installed and ENCRYPT is set to 'maybe' 
+   or 'yes' in /etc/popularity-contest.conf, the reports are encrypted using
+   public key cryptography, so the eavesdropper should not be able to decrypt
+  them. The default is 'maybe' with popularity-contest 1.60.
 
 Q) What are the privacy considerations for popularity-contest ?
 

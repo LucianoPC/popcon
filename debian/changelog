@@ -1,3 +1,12 @@
+popularity-contest (1.60) unstable; urgency=low
+
+  * Encrypt reports by default:
+    + default.conf, FAQ:
+      - Set ENCRYPT=maybe by default and document it.
+    As a consequence, reports are now compressed by default. Closes: #149425
+
+ -- Bill Allombert <ballombe@debian.org>  Thu, 05 Sep 2013 09:29:57 +0200
+
 popularity-contest (1.59) unstable; urgency=low
 
   * debian/cron.daily:
