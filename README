@@ -98,10 +98,13 @@ RELATED PROJECTS
 
 There are several projects trying to count users and machines.  First and
 foremost is the Linux Counter at http://counter.li.org/.  It tries to 
-estimate the amount of Linux users worldwide.  Second, we are aware of
-separate popcon installations at Fink, http://fink.opendarwin.org/popcon/
-and Ubuntu, http://popcon.ubuntu.com, receiving information about the Ubuntu
-users.  We are sure there are others.
+estimate the amount of Linux users worldwide.
+
+There are some popcon installations for other distributions:
+
+Ubuntu: http://popcon.ubuntu.com/
+DebianEdu: http://popcon.skolelinux.org/
+NeuroDebian: http://neuro.debian.net/popcon/
 
 INSTALLATION PRESEEDING
 =======================
