@@ -1,3 +1,9 @@
+popularity-contest (1.61) UNRELEASED; urgency=low
+
+  * 
+
+ -- Bill Allombert <ballombe@debian.org>  Sat, 05 Oct 2013 17:05:24 +0200
+
 popularity-contest (1.60) unstable; urgency=low
 
   * Encrypt reports by default:
