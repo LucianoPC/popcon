@@ -19,11 +19,11 @@ use these files to generate your own statistics.
 Now you can do, for example:
 
 	cat popcon-entries/*/* | popanal.py
-	
+
 which creates a file named results.  Output lines look like this:
 
    <name> <vote> <old> <recent-ctime> <no-files>
-   
+
 <name> is the package name;
 <vote> is the number of people who use this package regularly;
 <old> is the number of people who installed, but don't use this package
