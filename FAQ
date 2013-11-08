@@ -14,16 +14,16 @@ A) popularity-contest reports the system vendor [1], the system architecture
 
 Q) What is considered a 'vote' for a package ?
 
-A) A computer 'vote' for a package if according to the data provided in the
+A) A computer 'vote's for a package if according to the data provided in the
    report, a program provided or depending on the package was used less than
-   thirty days ago. This computation is performed by the popcon server.  
+   thirty days ago. This computation is performed by the popcon server.
 
 Q) Can submissions be eavesdropped ?
 
-A) Yes, however if the package gnupg is installed and ENCRYPT is set to 'maybe' 
+A) Yes, however if the package gnupg is installed and ENCRYPT is set to 'maybe'
    or 'yes' in /etc/popularity-contest.conf, the reports are encrypted using
    public key cryptography, so the eavesdropper should not be able to decrypt
-  them. The default is 'maybe' with popularity-contest 1.60.
+   them. The default is 'maybe' with popularity-contest 1.60.
 
 Q) What are the privacy considerations for popularity-contest ?
 
@@ -35,7 +35,7 @@ A) Each popularity-contest host is identified by a random 128bit uuid
    stores it in a database for a maximum of 20 days or until the host
    sends a new report. This database is readable only by Debian
    Developers.  The emails are readable only by the server admins.
-   Every day, the server computes a summary and post it on
+   Every day, the server computes a summary and posts it on
    <http://popcon.debian.org/all-popcon-results.txt.gz>. This summary
    is a merge of all the submissions and does not include uuids.
 
@@ -48,9 +48,9 @@ A) Each popularity-contest host is identified by a random 128bit uuid
    shut-down and 23 days if it is let idle.
 
    2) Unofficial and local packages are reported. This can be an issue
-   due to 2) above, especially for custom-build kernel packages.
+   due to 2) above, especially for custom-built kernel packages.
    We are evaluating how far we can alleviate this problem.
-   
+
 Q) /usr is mounted with 'noatime'.
 
 A) popularity-contest relies on atime to know what packages were used during
@@ -59,13 +59,13 @@ A) popularity-contest relies on atime to know what packages were used during
 
 Q) When does popularity-contest run ?
 
-A) popularity-contest is run by the daily cron job 
+A) popularity-contest is run by the daily cron job
 "/etc/cron.daily/popularity-contest", but only one day in the week,
 which is specified in the configuration file. This day is chosen randomly
 to spread the load on the server.
 
 Under the default configuration of cron, this happens at 6:47 in the morning.
-This can be changed by editing /etc/crontab but if your computer is not always
+This can be changed by editing /etc/crontab.  If your computer is not always
 turned on, we really recommend you install the anacron package.
 
 If /etc/cron.daily/popularity-contest has not run for more than a week, it will
@@ -74,7 +74,7 @@ accept to run any day.
 Q) I don't want popcon email to be sent by root! How can I change that ?
 
 A) To send as user 'myuser', edit the function 'do_sendmail' in
-/etc/cron.daily/popularity-contest to 
+/etc/cron.daily/popularity-contest to
 
   do_sendmail()
   {
@@ -95,19 +95,19 @@ queue until the internet connectivity is back.
 
 Nevertheless, you can prevent popularity-contest from sending reports via email
 by adding
-MAILTO= 
+MAILTO=
 to /etc/popularity-contest.conf
 
 Q) How can I specify a HTTP proxy server for the HTTP submission ?
 
 Popularity-contest honors the environment variable http_proxy that you can
 set in /etc/environment. Alternatively you can specify a proxy server
-specifically for popularity-contest by adding a line 
+specifically for popularity-contest by adding a line
 
 HTTP_PROXY="http://<proxy hostname>:<port>"
 to /etc/popularity-contest.conf.
 
-Q) How can I convert the timestamps in the popcon report to human-readable 
+Q) How can I convert the timestamps in the popcon report to human-readable
 dates ?
 
 A) The timestamps are just the number of seconds since the epoch, namely
