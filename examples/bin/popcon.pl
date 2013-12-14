@@ -48,54 +48,51 @@ sub mark
 
 sub htmlheader
 {
+  my $name = $_[0];
+  my $report_label = $poptext{$name};
   print HTML <<"EOH";
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
   <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-      <title> Debian Popularity Contest </title>
-        <link rev="made" href="mailto:ballombe\@debian.org">
-        <link rel="shortcut icon" href="/favicon.ico">
-        </head>
-        <body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#800080" alink="#FF0000">
-        <div align="center">
-        <a href="http://www.debian.org/">
-        <img src="http://www.debian.org/logos/openlogo-nd-50.png" border="0" hspace="0" vspace="0" alt="" width="50" height="61">
-        </a>
-        <a href="http://www.debian.org/">
-        <img src="http://www.debian.org/Pics/debian.jpg" border="0" hspace="0" vspace="0" alt="Debian Project" width="179" height="61">
-        </a>
-        </div>
-        <br>
-        <table bgcolor="#DF0451" border="0" width="100%" cellpadding="0" cellspacing="0" summary="">
-        <tr>
-        <td valign="top">
-        <img src="http://www.debian.org/Pics/red-upperleft.png" align="left" border="0" hspace="0" vspace="0" alt="" width="15" height="16">
-        </td>
-        <td rowspan="2" align="center">
-        <font color="#FFFF00"><big><big>Debian Popularity Contest</big></big></font>
-        </td>
-        <td valign="top">
-        <img src="http://www.debian.org/Pics/red-upperright.png" align="right" border="0" hspace="0" vspace="0" alt="" width="16" height="16">
-        </td>
-        </tr>
-        <tr>
-        <td valign="bottom">
-        <img src="http://www.debian.org/Pics/red-lowerleft.png" align="left" border="0" hspace="0" vspace="0" alt="" width="16" height="16">
-        </td>
-        <td valign="bottom">
-        <img src="http://www.debian.org/Pics/red-lowerright.png" align="right" border="0" hspace="0" vspace="0" alt="" width="15" height="16">
-        </td>
-        </tr>
-        </table>
+    <title> Debian Popularity Contest </title>
+    <link rev="made" href="mailto:ballombe\@debian.org">
+    <link href="http://www.debian.org/debian.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body>
+    <div id="header">
+      <div id="upperheader">
+        <div id="logo">
+          <a href="http://www.debian.org/" title="Debian Home"><img src="http://www.debian.org/Pics/openlogo-50.png" alt="Debian" width="50" height="61"></a>
+        </div> <!-- end logo -->
+        <p class="section"><a href="/">POPCON</a></p>
+      </div> <!-- end upperheader -->
+      <!--UdmComment-->
+      <div id="navbar">
+        <p class="hidecss"><a href="#content">Skip Quicknav</a></p>
+        <ul>
+          <li><a href="http://www.debian.org/intro/about">About Debian</a></li>
+          <li><a href="http://www.debian.org/distrib/">Getting Debian</a></li>
+          <li><a href="http://www.debian.org/support">Support</a></li>
+          <li><a href="http://www.debian.org/devel/">Developers' Corner</a></li>
+        </ul>
+      </div> <!-- end navbar -->
+      <p id="breadcrumbs"><a href="http://popcon.debian.org/">Debian Popularity Contest</a>
+ &#x2F;
+      ${report_label}</p>
+    </div> <!-- end header -->
+    <!--/UdmComment-->
 EOH
 }
 
 sub popconintro
 {
-  my ($name,$page) = @_;
-  &htmlheader;
+  my ($name, $page) = @_;
+  &htmlheader($name);
   print HTML <<"EOF";
+<div id="content">
+  <h1>Debian Popularity Contest</h1>
   <p> <em> The popularity contest project is an attempt to map the usage of
   Debian packages.  This site publishes the statistics gathered from report
   sent by users of the <a
@@ -105,26 +102,38 @@ sub popconintro
   anonymizes the result and publishes this survey.
   For more information, read the <a href="${docurlbase}README">README</a> and the 
   <a href="${docurlbase}FAQ">FAQ</a>.
-  </em> <p>
+  </em>
+  <p><em>To participate in this survey, install the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package.</em> </p>
+  <p></p>	
 <form method="GET" action="http://qa.debian.org/popcon.php">Popcon statistics
 for source package <input type="text" size="30" maxlength="80" name="package">
 <input type="submit" value="Go">
 </form> <p>
 
 <style type="text/css">
-  #tabs ul { padding: 0; margin: 0; background #DF0451; }
+  #download-stats pre {
+    margin-top: -15px;
+  }
+  table td {
+    border-width: 0px;
+    vertical-align: top;
+  }
+  .stats-cell{
+    vertical-align: middle;
+  }
+  #tabs ul { margin: 0; background #C70036; }
   #tabs li {
     display: inline;
-    border: 2px #DF0451 solid;
-    border-bottom-width: 0;
     margin: 0 2px 0 0;
     font-size: 140%;
     padding: 0 2px;
-    -moz-border-radius: 15px 15px 0 0; border-radius: 15px 15px 0 0;
   }
-  #tabs #current { background: #DF0451; color: #FFFF00; }
-  #main { border: 2px #DF0451 solid; 
-  -moz-border-radius: 0 15px 15px 15px; border-radius: 0 15px 15px 15px; }
+  #tabs #current { background: #C70036; color: #F5F6F7; }
+  #main {
+    border: 2px #C70036 solid;
+    margin-bottom: 1em;
+    padding-left: 1em;
+  }
 </style>
 <div id="tabs">
   <ul>
@@ -144,10 +153,13 @@ EOF
 EOF
 }
 
-sub htmlfooter
+sub rawresults
 {
-  my ($numsub) = @_;
-  my $date=gmtime();
+  my ($numsub) = $_[0];
+  my ($popfile) = $_[1];
+  print HTML "<p>\n";
+  print HTML "<a href=\"$popfile\">Raw popularity-contest results</a>\n";
+  print HTML "</p>\n";
   print HTML <<EOF;
 <pre>
 inst     : number of people who installed this package;
@@ -159,20 +171,21 @@ and ctime were 0).
 </pre>
 <p>
 Number of submissions considered: $numsub
-</p><p>
-To participate in this survey, install the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package.
 </p>
 EOF
-  print HTML <<EOH
-<p>
-</div>
-<small>
-Made by <a href="mailto:ballombe\@debian.org"> Bill Allombert </a>. Last generated on $date UTC. <br>
+}
+
+sub htmlfooter
+{
+  my $date=gmtime();
+  print HTML <<EOH;
+<div id="footer">
+Made by <a href="mailto:ballombe\@debian.org">Bill Allombert</a>. Last generated on $date UTC. <br>
 <a href="http://popcon.alioth.debian.org" > Popularity-contest project </a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <BR>
-Copyright (C) 2004-2005 <A HREF="http://www.spi-inc.org/">SPI</A>;
-See <A HREF="http://www.debian.org/license">license terms</A>.
-</small>
+Copyright (C) 2004-2013 <a href="http://www.spi-inc.org/">SPI</a>;
+See <a href="http://www.debian.org/license">license terms</a>.
+</div>
 </body>
 </html>
 EOH
@@ -377,7 +390,8 @@ sub gen_sections
       print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
-    htmlfooter $numsub;
+    rawresults($numsub, $popfile);
+    htmlfooter;
     closedir SEC;
     close HTML;
   }
@@ -412,12 +426,14 @@ sub gen_sections
             print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
-    htmlfooter $numsub;
+    rawresults($numsub, $popfile);
+    htmlfooter;
     closedir SEC;
     close HTML;
   }
   open HTML , ">:utf8", "$popcon/index.html";
   popconintro($name,"index.html");
+  printf HTML ("<h2>Download</h2>");
   printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>");
   print_by (".",$_) for (@fields);
   print HTML ("</pre>\n </p> \n");
@@ -446,12 +462,14 @@ sub gen_sections
     print_by ($dir,$_) for (@fields);
     print HTML ("\n");
   }
+  printf HTML ("</pre>\n");
+  rawresults($numsub, $popfile);
   print HTML  <<'EOF';
-</pre>
+
+<h2>Statistics per Debian architectures</h2>
 <table border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
-<td>
-Statistics per Debian architectures:
+<td class="stats-cell">
 <pre>
 EOF
     for $f (grep { $_ ne 'unknown' } sort keys %arch)
@@ -478,10 +496,14 @@ EOF
   </td></tr>
 </table>
 </td>
+</tr>
+</table>
 EOF
   print HTML  <<'EOF';
-</tr><tr><td>
-Statistics per popularity-contest releases:
+<h2>Statistics per popularity-contest releases</h2>
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<tbody>
+<tr><td class="stats-cell">
 <pre>
 EOF
     for $f (grep { $_ ne 'unknown' } sort keys %release)
@@ -507,10 +529,11 @@ EOF
     </td></tr>
   </table>
 </td>
+</tr></table>
+<p>
+</p></div>
 EOF
-  print HTML "</tr></table><p>\n";
-  print HTML "<a href=\"$popfile\">Raw popularity-contest results</a>\n";
-  htmlfooter $numsub;
+  htmlfooter;
   close HTML;
 }
 
