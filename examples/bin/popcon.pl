@@ -49,7 +49,12 @@ sub mark
 sub htmlheader
 {
   my $name = $_[0];
+  my $sec = $_[1];
   my $report_label = $poptext{$name};
+  if ($sec){
+    $report_label = "$poptext{$name} ($sec)";
+  }
+
   print HTML <<"EOH";
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
   <html>
@@ -88,8 +93,13 @@ EOH
 
 sub popconintro
 {
-  my ($name, $page) = @_;
-  &htmlheader($name);
+  my ($name, $sec, $htmlfile) = @_;
+  my $page = ${htmlfile};
+  if ($sec) {
+    $page = "${sec}/${htmlfile}";
+  }
+
+  &htmlheader($name, $sec);
   print HTML <<"EOF";
 <div id="content">
   <h1>Debian Popularity Contest</h1>
@@ -149,7 +159,20 @@ EOF
   print HTML <<"EOF";
   </ul>
 </div>
-<div id="main">
+EOF
+}
+
+sub legend
+{
+  print HTML <<EOF;
+<pre>
+inst     : number of people who installed this package;
+vote     : number of people who use this package regularly;
+old      : number of people who installed, but don't use this package regularly;
+recent   : number of people who upgraded this package recently;
+no-files : number of people whose entry didn't contain enough information (atime
+and ctime were 0).
+</pre>
 EOF
 }
 
@@ -160,15 +183,8 @@ sub rawresults
   print HTML "<p>\n";
   print HTML "<a href=\"$popfile\">Raw popularity-contest results</a>\n";
   print HTML "</p>\n";
+  &legend;
   print HTML <<EOF;
-<pre>
-inst     : number of people who installed this package;
-vote     : number of people who use this package regularly;
-old      : number of people who installed, but don't use this package regularly;
-recent   : number of people who upgraded this package recently;
-no-files : number of people whose entry didn't contain enough information (atime
-and ctime were 0).
-</pre>
 <p>
 Number of submissions considered: $numsub
 </p>
@@ -182,9 +198,10 @@ sub htmlfooter
 <div id="footer">
 Made by <a href="mailto:ballombe\@debian.org">Bill Allombert</a>. Last generated on $date UTC. <br>
 <a href="http://popcon.alioth.debian.org" > Popularity-contest project </a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
-<BR>
-Copyright (C) 2004-2013 <a href="http://www.spi-inc.org/">SPI</a>;
-See <a href="http://www.debian.org/license">license terms</a>.
+<br>
+Debian template Copyright &copy; 1997-2013
+<a href="http://www.spi-inc.org/">SPI</a> and others; See <a href="http://www.debian.org/license" rel="copyright">license terms</a><br>
+Debian is a registered <a href="http://www.debian.org/trademark">trademark</a> of Software in the Public Interest, Inc.
 </div>
 </body>
 </html>
@@ -375,7 +392,8 @@ sub gen_sections
   {
     open HTML , ">:utf8", "$popcon/$sec/index.html";
     opendir SEC,"$popcon/$sec";
-    popconintro($name,"$sec/index.html");
+    popconintro($name, $sec, "index.html");
+    printf HTML ("<div id=\"main\">");
     printf HTML ("<p>Statistics for the section %-16s sorted by fields: ",$sec);
     print_by (".",$_) for (@fields);
     print HTML ("\n </p> \n");
@@ -390,7 +408,8 @@ sub gen_sections
       print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
-    rawresults($numsub, $popfile);
+    printf HTML ("</div><!-- close main-->");
+    &legend;
     htmlfooter;
     closedir SEC;
     close HTML;
@@ -399,7 +418,8 @@ sub gen_sections
   {
     open HTML , ">:utf8", "$popcon/$sec/first.html";
     opendir SEC,"$popcon/$sec";
-    popconintro($name,"$sec/first.html");
+    popconintro($name, $sec, "first.html");
+    printf HTML ("<div id=\"main\">");
     printf HTML ("<p>First package in section %-16s for fields: ",$sec);
     for $f (@fields)
     {
@@ -426,13 +446,15 @@ sub gen_sections
             print HTML ("\n");
     }
     print HTML ("\n </pre>\n");
-    rawresults($numsub, $popfile);
+    printf HTML ("</div><!-- close main-->");
+    &legend;
     htmlfooter;
     closedir SEC;
     close HTML;
   }
   open HTML , ">:utf8", "$popcon/index.html";
-  popconintro($name,"index.html");
+  popconintro($name, "", "index.html");
+  printf HTML ("<div id=\"main\">");
   printf HTML ("<h2>Download</h2>");
   printf HTML ("<p>Statistics for the whole archive sorted by fields: <pre>");
   print_by (".",$_) for (@fields);
@@ -531,8 +553,9 @@ EOF
 </td>
 </tr></table>
 <p>
-</p></div>
+</p>
 EOF
+  printf HTML ("</div><!-- close main-->");
   htmlfooter;
   close HTML;
 }
