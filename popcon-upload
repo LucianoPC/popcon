@@ -3,7 +3,7 @@
 # This file is placed in the public domain.
 
 use strict;
-use IO::Socket;
+use IO::Socket::IP;
 
 my %opts;
 
@@ -72,8 +72,8 @@ $SIG{ALRM} = sub { die "timeout in popcon-upload\n" };
 alarm(30);
 
 # Connect to server
-$remote = IO::Socket::INET->new(Proto => "tcp", PeerAddr => $proxy, 
-                                                PeerPort => $port); 
+$remote = IO::Socket::IP->new(Proto => "tcp", PeerAddr => $proxy, 
+                                              PeerPort => $port); 
 unless ($remote) { die "cannot connect to $proxy:$port" }
 
 my $boundary = "----------ThIs_Is_tHe_bouNdaRY_\$";
