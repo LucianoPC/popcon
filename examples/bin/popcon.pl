@@ -144,6 +144,22 @@ for source package <input type="text" size="30" maxlength="80" name="package">
     margin-bottom: 1em;
     padding-left: 1em;
   }
+  .legend dt{
+    margin: 0;
+  }
+ 
+ dt {
+    float: left;
+    clear: left;
+    font-weight: bold;
+    width: 6em;
+  }
+ dt:after {
+    content: ":";
+ }
+ dd {
+    margin: 0 0 0 7em;
+ }
 </style>
 <div id="tabs">
   <ul>
@@ -165,14 +181,18 @@ EOF
 sub legend
 {
   print HTML <<EOF;
-<pre>
-inst     : number of people who installed this package;
-vote     : number of people who use this package regularly;
-old      : number of people who installed, but don't use this package regularly;
-recent   : number of people who upgraded this package recently;
-no-files : number of people whose entry didn't contain enough information (atime
-and ctime were 0).
-</pre>
+<dl class='legend'>
+    <dt>inst</dt>
+    <dd>number of people who installed this package</dd>
+    <dt>vote</dt>
+    <dd>number of people who use this package regularly</dd>
+    <dt>old</dt>
+    <dd>number of people who installed, but don't use this package regularly</dd>
+    <dt>recent</dt>
+    <dd>number of people who upgraded this package recently</dd>
+    <dt>no-files</dt>
+    <dd>number of people whose entry didn't contain enough information (atime and ctime were 0)</dd>
+</dl>
 EOF
 }
 
@@ -199,6 +219,7 @@ sub htmlfooter
 Made by <a href="mailto:ballombe\@debian.org">Bill Allombert</a>. Last generated on $date UTC. <br>
 <a href="http://popcon.alioth.debian.org" > Popularity-contest project </a> by Avery Pennarun, Bill Allombert and Petter Reinholdtsen.
 <br>
+Debian theme by St&eacute;phane Blondon, based on
 Debian template Copyright &copy; 1997-2013
 <a href="http://www.spi-inc.org/">SPI</a> and others; See <a href="http://www.debian.org/license" rel="copyright">license terms</a><br>
 Debian is a registered <a href="http://www.debian.org/trademark">trademark</a> of Software in the Public Interest, Inc.
