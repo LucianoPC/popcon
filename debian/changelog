@@ -1,8 +1,8 @@
 popularity-contest (1.61) unstable; urgency=low
 
-  * Add support for IPv6. Closes: #730760.
-    - popcon-upload:
-       Use IO::Socket::IP instead of IO::Socket::INET in popcon-upload.
+  * Add support for IPv6. Closes: #730760. Thanks Bob Ham.
+   + popcon-upload:
+     - Use IO::Socket::IP instead of IO::Socket::INET in popcon-upload.
    + debian/control:
      - Add a dependency on libio-socket-ip-perl (>= 0.25-3).
        This module is targeted for inclusion in perl-base.
@@ -10,8 +10,10 @@ popularity-contest (1.61) unstable; urgency=low
    - New popcon.debian.org layout by Stéphane Blondon
   * debian/control:
    - Updated Standards-Version from 3.9.4 to 3.9.5.  No change needed.
+   - Add Vcs-Browser and Vcs-Git fields. Closes: 729024. 
+     Thanks Yaroslav Halchenko.
 
- -- Bill Allombert <ballombe@debian.org>  Mon, 24 Feb 2014 18:53:48 +0100
+ -- Bill Allombert <ballombe@debian.org>  Mon, 24 Feb 2014 22:56:49 +0100
 
 popularity-contest (1.60) unstable; urgency=low
 

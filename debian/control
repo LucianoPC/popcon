@@ -6,6 +6,8 @@ Uploaders: Petter Reinholdtsen <pere@debian.org>, Bill Allombert <ballombe@debia
 Build-Depends: debhelper (>=5)
 Homepage: http://popcon.debian.org/
 Standards-Version: 3.9.5
+Vcs-Browser: http://git.debian.org/?p=popcon/popcon.git
+Vcs-Git: git://git.debian.org/git/popcon/popcon.git
 
 Package: popularity-contest
 Architecture: all
