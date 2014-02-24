@@ -1,4 +1,4 @@
-popularity-contest (1.61) UNRELEASED; urgency=low
+popularity-contest (1.61) unstable; urgency=low
 
   * Add support for IPv6. Closes: #730760.
     - popcon-upload:
@@ -8,8 +8,10 @@ popularity-contest (1.61) UNRELEASED; urgency=low
        This module is targeted for inclusion in perl-base.
   * examples/bin/popcon.pl:
    - New popcon.debian.org layout by Stéphane Blondon
+  * debian/control:
+   - Updated Standards-Version from 3.9.4 to 3.9.5.  No change needed.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 20 Feb 2014 18:28:47 +0100
+ -- Bill Allombert <ballombe@debian.org>  Mon, 24 Feb 2014 18:53:48 +0100
 
 popularity-contest (1.60) unstable; urgency=low
 
