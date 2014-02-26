@@ -18,6 +18,13 @@ unset MTAOPS
 . /usr/share/popularity-contest/default.conf
 . /etc/popularity-contest.conf
 
+if test -d /etc/popularity-contest.d/; then
+  for file in `run-parts --list --regex '\.conf$' /etc/popularity-contest.d/`;
+  do
+   . $file
+  done
+fi
+
 # don't run if MAILTO address is blank, and not configured to use HTTP POST!
 if [ -z "$MAILTO" ] && [ "yes" != "$USEHTTP" ]; then exit 0; fi
 
@@ -80,8 +87,8 @@ if [ -x "$GPG" ] && [ "$ENCRYPT" = "maybe" ] || [ "$ENCRYPT" = "yes" ]; then
   rm -f "$POPCONGPG"
   GPGHOME=`mktemp -d`
   $GPG --batch --no-options --no-default-keyring --trust-model=always \
-       --homedir "$GPGHOME" --keyring "$KEYRING" --quiet \
-       --armor -o "$POPCONGPG" -r "$POPCONKEY" --encrypt "$POPCON"
+       --homedir "$GPGHOME" --keyring $KEYRING --quiet \
+       --armor -o "$POPCONGPG" -r $POPCONKEY --encrypt "$POPCON"
   rm -rf "$GPGHOME"
   POPCON="$POPCONGPG"
 fi

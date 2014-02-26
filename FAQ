@@ -116,3 +116,23 @@ date with
 
   date -d '@1139229934'
 
+======  FAQ For derivative distribution  ======
+
+Q) How can I set up popularity-contest to report to my own server
+in addition to Debian ?
+
+A) You need to provide a keyring file with the public key used by your server,
+then you can add a file matching /etc/popularity-contest.d/*.conf with
+KEYRING="$KEYRING --keyring /path/to/your/keyring"
+POPCONKEY="$POPCONKEY -r YOURKEYID"
+SUBMITURLS="$SUBMITURLS http://myserver/popcon.cgi"
+MAILTO="$MAILTO, survey@myserver" # Optional
+
+Q) And if I do not want to report to Debian, but I do not want to change
+/etc/popularity-contest.conf ?
+
+A) Add a file matching /etc/popularity-contest.d/00*.conf with
+KEYRING="/path/to/your/keyring"
+POPCONKEY="YOURKEYID"
+SUBMITURLS="http://myserver/popcon.cgi"
+MAILTO="survey@myserver" # or MAILTO=""
