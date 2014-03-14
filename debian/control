@@ -2,7 +2,7 @@ Source: popularity-contest
 Section: misc
 Priority: optional
 Maintainer: Popularity Contest Developers <popcon-developers@lists.alioth.debian.org>
-Uploaders: Petter Reinholdtsen <pere@debian.org>, Bill Allombert <ballombe@debian.org>
+Uploaders: Bill Allombert <ballombe@debian.org>
 Build-Depends: debhelper (>=5)
 Homepage: http://popcon.debian.org/
 Standards-Version: 3.9.5

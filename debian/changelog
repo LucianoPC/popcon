@@ -12,6 +12,7 @@ popularity-contest (1.61) unstable; urgency=low
    - Updated Standards-Version from 3.9.4 to 3.9.5.  No change needed.
    - Add Vcs-Browser and Vcs-Git fields. Closes: 729024. 
      Thanks Yaroslav Halchenko.
+   - Petter has retired as popcon maintainer. Adjust Uploaders field.
   * Allow derivatives to set up their own public keys in addition to Debian.
     Closes: 729097. Thanks Yaroslav Halchenko.
    + debian/cron.daily:
@@ -20,7 +21,7 @@ popularity-contest (1.61) unstable; urgency=low
    + FAQ: Add section for derivative distributions 
      - Document /etc/popularity-contest.d/
 
- -- Bill Allombert <ballombe@debian.org>  Wed, 26 Feb 2014 12:18:41 +0100
+ -- Bill Allombert <ballombe@debian.org>  Sat, 15 Mar 2014 14:29:34 +0100
 
 popularity-contest (1.60) unstable; urgency=low
 
