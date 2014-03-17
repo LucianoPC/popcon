@@ -10,18 +10,18 @@ popularity-contest (1.61) unstable; urgency=low
    - New popcon.debian.org layout by Stéphane Blondon
   * debian/control:
    - Updated Standards-Version from 3.9.4 to 3.9.5.  No change needed.
-   - Add Vcs-Browser and Vcs-Git fields. Closes: 729024. 
+   - Add Vcs-Browser and Vcs-Git fields. Closes: #729024. 
      Thanks Yaroslav Halchenko.
    - Petter has retired as popcon maintainer. Adjust Uploaders field.
   * Allow derivatives to set up their own public keys in addition to Debian.
-    Closes: 729097. Thanks Yaroslav Halchenko.
+    Closes: #729097. Thanks Yaroslav Halchenko.
    + debian/cron.daily:
      - Add support for /etc/popularity-contest.d/
      - Allow multiple keyrings and keys to be set.
    + FAQ: Add section for derivative distributions 
      - Document /etc/popularity-contest.d/
 
- -- Bill Allombert <ballombe@debian.org>  Sat, 15 Mar 2014 14:29:34 +0100
+ -- Bill Allombert <ballombe@debian.org>  Mon, 17 Mar 2014 20:37:27 +0100
 
 popularity-contest (1.60) unstable; urgency=low
 
