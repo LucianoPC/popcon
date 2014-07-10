@@ -35,14 +35,15 @@ if [ -n "$HTTP_PROXY" ]; then
   export http_proxy="$HTTP_PROXY";
 fi
 
-POPCON=/var/log/popularity-contest
+POPCONOLD=/var/log/popularity-contest
+POPCON=/var/log/popularity-contest.new
 
 # Only run on the given day, to spread the load on the server a bit
 if [ "$DAY" ] && [ "$DAY" != "$(date +%w)" ] ; then
 	# Ensure that popcon runs at least once in the last week
-	if [ -f "$POPCON" ] ; then
+	if [ -f "$POPCONOLD" ] ; then
 		now=$(date +%s)
-		lastrun=$(date -r $POPCON +%s)
+		lastrun=$(date -r $POPCONOLD +%s)
 		# 6.5 days, in seconds
 		week=561600
 		if [ "$(( $now - $lastrun ))" -le "$week" ]; then
@@ -131,4 +132,6 @@ fi
 
 if [ "yes" != "$SUBMITTED" ] ; then
 	logger -t popularity-contest "unable to submit report."
+else
+	mv $POPCON $POPCONOLD
 fi
