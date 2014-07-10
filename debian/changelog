@@ -1,3 +1,9 @@
+popularity-contest (1.62) unstable; urgency=low
+
+  *
+
+ -- Bill Allombert <ballombe@debian.org>  Thu, 10 Jul 2014 11:12:26 +0200
+
 popularity-contest (1.61) unstable; urgency=low
 
   * Add support for IPv6. Closes: #730760. Thanks Bob Ham.
