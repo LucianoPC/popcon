@@ -5,6 +5,7 @@ popularity-contest (1.63) unstable; urgency=low
    - examples/cgi-bin/popcon.cgi: fix typo in comments
    - README, debian/control, debian/po/*.po: remove trailing whitespaces
    - debian/control: Vcs fields: use https URL.
+  * debian/postinst: generate a file /etc/cron.d/popularity-contest
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 03 May 2015 17:03:42 +0200
 

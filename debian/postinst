@@ -39,8 +39,19 @@ select_random_day() {
         DAY=`bash -c 'echo $(($RANDOM % 7))'`
 }
 
+generate_crond() {
+  MIN=`bash -c 'echo $(($RANDOM % 60))'`
+  HOUR=`bash -c 'echo $(($RANDOM % 24))'`
+  FILE=/etc/cron.daily/popularity-contest
+  cat > /etc/cron.d/popularity-contest <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+$MIN $HOUR * * *   root    test -x $FILE && $FILE
+EOF
+}
 generate_conffile() {
-        generate_id
+	generate_id
+	generate_crond
 	select_random_day
 	cat <<-EOF >$conffile
 		# Config file for Debian's popularity-contest package.
@@ -95,6 +106,9 @@ case "$1" in
 	    if [ -z "$DAY" ] ; then
 	        select_random_day
 	        echo "DAY=\"$DAY\"" >> $conffile
+	    fi
+	    if [ ! -f /etc/cron.d/popularity-contest ] ; then
+	        generate_crond
 	    fi
 
 	    # Replace only if the content changed, to avoid changing the
