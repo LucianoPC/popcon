@@ -1,13 +1,17 @@
 popularity-contest (1.63) unstable; urgency=low
 
+  * debian/cron.daily: 
+   - Only update /var/log/popcon if submission was successful
+   - Add support for --crond option
+  * debian/postinst:
+   - Generate a file /etc/cron.d/popularity-contest
   * Patches from Paul Wise:
    - debian/changelog: fix some typos
    - examples/cgi-bin/popcon.cgi: fix typo in comments
    - README, debian/control, debian/po/*.po: remove trailing whitespaces
    - debian/control: Vcs fields: use https URL.
-  * debian/postinst: generate a file /etc/cron.d/popularity-contest
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 03 May 2015 17:03:42 +0200
+ -- Bill Allombert <ballombe@debian.org>  Mon, 13 Jul 2015 15:09:20 +0200
 
 popularity-contest (1.62) unstable; urgency=low
 
