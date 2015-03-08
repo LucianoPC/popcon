@@ -8,8 +8,8 @@
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
 # , fuzzy
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: popularity-contest_debian 1.36\n"

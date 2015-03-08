@@ -21,7 +21,7 @@ Description: Vote for your favourite packages automatically
  periodically anonymously submit to the Debian developers
  statistics about the most used Debian packages on this system.
  .
- This information helps Debian make decisions such as which packages 
+ This information helps Debian make decisions such as which packages
  should go on the first CD. It also lets Debian improve future versions
  of the distribution so that the most popular packages are the ones which
  are installed automatically for new users.

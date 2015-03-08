@@ -85,7 +85,7 @@ information out to us each week.  You can change where the submissions go
 by editing /etc/popularity-contest.conf.  Normally, you will send the
 results to:
 		survey@popcon.debian.org
-	
+
 The result of the survey is available at
 
 		http://popcon.debian.org/
