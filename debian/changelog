@@ -687,7 +687,7 @@ popularity-contest (1.30) unstable; urgency=low
   * debian/cron.weekly:
     - Try to run /usr/share/popularity-contest/popcon-upload if
       USEHTTP is enabled
-    - Do not send email if http POST method was successfull.
+    - Do not send email if http POST method was successful.
     - Do not run sendmail if it is not available, to work without
       mail-transport-agent.  Redused depend on mail-transport-agent to
       recommends, as the default for new installs is HTTP, and
@@ -768,7 +768,7 @@ popularity-contest (1.27) unstable; urgency=low
 
 popularity-contest (1.26) unstable; urgency=low
 
-  * popcon.pl: Accomodate with kfreebsd-gnu new URL.
+  * popcon.pl: Accommodate with kfreebsd-gnu new URL.
              + Add popcon release stats.
   * popcon-stat.pl: Unclutter the graph.
                   + Generate the popcon release graph.

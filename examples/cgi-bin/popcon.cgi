@@ -55,7 +55,7 @@ if (exists $ENV{CONTENT_TYPE} && $ENV{CONTENT_TYPE} =~ m%multipart/form-data%){
 		read $fh, $data, $len;
 		$data = Compress::Zlib::memGunzip($data);
 		@entry = ($data);
-	    } else { # Pass throught
+	    } else { # Pass through
 		print "Identity encoding detected.\n";
 		@entry = <$fh>;
 	    }
