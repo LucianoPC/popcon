@@ -8,6 +8,10 @@ popularity-contest (1.62) unstable; urgency=low
    + Vcs-Git, Vcs-Browser: migrate to anonscm.debian.org URL
   * debian/rules:
    + Remove obsolete 'source' and 'diff' targets.
+  * prepop.pl: reject reports with invalid ARCH or POPCONVER field.
+    Such fields are included in the HTML report without quoting,
+    so a malicious submission could inject content in the HTML report
+    Thanks Paul Wise.
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 26 Apr 2015 17:24:47 +0200
 

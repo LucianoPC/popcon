@@ -29,8 +29,14 @@ sub get_report
     return 'reject';
   }
   $id=$1; #untaint $id
+  $arch=$field{'ARCH'};
+  if (defined($arch) && $arch !~ /^[0-9A-Za-z-]*$/)
+  {
+    print STDERR "Report rejected: $arch: $id\n";
+    return 'reject';
+  }
   $vers=$field{'POPCONVER'};
-  if (defined($vers) && $vers =~ /^1\.56ubuntu1/)
+  if (defined($vers) && ($vers =~ /^1\.56ubuntu1/ || $vers !~ /^[0-9A-Za-z.+~:-]*$/))
   {
     print STDERR "Report rejected: $vers: $id\n";
     return 'reject';
