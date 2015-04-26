@@ -6,6 +6,8 @@ popularity-contest (1.62) unstable; urgency=low
    + Remove dependency on libio-socket-ip-perl (>= 0.25-3) included
      in perl-base.
    + Vcs-Git, Vcs-Browser: migrate to anonscm.debian.org URL
+  * debian/rules:
+   + Remove obsolete 'source' and 'diff' targets.
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 26 Apr 2015 17:24:47 +0200
 
