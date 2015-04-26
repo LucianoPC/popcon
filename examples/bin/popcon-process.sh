@@ -27,10 +27,12 @@ if [ true = "$READMAIL" ] ; then
 
     # process entries, splitting them into individual reports
     rm -fr popcon-gpg
-    mkdir popcon-gpg
+    mkdir -m 770 popcon-gpg
     $BINDIR/prepop.pl <new-popcon-entries >$LOGDIR/prepop.out 2>&1
     #decrypt reports (to be parallelized)
-    find popcon-gpg -type f -name '*.gpg' -execdir gpg {} \;
+    date >$LOGDIR/gpg.log
+    find popcon-gpg -type f -name '*.gpg' -execdir gpg {} \; >>$LOGDIR/gpg.log 2>&1
+    date >>$LOGDIR/gpg.log
     #process decrypted reports
     find popcon-gpg -type f -name '*.txt'| xargs cat | $BINDIR/prepop.pl
 fi
@@ -50,8 +52,8 @@ cp $WEBDIR/all-popcon-results.gz $SUMMARYDIR/popcon-`date +"%Y-%m-%d"`.gz
 cp $WEBDIR/stable/stable-popcon-results.gz $SUMMARYDIRSTABLE/popcon-`date +"%Y-%m-%d"`.stable.gz
 
 cd ../popcon-stat
-find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stat>$LOGDIR/popstat.log 2>&1 
-find $SUMMARYDIRSTABLE -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stable/stat >> $LOGDIR/popstat.log 2>&1 
+find $SUMMARYDIR -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stat>$LOGDIR/popstat.log 2>&1
+find $SUMMARYDIRSTABLE -type f -print | sort | $BINDIR/popcon-stat.pl ../www/stable/stat >> $LOGDIR/popstat.log 2>&1
 
 cd ../popcon-web
 $BINDIR/popcon.pl >$LOGDIR/popcon.log 2>$LOGDIR/popcon.errors

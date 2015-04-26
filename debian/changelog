@@ -12,6 +12,7 @@ popularity-contest (1.62) unstable; urgency=low
     Such fields are included in the HTML report without quoting,
     so a malicious submission could inject content in the HTML report
     Thanks Paul Wise.
+  * Update example server-side scripts to popcon.d.o version.
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 26 Apr 2015 17:24:47 +0200
 

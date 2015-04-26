@@ -31,7 +31,7 @@ while (<>)
      {
        if (defined($line[2]))
        {
-         if ($line[1] =~ m/^([0-9]+(?:\.[0-9]+)*)/)
+         if ($line[1] =~ m/^([0-9]+(?:\.[0-9]+)*)$/)
          {
            $rel{$f}->{"$1"}+=$line[2];
          } else {
@@ -85,12 +85,12 @@ sub submission_chart
 	  push @data,\@res;
   }
 
-  $obj=Chart::LinesPoints->new (600,400);
+  $obj=Chart::LinesPoints->new (600,500);
   $obj->set ('title' => "Number of submissions per architectures $title");
   $obj->set ('legend_labels' => [@arch]);
   $obj->set ('f_y_tick' => \&ytick);
-  $obj->set ('brush_size' => 3);
-  $obj->set ('pt_size' => 3);
+  $obj->set ('brush_size' => 1);
+  $obj->set ('pt_size' => 1);
   $obj->set ('max_val' => $maxv+1);
   $obj->set ('max_y_ticks' => 30);
   $obj->set ('y_ticks' => int $maxv +1);
@@ -99,7 +99,7 @@ sub submission_chart
   $obj->png ("$dirpng/submission$pngname.png", \@data);
 }
 
-submission_chart ("","0000-00-00",63,"");
+submission_chart ("","0000-00-00",105,"");
 submission_chart ("-1year",$oneyearago,14,"(last 12 months)");
 
 use Chart::Composite;
@@ -120,10 +120,10 @@ for $arch (@arch)
   $obj=Chart::Composite->new (700,400);
   $obj->set ('title' => "Number of submissions for $arch");
   $obj->set ('legend_labels' => \@labels);
-  $obj->set ('brush_size' => 3);
-  $obj->set ('pt_size' => 7);
+  $obj->set ('brush_size' => 1);
+  $obj->set ('pt_size' => 1);
   $obj->set ('x_ticks' => 'vertical');
-  $obj->set ('skip_x_ticks' => 63);
+  $obj->set ('skip_x_ticks' => 105);
   $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]); 
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
@@ -152,14 +152,14 @@ sub release_chart
     }
     push @data,\@res;
   }
-  $obj=Chart::LinesPoints->new (600,400);
+  $obj=Chart::LinesPoints->new (600,500);
   $obj->set ('title' => "popularity-contest versions in use $title");
   $obj->set ('legend_labels' => [@release]);
-  $obj->set ('brush_size' => 3);
-  $obj->set ('pt_size' => 3);
+  $obj->set ('brush_size' => 1);
+  $obj->set ('pt_size' => 1);
   $obj->set ('x_ticks' => 'vertical');
   $obj->set ('skip_x_ticks' => $ticks);
   $obj->png ("$dirpng/release$pngname.png", \@data);
 }
-release_chart ("","2004-05-14",63,"");
+release_chart ("","2004-05-14",105,"");
 release_chart ("-1year",$oneyearago,14,"(last 12 months)");

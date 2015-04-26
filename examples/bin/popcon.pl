@@ -531,11 +531,11 @@ EOF
 <table>
   <tr><td>
     <img alt="Graph of number of submissions per architectures"
-    width="600" height="400" src="stat/submission.png">
+    width="600" height="500" src="stat/submission.png">
   </td></tr>
   <tr><td>
     <img alt="Graph of number of submissions per architectures (last 12 months)"
-    width="600" height="400" src="stat/submission-1year.png">
+    width="600" height="500" src="stat/submission-1year.png">
   </td></tr>
 </table>
 </td>
@@ -564,11 +564,11 @@ EOF
   <table>
     <tr><td>
       <img alt="Graph of popularity-contest versions in use"
-       width="600" height="400" src="stat/release.png">
+       width="600" height="500" src="stat/release.png">
     </td></tr>
     <tr><td>
       <img alt="Graph of popularity-contest versions in use (12 last months)"
-       width="600" height="400" src="stat/release-1year.png">
+       width="600" height="500" src="stat/release-1year.png">
     </td></tr>
   </table>
 </td>
