@@ -1,8 +1,8 @@
 popularity-contest (1.62) unstable; urgency=low
 
-  *
+  * Please note when reading stats that jessie was released with 1.61.
 
- -- Bill Allombert <ballombe@debian.org>  Thu, 10 Jul 2014 11:12:26 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 26 Apr 2015 17:24:47 +0200
 
 popularity-contest (1.61) unstable; urgency=low
 
