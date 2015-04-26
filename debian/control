@@ -5,14 +5,14 @@ Maintainer: Popularity Contest Developers <popcon-developers@lists.alioth.debian
 Uploaders: Bill Allombert <ballombe@debian.org>
 Build-Depends: debhelper (>=5)
 Homepage: http://popcon.debian.org/
-Standards-Version: 3.9.5
-Vcs-Browser: http://git.debian.org/?p=popcon/popcon.git
-Vcs-Git: git://git.debian.org/git/popcon/popcon.git
+Standards-Version: 3.9.6
+Vcs-Browser: http://anonscm.debian.org/cgit/popcon/popcon.git
+Vcs-Git: git://anonscm.debian.org/popcon/popcon.git
 
 Package: popularity-contest
 Architecture: all
 Pre-Depends: debconf (>= 1.5.34) | cdebconf (>= 0.106)
-Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10), libio-socket-ip-perl (>= 0.25-3)
+Depends: ${misc:Depends}, ${perl:Depends}, dpkg (>= 1.10)
 Recommends: gnupg, cron | fcron, exim4 | mail-transport-agent
 Suggests: anacron
 Provides: popcon
