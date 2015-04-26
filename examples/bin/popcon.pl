@@ -11,7 +11,7 @@ my %popfile=('all' => "all-popcon-results.gz", 'stable' => "stable-popcon-result
 my %poptext=('all' => "All reports", 'stable' => "Stable reports");
 my $mirrorbase = "/srv/mirrors/debian";
 my $docurlbase = "/";
-my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", 
+my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny",
                "1.49" => "squeeze", "1.56" => "wheezy", "1.61" => "jessie");
 my %popver=();
 my @dists=("main","contrib","non-free","non-US");
@@ -110,11 +110,11 @@ sub popconintro
   package. This package sends every week the list of packages installed and the
   access time of relevant files to the server via email. Every day the server
   anonymizes the result and publishes this survey.
-  For more information, read the <a href="${docurlbase}README">README</a> and the 
+  For more information, read the <a href="${docurlbase}README">README</a> and the
   <a href="${docurlbase}FAQ">FAQ</a>.
   </em>
   <p><em>To participate in this survey, install the <a href="http://packages.debian.org/popularity-contest">popularity-contest</a> package.</em> </p>
-  <p></p>	
+  <p></p>
 <form method="GET" action="http://qa.debian.org/popcon.php">Popcon statistics
 for source package <input type="text" size="30" maxlength="80" name="package">
 <input type="submit" value="Go">
@@ -147,7 +147,7 @@ for source package <input type="text" size="30" maxlength="80" name="package">
   .legend dt{
     margin: 0;
   }
- 
+
  dt {
     float: left;
     clear: left;
@@ -255,11 +255,11 @@ sub make_by
     print DAT $list_header{$sec};
     $me="";
   }
-  else 
+  else
   {
     print DAT <<"EOF";
 #Format
-#   
+#
 #<name> is the package name;
 EOF
     $me="(maintainer)";
@@ -310,7 +310,7 @@ my %source=();
 
 #Format
 #<name> <vote> <old> <recent> <no-files>
-#   
+#
 #<name> is the package name;
 #<vote> is the number of people who use this package regularly;
 #<old> is the number of people who installed, but don't use this package
@@ -343,7 +343,7 @@ sub read_result
                     $maintpkg{$maint{$name}}->{$f}+=$v;
                     $sourcepkg{$source{$name}}->{$f}+=$v;
                     my($sm)=$sourcemax{$source{$name}}->{$f};
-                    $sourcemax{$source{$name}}->{$f}=$v 
+                    $sourcemax{$source{$name}}->{$f}=$v
                       if (!defined($sm) || $sm < $v);
             }
     }
@@ -612,7 +612,7 @@ sub read_packages
       while(<AVAIL>)
       {
         /^Package: (.+)/  and do {$p=$1;$maint{$p}="bug";$source{$p}=$p;next;};
-        /^Version: (.+)/ && $p eq "popularity-contest" 
+        /^Version: (.+)/ && $p eq "popularity-contest"
           and do { $popver{$dist}=$1; next;};
         /^Maintainer: ([^()]+) (\(.+\) )*<.+>/
           and do { $maint{$p}=join(' ',map{ucfirst($_)} split(' ',lc $1));next;};

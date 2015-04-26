@@ -29,7 +29,7 @@ sub fuzzy_timestamp {
 }
 
 while (my $line = <STDIN>) {
-    
+
     if ($line =~ m/^POPULARITY-CONTEST-0/i) {
 	$foundentry = 1;
 	$ignorecount = 0;

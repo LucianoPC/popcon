@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 #
 # Read Debian popularity-contest submission data on stdin and produce
 # some statistics about it.
@@ -107,9 +107,9 @@ def read_depends(filename):
             dep = dep + parse_depends(split[1])
         elif split[0]=='Provides':
             prov = parse_depends(split[1])
-            
+
         if not line: break
-    
+
 
 class Entry:
     atime = 0;
@@ -233,7 +233,7 @@ def read_submissions(stream):
                     e.release = 'unknown'
                 else:
                     e.release = header['POPCONVER']
-        
+
             if header.has_key('ARCH'):
                 if header['ARCH']=='x86_64':
                     e.arch = 'amd64'
@@ -249,7 +249,7 @@ def read_submissions(stream):
             if header.has_key('TIME'):
                 try:
                   date = long(header['TIME'])
-                except: 
+                except:
                   ewrite('Invalid date: ' + header['TIME'])
                   continue
                 e.done(date,stat)

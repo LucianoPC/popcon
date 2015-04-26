@@ -28,7 +28,7 @@ popularity-contest (1.61) unstable; urgency=low
    - New popcon.debian.org layout by Stéphane Blondon
   * debian/control:
    - Updated Standards-Version from 3.9.4 to 3.9.5.  No change needed.
-   - Add Vcs-Browser and Vcs-Git fields. Closes: #729024. 
+   - Add Vcs-Browser and Vcs-Git fields. Closes: #729024.
      Thanks Yaroslav Halchenko.
    - Petter has retired as popcon maintainer. Adjust Uploaders field.
   * Allow derivatives to set up their own public keys in addition to Debian.
@@ -36,7 +36,7 @@ popularity-contest (1.61) unstable; urgency=low
    + debian/cron.daily:
      - Add support for /etc/popularity-contest.d/
      - Allow multiple keyrings and keys to be set.
-   + FAQ: Add section for derivative distributions 
+   + FAQ: Add section for derivative distributions
      - Document /etc/popularity-contest.d/
 
  -- Bill Allombert <ballombe@debian.org>  Mon, 17 Mar 2014 20:37:27 +0100
@@ -85,7 +85,7 @@ popularity-contest (1.58) unstable; urgency=low
       - Accept encrypted report.
     + examples/bin/prepop.pl, examples/bin/popcon-process.sh
       - Add support for decrypting encrypted report
-  * popularity-contest: 
+  * popularity-contest:
     - truncate reported atime and ctime to multiple of 12 hours to reduce
       information leak. Closes: #707951 Thanks Bernhard R. Link
   * debian/control:
@@ -101,7 +101,7 @@ popularity-contest (1.57) unstable; urgency=low
   * popcon.pl:
     - add popcon version of wheezy
   [ Christian Perrier ]
-  [ Debconf translations ] 
+  [ Debconf translations ]
   * Kannada (Mallikarjuna).  Closes: #694411
 
  -- Bill Allombert <ballombe@debian.org>  Sun, 05 May 2013 21:21:15 +0200
@@ -109,7 +109,7 @@ popularity-contest (1.57) unstable; urgency=low
 popularity-contest (1.56) unstable; urgency=low
 
   [ Christian Perrier ]
-  [ Debconf translations ] 
+  [ Debconf translations ]
   * Latvian (Rūdolfs Mazurs).  Closes: #674661
   * Lithuanian (Rimas Kudelis).  Closes: #675629
   * Galician (Jorge Barreiro).  Closes: #676988
@@ -135,7 +135,7 @@ popularity-contest (1.54) unstable; urgency=low
 
   [ Bill Allombert ]
   * README: mention move to subversion.
-  * popanal.py: sync with popcon.debian.org version: 
+  * popanal.py: sync with popcon.debian.org version:
     - sort packages by name in all-popcon-results to prevent data leak.
       Closes: #634474 Thanks Timo Juhani Lindfors for finding this issue.
     - add support for generating stats for stable reports.
@@ -148,21 +148,21 @@ popularity-contest (1.54) unstable; urgency=low
   * debian/control:
     - Updated Standards-Version from 3.9.2 to 3.9.3.  No change needed.
   * popcon-largest-unused:
-    - Do not fail when there are no OLD packages. 
+    - Do not fail when there are no OLD packages.
       Closes: #666771 Thanks Jeffrey Sheinberg
 
   [ Debconf translations ]
   * Sinhala; (Danishka Navin).  Closes: #640757
-  * Icelandic (Sveinn í Felli). 
+  * Icelandic (Sveinn í Felli).
   * Kannada (Vikram Vincent).  Closes: #659342
 
  -- Bill Allombert <ballombe@debian.org>  Wed, 09 May 2012 00:03:32 +0200
 
 popularity-contest (1.53) unstable; urgency=low
 
-  * popularity-contest: 
+  * popularity-contest:
     - Find package files lists by running dpkg -L by batches.  Closes: #622322
-      This fix an issues with multiarch packages. (sorry for the delay) 
+      This fix an issues with multiarch packages. (sorry for the delay)
   * debian/control:
     - Updated Standards-Version from 3.9.1 to 3.9.2.  No change needed.
 
@@ -171,8 +171,8 @@ popularity-contest (1.53) unstable; urgency=low
 popularity-contest (1.52) unstable; urgency=low
 
   * Please note when reading stats that squeeze was released with 1.49.
-  * Allow cron.daily to run if last run was more than 7 day ago. 
-    Patch from Vagrant Cascadian.  Closes: #610876 
+  * Allow cron.daily to run if last run was more than 7 day ago.
+    Patch from Vagrant Cascadian.  Closes: #610876
   * FAQ: document how to disable sending report by email.  Closes: #502159
     Thanks, Ryo Furue.
   * prepop.pl popcon-stat.pl popcon-process.sh popcon.pl:
@@ -212,7 +212,7 @@ popularity-contest (1.49) unstable; urgency=low
   [ Bill Allombert ]
   * popcon.pl:
     - sync with popcon.debian.org version: add source (max) ratings.
-  * debian/control: 
+  * debian/control:
     - Build-Depends: raise debhelper version to (>=5) to match compat.
     - Updated Standards-Version from 3.8.1 to 3.9.1.  No change needed.
 
@@ -233,10 +233,10 @@ popularity-contest (1.48) unstable; urgency=low
   [ Bill Allombert ]
   * popcon.pl:
     - sync with popcon.debian.org version: add release names.
-  * popularity-contest: 
-    - use "dpkg --print-architecture" instead of 
+  * popularity-contest:
+    - use "dpkg --print-architecture" instead of
           "dpkg --print-installation-architecture". Closes: #529393
-  * debian/control: 
+  * debian/control:
     - Updated Standards-Version from 3.8.0 to 3.8.1.  No change needed.
   * debian/compat:
     - Set debhelper compatibility level to 5
@@ -561,7 +561,7 @@ popularity-contest (1.33) unstable; urgency=low
       to fit a decision taken in -i18n
 
   [Bill Allombert]
-   * FAQ: 
+   * FAQ:
      - Apply spelling fix by Thijs Kinkhorst, thanks! (Closes: #348329)
      - Remove paragraph about 'valid sender domain' since popcon.debian.org
        mail-server no more requires it.
@@ -736,7 +736,7 @@ popularity-contest (1.28) unstable; urgency=low
 
   * Update example server-side scripts to popcon.d.o version:
     - popcon.pl: Fix typos in index.html header text.
-               + Output timings to stdout. 
+               + Output timings to stdout.
     - popanal.py: Catch broken date field in reports.
     - popcon-process.sh: redirect popcon.pl output to popcon.log
   * Translations (Done by Christian Perrier)
@@ -765,7 +765,7 @@ popularity-contest (1.26) unstable; urgency=low
   * popcon.pl: Accomodate with kfreebsd-gnu new URL.
              + Add popcon release stats.
   * popcon-stat.pl: Unclutter the graph.
-                  + Generate the popcon release graph.  
+                  + Generate the popcon release graph.
   * FAQ: Document how to not send popcon email by root. Closes: #264593
          Thanks Martin Dickopp.
        + Document when popularity-contest run and recommends anacron.
@@ -1024,7 +1024,7 @@ popularity-contest (1.12) unstable; urgency=low
     to report the platform.
   * Update server-side scripts to current popcon.debian.org version.
   * Fix sh scripts to avoid non POSIX test options. (Closes: #231958).
-  * Update French debconf translation, thanks Christian Perrier. 
+  * Update French debconf translation, thanks Christian Perrier.
     (Closes: #231294)
   * Update Dutch debconf translation, thanks Bart Cornelis. (Closes: #229752)
 
@@ -1148,7 +1148,7 @@ popularity-contest (1.4) unstable; urgency=low
 popularity-contest (1.3-1.3) unstable; urgency=low
 
   * NMU again
-  * Removed the "Accept here" sentence in debconf templates 
+  * Removed the "Accept here" sentence in debconf templates
     as suggested by Joey Hess.
 
  -- Christian Perrier <bubulle@debian.org>  Fri, 29 Aug 2003 11:54:13 +0200
@@ -1212,13 +1212,13 @@ popularity-contest (1.1-1) unstable; urgency=low
 
   * Allow overriding the From: and Sender: headers in outgoing mail by
     adding a new MAIL_FROM variable in /etc/popularity-contest.conf.  Also
-    drop to user "nobody" before running.  Closes: #89530, #39501, #69823, 
+    drop to user "nobody" before running.  Closes: #89530, #39501, #69823,
     #74809, #57257, #57709, #65218.  Okay, this was obviously a popular
     request, but if people would just configure their mailers not to use
     invalid From: lines by default, they would be a lot happier.
-    
+
   * Added a popularity-contest.8 manpage.  Closes: #39501.
-  
+
   * Updated README.  Closes: #105668.
 
  -- Avery Pennarun <apenwarr@debian.org>  Tue,  6 Nov 2001 21:19:38 -0500
@@ -1226,15 +1226,15 @@ popularity-contest (1.1-1) unstable; urgency=low
 popularity-contest (1.0-1) unstable; urgency=low
 
   * Now runs only once a week instead of once a day.  Fixes bug#53768.
-  
+
   * Let sendmail auto-generate the From header.  Fixes bug#48195, bug#48200.
-  
+
   * Warnings about Received and Message-Id e-mail lines that may reveal the
     sender.  Fixes bug#31205.
-    
+
   * Actually even version 0.1-2 saved the popcon results to a log file, so
     that fixes bug#44801.
-    
+
   * Uses a more unique ID string than just the hostname, and it persists
     across hostname changes.
 
@@ -1249,12 +1249,12 @@ popularity-contest (0.1-2) frozen unstable; urgency=low
 popularity-contest (0.1) frozen unstable; urgency=low
 
   * Use a valid From_ address for sendmail; fixes bug#30341.
-  
+
   * popularity-contest.8 is a link to the undocumented(8) man page, and we
     provide a README file in /usr/doc; downgrades bug#28745.
-    
+
   * Include my post-processing scripts in /usr/doc/popularity-contest/examples
-  
+
   * No longer tries to report on packages that aren't installed.
 
  -- Avery Pennarun <apenwarr@debian.org>  Sun, 20 Dec 1998 16:11:02 -0500

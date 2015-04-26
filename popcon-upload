@@ -45,11 +45,11 @@ my ($http_proxy,$proxy,$port,$remote);
 $http_proxy=$ENV{'http_proxy'};
 if (defined($http_proxy))
 {
-  $http_proxy =~ m{http://([^:]*)(?::([0-9]+))?} 
+  $http_proxy =~ m{http://([^:]*)(?::([0-9]+))?}
         or die ("unrecognized http_proxy");
   $proxy=$1; $port=$2;
 }
-  
+
 $proxy=$host unless (defined($proxy));
 $port=80 unless (defined($port));
 
@@ -63,7 +63,7 @@ if ($compressed) {
     open FILE, "< $file" or die "reading from '$file'";
     $encoding = "identity";
 }
-$str .= $_ while(<FILE>); 
+$str .= $_ while(<FILE>);
 close(FILE);
 $len = length($str);
 
@@ -72,8 +72,8 @@ $SIG{ALRM} = sub { die "timeout in popcon-upload\n" };
 alarm(30);
 
 # Connect to server
-$remote = IO::Socket::IP->new(Proto => "tcp", PeerAddr => $proxy, 
-                                              PeerPort => $port); 
+$remote = IO::Socket::IP->new(Proto => "tcp", PeerAddr => $proxy,
+                                              PeerPort => $port);
 unless ($remote) { die "cannot connect to $proxy:$port" }
 
 my $boundary = "----------ThIs_Is_tHe_bouNdaRY_\$";

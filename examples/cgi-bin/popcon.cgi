@@ -73,7 +73,7 @@ if (exists $ENV{CONTENT_TYPE} && $ENV{CONTENT_TYPE} =~ m%multipart/form-data%){
     @entry = <GZIP>;
 }
 
-if ($entry[0] =~ m/POPULARITY-CONTEST-0/ 
+if ($entry[0] =~ m/POPULARITY-CONTEST-0/
  || $entry[0] =~ m/-----BEGIN PGP MESSAGE-----/)
 {
     if ($directsave) {

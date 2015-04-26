@@ -5,7 +5,7 @@ DEBIAN PACKAGE POPULARITY CONTEST - Avery Pennarun <apenwarr@debian.org>
 This package contains a script, /usr/sbin/popularity-contest, which
 generates a list of the packages installed on your system, in order of
 most-recently-used to least-recently-used.  The simplest way to use this
-information is to help clean up your hard drive by removing unused packages. 
+information is to help clean up your hard drive by removing unused packages.
 
 For example,
 	popularity-contest | grep '<OLD>'
@@ -34,13 +34,13 @@ installed on your system.  They have the format:
 
 	<atime> <ctime> <package-name> <mru-program> <tag>
 
-<package-name> is the name of the Debian package that contains <mru-program>. 
+<package-name> is the name of the Debian package that contains <mru-program>.
 <mru-program> is the most recently used program, static library, or header
 (.h) file in the package.
 
 <atime> and <ctime> are the access time and creation time of the
 <mru-program> on your disk, respectively, represented as the number of
-seconds since midnight GMT on January 1, 1970 (i.e. in Unix time_t format). 
+seconds since midnight GMT on January 1, 1970 (i.e. in Unix time_t format).
 Linux updates <atime> whenever you open the file; <ctime> was set when you
 first installed the package.
 
@@ -73,7 +73,7 @@ to keep.
   !!!!
 
 SECURITY NOTE: it's impossible to make a submission completely anonymous,
-since Internet servers tend to add headers and log messages along the way. 
+since Internet servers tend to add headers and log messages along the way.
 Our receiver program at debian throws away this information as soon as
 possible so no one will see it, but if you're really paranoid you might not
 want to participate.
@@ -97,7 +97,7 @@ RELATED PROJECTS
 ================
 
 There are several projects trying to count users and machines.  First and
-foremost is the Linux Counter at http://counter.li.org/.  It tries to 
+foremost is the Linux Counter at http://counter.li.org/.  It tries to
 estimate the amount of Linux users worldwide.
 
 There are some popcon installations for other distributions:

@@ -124,7 +124,7 @@ for $arch (@arch)
   $obj->set ('pt_size' => 1);
   $obj->set ('x_ticks' => 'vertical');
   $obj->set ('skip_x_ticks' => 105);
-  $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]); 
+  $obj->set ('composite_info' => [ ['LinesPoints', [1]], ['LinesPoints', [2] ] ]);
   $obj->png ("$dirpng/sub-$arch.png", \@data);
 }
 
