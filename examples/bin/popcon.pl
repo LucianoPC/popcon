@@ -12,7 +12,7 @@ my %poptext=('all' => "All reports", 'stable' => "Stable reports");
 my $mirrorbase = "/srv/mirrors/debian";
 my $docurlbase = "/";
 my %popconver=("1.28" => "sarge", "1.41" => "etch", "1.46" => "lenny", 
-               "1.49" => "squeeze", "1.56" => "wheezy");
+               "1.49" => "squeeze", "1.56" => "wheezy", "1.61" => "jessie");
 my %popver=();
 my @dists=("main","contrib","non-free","non-US");
 my @fields=("inst","vote","old","recent","no-files");
