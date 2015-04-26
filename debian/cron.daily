@@ -58,7 +58,7 @@ savelog -c 7 popularity-contest >/dev/null
 
 run_popcon()
 {
-	su -s /bin/sh -c "/usr/sbin/popularity-contest" nobody
+	runuser -s /bin/sh -c "/usr/sbin/popularity-contest" nobody
 }
 
 do_sendmail()
