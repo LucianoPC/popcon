@@ -1,6 +1,7 @@
 popularity-contest (1.62) unstable; urgency=low
 
-  * Please note when reading stats that jessie was released with 1.61.
+  * Please note when reading stats that Jessie was released with 1.61.
+    Closes: #783502
   * debian/control:
    + Updated Standards-Version from 3.9.5 to 3.9.6.  No change needed.
    + Remove dependency on libio-socket-ip-perl (>= 0.25-3) included
@@ -19,7 +20,7 @@ popularity-contest (1.62) unstable; urgency=low
     - use runuser instead of su. Closes: #764369. Thanks Laurent Bigonville
   * debian-popcon.gpg: use new submission key
 
- -- Bill Allombert <ballombe@debian.org>  Sun, 26 Apr 2015 17:24:47 +0200
+ -- Bill Allombert <ballombe@debian.org>  Mon, 27 Apr 2015 17:10:46 +0200
 
 popularity-contest (1.61) unstable; urgency=low
 
