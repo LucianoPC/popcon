@@ -6,6 +6,8 @@ popularity-contest (1.62) unstable; urgency=low
    + Remove dependency on libio-socket-ip-perl (>= 0.25-3) included
      in perl-base.
    + Vcs-Git, Vcs-Browser: migrate to anonscm.debian.org URL
+   + Recommends: cron-daemon instead of fcron. Closes: #752504
+     Thanks Alexandre Detiste.
   * debian/rules:
    + Remove obsolete 'source' and 'diff' targets.
   * prepop.pl: reject reports with invalid ARCH or POPCONVER field.
