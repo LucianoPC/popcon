@@ -1,3 +1,13 @@
+popularity-contest (1.63) unstable; urgency=low
+
+  * Patches from Paul Wise:
+   - debian/changelog: fix some typos
+   - examples/cgi-bin/popcon.cgi: fix typo in comments
+   - README, debian/control, debian/po/*.po: remove trailing whitespaces
+   - debian/control: Vcs fields: use https URL.
+
+ -- Bill Allombert <ballombe@debian.org>  Sun, 03 May 2015 17:03:42 +0200
+
 popularity-contest (1.62) unstable; urgency=low
 
   * Please note when reading stats that Jessie was released with 1.61.
