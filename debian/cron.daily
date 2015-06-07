@@ -6,6 +6,8 @@ if [ ! -f /usr/sbin/popularity-contest ]; then
 	exit 0
 fi
 
+MODE="$1"
+
 unset MAILFROM
 unset MAILTO
 unset MY_HOSTID
@@ -44,8 +46,13 @@ if [ "$DAY" ] && [ "$DAY" != "$(date +%w)" ] ; then
 	if [ -f "$POPCONOLD" ] ; then
 		now=$(date +%s)
 		lastrun=$(date -r $POPCONOLD +%s)
-		# 6.5 days, in seconds
-		week=561600
+                if [ "$MODE" = "--crond" ]; then
+			# 6.5 days, in seconds
+			week=561600
+	        else
+			# 7.5 days, in seconds
+			week=648000
+                fi
 		if [ "$(( $now - $lastrun ))" -le "$week" ]; then
 			exit 0
 		fi
@@ -110,11 +117,11 @@ fi
 
 # try to email the popularity contest data
 
-if [ yes != "$SUBMITTED" ] && [ "$MAILTO" ]; then
+if [ "$MODE" = "--crond" ] && [ yes != "$SUBMITTED" ] && [ "$MAILTO" ]; then
     if [ -x "`which sendmail 2>/dev/null`" ]; then
 	(
 	    if [ -n "$MAILFROM" ]; then
-	        	echo "From: <$MAILFROM>"
+	       	echo "From: <$MAILFROM>"
 	    	echo "Sender: <$MAILFROM>"
 	    fi
 	    echo "To: $MAILTO"

@@ -46,7 +46,7 @@ generate_crond() {
   cat > /etc/cron.d/popularity-contest <<EOF
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-$MIN $HOUR * * *   root    test -x $FILE && $FILE
+$MIN $HOUR * * *   root    test -x $FILE && $FILE --crond
 EOF
 }
 generate_conffile() {
