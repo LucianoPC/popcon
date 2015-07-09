@@ -2,7 +2,9 @@
 #
 # Receive HTTP post request with a file upload, uncompress it if
 # needed, and submit it as an email to the popcon collector.
-#
+
+# Require the Debian package libcgi-pm-perl
+
 # Handle three different submission methods
 #  - simple post message, where the complete body is the popcon report
 #    (used by popcon version 1.30).

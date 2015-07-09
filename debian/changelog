@@ -5,6 +5,8 @@ popularity-contest (1.63) unstable; urgency=low
    - Add support for --crond option
   * debian/postinst:
    - Generate a file /etc/cron.d/popularity-contest
+  * examples/cgi-bin/popcon.cgi: 
+    - document that it requires libcgi-pm-perl due to change in perl.
   * Patches from Paul Wise:
    - debian/changelog: fix some typos
    - examples/cgi-bin/popcon.cgi: fix typo in comments
