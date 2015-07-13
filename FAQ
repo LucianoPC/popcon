@@ -60,13 +60,12 @@ A) popularity-contest relies on atime to know what packages were used during
 Q) When does popularity-contest run ?
 
 A) popularity-contest is run by the daily cron job
-"/etc/cron.daily/popularity-contest", but only one day in the week,
-which is specified in the configuration file. This day is chosen randomly
+"/etc/cron.d/popularity-contest", but only one day in the week,
+which is specified in the configuration file. The exact time is chosen randomly
 to spread the load on the server.
 
-Under the default configuration of cron, this happens at 6:47 in the morning.
-This can be changed by editing /etc/crontab.  If your computer is not always
-turned on, we really recommend you install the anacron package.
+If your computer is not always turned on, we really recommend you install the
+anacron package.
 
 If /etc/cron.daily/popularity-contest has not run for more than a week, it will
 accept to run any day.
