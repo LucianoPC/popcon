@@ -3,6 +3,8 @@ popularity-contest (1.63) unstable; urgency=low
   * debian/cron.daily: 
    - Only update /var/log/popcon if submission was successful
    - Add support for --crond option
+  * debian/rules:
+    - use dh_prep instead of dh_clean -k
   * debian/postinst:
    - Generate a file /etc/cron.d/popularity-contest to randomize
      the submission time to avoid overloading the server. Closes: #709892.
@@ -14,7 +16,7 @@ popularity-contest (1.63) unstable; urgency=low
    - README, debian/control, debian/po/*.po: remove trailing whitespaces
    - debian/control: Vcs fields: use https URL.
 
- -- Bill Allombert <ballombe@debian.org>  Mon, 13 Jul 2015 15:09:20 +0200
+ -- Bill Allombert <ballombe@debian.org>  Sun, 13 Sep 2015 18:44:04 +0200
 
 popularity-contest (1.62) unstable; urgency=low
 
