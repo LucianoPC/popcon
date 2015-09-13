@@ -27,7 +27,7 @@ fi
 EMPTYID="d41d8cd98f00b204e9800998ecf8427e"
 
 generate_id() {
-        if [ -x /usr/bin/uuidgen ] ; then
+        if which uuidgen >/dev/null 2>&1; then
                 MY_HOSTID=`uuidgen | tr -d -`
         else
 	        MY_HOSTID=`dd if=/dev/urandom bs=1k count=1 2>/dev/null | md5sum | sed 's/  -//'''`

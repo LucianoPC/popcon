@@ -8,6 +8,7 @@ popularity-contest (1.63) unstable; urgency=low
   * debian/postinst:
    - Generate a file /etc/cron.d/popularity-contest to randomize
      the submission time to avoid overloading the server. Closes: #709892.
+   - Do not hard-code path to uuidgen.
   * examples/cgi-bin/popcon.cgi: 
     - document that it requires libcgi-pm-perl due to change in perl.
   * Patches from Paul Wise:
