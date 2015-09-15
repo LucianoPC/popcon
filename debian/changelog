@@ -2,6 +2,8 @@ popularity-contest (1.64) unstable; urgency=low
 
   * debian/dirs:
     - ship /etc/cron.d. Closes: #798941
+  * debian/postrm:
+    - remove /etc/cron.d/popularity-contest on purge
 
  -- Bill Allombert <ballombe@debian.org>  Tue, 15 Sep 2015 16:30:57 +0200
 
