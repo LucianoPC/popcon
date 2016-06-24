@@ -3,10 +3,10 @@
 # Read Debian popularity-contest submission data on stdin and produce
 # some statistics about it.
 #
-import sys, string, time, glob, gzip
+import sys, string, time, glob, lzma
 
 mirrorbase = "/srv/mirrors/debian"
-stable_version = "1.56"
+stable_version = "1.61"
 
 def ewrite(s):
     sys.stderr.write("%s\n" % s)
@@ -81,11 +81,14 @@ def parse_depends(depline):
 
 
 def read_depends(filename):
-    file = gzip.open(filename, 'r')
+    file = lzma.LZMAFile(filename, "r")
     package = None
 
     while 1:
-        line = file.readline()
+        try:
+          line = file.readline()
+        except:
+          line = False
         if line:
             if line[0]==' ' or line[0]=='\t': continue  # continuation
             split = string.split(line, ':')
@@ -109,7 +112,6 @@ def read_depends(filename):
             prov = parse_depends(split[1])
 
         if not line: break
-
 
 class Entry:
     atime = 0;
@@ -264,9 +266,9 @@ def read_submissions(stream):
 
 # main program
 
-for d in glob.glob('%s/dists/stable/*/binary-i386/Packages.gz' % mirrorbase):
+for d in glob.glob('%s/dists/stable/*/binary-i386/Packages.xz' % mirrorbase):
     read_depends(d)
-for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages.gz' % mirrorbase):
+for d in glob.glob('%s/dists/unstable/*/binary-i386/Packages.xz' % mirrorbase):
     read_depends(d)
 read_submissions(sys.stdin)
 stat.output("results")

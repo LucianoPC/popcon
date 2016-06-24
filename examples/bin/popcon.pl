@@ -603,11 +603,11 @@ sub read_packages
   mark "Reading legacy packages...";
   for $dist ("stable", "testing", "unstable")
   {
-    for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.gz"))
+    for (glob("$mirrorbase/dists/$dist/*/binary-*/Packages.xz"))
     {
       /([^[:space:]]+)/ or die("incorrect package name");
       my $file = $1;#Untaint
-        open AVAIL, "-|:encoding(UTF-8)","zcat $file";
+      open AVAIL, "-|:encoding(UTF-8)","xzcat $file";
       my $p;
       while(<AVAIL>)
       {

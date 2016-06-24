@@ -1,3 +1,10 @@
+popularity-contest (1.65) UNRELEASED; urgency=low
+
+  * popanal.py, gensections.pl, popcon.pl:
+    - Read Packages.xz instead of Packages.gz.
+
+ -- Bill Allombert <ballombe@debian.org>  Fri, 24 Jun 2016 15:43:16 +0200
+
 popularity-contest (1.64) unstable; urgency=low
 
   * debian/dirs:

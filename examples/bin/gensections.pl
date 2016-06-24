@@ -5,11 +5,11 @@ my $docurlbase = "";
 
 $ENV{PATH}="/bin:/usr/bin";
 
-for (glob("$mirrorbase/dists/stable/*/binary-*/Packages.gz"))
+for (glob("$mirrorbase/dists/stable/*/binary-*/Packages.xz"))
 {
   /([^[:space:]]+)/ or die("incorrect package name");
   $file = $1;#Untaint
-  open AVAIL, "-|:encoding(UTF-8)","zcat $file";
+  open AVAIL, "-|:encoding(UTF-8)","xzcat $file";
   while(<AVAIL>)
   {
 /^Package: (.+)/  and do {$p=$1;next;};
