@@ -1,0 +1,101 @@
+Dependencies
+===========
+
+ - python-sklearn, python-numpy, python-scipy
+
+
+Script usage
+============
+
+create_popcon_clusters.py [popcon-entries_path] [random_state] [n_clusters] [n_processors]
+
+[options]
+  popcon-entries_path     - Its the path of folder with the popularity-contest
+                            submissions
+  random_state (optional) - Its a number of random_state of KMeans
+  n_clusters   (optional) - Its the number of clusters are been used
+  n_processors (optional) - Its the number of processors to be used
+
+ example to run:
+
+   $ ./create_popcon_clusters.py ./popcon-entries
+
+
+Creating clusters document
+==========================
+
+The script to create clusters using popularity-contest submissions is the
+one named create_popcon_clusters.py. This script groups similar submissions into
+clusters, by analising popularity-contest submission's packages.
+
+The first step of this script is to get all Debian packages in Packages.gz
+on /srv/mirrors/debian/dists/stable/*/binary-i386/Packages.gz and
+/srv/mirrors/debian/dists/unstable/*/binary-i386/Packages.gz, those Packages.gz
+can be founded on ftp://ftp.br.debian.org. After collect all packages names
+then those are ordered and are removed libraries and documents
+with the regex '^lib.*' and '.*doc$'.
+
+The second step is to create a submissions matrix, where each line is a
+popularity-contest submission in binary format, and each column represents
+a Debian package. This can be seen on the example bellow:
+
+  - debian packages:            git, gedit, vagrant, vim,
+  - submission matrix:           1     0       1      0
+                                 0     0       1      1
+
+Analising the examples, the first popularity-contest submission have the
+packages 'git' and 'vagrant', the second submission have the packages
+'vagrant', and 'vim'.
+
+The third step is to remove the unused packages from matrix. In the given
+example, the column represeting the package 'gedit' will be removed. After that,
+the matrix will be in the following format:
+
+  - debian packages:            git, vagrant, vim,
+  - submission matrix:           1      1      0
+                                 0      1      1
+
+The fourth step is to remove packages that are not used by many user. To do
+that, it is removed packages that used by less then 5% of users. This step is
+used to remove packages that can identify an user.
+
+Once that is done, the submission matrix is used to calculate the clusters with
+class KMeans of python-sklearn. This clusters are saved on clusters.txt.
+
+  - clusters.txt explanation:
+    - This file contains the clusters positions in a cartesian plane, where
+    each line represents a cluster. Each line of this file contains the
+    cluster position into cartesian plane, example:
+
+      - 0.1;0.5;0.7
+      - 0.3;0.4;0.9
+
+    - The cluster 0 is on the position [0.1, 0.5, 0.7] on cartesian plane, and
+    the cluster 1 is on the position [0.3, 0.4, 0.9].
+
+    - The dimensions of this cartesian plan is the total number of packages
+      after removing the ones that are not used by any user and the ones that
+      used by few userd.
+
+    - The clusters values are necessary in order to calculate the distance
+    between the clusters and a new point into cartesian plan, in this case the
+    new point is a new popularity-contest submission. With this distances it is
+    possible to know what the best cluster for this point will be, of course,
+    the best cluster is the one what is closer to the point.
+
+Another output of create_popcon_clusters script is a relation between
+packages and the clusters that packages are included, whereas the submission
+zero, that contains 'git' and 'vagrant', is on the cluster zero, and the
+submission one, that contains 'vagrant' and 'vim', is on the cluster one, the
+relation between packages and clusters follows the following example:
+
+  - pkgs_clusters: git-0:1
+                   vagrant-0:1;1:1
+                   vim-1:1
+
+This exemple shows that the package 'git' appears on cluster zero, one time,
+and the package 'vagrant' appears on cluster zero, one time, and on cluster
+one, one time, and the package vim appears on cluster one, one time.
+
+The relation between packages and clusters are saved on pkgs_clusters.txt, this
+file and the cluster.txt are saved on the popcon_clusters folder
